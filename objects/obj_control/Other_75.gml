@@ -15,7 +15,8 @@ case "gamepad discovered":                     // A game pad has been discovered
 		show_debug_message("room name: " + string(room_get_name(room)));
 		show_debug_message("pad number: " + string(pad));
 
-		player[pad] = instance_create_layer(100 * pad, 250, "layer_players", obj_player);
+		//place each player instance at quarter of the screen
+		player[pad] = instance_create_layer(((room_width / 4) * pad) + (room_width / 8), 250, "layer_players", obj_player);
 		//instance_create_layer(100 * pad, 250, "layer_players", obj_wall);
 		//object_set_persistent(player[pad], true);
 		with (player[pad])

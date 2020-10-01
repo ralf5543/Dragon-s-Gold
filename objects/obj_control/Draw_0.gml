@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Temp gamepads infos
 // You can write your code in this editor
 
 
@@ -8,7 +8,7 @@ var _num = 0;
 
 for (var i = 0; i < 12; i++;) {
 	//var xx = 32 + ((room / i) * _num);
-	xx = (32 + (room_width / 4) * i);
+	xx = (128 + (room_width / 4) * i);
 	var yy = 32;
 	
 	if gamepad_is_connected(i) {

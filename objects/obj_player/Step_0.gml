@@ -1,9 +1,5 @@
 /// @description Insert description here
 
-key_left = 0;
-key_right = 0;
-key_jump = 0;
-key_start = 0;
 
 if (hasControl) {
 
@@ -13,6 +9,8 @@ if (hasControl) {
 	if (abs(gamepad_axis_value(pad_num, gp_axislh)) > .2) {
 	    key_left = abs(min(gamepad_axis_value(pad_num, gp_axislh), 0));
 	    key_right = max(gamepad_axis_value(pad_num, gp_axislh), 0);
+	    key_up = abs(min(gamepad_axis_value(pad_num, gp_axislv), 0));
+	    key_down = max(gamepad_axis_value(pad_num, gp_axislv), 0);
 		
 		controller = 1;
 	}
@@ -31,8 +29,10 @@ if (hasControl) {
 };
 
 if (room == rm_start) {
+	
 	if (key_start) {
-		room_goto_next();
+		//instance_create_layer(x - ((3 * 128) / 2), y + 250, "layer_players", obj_select_class);
+		instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
 	}
 } else {
 
@@ -93,9 +93,22 @@ if (room == rm_start) {
 	} else {
 		image_speed = 1;
 		if (hsp == 0) {
-			sprite_index = spr_wizard_stand_strip2;
+			if (character == "knight") {
+			    sprite_index = spr_knight_stand_strip2;
+			} else if (character == "wizard") {
+				sprite_index = spr_wizard_stand_strip2;
+			} else if (character == "ranger") {
+				sprite_index = spr_ranger_stand_strip2;
+			}
+			
 		} else {
-			sprite_index = spr_wizard_walk_strip8;
+			if (character == "knight") {
+			    sprite_index = spr_knight_walk_strip8;
+			} else if (character == "wizard") {
+				sprite_index = spr_wizard_walk_strip8;
+			} else if (character == "ranger") {
+				sprite_index = spr_ranger_walk_strip8;
+			}
 		};
 	};
 
