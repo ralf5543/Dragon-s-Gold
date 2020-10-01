@@ -2,10 +2,12 @@
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},"order":2,},
+    {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"order":0,},
     {"id":{"name":"spr_wizard_walk_strip8","path":"sprites/spr_wizard_walk_strip8/spr_wizard_walk_strip8.yy",},"order":2,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":0,},
     {"id":{"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"order":1,},
+    {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -22,6 +24,7 @@
     "children": [],
   },
   "RoomOrder": [
+    {"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},
     {"name":"Room1","path":"rooms/Room1/Room1.yy",},
   ],
   "Folders": [

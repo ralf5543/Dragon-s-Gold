@@ -8,4 +8,3 @@ player[i] = noone;
 
 //draw gamepads informations
 draw_set_colour(c_black);
-
