@@ -39,6 +39,7 @@ if (room == rm_start) {
 	
 	if (key_start) {
 		show_debug_message("light_owner in Player step: " + string(light_owner));
+		show_debug_message("pad_num in Player step: " + string(pad_num));
 		// create class selection menu linked to this instance
 		var inst = instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
 		with (inst)

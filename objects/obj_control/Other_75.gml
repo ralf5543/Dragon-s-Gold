@@ -26,7 +26,7 @@ case "gamepad discovered":                     // A game pad has been discovered
             //image_index = instance_number(object_index);
             pad_num = pad;
 			//give gamepad id to the obj_player, via light_owner var
-			light_owner = other.id;
+			light_owner = other.player_id;
             }
         }
 		total_pads ++;

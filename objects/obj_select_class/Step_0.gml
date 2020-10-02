@@ -10,7 +10,7 @@ if (menu_control) {
 		    menu_cursor = 0;
 		}
 		
-		   show_debug_message("player_number : " + string(player_number));
+		   show_debug_message("player_number in Class step : " + string(player_number));
 		   show_debug_message("turlututu in Class step: " + string(turlututu));
 	}
 	
@@ -32,7 +32,8 @@ if (menu_control) {
 
 			show_debug_message("menu_committed : " + string(menu[menu_committed]));
 			//character = menu[menu_committed];
-			obj_player.character = menu[menu_committed];
+			//obj_player.character = menu[menu_committed];
+			turlututu.character = menu[menu_committed];
 			obj_control.ready_players ++;
 			show_debug_message("ready_players : " + string(obj_control.ready_players));
 	}
