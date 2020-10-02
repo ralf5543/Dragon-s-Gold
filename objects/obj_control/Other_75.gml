@@ -19,12 +19,18 @@ case "gamepad discovered":                     // A game pad has been discovered
 		player[pad] = instance_create_layer(((room_width / 4) * pad) + (room_width / 8), 250, "layer_players", obj_player);
 		//instance_create_layer(100 * pad, 250, "layer_players", obj_wall);
 		//object_set_persistent(player[pad], true);
+		player_id = player[pad].id;
+		show_debug_message("player id in Async control : " + string(player_id));
+		show_debug_message("player[pad] in Async control : " + string(player[pad]));
 		with (player[pad])
             {
             //image_index = instance_number(object_index);
             pad_num = pad;
+			light_owner = other.id;
             }
         }
+		total_pads ++;
+	   
 		
 	
 	        
@@ -39,5 +45,8 @@ case "gamepad lost":                           // Gamepad has been removed or ot
             }
         player[pad] = noone;                   // Set the controller array to "noone" so it detects a new pad being connected
         }
+		
+		total_pads --;
+	   show_debug_message("total_pads : " + string(total_pads));
     break;
 }

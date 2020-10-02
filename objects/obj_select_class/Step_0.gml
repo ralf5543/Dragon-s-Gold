@@ -5,37 +5,39 @@
 
 //keyboard controls
 if (menu_control) {
-	if (gamepad_button_check_pressed(obj_player.pad_num, gp_padu)) {
+	if (gamepad_button_check_pressed(player_number, gp_padu)) {
 		menu_cursor ++;
 	   
 		//if on first item, go to last item if key up
 		if (menu_cursor >= menu_items) {
 		    menu_cursor = 0;
 		}
-		show_debug_message("vers le haut");
+		
+		   show_debug_message("player_number : " + string(player_number));
+		   show_debug_message("turlututu in Class step: " + string(turlututu));
 	}
 	
-	if (gamepad_button_check_pressed(obj_player.pad_num, gp_padd)) {
+	if (gamepad_button_check_pressed(player_number, gp_padd)) {
 		menu_cursor --;
 	   
 		//if on last item, go to first item if key down
 		if (menu_cursor < 0) {
 		    menu_cursor = menu_items - 1;
 		}
-		show_debug_message("vers le bas");
 	}
 	
-	if (gamepad_button_check_pressed(obj_player.pad_num, gp_face1)) {
+	if (gamepad_button_check_pressed(player_number, gp_face1)) {
 		//move the menu outside the screen, to the right
 		menu_x_target += menu_width;
 		menu_committed = menu_cursor;
-		menu_control = false;
-		room_goto_next();
+		//menu_control = false;
+		
 
 			show_debug_message("menu_committed : " + string(menu[menu_committed]));
 			//character = menu[menu_committed];
 			obj_player.character = menu[menu_committed];
-
+			obj_control.ready_players ++;
+			show_debug_message("ready_players : " + string(obj_control.ready_players));
 	}
 }
 

@@ -29,11 +29,11 @@ for (i = 0; i < menu_items; i ++) {
 	
 	draw_set_color(c_black);
 	
-	draw_text(xx - offset, yy, txt);
+	/*draw_text(xx - offset, yy, txt);
 	draw_text(xx + offset, yy, txt);
 	draw_text(xx, yy - offset, txt);
-	draw_text(xx, yy + offset, txt);
+	draw_text(xx, yy + offset, txt);*/
 	
 	draw_set_color(col);
-	draw_text(xx, yy, txt);
+	draw_text(600 + (600 * player_number), yy, txt);
 }

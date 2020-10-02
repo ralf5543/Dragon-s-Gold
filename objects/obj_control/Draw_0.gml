@@ -28,3 +28,4 @@ for (var i = 0; i < 12; i++;) {
 }
 
 draw_text(500, 500, "Nombre de manettes branchees " + string(_num));
+draw_text(500, 600, "gamepad_get_device_count() " + string(gamepad_get_device_count()));

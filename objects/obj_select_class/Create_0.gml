@@ -28,3 +28,4 @@ menu_items = array_length(menu);
 
 //the current selected item
 menu_cursor = 2;
+

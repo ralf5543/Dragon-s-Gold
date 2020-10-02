@@ -25,3 +25,4 @@ pad_num = 0;
 
 // The class of the selected character
 character = "No class";
+light_owner = 0;

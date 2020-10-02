@@ -19,8 +19,8 @@ if (hasControl) {
 	if (abs(gamepad_axis_value(pad_num, gp_axislv)) > .2) {
 		controller = 1;
 	}
-	key_jump = gamepad_button_check(pad_num, gp_face1);
-	key_start = gamepad_button_check(pad_num, gp_start);
+	key_jump = gamepad_button_check_pressed(pad_num, gp_face1);
+	key_start = gamepad_button_check_pressed(pad_num, gp_start);
 	
 } else {
 	key_left = 0;
@@ -30,9 +30,20 @@ if (hasControl) {
 
 if (room == rm_start) {
 	
+	//obj_player.objectHeldId = object_index;
+	
 	if (key_start) {
+		//show_debug_message("player id in Player step: " + string(player_id));
+		show_debug_message("light_owner in Player step: " + string(light_owner));
+		//show_debug_message("player[pad] in Player step: " + string(player[pad]));
 		//instance_create_layer(x - ((3 * 128) / 2), y + 250, "layer_players", obj_select_class);
-		instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
+		var inst = instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
+		with (inst)
+		   {
+		   player_number = other.pad_num;
+		   turlututu = other.light_owner;
+		   }
+		   
 	}
 } else {
 
