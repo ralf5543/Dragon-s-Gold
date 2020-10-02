@@ -1,7 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-//so the menu smoothly goes to the left
+/// @description Select class actions
 
 //keyboard controls
 if (menu_control) {

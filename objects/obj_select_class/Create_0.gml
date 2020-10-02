@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Select class variables
 
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
@@ -15,7 +14,7 @@ menu_font = fnt_menu;
 menu_itemHeight = font_get_size(menu_font);
 menu_committed = -1;
 
-//just to active the menu (ndlr : what the point ??)
+//just to active the menu
 menu_control = true;
 
 // Better for perfs to enter last array entries first

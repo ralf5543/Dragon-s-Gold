@@ -2,13 +2,10 @@
 // You can write your code in this editor
 
 
-var _num = 0;
+var _num = 0;//number of plugged gamepads
 
-	var xx = 32;
-
-for (var i = 0; i < 12; i++;) {
-	//var xx = 32 + ((room / i) * _num);
-	xx = (128 + (room_width / 4) * i);
+for (var i = 0; i < 12; i++;) {//12, because it's the max possible of gamepads slots
+	var xx = (128 + (room_width / 4) * i);
 	var yy = 32;
 	
 	if gamepad_is_connected(i) {
@@ -28,4 +25,3 @@ for (var i = 0; i < 12; i++;) {
 }
 
 draw_text(500, 500, "Nombre de manettes branchees " + string(_num));
-draw_text(500, 600, "gamepad_get_device_count() " + string(gamepad_get_device_count()));

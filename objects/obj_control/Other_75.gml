@@ -1,5 +1,4 @@
 /// @description Gamepads detection
-// You can write your code in this editor
 
 show_debug_message("Event = " + async_load[? "event_type"]);        // Debug code so you can see which event has been
 show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered and the pad associated with it.
@@ -26,6 +25,7 @@ case "gamepad discovered":                     // A game pad has been discovered
             {
             //image_index = instance_number(object_index);
             pad_num = pad;
+			//give gamepad id to the obj_player, via light_owner var
 			light_owner = other.id;
             }
         }

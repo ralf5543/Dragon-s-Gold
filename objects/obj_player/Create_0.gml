@@ -13,9 +13,9 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
-controller = 0;// as "false"
+controller = 0;// as "false" -> so keyboard
 
-hasControl = true;
+hasControl = true;// ?
 
 image_index = 0;
 image_speed = 0;
@@ -25,4 +25,4 @@ pad_num = 0;
 
 // The class of the selected character
 character = "No class";
-light_owner = 0;
+light_owner = 0;// gamepad id recovered from obj_control

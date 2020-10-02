@@ -1,8 +1,12 @@
-/// @description Insert description here
+/// @description Players commands
 
 
 if (hasControl) {
 
+// Get player input
+	key_left = 0
+	key_right = 0;
+	key_jump = 0;
 
 	// test horizontal axe for left stick for first slot controller, ignoring dead zone (0.2)
 	// abs takes a number, and change it to positive equivalent ("-9" -> "9")
@@ -22,6 +26,7 @@ if (hasControl) {
 	key_jump = gamepad_button_check_pressed(pad_num, gp_face1);
 	key_start = gamepad_button_check_pressed(pad_num, gp_start);
 	
+	
 } else {
 	key_left = 0;
 	key_right = 0;
@@ -33,14 +38,15 @@ if (room == rm_start) {
 	//obj_player.objectHeldId = object_index;
 	
 	if (key_start) {
-		//show_debug_message("player id in Player step: " + string(player_id));
 		show_debug_message("light_owner in Player step: " + string(light_owner));
-		//show_debug_message("player[pad] in Player step: " + string(player[pad]));
-		//instance_create_layer(x - ((3 * 128) / 2), y + 250, "layer_players", obj_select_class);
+		// create class selection menu linked to this instance
 		var inst = instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
 		with (inst)
 		   {
+			   //give gamepad number to that obj_select_class instance
 		   player_number = other.pad_num;
+		   
+		   //give gamepad id to the obj_select_class, via turlututu var
 		   turlututu = other.light_owner;
 		   }
 		   

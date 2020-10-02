@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Temp players infos drawn
+
 draw_self();// default draw, needed if draw event exists
 
 draw_set_color(c_black);
