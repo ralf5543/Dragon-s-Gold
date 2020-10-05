@@ -38,17 +38,15 @@ if (room == rm_start) {
 	//obj_player.objectHeldId = object_index;
 	
 	if (key_start) {
-		show_debug_message("light_owner in Player step: " + string(light_owner));
-		show_debug_message("pad_num in Player step: " + string(pad_num));
 		// create class selection menu linked to this instance
 		var inst = instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
 		with (inst)
 		   {
-			   //give gamepad number to that obj_select_class instance
+			//give gamepad number (from 0 to 3) to that obj_select_class instance
 		   player_number = other.pad_num;
 		   
 		   //give gamepad id to the obj_select_class, via turlututu var
-		   turlututu = other.light_owner;
+		   gamepad_id_receiver = other.gamepad_id_owner;
 		   }
 		   
 	}

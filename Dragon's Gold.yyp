@@ -1,16 +1,21 @@
 {
   "resources": [
     {"id":{"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"order":7,},
+    {"id":{"name":"spr_tile_castle","path":"sprites/spr_tile_castle/spr_tile_castle.yy",},"order":14,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
+    {"id":{"name":"spr_background_metal","path":"sprites/spr_background_metal/spr_background_metal.yy",},"order":15,},
     {"id":{"name":"spr_select_wizard","path":"sprites/spr_select_wizard/spr_select_wizard.yy",},"order":4,},
     {"id":{"name":"spr_select_knight","path":"sprites/spr_select_knight/spr_select_knight.yy",},"order":3,},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},"order":2,},
     {"id":{"name":"spr_knight_walk_strip8","path":"sprites/spr_knight_walk_strip8/spr_knight_walk_strip8.yy",},"order":11,},
+    {"id":{"name":"spr_bricks","path":"sprites/spr_bricks/spr_bricks.yy",},"order":12,},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"order":0,},
     {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},"order":6,},
+    {"id":{"name":"spr_castle","path":"sprites/spr_castle/spr_castle.yy",},"order":13,},
     {"id":{"name":"spr_wizard_walk_strip8","path":"sprites/spr_wizard_walk_strip8/spr_wizard_walk_strip8.yy",},"order":2,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_knight_stand_strip2","path":"sprites/spr_knight_stand_strip2/spr_knight_stand_strip2.yy",},"order":10,},
+    {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":1,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":0,},
     {"id":{"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"order":1,},
     {"id":{"name":"obj_select_class","path":"objects/obj_select_class/obj_select_class.yy",},"order":3,},
@@ -58,7 +63,9 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":".DS_Store","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2.3.0.529",
   },

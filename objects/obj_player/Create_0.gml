@@ -20,9 +20,9 @@ hasControl = true;// ?
 image_index = 0;
 image_speed = 0;
 
-//Gamepad number starting with 0)
+//Gamepad number (starting with 0)
 pad_num = 0;
 
 // The class of the selected character
 character = "No class";
-light_owner = 0;// gamepad id recovered from obj_control
+gamepad_id_owner = 0;// gamepad id recovered from obj_control

@@ -9,9 +9,7 @@ if (menu_control) {
 		if (menu_cursor >= menu_items) {
 		    menu_cursor = 0;
 		}
-		
-		   show_debug_message("player_number in Class step : " + string(player_number));
-		   show_debug_message("turlututu in Class step: " + string(turlututu));
+
 	}
 	
 	if (gamepad_button_check_pressed(player_number, gp_padd)) {
@@ -33,43 +31,8 @@ if (menu_control) {
 			show_debug_message("menu_committed : " + string(menu[menu_committed]));
 			//character = menu[menu_committed];
 			//obj_player.character = menu[menu_committed];
-			turlututu.character = menu[menu_committed];
+			gamepad_id_receiver.character = menu[menu_committed];
 			obj_control.ready_players ++;
 			show_debug_message("ready_players : " + string(obj_control.ready_players));
 	}
 }
-
-/*if (menu_width > gui_width + 150) && (menu_committed != -1) {
-	switch (menu_committed) {
-		
-		//new game
-		// calls the script with black rectangle transition,
-		//with "go to next room" argument
-		case 2 : slideTransition(TRANS_MODE.NEXT);
-		break;
-		
-		// continue
-		case 1 : {
-			show_debug_message("click continue : SAVEFILE : " + string(SAVEFILE));
-			//show_debug_message("click continue : file : " + file);
-			if (!file_exists(SAVEFILE)) {
-				show_debug_message("save NOT exists");
-				// if no save, start a  new game
-				slideTransition(TRANS_MODE.NEXT);
-			} else {
-				show_debug_message("save exists");
-				var file = file_text_open_read(SAVEFILE);
-				var target = file_text_read_real(file);
-				file_text_close(file);
-				slideTransition(TRANS_MODE.GOTO, target);
-			}
-		}
-		break;
-		
-		// quit game
-		case 0 : game_end();
-		break;
-	}
-}
-
-*/
