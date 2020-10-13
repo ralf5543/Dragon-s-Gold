@@ -35,11 +35,9 @@ if (hasControl) {
 
 if (room == rm_start) {
 	
-	//obj_player.objectHeldId = object_index;
-	
 	if (key_start) {
 		// create class selection menu linked to this instance
-		var inst = instance_create_layer(x - (128 / 2), y + 250, "layer_players", obj_select_class);
+		var inst = instance_create_layer(x - ((128 * 3) / 2), y + 250, "layer_players", obj_select_class);
 		with (inst)
 		   {
 			//give gamepad number (from 0 to 3) to that obj_select_class instance

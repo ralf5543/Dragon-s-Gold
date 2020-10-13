@@ -18,9 +18,13 @@ menu_committed = -1;
 menu_control = true;
 
 // Better for perfs to enter last array entries first
-menu[2] = "knight";
+menu[6] = "wizard";
+menu[5] = "ranger";
+menu[4] = "wizard";
+menu[3] = "knight";
+menu[2] = "ranger";
 menu[1] = "wizard";
-menu[0] = "ranger";
+menu[0] = "knight";
 
 //number of items in menu array
 menu_items = array_length(menu);

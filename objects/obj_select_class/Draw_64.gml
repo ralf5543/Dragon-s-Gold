@@ -1,11 +1,26 @@
 /// @description Graphics for the class selector
 
+
+for (i = 0; i < menu_items; i ++) {
+	var portrait_size = 128;
+	var xx = 0;
+	
+	if (i mod 3 == 0) {
+		xx = 0
+	 } else if ((i + 1) mod 3 == 0) {
+		xx = portrait_size;
+	 } else {
+		 xx = portrait_size * 2;
+	 }
+	 
+ draw_sprite(asset_get_index("spr_portrait_" + menu[i]), 0, x + xx, y + portrait_size * (floor(i / 3)));
+
+}
+
+draw_sprite(spr_cursor, 0, x, y);
+
 //choose font to use
 draw_set_font(fnt_menu);
-
-//chose horizontal and vertical alignment
-draw_set_halign(fa_right);
-draw_set_valign(fa_bottom);
 
 
 for (i = 0; i < menu_items; i ++) {
@@ -16,9 +31,9 @@ for (i = 0; i < menu_items; i ++) {
 	if (menu_cursor == i) {
 		//inserts text at beginning (0) of the string "txt"
 	    txt = string_insert("> ", txt, 0);
-		var col = c_white;
+		var col = c_red;
 	} else {
-		var col = c_gray;
+		var col = c_black;
 	}
 	
 	var xx = menu_width;

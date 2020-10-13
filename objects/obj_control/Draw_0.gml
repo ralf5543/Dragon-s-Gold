@@ -1,11 +1,11 @@
 /// @description Temp gamepads infos
 // You can write your code in this editor
 
-
 var _num = 0;//number of plugged gamepads
+draw_set_color(c_black);
 
-for (var i = 0; i < 12; i++;) {//12, because it's the max possible of gamepads slots
-	var xx = (128 + (room_width / 4) * i);
+for (var i = 0; i < 4; i++;) { //4 players max
+	var xx = (room_width / 4) * i;// centered on the screen quarter
 	var yy = 32;
 	
 	if gamepad_is_connected(i) {
@@ -18,9 +18,13 @@ for (var i = 0; i < 12; i++;) {//12, because it's the max possible of gamepads s
 	    draw_text(xx, yy + 80, "Right H Axis - " + string(gamepad_axis_value(i, gp_axisrh)));
 	    draw_text(xx, yy + 100, "Right V Axis - " + string(gamepad_axis_value(i, gp_axisrv)));   
 	    draw_text(xx, yy + 120, "Fire Rate - " + string(gamepad_button_value(i, gp_shoulderrb)));
-	    draw_text(xx, yy + 140, "Press START to join");
+		draw_set_halign(fa_center);
+		draw_text(xx + (room_width / 8), yy + (room_height / 2), "Press START to join !");
+		draw_set_halign(fa_left);
 	} else {
-		draw_text(xx, yy, "Add a controller ");
+		draw_set_halign(fa_center);
+		draw_text(xx + (room_width / 8), yy + (room_height / 2), "No controller");
+		draw_set_halign(fa_left);
 	}
 }
 
