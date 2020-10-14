@@ -7,6 +7,7 @@
     {"id":{"name":"spr_background_metal","path":"sprites/spr_background_metal/spr_background_metal.yy",},"order":15,},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},"order":2,},
     {"id":{"name":"spr_knight_walk_strip8","path":"sprites/spr_knight_walk_strip8/spr_knight_walk_strip8.yy",},"order":11,},
+    {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},"order":4,},
     {"id":{"name":"spr_bricks","path":"sprites/spr_bricks/spr_bricks.yy",},"order":12,},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"order":0,},
     {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},"order":3,},

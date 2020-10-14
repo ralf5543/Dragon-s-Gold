@@ -38,16 +38,16 @@ if (room == rm_start) {
 	if (key_start) {
 		// create class selection menu linked to this instance
 		var inst = instance_create_layer(x - ((128 * 3) / 2), y + 250, "layer_players", obj_select_class);
-		with (inst)
-		   {
+
+		with (inst) {
 			//give gamepad number (from 0 to 3) to that obj_select_class instance
 		   player_number = other.pad_num;
 		   
-		   //give gamepad id to the obj_select_class, via turlututu var
+		   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
 		   gamepad_id_receiver = other.gamepad_id_owner;
-		   }
-		   
+		}
 	}
+		   
 } else {
 
 
@@ -107,22 +107,10 @@ if (room == rm_start) {
 	} else {
 		image_speed = 1;
 		if (hsp == 0) {
-			if (character == "knight") {
-			    sprite_index = spr_knight_stand_strip2;
-			} else if (character == "wizard") {
-				sprite_index = spr_wizard_stand_strip2;
-			} else if (character == "ranger") {
-				sprite_index = spr_ranger_stand_strip2;
-			}
+			sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
 			
 		} else {
-			if (character == "knight") {
-			    sprite_index = spr_knight_walk_strip8;
-			} else if (character == "wizard") {
-				sprite_index = spr_wizard_walk_strip8;
-			} else if (character == "ranger") {
-				sprite_index = spr_ranger_walk_strip8;
-			}
+			sprite_index = asset_get_index("spr_" + character + "_walk_strip8");
 		};
 	};
 
