@@ -26,3 +26,5 @@ pad_num = 0;
 // The class of the selected character
 character = "No class";
 gamepad_id_owner = 0;// gamepad id recovered from obj_control
+
+pas_appuye = 1;

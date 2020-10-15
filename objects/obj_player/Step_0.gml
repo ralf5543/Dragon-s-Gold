@@ -46,6 +46,10 @@ if (room == rm_start) {
 		   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
 		   gamepad_id_receiver = other.gamepad_id_owner;
 		}
+		if (pas_appuye == 1) {
+			obj_control.start_players ++;
+			pas_appuye = 0;
+		}
 	}
 		   
 } else {
