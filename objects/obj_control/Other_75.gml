@@ -32,16 +32,24 @@ case "gamepad discovered":                     // A game pad has been discovered
 	        
     break;
 case "gamepad lost":                           // Gamepad has been removed or otherwise disabled
+
     var pad = async_load[? "pad_index"];       // Get the pad index
-    if (instance_exists(player[pad]))          // Check for a player instance associated with the pad and remove it
-        {
-        with (player[pad])
-            {
-            instance_destroy();
-            }
-        player[pad] = noone;                   // Set the controller array to "noone" so it detects a new pad being connected
-        }
+
+	/*if (room == rm_start) {
+	    if (instance_exists(player[pad]))          // Check for a player instance associated with the pad and remove it
+	        {
+	        with (player[pad]) {
+	            instance_destroy();
+	        }
+	        player[pad] = noone;                   // Set the controller array to "noone" so it detects a new pad being connected
+	    }
+		
+		with (player_number) {
+			instance_destroy();
+		}
+	}*/
 		
 		total_pads --;
+
     break;
 }
