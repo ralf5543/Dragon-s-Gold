@@ -1,4 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Pressing direction stick control
 
-free_stick = 1;
+free_stick = true;//if true, can use the stick again

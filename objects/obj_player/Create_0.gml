@@ -1,5 +1,7 @@
 /// @description Global variables
 
+isActive = false;// will turn to true when pushing Start button
+
 key_left = 0;
 key_right = 0;
 key_up = 0;
@@ -13,10 +15,6 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
-controller = 0;// as "false" -> so keyboard
-
-hasControl = true;// ?
-
 image_index = 0;
 image_speed = 0;
 
@@ -27,4 +25,6 @@ pad_num = 0;
 character = "No class";
 gamepad_id_owner = 0;// gamepad id recovered from obj_control
 
-pas_appuye = 1;
+// prevails from pushing serveral times on start button
+// and distort the ready players number
+can_push_start = true;

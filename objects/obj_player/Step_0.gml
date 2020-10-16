@@ -1,38 +1,28 @@
 /// @description Players commands
 
 
-if (hasControl) {
+// stops the character when sticks are released
+key_left = 0
+key_right = 0;
+key_jump = 0;
 
-// Get player input
-	key_left = 0
-	key_right = 0;
-	key_jump = 0;
+// test horizontal axe for left stick for first slot controller, ignoring dead zone (0.2)
+// abs takes a number, and change it to positive equivalent ("-9" -> "9")
+if (abs(gamepad_axis_value(pad_num, gp_axislh)) > .2) {
+	key_left = abs(min(gamepad_axis_value(pad_num, gp_axislh), 0));
+	key_right = max(gamepad_axis_value(pad_num, gp_axislh), 0);	    
+}
 
-	// test horizontal axe for left stick for first slot controller, ignoring dead zone (0.2)
-	// abs takes a number, and change it to positive equivalent ("-9" -> "9")
-	if (abs(gamepad_axis_value(pad_num, gp_axislh)) > .2) {
-	    key_left = abs(min(gamepad_axis_value(pad_num, gp_axislh), 0));
-	    key_right = max(gamepad_axis_value(pad_num, gp_axislh), 0);
-	    key_up = abs(min(gamepad_axis_value(pad_num, gp_axislv), 0));
-	    key_down = max(gamepad_axis_value(pad_num, gp_axislv), 0);
-		
-		controller = 1;
-	}
-
-	// same for vertical axe
-	if (abs(gamepad_axis_value(pad_num, gp_axislv)) > .2) {
-		controller = 1;
-	}
-	key_jump = gamepad_button_check_pressed(pad_num, gp_face1);
-	key_start = gamepad_button_check_pressed(pad_num, gp_start);
+// same for vertical axe
+if (abs(gamepad_axis_value(pad_num, gp_axislv)) > .2) {
+	key_up = abs(min(gamepad_axis_value(pad_num, gp_axislv), 0));
+	key_down = max(gamepad_axis_value(pad_num, gp_axislv), 0);
+}
 	
-	
-} else {
-	key_left = 0;
-	key_right = 0;
-	key_jump = 0;
-};
+key_jump = gamepad_button_check_pressed(pad_num, gp_face1);
+key_start = gamepad_button_check_pressed(pad_num, gp_start);	
 
+// used only for characters selection screen
 if (room == rm_start) {
 	
 	if (key_start) {
@@ -46,9 +36,10 @@ if (room == rm_start) {
 		   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
 		   gamepad_id_receiver = other.gamepad_id_owner;
 		}
-		if (pas_appuye == 1) {
+		if (can_push_start == true) {
+			//tells (just once) to the Controller that this player is ready
 			obj_control.start_players ++;
-			pas_appuye = 0;
+			can_push_start = false;
 		}
 	}
 		   
@@ -122,5 +113,4 @@ if (room == rm_start) {
 	if (hsp != 0) {
 	    image_xscale = sign(hsp);//so 1 or -1 (-1 is flipping the sprite)
 	}
-
 }
