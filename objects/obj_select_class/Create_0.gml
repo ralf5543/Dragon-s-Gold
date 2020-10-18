@@ -31,3 +31,4 @@ cursor = instance_create_layer(x, y, "layer_above", obj_cursor);
 portrait_size = 128;// size of the portrait square
 
 free_stick = true;// if false, can't use gamepad stick for a few milliseconds
+init_player_selection = true;

@@ -28,6 +28,9 @@ if (room == rm_start) {
 	if (key_start) {
 		// create class selection menu linked to this instance
 		var inst = instance_create_layer(x - ((128 * 3) / 2), y + 250, "layer_players", obj_select_class);
+		//sprite_index = spr_knight_stand_strip2;
+		image_xscale = 1.5;
+		image_yscale = 1.5;
 
 		with (inst) {
 			//give gamepad number (from 0 to 3) to that obj_select_class instance
@@ -44,7 +47,8 @@ if (room == rm_start) {
 	}
 		   
 } else {
-
+		image_xscale = 1;
+		image_yscale = 1;
 
 	//=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1

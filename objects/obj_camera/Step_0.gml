@@ -17,10 +17,10 @@
 	view_visible[3] = false;
 
 	for(var i = 0; i < playerCount; i ++) {
-		toto = instance_find(obj_player, i);
+		player_nth = instance_find(obj_player, i);
 		view_visible[i] = true;
 		
-		global.Cameras[i] = camera_create_view(0, 0, width  * .75, height * .75, 0, toto, -1, -1, width, height);
+		global.Cameras[i] = camera_create_view(0, 0, width  * .75, height * .75, 0, player_nth, -1, -1, width, height);
 		view_set_camera(i, global.Cameras[i]);
 	
 		//if 1 player only
@@ -90,12 +90,18 @@
 			view_set_hport(3, height / 2);
 			camera_set_view_size(global.Cameras[3], width / 2, height / 2);
 		}
-		
-		show_debug_message("scale: " + string(scale));
+
 	}
 	
 	
 	
 	window_set_size(width * scale, height * scale);
-	//window_set_size(2048, 1024);
 	surface_resize(application_surface, width * scale, height * scale);
+	
+	/// @description Temp players infos drawn
+
+//draw_self();// default draw, needed if draw event exists
+
+//draw_set_color(c_white);
+//draw_text(x - 10, y - 70, "Player " + string(pad_num + 1));
+//draw_text(x - 10, y - 50, "Classe " + string(character));

@@ -6,8 +6,31 @@ if (gamepad_button_check_pressed(player_number, gp_face2)) {
 	obj_control.ready_players --;
 }
 
+if (init_player_selection == true) {
+	//gives the next skin to each player
+	gamepad_id_receiver.sprite_index = asset_get_index("spr_" + selectClass[player_number] + "_stand_strip2");
+	
+	//moves the cursor to the next portrait for each new player
+	if (player_number > selectClass_columns - 1) {
+		cursor.x = x + portrait_size * (player_number - selectClass_columns);
+		cursor.y = y + (floor(player_number / (selectClass_columns))) * portrait_size;
+		
+	} else {
+		//automatically put the cursor at next line, if needed
+		cursor.x = x + portrait_size * player_number;
+	}
+	
+	//assigns the right class to the new player, equal to the cursor position
+	selectClass_cursor = player_number;
+	
+	// so it will run only once, at select class menu creation
+	init_player_selection = false;
+}
+
+
 // if menu is active (class not yet selected)
 if (selectClass_control) {
+	
 	
 	if(free_stick = 1) {//see create event...
 		
