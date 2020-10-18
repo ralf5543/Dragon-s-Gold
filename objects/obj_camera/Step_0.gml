@@ -20,7 +20,7 @@
 		toto = instance_find(obj_player, i);
 		view_visible[i] = true;
 		
-		global.Cameras[i] = camera_create_view(0, 0, width, height, 0, toto, -1, -1, width, height);
+		global.Cameras[i] = camera_create_view(0, 0, width  * .75, height * .75, 0, toto, -1, -1, width, height);
 		view_set_camera(i, global.Cameras[i]);
 	
 		//if 1 player only
@@ -36,13 +36,13 @@
 			view_set_yport(0, 0);
 			view_set_wport(0, width);
 			view_set_hport(0, height / 2);
-			camera_set_view_size(global.Cameras[0], width, height / 2);
+			camera_set_view_size(global.Cameras[0], width  * .75, (height / 2)  * .75);
 		
 			view_set_xport(1, 0);
 			view_set_yport(1, height / 2);
 			view_set_wport(1, width);
 			view_set_hport(1, height / 2);
-			camera_set_view_size(global.Cameras[1], width, height / 2);
+			camera_set_view_size(global.Cameras[1], width  * .75, (height / 2)  * .75);
 		}
 		// if 3 players
 		if(i == 2) {
@@ -96,6 +96,6 @@
 	
 	
 	
-	//window_set_size(width * scale, height * scale);
-	window_set_size(2048, 1024);
+	window_set_size(width * scale, height * scale);
+	//window_set_size(2048, 1024);
 	surface_resize(application_surface, width * scale, height * scale);
