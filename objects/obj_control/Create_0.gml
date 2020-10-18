@@ -1,6 +1,6 @@
 /// @description Gamepads detection
 
-
+window_set_fullscreen(true);
 for (var i = 0; i < 12; i++;) {
 	player[i] = noone;
 }
