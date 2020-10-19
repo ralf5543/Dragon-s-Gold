@@ -20,15 +20,15 @@
 		player_nth = instance_find(obj_player, i);
 		view_visible[i] = true;
 		
-		global.Cameras[i] = camera_create_view(0, 0, width  * .75, height * .75, 0, player_nth, -1, -1, width, height);
+		global.Cameras[i] = camera_create_view(0, 0, width  * .5, height * .5, 0, player_nth, -1, -1, width, height);
 		view_set_camera(i, global.Cameras[i]);
 	
 		//if 1 player only
 		if(i == 0) {
 			view_xport[i] = 0;
 			view_yport[i] = 0;
-			view_wport[i] = width;
-			view_hport[i] = height;
+			view_wport[i] = width / 2;
+			view_hport[i] = height / 2;
 		}
 		// if 2 players
 		if(i == 1) {
@@ -36,13 +36,13 @@
 			view_set_yport(0, 0);
 			view_set_wport(0, width);
 			view_set_hport(0, height / 2);
-			camera_set_view_size(global.Cameras[0], width  * .75, (height / 2)  * .75);
+			camera_set_view_size(global.Cameras[0], width  * .7, (height / 2)  * .7);
 		
 			view_set_xport(1, 0);
 			view_set_yport(1, height / 2);
 			view_set_wport(1, width);
 			view_set_hport(1, height / 2);
-			camera_set_view_size(global.Cameras[1], width  * .75, (height / 2)  * .75);
+			camera_set_view_size(global.Cameras[1], width  * .7, (height / 2)  * .7);
 		}
 		// if 3 players
 		if(i == 2) {
@@ -51,44 +51,44 @@
 			view_set_yport(0, 0);
 			view_set_wport(0, width);
 			view_set_hport(0, height / 2);
-			camera_set_view_size(global.Cameras[0], width, height / 2);
+			camera_set_view_size(global.Cameras[0], width  * .7, (height / 2)  * .7);
 		
 			view_set_xport(1, 0);
 			view_set_yport(1, height / 2);
 			view_set_wport(1, width / 2);
 			view_set_hport(1, height / 2);
-			camera_set_view_size(global.Cameras[1], width / 2, height / 2);
+			camera_set_view_size(global.Cameras[1], (width / 2) * .85,( height / 2) * .85);
 		
 			view_set_xport(2, width / 2);
 			view_set_yport(2, height / 2);
 			view_set_wport(2, width / 2);
 			view_set_hport(2, height / 2);
-			camera_set_view_size(global.Cameras[2], width / 2, height / 2);
+			camera_set_view_size(global.Cameras[2], (width / 2) * .85,( height / 2) * .85);
 		}
 		if(i == 3) {
 			view_set_xport(0, 0);
 			view_set_yport(0, 0);
 			view_set_wport(0, width / 2);
 			view_set_hport(0, height / 2);
-			camera_set_view_size(global.Cameras[0], width / 2, height / 2);
+			camera_set_view_size(global.Cameras[0], (width / 2) * .85,( height / 2) * .85);
 		
 			view_set_xport(1, width / 2);
 			view_set_yport(1, 0);
 			view_set_wport(1, width / 2);
 			view_set_hport(1, height / 2);
-			camera_set_view_size(global.Cameras[1], width / 2, height / 2);
+			camera_set_view_size(global.Cameras[1], (width / 2) * .85,( height / 2) * .85);
 		
 			view_set_xport(2, 0);
 			view_set_yport(2, height / 2);
 			view_set_wport(2, width / 2);
 			view_set_hport(2, height / 2);
-			camera_set_view_size(global.Cameras[2], width / 2, height / 2);
+			camera_set_view_size(global.Cameras[2], (width / 2) * .85,( height / 2) * .85);
 		
 			view_set_xport(3, width / 2);
 			view_set_yport(3, height / 2);
 			view_set_wport(3, width / 2);
 			view_set_hport(3, height / 2);
-			camera_set_view_size(global.Cameras[3], width / 2, height / 2);
+			camera_set_view_size(global.Cameras[3], (width / 2) * .85,( height / 2) * .85);
 		}
 
 	}
