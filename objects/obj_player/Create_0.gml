@@ -7,6 +7,7 @@ key_right = 0;
 key_up = 0;
 key_down = 0;
 key_jump = 0;
+key_attack = 0;
 key_start = 0;
 
 
@@ -15,8 +16,12 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
+state = PLAYERSTATE.FREE;
+hitByAttack = ds_list_create();
+
+facing = 1;// tells which side character is facing (1 = right, -1 = left)
+
 image_index = 0;
-image_speed = 0;
 
 //Gamepad number (starting with 0)
 pad_num = 0;
@@ -28,3 +33,10 @@ gamepad_id_owner = 0;// gamepad id recovered from obj_control
 // prevails from pushing serveral times on start button
 // and distort the ready players number
 can_push_start = true;
+
+//enum : global variable you never want to change
+enum PLAYERSTATE {
+	FREE,
+	ATTACK_SLASH,
+	ATTACK_COMBO
+}

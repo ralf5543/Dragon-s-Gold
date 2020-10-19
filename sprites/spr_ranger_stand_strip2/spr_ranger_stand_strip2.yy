@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1be50d43-45f2-45d1-9e0d-c58efd82e4e3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "ranger",
+    "path": "folders/Sprites/Classes/ranger.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ranger_stand_strip2",

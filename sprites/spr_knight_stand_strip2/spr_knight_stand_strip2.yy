@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e1901bf8-522c-46b8-a991-102c4c1187a7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "knight",
+    "path": "folders/Sprites/Classes/knight.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_knight_stand_strip2",

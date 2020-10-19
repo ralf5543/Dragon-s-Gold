@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"91088fe9-0137-49d7-9edc-deaa8427a2b0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "ranger",
+    "path": "folders/Sprites/Classes/ranger.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ranger_walk_strip8",

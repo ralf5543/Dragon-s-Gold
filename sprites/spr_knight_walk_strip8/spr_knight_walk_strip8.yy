@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"76a3d2dc-e351-465d-94ed-11104e776802","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "knight",
+    "path": "folders/Sprites/Classes/knight.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_knight_walk_strip8",
