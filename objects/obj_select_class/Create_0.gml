@@ -32,3 +32,5 @@ portrait_size = 128;// size of the portrait square
 
 free_stick = true;// if false, can't use gamepad stick for a few milliseconds
 init_player_selection = true;
+
+x -= ((selectClass_columns * portrait_size) / 2);// centers the menu

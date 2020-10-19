@@ -27,7 +27,8 @@ if (room == rm_start) {
 	
 	if (key_start) {
 		// create class selection menu linked to this instance
-		var inst = instance_create_layer(x - ((128 * 3) / 2), y + 250, "layer_players", obj_select_class);
+		//var inst = instance_create_layer(x - ((128 * 3) / 2), y + 250, "layer_players", obj_select_class);
+		var inst = instance_create_layer(x, y + 250, "layer_players", obj_select_class);
 		//sprite_index = spr_knight_stand_strip2;
 		image_xscale = 1.5;
 		image_yscale = 1.5;
