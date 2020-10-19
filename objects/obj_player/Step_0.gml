@@ -26,21 +26,24 @@ key_start = gamepad_button_check_pressed(pad_num, gp_start);
 if (room == rm_start) {
 	
 	if (key_start) {
-		// create class selection menu linked to this instance
-		var inst = instance_create_layer(x, y + 250, "layer_players", obj_select_class);
-
-		image_xscale = 1.5;
-		image_yscale = 1.5;
-
-		with (inst) {
-			//give gamepad number (from 0 to 3) to that obj_select_class instance
-		   player_number = other.pad_num;
-		   
-		   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
-		   gamepad_id_receiver = other.gamepad_id_owner;
-		}
+		
+		//Can push Start only once
 		if (can_push_start == true) {
-			//tells (just once) to the Controller that this player is ready
+			// create class selection menu linked to this instance
+			var inst = instance_create_layer(x, y + 250, "layer_players", obj_select_class);
+
+			image_xscale = 1.5;
+			image_yscale = 1.5;
+
+			with (inst) {
+				//give gamepad number (from 0 to 3) to that obj_select_class instance
+			   player_number = other.pad_num;
+		   
+			   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
+			   gamepad_id_receiver = other.gamepad_id_owner;
+			}
+			
+			//tells the Controller that this player is ready
 			obj_control.start_players ++;
 			can_push_start = false;
 		}

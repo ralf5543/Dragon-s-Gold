@@ -1,4 +1,3 @@
-// Script assets have changed for v2.3.0 see
 
 function PlayerState_Attack_Slash(){
 	hsp = 0;
@@ -12,7 +11,7 @@ function PlayerState_Attack_Slash(){
 	}
 	
 	//use attack hitbox and checks for hits
-	mask_index = asset_get_index("spr_" + character + "_attackHB_strip7");//use the attack ùask collision
+	mask_index = asset_get_index("spr_" + character + "_attackHB_strip7");//use the attack mask collision
 	var hitByAttackNow = ds_list_create();
 	var hits = instance_place_list(x, y, obj_player, hitByAttackNow, false);
 	

@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-
 
 function PlayerState_Free(){
 //=======---------- Calculate movements
