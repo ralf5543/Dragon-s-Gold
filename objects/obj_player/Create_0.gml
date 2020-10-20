@@ -22,6 +22,7 @@ hitByAttack = ds_list_create();
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
 
 flash = 0;
+hitfrom = // direction of the incoming attack
 
 image_index = 0;
 
@@ -34,13 +35,20 @@ gamepad_id_owner = 0;// gamepad id recovered from obj_control
 
 // prevails from pushing serveral times on start button
 // and distort the ready players number
-can_push_start = true;
+
 
 //enum : global variable you never want to change
 enum PLAYERSTATE {
 	FREE,
+	HURT,
 	ATTACK_SLASH,
-	ATTACK_COMBO
+	ATTACK_COMBO,
 }
 
+can_push_start = true;
 can_attack = true;
+
+test_hsp = 4;
+test_vsp = -5;
+test_grv = .4;
+done = 0;

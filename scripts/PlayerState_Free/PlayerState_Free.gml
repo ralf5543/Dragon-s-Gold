@@ -1,5 +1,14 @@
 
 function PlayerState_Free(){
+	
+	//reinit the hurt values, so he can be thrown again !
+	test_hsp = 4;
+	test_vsp = -5;
+	test_grv = .4;
+	done = 0;
+	
+	can_attack = true;
+	
 //=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1
 
@@ -70,7 +79,7 @@ function PlayerState_Free(){
 	}
 	
 	// if attacks AND not in the air (jumping or falling)
-	if (key_attack) && (vsp == 0) {
+	if (key_attack) && (vsp == 0) && (state != PLAYERSTATE.HURT) {
 		state = PLAYERSTATE.ATTACK_SLASH;
 	}
 }

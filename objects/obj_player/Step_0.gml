@@ -58,6 +58,10 @@ if (room == rm_start) {
 		PlayerState_Free();
 		break;
 		
+		case PLAYERSTATE.HURT : 
+		PlayerState_Hurt();
+		break;
+		
 		case PLAYERSTATE.ATTACK_SLASH : 
 		PlayerState_Attack_Slash()
 		break;
@@ -66,4 +70,5 @@ if (room == rm_start) {
 		PlayerState_Attach_Combo();
 		break;
 	}
+	
 }

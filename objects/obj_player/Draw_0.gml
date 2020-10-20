@@ -9,3 +9,14 @@ if (flash > 0) {
 	draw_self();
 	shader_reset();//prevents the shader to apply to all
 };
+
+if (room != rm_start) {
+
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(x - 10, y - 70, "Player " + string(pad_num + 1));
+	draw_text(x - 10, y - 50, "Class " + string(character));
+	
+	draw_text(x - 10, y - 100, "state " + string(state));
+	draw_text(x - 10, y - 80, "done " + string(done));
+}

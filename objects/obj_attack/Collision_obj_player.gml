@@ -5,6 +5,8 @@ if (can_hit == true) {//so apply only once
 
 	with (other) {
 		flash = 10;
+		//hitfrom = other.direction;
+		state = PLAYERSTATE.HURT;
 	}
 	can_hit = false;
 }
