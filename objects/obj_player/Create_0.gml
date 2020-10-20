@@ -21,6 +21,8 @@ hitByAttack = ds_list_create();
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
 
+flash = 0;
+
 image_index = 0;
 
 //Gamepad number (starting with 0)
@@ -40,3 +42,5 @@ enum PLAYERSTATE {
 	ATTACK_SLASH,
 	ATTACK_COMBO
 }
+
+can_attack = true;
