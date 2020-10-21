@@ -2,10 +2,10 @@
 function PlayerState_Free(){
 	
 	//reinit the hurt values, so he can be thrown again !
-	test_hsp = 4;
-	test_vsp = -5;
-	test_grv = .4;
-	done = 0;
+	hurt_hsp = 4;
+	hurt_vsp = -5;
+	hurt_grv = .4;
+	hurt_done = 0;
 	
 	can_attack = true;
 	

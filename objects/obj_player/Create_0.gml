@@ -48,7 +48,8 @@ enum PLAYERSTATE {
 can_push_start = true;
 can_attack = true;
 
-test_hsp = 4;
-test_vsp = -5;
-test_grv = .4;
-done = 0;
+// used to "throw" the hit player
+hurt_hsp = 4;
+hurt_vsp = -5;
+hurt_grv = .4;
+hurt_done = 0;

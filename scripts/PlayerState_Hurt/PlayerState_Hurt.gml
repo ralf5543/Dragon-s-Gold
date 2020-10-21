@@ -10,43 +10,43 @@ function PlayerState_Hurt(){
 		image_speed = 0;
 	}
 	
-	if (done == 0) {
+	if (hurt_done == 0) {
 		
-		test_vsp += test_grv; //contuously accelerates bottom move
+		hurt_vsp += hurt_grv; //contuously accelerates bottom move
 
 
 		//=======---------- horizontal collisions
 		// detects a collision at (x + hsp) distance
-		if (place_meeting(x + test_hsp, y, obj_wall)) {
+		if (place_meeting(x + hurt_hsp, y, obj_wall)) {
 
 			//while detects NO collision at 1px (sign(hsp), so 1 and -1) x distance
-			while (!place_meeting(x + sign(test_hsp), y, obj_wall)) {
+			while (!place_meeting(x + sign(hurt_hsp), y, obj_wall)) {
 				//move from the "rest" to be the closest as possible from collision
-			    x += sign(test_hsp);
+			    x += sign(hurt_hsp);
 			}
-			hsp = 0;
+			hurt_hsp = 0;
 		}
 
-		x += test_hsp;
+		x += hurt_hsp;
 
 		//=======---------- vertical collisions
 		// detects a collision at (y + vsp) distance
-		if (place_meeting(x, y + test_vsp, obj_wall)) {
-			if (test_vsp > 1) {// just to stop the condition, and save perfs
-				done = 1;				
+		if (place_meeting(x, y + hurt_vsp, obj_wall)) {
+			if (hurt_vsp > 1) {// just to stop the condition, and save perfs
+				hurt_done = 1;				
 			
 			};
 		
 			//while detects NO collision at 1px (sign(vsp), so 1 and -1) y distance
-			 while (!place_meeting(x, y + sign(test_vsp), obj_wall)) {
+			 while (!place_meeting(x, y + sign(hurt_vsp), obj_wall)) {
 				//move from the "rest" to be the closest as possible from collision
-			    y += sign(test_vsp);
+			    y += sign(hurt_vsp);
 			}
-			test_vsp = 0;
+			hurt_vsp = 0;
 			state = PLAYERSTATE.FREE;
 		}
 
-		y += test_vsp;	
+		y += hurt_vsp;	
 	
 	}
 

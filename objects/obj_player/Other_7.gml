@@ -5,7 +5,3 @@ if (sprite_index == asset_get_index("spr_" + character + "_attack_strip7")) {
 	state = PLAYERSTATE.FREE;
 	can_attack = true;
 }
-
-if (sprite_index == asset_get_index("spr_" + character + "_hurt_strip2")) {
-	//alarm[0] = room_speed;
-}
