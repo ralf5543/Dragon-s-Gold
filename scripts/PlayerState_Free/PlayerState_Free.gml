@@ -14,7 +14,7 @@ function PlayerState_Free(){
 
 	hsp = move * walksp; // changes the direction from -4 (if walkspd = 4), to 4, on X axis.
 	vsp += grv; //contuously accelerates bottom move
-
+	
 	// if detects a collision with wall 1px bellow it (so, if it's on the floor !)
 	//AND jump button is pressed
 	if (place_meeting(x, y + 1, obj_wall)) && (key_jump) {
@@ -39,12 +39,21 @@ function PlayerState_Free(){
 	//=======---------- vertical collisions
 	// detects a collision at (y + vsp) distance
 	if (place_meeting(x, y + vsp, obj_wall)) {
+		if (vsp > .4) {//strange, the vsp seems to be stuck at 0.4, and not 0...
+			if (can_landingSound) {
+				audio_play_sound(snd_landing, 5, false);
+				can_landingSound = false;
+				alarm[1] = 16;
+			}
+		};
+		
 		//while detects NO collision at 1px (sign(vsp), so 1 and -1) y distance
 		 while (!place_meeting(x, y + sign(vsp), obj_wall)) {
 			//move from the "rest" to be the closest as possible from collision
 		    y += sign(vsp);
 		}
 		vsp = 0;
+		
 	}
 
 	y += vsp;
@@ -55,10 +64,13 @@ function PlayerState_Free(){
 		//sprite_index = spr_player_air_strip2;
 		//stops the animation
 		image_speed = 0;
-		if (vsp > 0) {// or if (sign(vsp))
+		
+		//ascendant part from the jump
+		if (vsp > 0) {
 			//select the frame
 		    image_index = 0;
 		}
+		//descendant part from the jump
 		else {
 		    image_index = 1;
 		}
@@ -75,7 +87,13 @@ function PlayerState_Free(){
 	//if moving
 	if (hsp != 0) {
 		facing = sign(hsp);
-	    
+		
+		//if on floor
+		if (can_footStep == true) && (place_meeting(x, y + 1, obj_wall)) {
+			audio_play_sound(choose(snd_footstep1, snd_footstep2, snd_footstep3, snd_footstep4), 1, false);
+			can_footStep = false;
+			alarm[1] = 16;//so 1 sound every 2 frames
+		}
 	}
 	
 	// if attacks AND not in the air (jumping or falling)

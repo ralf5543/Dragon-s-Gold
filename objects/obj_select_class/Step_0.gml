@@ -41,12 +41,9 @@ if (selectClass_control) {
 			if (cursor.x != x) {	
 				cursor.x -= portrait_size;
 				selectClass_cursor --;//select the the previous class
+				MoveCursor();
 			}
 				
-			gamepad_id_receiver.character = selectClass[selectClass_cursor];
-			gamepad_id_receiver.sprite_index = asset_get_index("spr_" + gamepad_id_receiver.character + "_stand_strip2");
-			free_stick = 0;
-		    alarm[0] = room_speed / 6;
 		} 
 		
 		// ========---------------- MOVE TO THE RIGHT
@@ -61,14 +58,9 @@ if (selectClass_control) {
 				if (cursor.x != x + portrait_size * (selectClass_columns - 1)) {	
 					cursor.x += portrait_size;
 					selectClass_cursor ++;//select the the next class
+					MoveCursor();
 				}
 			}
-			
-			
-			gamepad_id_receiver.character = selectClass[selectClass_cursor];
-			gamepad_id_receiver.sprite_index = asset_get_index("spr_" + gamepad_id_receiver.character + "_stand_strip2");
-		    free_stick = 0;
-		    alarm[0] = room_speed / 6;
 		}
 		
 		// ========---------------- MOVE UP
@@ -77,13 +69,10 @@ if (selectClass_control) {
 			// if cursor not on first line of the grid
 			if (cursor.y != y) {	
 				cursor.y -= portrait_size;
-				// select the X preivous class (when X = columns number)
+				// select the X previous class (when X = columns number)
 				selectClass_cursor = selectClass_cursor - selectClass_columns;
+				MoveCursor();
 			}
-			gamepad_id_receiver.character = selectClass[selectClass_cursor];
-			gamepad_id_receiver.sprite_index = asset_get_index("spr_" + gamepad_id_receiver.character + "_stand_strip2");
-		    free_stick = false;
-		    alarm[0] = room_speed / 6;
 		}
 		
 		
@@ -97,13 +86,9 @@ if (selectClass_control) {
 					if (cursor.y != y + (floor(selectClass_items / selectClass_columns)* portrait_size)) {	
 					cursor.y += portrait_size;
 					selectClass_cursor = selectClass_cursor + selectClass_columns;
+					MoveCursor();
 				}
 			}
-			
-			gamepad_id_receiver.character = selectClass[selectClass_cursor];
-			gamepad_id_receiver.sprite_index = asset_get_index("spr_" + gamepad_id_receiver.character + "_stand_strip2");
-		    free_stick = 0;
-		    alarm[0] = room_speed / 6;
 		} 
 	}
 	

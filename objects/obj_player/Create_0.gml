@@ -43,6 +43,9 @@ enum PLAYERSTATE {
 // and distort the ready players number
 can_push_start = true;
 can_attack = true;
+can_footStep = true;
+can_landingSound = true;
+can_hurtSound = true;
 
 hitfrom = undefined // direction of the incoming attack
 

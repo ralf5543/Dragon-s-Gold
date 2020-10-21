@@ -10,6 +10,11 @@ function PlayerState_Hurt(){
 	}
 	
 	if (hurt_done == 0) {
+		if (can_hurtSound) {
+			audio_play_sound(choose(snd_hurt_male1, snd_hurt_male2, snd_hurt_male3), 8, false);
+			can_hurtSound = false;
+			alarm[1] = 32;
+		}
 		
 		hurt_vsp += hurt_grv; //contuously accelerates bottom move
 

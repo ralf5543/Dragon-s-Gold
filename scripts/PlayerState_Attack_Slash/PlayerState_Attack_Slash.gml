@@ -10,6 +10,8 @@ function PlayerState_Attack_Slash(){
 			sprite_index = asset_get_index("spr_" + character + "_attack_strip7");
 			image_index = 0;
 		}
+		
+		audio_play_sound(snd_attack_miss, 6, false);
 	
 		//use attack hitbox and checks for hits
 		var inst = instance_create_layer(x, y, "layer_players", obj_attack);

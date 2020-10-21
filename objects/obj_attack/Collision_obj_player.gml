@@ -1,7 +1,6 @@
 /// @description Hit ennemy
 
 if (can_hit == true) {//so apply only once
-	show_debug_message("Prends ça, vile " + string(other.character));
 
 	with (other) {
 		if (point_direction(other.x, other.y, x, y) > 90) {
@@ -11,6 +10,8 @@ if (can_hit == true) {//so apply only once
 		}
 		facing = -hitfrom;//(faces the origin of the attack)
 		flash = 10;
+		
+		audio_play_sound(snd_smash, 7, false);
 		
 		state = PLAYERSTATE.HURT;
 		
