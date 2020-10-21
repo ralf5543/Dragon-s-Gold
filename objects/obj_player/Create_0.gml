@@ -17,12 +17,10 @@ grv = .4; // gravity
 walksp = 4; // walk speed
 
 state = PLAYERSTATE.FREE;
-hitByAttack = ds_list_create();
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
 
 flash = 0;
-hitfrom = // direction of the incoming attack
 
 image_index = 0;
 
@@ -33,23 +31,24 @@ pad_num = 0;
 character = "No class";
 gamepad_id_owner = 0;// gamepad id recovered from obj_control
 
-// prevails from pushing serveral times on start button
-// and distort the ready players number
-
 
 //enum : global variable you never want to change
 enum PLAYERSTATE {
 	FREE,
 	HURT,
 	ATTACK_SLASH,
-	ATTACK_COMBO,
 }
 
+// prevails from pushing serveral times on start button
+// and distort the ready players number
 can_push_start = true;
 can_attack = true;
+
+hitfrom = undefined // direction of the incoming attack
 
 // used to "throw" the hit player
 hurt_hsp = 4;
 hurt_vsp = -5;
 hurt_grv = .4;
 hurt_done = 0;
+

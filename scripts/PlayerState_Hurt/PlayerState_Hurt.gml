@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function PlayerState_Hurt(){
 
 	can_attack = false;
@@ -17,17 +16,17 @@ function PlayerState_Hurt(){
 
 		//=======---------- horizontal collisions
 		// detects a collision at (x + hsp) distance
-		if (place_meeting(x + hurt_hsp, y, obj_wall)) {
+		if (place_meeting(x + (hurt_hsp * hitfrom), y, obj_wall)) {
 
 			//while detects NO collision at 1px (sign(hsp), so 1 and -1) x distance
-			while (!place_meeting(x + sign(hurt_hsp), y, obj_wall)) {
+			while (!place_meeting(x + sign(hurt_hsp * hitfrom), y, obj_wall)) {
 				//move from the "rest" to be the closest as possible from collision
-			    x += sign(hurt_hsp);
+			    x += sign(hurt_hsp * hitfrom);
 			}
 			hurt_hsp = 0;
 		}
 
-		x += hurt_hsp;
+		x += hurt_hsp * hitfrom;// the player will be thrown to the left or the right
 
 		//=======---------- vertical collisions
 		// detects a collision at (y + vsp) distance

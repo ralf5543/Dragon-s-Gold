@@ -65,10 +65,7 @@ if (room == rm_start) {
 		case PLAYERSTATE.ATTACK_SLASH : 
 		PlayerState_Attack_Slash()
 		break;
-		
-		case PLAYERSTATE.ATTACK_COMBO : 
-		PlayerState_Attach_Combo();
-		break;
+
 	}
 	
 }
