@@ -98,6 +98,6 @@ function PlayerState_Free(){
 	
 	// if attacks AND not in the air (jumping or falling)
 	if (key_attack) && (vsp == 0) && (state != PLAYERSTATE.HURT) {
-		state = PLAYERSTATE.ATTACK_SLASH;
+		state = PLAYERSTATE.ATTACK;
 	}
 }

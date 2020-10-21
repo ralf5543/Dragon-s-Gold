@@ -1,5 +1,5 @@
 
-function PlayerState_Attack_Slash(){
+function PlayerState_Attack(){
 	hsp = 0;
 	vsp = 0;
 	
@@ -11,6 +11,7 @@ function PlayerState_Attack_Slash(){
 			image_index = 0;
 		}
 		
+		audio_sound_pitch(snd_attack_miss, choose(.8, 1, 1.2));//change the "bass" of the sound
 		audio_play_sound(snd_attack_miss, 6, false);
 	
 		//use attack hitbox and checks for hits

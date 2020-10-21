@@ -36,7 +36,7 @@ gamepad_id_owner = 0;// gamepad id recovered from obj_control
 enum PLAYERSTATE {
 	FREE,
 	HURT,
-	ATTACK_SLASH,
+	ATTACK,
 }
 
 // prevails from pushing serveral times on start button

@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerState_Attack_Slash",
+  "name": "PlayerState_Attack",
   "tags": [],
   "resourceType": "GMScript",
 }
