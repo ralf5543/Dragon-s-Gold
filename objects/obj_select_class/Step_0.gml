@@ -92,11 +92,9 @@ if (selectClass_control) {
 		} 
 	}
 	
-	
-
-	
 	// A button to valid player's choice
 	if (gamepad_button_check_pressed(player_number, gp_face1)) {
+		audio_play_sound(snd_tada, 8, false);
 		selectClass_control = false;// deactive the class selector		
 		gamepad_id_receiver.character = selectClass[selectClass_cursor];// gives the character the selected class
 		obj_control.ready_players ++;//tells the Controller that 1 more player pushed the start button
