@@ -32,6 +32,7 @@ if (room == rm_start) {
 			// create class selection menu linked to this instance
 			var inst = instance_create_layer(x, y + 250, "layer_players", obj_select_class);
 			
+			audio_sound_pitch(snd_start, choose(.8, 1, 1.2));
 			audio_play_sound(snd_start, 10, false);
 
 			image_xscale = 1.5;

@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Create views
 
 	var width = 2048, height = 1024, scale = 1;
 
@@ -46,7 +45,7 @@
 		}
 		// if 3 players
 		if(i == 2) {
-			//First player gets a big screen
+			//First player gets a bigger screen
 			view_set_xport(0, 0);
 			view_set_yport(0, 0);
 			view_set_wport(0, width);

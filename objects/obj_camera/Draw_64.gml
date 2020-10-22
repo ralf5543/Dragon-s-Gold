@@ -1,4 +1,4 @@
-/// @description Slit screens separators
+/// @description Split screens separators
 
 if (playerCount > 1) {
     draw_rectangle_color(0, (room_height / 2) - 4, room_width, (room_height / 2) + 4, c_black, c_black, c_black, c_black, false);
