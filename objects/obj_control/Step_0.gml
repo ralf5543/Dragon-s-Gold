@@ -10,8 +10,6 @@ if (room == rm_start) {
 				instance_destroy();
 			}				
 		}
-		show_debug_message("ready_players: " + string(ready_players));
-		show_debug_message("start_players: " + string(start_players));
 
 	    room_goto_next();
 	}

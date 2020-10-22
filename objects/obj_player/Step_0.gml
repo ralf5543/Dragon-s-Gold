@@ -65,6 +65,10 @@ if (room == rm_start) {
 		PlayerState_Hurt();
 		break;
 		
+		case PLAYERSTATE.DEAD : 
+		PlayerState_Dead();
+		break;
+		
 		case PLAYERSTATE.ATTACK : 
 		PlayerState_Attack()
 		break;

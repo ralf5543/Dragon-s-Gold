@@ -47,17 +47,17 @@ function PlayerState_Hurt(){
 			    y += sign(hurt_vsp);
 			}
 			hurt_vsp = 0;
-			state = PLAYERSTATE.FREE;
+			if (hp > 0) {
+				state = PLAYERSTATE.FREE;
+			} else {
+				state = PLAYERSTATE.DEAD;
+			}
 		}
 
 		y += hurt_vsp;	
 	
 	}
 	
-	if (hp <= 0) {
-		sprite_index = asset_get_index("spr_" + character + "_die_strip6");
-		hsp = 0;
-		vsp = 0;
-	}
+	
 
 }
