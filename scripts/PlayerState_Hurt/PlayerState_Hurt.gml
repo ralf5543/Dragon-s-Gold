@@ -53,5 +53,11 @@ function PlayerState_Hurt(){
 		y += hurt_vsp;	
 	
 	}
+	
+	if (hp <= 0) {
+		sprite_index = asset_get_index("spr_" + character + "_die_strip6");
+		hsp = 0;
+		vsp = 0;
+	}
 
 }
