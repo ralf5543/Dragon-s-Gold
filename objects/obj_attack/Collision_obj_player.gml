@@ -14,6 +14,7 @@ if (can_hit == true) {//so apply only once
 		audio_play_sound(snd_smash, 7, false);
 		
 		state = PLAYERSTATE.HURT;
+		hp -= 10;
 		
 	}
 	can_hit = false;
