@@ -16,7 +16,7 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
-hp = 10;
+hp = 50;
 hp_max = hp;
 
 state = PLAYERSTATE.FREE;
