@@ -41,12 +41,12 @@ if (room != rm_start) {
 
 			// Player 2
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + player2.character), 0, gui_margin, gui_margin + (room_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + player2.character), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
-			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (room_height / 2));
-			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (room_height / 2), (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
-			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (room_height / 2));
+			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2));
+			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (global.surface_height / 2), (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
+			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (global.surface_height / 2));
 
 		
 		//===============---------------- 3 players

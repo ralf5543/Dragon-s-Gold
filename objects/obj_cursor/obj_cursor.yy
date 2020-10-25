@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Select_screen",
+    "path": "folders/Objects/Select_screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_cursor",

@@ -1,7 +1,5 @@
 
 function PlayerState_Attack(){
-	hsp = 0;
-	vsp = 0;
 	
 	if (can_attack == true) {
 
