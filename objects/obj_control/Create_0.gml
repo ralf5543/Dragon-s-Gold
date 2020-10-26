@@ -17,7 +17,7 @@ total_pads = 0;// number of plugged gamepads
 start_players = 0;// number of players who pushed Start
 ready_players = 0;// number of players who selected their character
 
-
+toto = true;
 
 
 //list of all castle rooms objets, used or not

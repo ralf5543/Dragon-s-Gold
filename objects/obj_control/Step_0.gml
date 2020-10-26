@@ -14,5 +14,14 @@ if (room == rm_start) {
 	    room_goto_next();
 		
 	}
+} else {
+	if (toto) {
+	   show_debug_message("instance_number(obj_door): " + string(instance_number(obj_door)));
+	   
+	   for (var i = 0; i < instance_number(obj_door); i ++) {
+		   instance_find(obj_door, i).door_number = i;
+	   }
+	   
+	   toto = false;
+	}
 }
-

@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-hall_id_receiver = undefined;
-
-side = undefined;
-
-door_number = undefined;
+hall_x = 0;
+hall_y = 448;
+hall_name = "Salle C";
