@@ -71,12 +71,12 @@ if (room != rm_start) {
 			healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + player2.character), 0, gui_margin, gui_margin + (room_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + player2.character), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
-			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (room_height / 2));
-			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (room_height / 2), (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
-			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (room_height / 2));		
+			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2));
+			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (global.surface_height / 2), (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
+			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (global.surface_height / 2));		
 
 			//=====----- Player 3
 			gui_zoom = .5;
@@ -84,12 +84,12 @@ if (room != rm_start) {
 			healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + player3.character), 0, gui_margin + (room_width / 2), gui_margin + (room_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + player3.character), 0, gui_margin + (global.surface_width / 2), gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
-			draw_sprite(spr_healthBackground, 0, healthbar_x + (room_width / 2), healthbar_y + (room_height / 2));
-			draw_sprite_stretched(spr_healthBar, 0, healthbar_x + (room_width / 2), healthbar_y + (room_height / 2), (player3.hp / player3.hp_max) * healthbar_width, healthbar_height);
-			draw_sprite(spr_healthBorder, 0, healthbar_x + (room_width / 2), healthbar_y + (room_height / 2));
+			draw_sprite(spr_healthBackground, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2));
+			draw_sprite_stretched(spr_healthBar, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2), (player3.hp / player3.hp_max) * healthbar_width, healthbar_height);
+			draw_sprite(spr_healthBorder, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2));
 
 		//===============---------------- 4 players
 		} else {
@@ -115,12 +115,12 @@ if (room != rm_start) {
 				healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 			
 				//Portrait
-				draw_sprite_ext(asset_get_index("spr_portrait_" + player2.character), 0, gui_margin + (room_width / 2), gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
+				draw_sprite_ext(asset_get_index("spr_portrait_" + player2.character), 0, gui_margin + (global.surface_width / 2), gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 				//healthbar
-				draw_sprite(spr_healthBackground, 0, healthbar_x + (room_width / 2), healthbar_y);
-				draw_sprite_stretched(spr_healthBar, 0, healthbar_x + (room_width / 2), healthbar_y, (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
-				draw_sprite(spr_healthBorder, 0, healthbar_x + (room_width / 2), healthbar_y);	
+				draw_sprite(spr_healthBackground, 0, healthbar_x + (global.surface_width / 2), healthbar_y);
+				draw_sprite_stretched(spr_healthBar, 0, healthbar_x + (global.surface_width / 2), healthbar_y, (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
+				draw_sprite(spr_healthBorder, 0, healthbar_x + (global.surface_width / 2), healthbar_y);	
 			}
 		
 			// Player 3
@@ -130,12 +130,12 @@ if (room != rm_start) {
 				healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 			
 				//Portrait
-				draw_sprite_ext(asset_get_index("spr_portrait_" + player3.character), 0, gui_margin, gui_margin + (room_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+				draw_sprite_ext(asset_get_index("spr_portrait_" + player3.character), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 				//healthbar
-				draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (room_height / 2));
-				draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (room_height / 2), (player3.hp / player3.hp_max) * healthbar_width, healthbar_height);
-				draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (room_height / 2));	
+				draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2));
+				draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (global.surface_height / 2), (player3.hp / player3.hp_max) * healthbar_width, healthbar_height);
+				draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (global.surface_height / 2));	
 			}
 		
 			// Player 4
@@ -145,12 +145,12 @@ if (room != rm_start) {
 				healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 			
 				//Portrait
-				draw_sprite_ext(asset_get_index("spr_portrait_" + player4.character), 0, gui_margin + (room_width / 2), gui_margin + (room_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+				draw_sprite_ext(asset_get_index("spr_portrait_" + player4.character), 0, gui_margin + (global.surface_width / 2), gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 				//healthbar
-				draw_sprite(spr_healthBackground, 0, healthbar_x + (room_width / 2), healthbar_y + (room_height / 2));
-				draw_sprite_stretched(spr_healthBar, 0, healthbar_x + (room_width / 2), healthbar_y + (room_height / 2), (player4.hp / player4.hp_max) * healthbar_width, healthbar_height);
-				draw_sprite(spr_healthBorder, 0, healthbar_x + (room_width / 2), healthbar_y + (room_height / 2));	
+				draw_sprite(spr_healthBackground, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2));
+				draw_sprite_stretched(spr_healthBar, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2), (player4.hp / player4.hp_max) * healthbar_width, healthbar_height);
+				draw_sprite(spr_healthBorder, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2));	
 			}
 		}
 	}

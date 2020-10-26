@@ -75,4 +75,6 @@ if (room == rm_start) {
 
 	}
 	
+	//show_debug_message("door_A_left (player): " + string(obj_control.hall_A.door_left));
+	
 }

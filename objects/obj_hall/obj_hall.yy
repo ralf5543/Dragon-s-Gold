@@ -18,8 +18,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_hall_C","path":"objects/obj_hall_C/obj_hall_C.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_hall_C","path":"objects/obj_hall_C/obj_hall_C.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_hall","path":"objects/obj_hall/obj_hall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_hall","path":"objects/obj_hall/obj_hall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -28,7 +28,7 @@
     "path": "folders/Objects/level_design.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_hall_C",
+  "name": "obj_hall",
   "tags": [],
   "resourceType": "GMObject",
 }

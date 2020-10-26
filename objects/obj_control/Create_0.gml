@@ -1,7 +1,11 @@
 /// @description Gamepads detection
 randomize();
 
+global.surface_width = surface_get_width(application_surface);
+global.surface_height = surface_get_height(application_surface);
+
 window_set_fullscreen(true);
+
 for (var i = 0; i < 12; i++;) {
 	player[i] = noone;
 }
@@ -13,8 +17,11 @@ total_pads = 0;// number of plugged gamepads
 start_players = 0;// number of players who pushed Start
 ready_players = 0;// number of players who selected their character
 
+
+
+
 //list of all castle rooms objets, used or not
-halls_list = ds_list_create();
+/*halls_list = ds_list_create();
 ds_list_add(halls_list, obj_hall_A);
 ds_list_add(halls_list, obj_hall_B);
 ds_list_add(halls_list, obj_hall_C);
@@ -24,7 +31,5 @@ ds_list_shuffle(halls_list);
 ds_list_delete(halls_list, 2);
 
 //get the numver of halls used
-halls_list_size = ds_list_size(halls_list);
+halls_list_size = ds_list_size(halls_list);*/
 
-global.surface_width = surface_get_width(application_surface);
-global.surface_height = surface_get_height(application_surface);
