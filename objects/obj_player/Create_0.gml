@@ -6,6 +6,7 @@ key_left = 0;
 key_right = 0;
 key_up = 0;
 key_down = 0;
+key_run = 0;
 key_jump = 0;
 key_attack = 0;
 key_start = 0;
@@ -16,8 +17,11 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
-hp = 50;
+hp = 50;// Life points
 hp_max = hp;
+
+energy = 250;
+energy_max = energy;
 
 state = PLAYERSTATE.FREE;
 
@@ -62,4 +66,6 @@ hurt_done = 0;
 gui_margin = 20;
 healthbar_width = 248;//256 - border
 healthbar_height = 24;//36 - border
+energybar_width = 192;//256 - border
+energybar_height = 10;//36 - border
 

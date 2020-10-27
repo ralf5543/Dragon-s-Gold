@@ -11,6 +11,12 @@ function PlayerState_Free(){
 	
 //=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1
+	if (key_run) && (energy > 0) {
+		walksp = 8;
+		energy --;
+	} else {
+		walksp = 4;
+	}
 
 	hsp = move * walksp; // changes the direction from -4 (if walkspd = 4), to 4, on X axis.
 	vsp += grv; //contuously accelerates bottom move

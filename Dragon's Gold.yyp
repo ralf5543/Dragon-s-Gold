@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_energyBar","path":"sprites/spr_energyBar/spr_energyBar.yy",},"order":27,},
     {"id":{"name":"spr_portrait_ranger","path":"sprites/spr_portrait_ranger/spr_portrait_ranger.yy",},"order":2,},
     {"id":{"name":"PlayerState_Hurt","path":"scripts/PlayerState_Hurt/PlayerState_Hurt.yy",},"order":3,},
     {"id":{"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"order":1,},
@@ -48,6 +49,7 @@
     {"id":{"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"order":1,},
     {"id":{"name":"spr_knight_attackHB_strip7","path":"sprites/spr_knight_attackHB_strip7/spr_knight_attackHB_strip7.yy",},"order":3,},
     {"id":{"name":"spr_healthBackground","path":"sprites/spr_healthBackground/spr_healthBackground.yy",},"order":25,},
+    {"id":{"name":"spr_energyBackground","path":"sprites/spr_energyBackground/spr_energyBackground.yy",},"order":28,},
     {"id":{"name":"PlayerState_Free","path":"scripts/PlayerState_Free/PlayerState_Free.yy",},"order":0,},
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"order":1,},
     {"id":{"name":"MoveCursor","path":"scripts/MoveCursor/MoveCursor.yy",},"order":4,},

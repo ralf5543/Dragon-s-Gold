@@ -12,6 +12,8 @@ if (room != rm_start) {
 		portrait_width = 128 * gui_zoom;
 		healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 		healthbar_y = gui_margin;
+		energybar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
+		energybar_y = (gui_margin * 2) + healthbar_height;
 	
 		//===============---------------- 1 player only
 		if (obj_control.start_players == 1) {
@@ -22,6 +24,10 @@ if (room != rm_start) {
 			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y);
 			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y, (hp / hp_max) * healthbar_width, healthbar_height);
 			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y);			
+		
+			//energyhbar
+			draw_sprite(spr_energyBackground, 0, energybar_x, energybar_y);
+			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y, (energy / energy_max) * energybar_width, energybar_height);
 		}
 		
 		//===============---------------- 2 players

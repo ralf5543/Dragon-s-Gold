@@ -18,6 +18,7 @@ if (abs(gamepad_axis_value(pad_num, gp_axislv)) > .2) {
 	key_down = max(gamepad_axis_value(pad_num, gp_axislv), 0);
 }
 	
+key_run = gamepad_button_check(pad_num, gp_shoulderrb);// Right trigger
 key_jump = gamepad_button_check_pressed(pad_num, gp_face1);// A (green) button
 key_attack = gamepad_button_check_pressed(pad_num, gp_face3);// X (blue) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
@@ -55,6 +56,8 @@ if (room == rm_start) {
 } else {
 		image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
 		image_yscale = 1
+		
+		energy += .2;
 
 	switch (state) {
 		case PLAYERSTATE.FREE : 
