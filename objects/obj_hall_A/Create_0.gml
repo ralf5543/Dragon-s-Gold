@@ -4,3 +4,4 @@
 hall_x = 0;
 hall_y = 448;
 hall_name = "Salle C";
+hall_number = undefined;

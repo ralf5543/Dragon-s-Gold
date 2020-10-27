@@ -2,8 +2,6 @@
 // You can write your code in this editor
 
 hall_x = 0;
-hall_y = 0;
-
-hall_name = undefined;
-
-hall_id_owner = id;
+hall_y = 3904;
+hall_name = "Salle D";
+hall_number = undefined;
