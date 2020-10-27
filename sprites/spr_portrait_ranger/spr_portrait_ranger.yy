@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "portraits",
-    "path": "folders/Sprites/portraits.yy",
+    "path": "folders/Sprites/GUI/portraits.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_portrait_ranger",

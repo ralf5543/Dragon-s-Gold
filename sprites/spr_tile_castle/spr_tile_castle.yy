@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"53914d2a-372a-45df-a589-b8f796285a92","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "level_design",
+    "path": "folders/Sprites/level_design.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_tile_castle",

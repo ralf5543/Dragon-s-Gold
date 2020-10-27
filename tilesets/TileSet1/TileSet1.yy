@@ -67,7 +67,7 @@
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Sprites/Tile Sets.yy",
+    "path": "folders/Sprites/level_design/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
   "name": "TileSet1",

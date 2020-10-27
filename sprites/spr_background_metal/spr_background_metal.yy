@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b6910105-1ed4-4d51-9983-8cc1146c1f2c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "select_screen",
+    "path": "folders/Sprites/select_screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_background_metal",

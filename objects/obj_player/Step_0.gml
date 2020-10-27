@@ -57,7 +57,9 @@ if (room == rm_start) {
 		image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
 		image_yscale = 1
 		
-		energy += .2;
+		 if (energy < energy_max) {
+			energy += .1;
+		 }
 
 	switch (state) {
 		case PLAYERSTATE.FREE : 
@@ -77,7 +79,4 @@ if (room == rm_start) {
 		break;
 
 	}
-	
-	//show_debug_message("door_A_left (player): " + string(obj_control.hall_A.door_left));
-	
 }

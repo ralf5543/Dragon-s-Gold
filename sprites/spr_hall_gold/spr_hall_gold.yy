@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 2047,
   "bbox_top": 0,
-  "bbox_bottom": 0,
+  "bbox_bottom": 693,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 1,
-  "height": 12,
+  "width": 2048,
+  "height": 694,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bd426dbd-d675-4a75-8373-337abb6cd102","path":"sprites/spr_healthBar/spr_healthBar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bd426dbd-d675-4a75-8373-337abb6cd102","path":"sprites/spr_healthBar/spr_healthBar.yy",},"LayerId":{"name":"f5011ced-17ed-4a0b-806f-f878e3734004","path":"sprites/spr_healthBar/spr_healthBar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_healthBar","path":"sprites/spr_healthBar/spr_healthBar.yy",},"resourceVersion":"1.0","name":"bd426dbd-d675-4a75-8373-337abb6cd102","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8b6f6f2c-2209-4cd3-9f17-730828927f4e","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8b6f6f2c-2209-4cd3-9f17-730828927f4e","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},"LayerId":{"name":"b0479794-05a8-4beb-b15f-d3bc4d717d4b","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_hall_gold","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},"resourceVersion":"1.0","name":"8b6f6f2c-2209-4cd3-9f17-730828927f4e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_healthBar","path":"sprites/spr_healthBar/spr_healthBar.yy",},
+    "spriteId": {"name":"spr_hall_gold","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f9b94c0b-44c6-4baa-9a7f-d277674258f3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd426dbd-d675-4a75-8373-337abb6cd102","path":"sprites/spr_healthBar/spr_healthBar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d232bf0f-2cc9-434b-8f80-a257c99aad94","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b6f6f2c-2209-4cd3-9f17-730828927f4e","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_healthBar","path":"sprites/spr_healthBar/spr_healthBar.yy",},
+    "parent": {"name":"spr_hall_gold","path":"sprites/spr_hall_gold/spr_hall_gold.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_healthBar",
+    "name": "spr_hall_gold",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f5011ced-17ed-4a0b-806f-f878e3734004","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b0479794-05a8-4beb-b15f-d3bc4d717d4b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "GUI",
-    "path": "folders/Sprites/GUI.yy",
+    "name": "level_design",
+    "path": "folders/Sprites/level_design.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_healthBar",
+  "name": "spr_hall_gold",
   "tags": [],
   "resourceType": "GMSprite",
 }
