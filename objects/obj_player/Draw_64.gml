@@ -10,8 +10,10 @@ if (room != rm_start) {
 	
 		gui_zoom = 1;// make gui smaller for split screen
 		portrait_width = 128 * gui_zoom;
+		
 		healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 		healthbar_y = gui_margin;
+		
 		energybar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 		energybar_y = (gui_margin * 2) + healthbar_height;
 	
@@ -35,6 +37,7 @@ if (room != rm_start) {
 			gui_zoom = .75;
 			portrait_width = 128 * gui_zoom;
 			healthbar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
+			energybar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 		
 			// Player 1
 			//Portrait
@@ -44,6 +47,10 @@ if (room != rm_start) {
 			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y);
 			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y, (player1.hp / player1.hp_max) * healthbar_width, healthbar_height);
 			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y);	
+			
+			//energyhbar
+			draw_sprite(spr_energyBackground, 0, energybar_x, energybar_y);
+			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y, (player1.energy / player1.energy_max) * energybar_width, energybar_height);
 
 			// Player 2
 			//Portrait
@@ -53,6 +60,10 @@ if (room != rm_start) {
 			draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2));
 			draw_sprite_stretched(spr_healthBar, 0, healthbar_x, healthbar_y + (global.surface_height / 2), (player2.hp / player2.hp_max) * healthbar_width, healthbar_height);
 			draw_sprite(spr_healthBorder, 0, healthbar_x, healthbar_y + (global.surface_height / 2));
+						
+			//energyhbar
+			draw_sprite(spr_energyBackground, 0, energybar_x, energybar_y + (global.surface_height / 2));
+			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y + (global.surface_height / 2), (player1.energy / player1.energy_max) * energybar_width, energybar_height);
 
 		
 		//===============---------------- 3 players

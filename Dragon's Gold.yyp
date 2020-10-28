@@ -6,6 +6,7 @@
     {"id":{"name":"PlayerState_Hurt","path":"scripts/PlayerState_Hurt/PlayerState_Hurt.yy",},"order":3,},
     {"id":{"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"order":1,},
     {"id":{"name":"spr_knight_attack_strip7","path":"sprites/spr_knight_attack_strip7/spr_knight_attack_strip7.yy",},"order":0,},
+    {"id":{"name":"CreateDoors","path":"scripts/CreateDoors/CreateDoors.yy",},"order":6,},
     {"id":{"name":"spr_tile_castle","path":"sprites/spr_tile_castle/spr_tile_castle.yy",},"order":5,},
     {"id":{"name":"spr_ranger_attack_strip7","path":"sprites/spr_ranger_attack_strip7/spr_ranger_attack_strip7.yy",},"order":0,},
     {"id":{"name":"snd_metal3","path":"sounds/snd_metal3/snd_metal3.yy",},"order":6,},

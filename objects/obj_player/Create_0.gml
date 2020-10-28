@@ -20,7 +20,7 @@ walksp = 4; // walk speed
 hp = 50;// Life points
 hp_max = hp;
 
-energy = 250;
+energy = 250;// Energy points (used to run)
 energy_max = energy;
 
 state = PLAYERSTATE.FREE;
@@ -62,7 +62,7 @@ hurt_vsp = -5;
 hurt_grv = .4;
 hurt_done = 0;
 
-// ============---------------- GUI
+// ===================---------------- GUI
 gui_margin = 20;
 healthbar_width = 248;//256 - border
 healthbar_height = 24;//36 - border

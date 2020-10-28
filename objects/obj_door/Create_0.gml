@@ -1,8 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Door variables
 
-hall_id_receiver = undefined;
+side = undefined; // either "left" or "right" door in a hall
 
-side = undefined;
-
-door_number = undefined;
+door_number = undefined;// The nth of the door in existings doors instances

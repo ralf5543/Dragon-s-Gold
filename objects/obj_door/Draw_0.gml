@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Temp drawn infos
+
 draw_self();
 
 if (side == "left") {
