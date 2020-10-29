@@ -5,3 +5,4 @@ hall_y = 5056; // Vertical position of the hall on the Room
 hall_name = "Middle A";
 hall_number = undefined;// number of the hall in the list, after shuffle
 hall_floor = "middle";
+has_stairs = false;

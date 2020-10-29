@@ -1,5 +1,6 @@
 /// @description Doors use
 
+audio_play_sound(snd_door_opened, 5, 0);
 //left door
 if (other.side == "left") {
 	//go to next hall

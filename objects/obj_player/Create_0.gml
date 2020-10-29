@@ -30,7 +30,7 @@ enum PLAYERSTATE {
 	FREE,
 	HURT,
 	DEAD,
-	ATTACK,
+	ATTACK
 }
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
@@ -53,6 +53,7 @@ can_attack = true;
 can_footStep = true;
 can_landingSound = true;
 can_hurtSound = true;
+toto = true;
 
 hitfrom = undefined // direction of the incoming attack
 

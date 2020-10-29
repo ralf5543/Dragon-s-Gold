@@ -77,6 +77,10 @@ if (room == rm_start) {
 		case PLAYERSTATE.ATTACK : 
 		PlayerState_Attack()
 		break;
+		
+		case PLAYERSTATE.STUCK : 
+		PlayerState_Stuck()
+		break;
 
 	}
 }

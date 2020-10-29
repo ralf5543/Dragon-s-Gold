@@ -66,8 +66,15 @@ if (room != rm_start) {
 			hall_ground.hall_number = i;
 		}
 	}
-
 	
+	//creates a staiwary in a randoù hall at each floor
+	ds_list_find_value(halls_roof_list, random(halls_roof_list_size)).has_stairs = true;
+	ds_list_find_value(halls_middle_list, random(halls_middle_list_size)).has_stairs = true;
+	ds_list_find_value(halls_ground_list, random(halls_ground_list_size)).has_stairs = true;
+	
+	
+
+	//==================-------------- Players starting position
 	with (obj_player) {
 		//Places each player in a different used hall, at 1 tile from left of it
 		
@@ -75,8 +82,8 @@ if (room != rm_start) {
 			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
 			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y;
 		} else if (pad_num == 1) {
-			x = ds_list_find_value(other.halls_middle_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_middle_list, pad_num).hall_y;
+			x = ds_list_find_value(other.halls_ground_list, pad_num).hall_x + 128;
+			y = ds_list_find_value(other.halls_ground_list, pad_num).hall_y;
 		} else if (pad_num == 2) {
 			x = ds_list_find_value(other.halls_ground_list, pad_num).hall_x + 128;
 			y = ds_list_find_value(other.halls_ground_list, pad_num).hall_y;

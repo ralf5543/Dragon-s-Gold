@@ -20,8 +20,10 @@ if (room == rm_start) {
 		for (var i = 0; i < instance_number(obj_door); i ++) {
 			instance_find(obj_door, i).door_number = i;
 		}
+		for (var i = 0; i < instance_number(obj_stairway); i ++) {
+			instance_find(obj_stairway, i).stairway_number = i;
+		}
 		
 		door_calculate = false;
 	}
-
 }
