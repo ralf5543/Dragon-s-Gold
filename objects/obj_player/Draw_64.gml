@@ -63,7 +63,7 @@ if (room != rm_start) {
 						
 			//energyhbar
 			draw_sprite(spr_energyBackground, 0, energybar_x, energybar_y + (global.surface_height / 2));
-			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y + (global.surface_height / 2), (player1.energy / player1.energy_max) * energybar_width, energybar_height);
+			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y + (global.surface_height / 2), (player2.energy / player2.energy_max) * energybar_width, energybar_height);
 
 		
 		//===============---------------- 3 players

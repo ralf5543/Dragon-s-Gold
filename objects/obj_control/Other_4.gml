@@ -3,38 +3,83 @@
 
 if (room != rm_start) {
 
-	//list of all castle rooms objets, used or not
-	halls_list = ds_list_create();
-	ds_list_add(halls_list, obj_hall_A);
-	ds_list_add(halls_list, obj_hall_B);
-	ds_list_add(halls_list, obj_hall_C);
-	ds_list_add(halls_list, obj_hall_D);
+	//list of all castle roof rooms objets, used or not
+	halls_roof_list = ds_list_create();
+	ds_list_add(halls_roof_list, obj_hall_roof_A);
+	ds_list_add(halls_roof_list, obj_hall_roof_B);
+	ds_list_add(halls_roof_list, obj_hall_roof_C);
+	ds_list_add(halls_roof_list, obj_hall_roof_D);
+
+	//list of all castle middle rooms objets, used or not
+	halls_middle_list = ds_list_create();
+	ds_list_add(halls_middle_list, obj_hall_middle_A);
+	ds_list_add(halls_middle_list, obj_hall_middle_B);
+	ds_list_add(halls_middle_list, obj_hall_middle_C);
+	ds_list_add(halls_middle_list, obj_hall_middle_D);
+
+	//list of all castle ground rooms objets, used or not
+	halls_ground_list = ds_list_create();
+	ds_list_add(halls_ground_list, obj_hall_ground_A);
+	ds_list_add(halls_ground_list, obj_hall_ground_B);
+	ds_list_add(halls_ground_list, obj_hall_ground_C);
+	ds_list_add(halls_ground_list, obj_hall_ground_D);
 
 	//shuffle the list and remove (actually) the last of them
-	ds_list_shuffle(halls_list);
-	ds_list_delete(halls_list, 2);
+	ds_list_shuffle(halls_roof_list);
+	ds_list_delete(halls_roof_list, 3);
 	
-	show_debug_message("halls_list: " + string(halls_list));
+	ds_list_shuffle(halls_middle_list);
+	ds_list_delete(halls_middle_list, 3);
+	
+	ds_list_shuffle(halls_ground_list);
+	ds_list_delete(halls_ground_list, 3);
+
 
 	//get the number of halls used
-	halls_list_size = ds_list_size(halls_list);
-	show_debug_message("halls_list_size: " + string(halls_list_size));
-	
+	halls_roof_list_size = ds_list_size(halls_roof_list);	
+	halls_middle_list_size = ds_list_size(halls_middle_list);	
+	halls_ground_list_size = ds_list_size(halls_ground_list);	
 		
 	// Create halls objects instances
-	for (var i = 0; i < halls_list_size; i ++) {
-		show_debug_message("ds_list_find_value(halls_list, i): " + string(ds_list_find_value(halls_list, i)));
+	for (var i = 0; i < halls_roof_list_size; i ++) {
 
-		if (!instance_exists(ds_list_find_value(halls_list, i))) {
-			hall = instance_create_layer(x, y, "layer_walls", ds_list_find_value(halls_list, i));
-			hall.hall_number = i;
+		if (!instance_exists(ds_list_find_value(halls_roof_list, i))) {
+			hall_roof = instance_create_layer(x, y, "layer_walls", ds_list_find_value(halls_roof_list, i));
+			hall_roof.hall_number = i;
+		}
+	}
+		
+	// Create halls objects instances
+	for (var i = 0; i < halls_middle_list_size; i ++) {
+
+		if (!instance_exists(ds_list_find_value(halls_middle_list, i))) {
+			hall_middle = instance_create_layer(x, y, "layer_walls", ds_list_find_value(halls_middle_list, i));
+			hall_middle.hall_number = i;
+		}
+	}
+		
+	// Create halls objects instances
+	for (var i = 0; i < halls_ground_list_size; i ++) {
+
+		if (!instance_exists(ds_list_find_value(halls_ground_list, i))) {
+			hall_ground = instance_create_layer(x, y, "layer_walls", ds_list_find_value(halls_ground_list, i));
+			hall_ground.hall_number = i;
 		}
 	}
 
 	
 	with (obj_player) {
 		//Places each player in a different used hall, at 1 tile from left of it
-		x = ds_list_find_value(other.halls_list, pad_num).hall_x + 128;
-		y = ds_list_find_value(other.halls_list, pad_num).hall_y;
+		
+		if (pad_num == 0) {			
+			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
+			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y;
+		} else if (pad_num == 1) {
+			x = ds_list_find_value(other.halls_middle_list, pad_num).hall_x + 128;
+			y = ds_list_find_value(other.halls_middle_list, pad_num).hall_y;
+		} else if (pad_num == 2) {
+			x = ds_list_find_value(other.halls_ground_list, pad_num).hall_x + 128;
+			y = ds_list_find_value(other.halls_ground_list, pad_num).hall_y;
+		}
 	}	
 }
