@@ -10,6 +10,7 @@ key_run = 0;
 key_jump = 0;
 key_attack = 0;
 key_special = 0;
+key_special_released = 0;
 key_start = 0;
 
 
@@ -32,7 +33,8 @@ enum PLAYERSTATE {
 	HURT,
 	DEAD,
 	ATTACK,
-	SPECIAL
+	SPECIAL,
+	SPECIAL_LONG
 }
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)

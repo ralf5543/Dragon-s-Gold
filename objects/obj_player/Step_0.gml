@@ -22,6 +22,7 @@ key_run = gamepad_button_check(pad_num, gp_shoulderrb);// Right trigger
 key_jump = gamepad_button_check_pressed(pad_num, gp_face1);// A (green) button
 key_attack = gamepad_button_check_pressed(pad_num, gp_face3);// X (blue) button
 key_special = gamepad_button_check_pressed(pad_num, gp_face2);// B (red) button
+key_special_released = gamepad_button_check_released(pad_num, gp_face2);// B (red) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
 
 // used only for characters selection screen
@@ -87,9 +88,17 @@ if (room == rm_start) {
 		
 		case PLAYERSTATE.SPECIAL : 
 		if (character == "ranger") {
-			PlayerState_Ranger_Special();
+			PlayerState_Ranger_Special();			
+		} else if (character == "knight") {
+			PlayerState_Knight_Special();
 		}
 		break;
-
+	}
+	
+	if (state != PLAYERSTATE.SPECIAL) && (character == "knight") {
+		// todo : verify in a game with several knights
+		if (instance_exists(obj_shield)) {
+			instance_destroy(obj_shield);
+		}
 	}
 }

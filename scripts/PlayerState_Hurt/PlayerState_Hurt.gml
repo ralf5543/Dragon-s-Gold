@@ -47,6 +47,7 @@ function PlayerState_Hurt(){
 			    y += sign(hurt_vsp);
 			}
 			hurt_vsp = 0;
+			
 			if (hp > 0) {
 				state = PLAYERSTATE.FREE;
 			} else {
@@ -57,7 +58,5 @@ function PlayerState_Hurt(){
 		y += hurt_vsp;	
 	
 	}
-	
-	
 
 }

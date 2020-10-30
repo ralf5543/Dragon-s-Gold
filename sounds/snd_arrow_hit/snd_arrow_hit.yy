@@ -13,8 +13,8 @@
   "soundFile": "snd_arrow_hit.wav",
   "duration": 0.299376,
   "parent": {
-    "name": "attack",
-    "path": "folders/Sounds/characters/attack.yy",
+    "name": "ranger",
+    "path": "folders/Sounds/characters/ranger.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_arrow_hit",
