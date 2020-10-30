@@ -9,6 +9,7 @@ key_down = 0;
 key_run = 0;
 key_jump = 0;
 key_attack = 0;
+key_special = 0;
 key_start = 0;
 
 
@@ -30,10 +31,12 @@ enum PLAYERSTATE {
 	FREE,
 	HURT,
 	DEAD,
-	ATTACK
+	ATTACK,
+	SPECIAL
 }
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
+player_orientation = 0;// used by attacks direction
 
 flash = 0;
 
@@ -53,7 +56,6 @@ can_attack = true;
 can_footStep = true;
 can_landingSound = true;
 can_hurtSound = true;
-toto = true;
 
 hitfrom = undefined // direction of the incoming attack
 
@@ -70,3 +72,4 @@ healthbar_height = 24;//36 - border
 energybar_width = 192;//256 - border
 energybar_height = 10;//36 - border
 
+hitten_by_arrow = undefined;

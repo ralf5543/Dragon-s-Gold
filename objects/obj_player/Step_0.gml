@@ -21,6 +21,7 @@ if (abs(gamepad_axis_value(pad_num, gp_axislv)) > .2) {
 key_run = gamepad_button_check(pad_num, gp_shoulderrb);// Right trigger
 key_jump = gamepad_button_check_pressed(pad_num, gp_face1);// A (green) button
 key_attack = gamepad_button_check_pressed(pad_num, gp_face3);// X (blue) button
+key_special = gamepad_button_check_pressed(pad_num, gp_face2);// B (red) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
 
 // used only for characters selection screen
@@ -57,6 +58,12 @@ if (room == rm_start) {
 		image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
 		image_yscale = 1
 		
+		 if (facing == 1) {
+			player_orientation = 0;
+		 } else {
+			 player_orientation = 180;
+		 }
+		
 		 if (energy < energy_max) {
 			energy += .1;
 		 }
@@ -75,11 +82,13 @@ if (room == rm_start) {
 		break;
 		
 		case PLAYERSTATE.ATTACK : 
-		PlayerState_Attack()
+		PlayerState_Attack();
 		break;
 		
-		case PLAYERSTATE.STUCK : 
-		PlayerState_Stuck()
+		case PLAYERSTATE.SPECIAL : 
+		if (character == "ranger") {
+			PlayerState_Ranger_Special();
+		}
 		break;
 
 	}

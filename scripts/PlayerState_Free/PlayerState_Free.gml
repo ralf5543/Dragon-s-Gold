@@ -104,6 +104,14 @@ function PlayerState_Free(){
 	
 	// if attacks AND not in the air (jumping or falling) AND not hurt
 	if (key_attack) && (place_meeting(x, y + 1, obj_wall)) && (state != PLAYERSTATE.HURT) {
+		show_debug_message("attack");
 		state = PLAYERSTATE.ATTACK;
+	}
+	
+	// if attacks AND not in the air (jumping or falling) AND not hurt
+	if (key_special) && (place_meeting(x, y + 1, obj_wall)) && (state != PLAYERSTATE.HURT) {
+		show_debug_message("special");
+		state = PLAYERSTATE.SPECIAL;
+	
 	}
 }

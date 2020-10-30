@@ -1,7 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description Stairs use
 	
+	//go downstairs
 if (gamepad_button_check_pressed(pad_num, gp_padd)) {
 
 	if (other.stairway_floor == "roof") || (other.stairway_floor == "middle") {
@@ -10,7 +9,7 @@ if (gamepad_button_check_pressed(pad_num, gp_padd)) {
 		y = instance_find(obj_stairway, other.stairway_number + 1).y + 64;
 	}
 			
-	
+	//go upstairs
 } else if (gamepad_button_check_pressed(pad_num, gp_padu)) {
 
 	if (other.stairway_floor == "ground") || (other.stairway_floor == "middle") {
