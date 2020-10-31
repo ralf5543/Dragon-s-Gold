@@ -12,7 +12,7 @@ function PlayerState_Ranger_Special(){
 		audio_sound_pitch(snd_bow, choose(.8, 1, 1.2));//change the "bass" of the sound
 		audio_play_sound(snd_bow, 6, false);
 	
-		//use attack hitbox and checks for hits
+		//use ranger hitbox
 		var inst = instance_create_layer(x, y + 16, "layer_players", obj_arrow);
 		with (inst) {
 			speed = 16;

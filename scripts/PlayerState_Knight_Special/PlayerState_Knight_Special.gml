@@ -12,7 +12,10 @@ function PlayerState_Knight_Special(){
 	
 		//use attack hitbox and checks for hits
 		shield = instance_create_layer(x, y, "layer_players", obj_shield);
-		shield.image_xscale = facing;	
+		with (shield) {
+			sprite_index = spr_knight_shieldHB_strip8;
+			image_xscale = other.facing;
+		}
 		
 		can_attack = false;
 	}

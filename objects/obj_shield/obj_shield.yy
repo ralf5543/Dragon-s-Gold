@@ -1,10 +1,7 @@
 {
-  "spriteId": {
-    "name": "spr_knight_shieldHB_strip8",
-    "path": "sprites/spr_knight_shieldHB_strip8/spr_knight_shieldHB_strip8.yy",
-  },
-  "solid": true,
-  "visible": true,
+  "spriteId": null,
+  "solid": false,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
