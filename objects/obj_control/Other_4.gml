@@ -80,13 +80,13 @@ if (room != rm_start) {
 		
 		if (pad_num == 0) {			
 			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y;
+			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
 		} else if (pad_num == 1) {
 			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y;
+			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
 		} else if (pad_num == 2) {
 			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y;
+			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
 		}
 	}	
 }

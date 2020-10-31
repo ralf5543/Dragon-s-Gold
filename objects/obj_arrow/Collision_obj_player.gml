@@ -2,8 +2,6 @@
 // You can write your code in this editor
 /// @description Hit ennemy
 
-
-
 with (other) {
 	if (state != PLAYERSTATE.HURT) {
 		if (point_direction(other.x, other.y, x, y) > 90) {
