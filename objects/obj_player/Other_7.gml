@@ -9,16 +9,17 @@ if (sprite_index == asset_get_index("spr_" + character + "_attack_strip7")) {
 
 //bow animation
 if (sprite_index == spr_ranger_bow_strip8) {
-    sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
-	state = PLAYERSTATE.FREE;
-	can_attack = true;
+    //sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
+	//state = PLAYERSTATE.FREE;
+	//can_attack = true;
+	image_index = -1;
+	image_speed = 0;
 }
 
 //shield animation
 if (sprite_index == spr_knight_shield_strip8) {
     image_index = -1;
-	//state = PLAYERSTATE.FREE;
-	//can_attack = true;
+
 }
 
 //death animation

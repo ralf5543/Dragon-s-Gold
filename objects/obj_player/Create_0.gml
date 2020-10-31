@@ -75,3 +75,4 @@ energybar_width = 192;//256 - border
 energybar_height = 10;//36 - border
 
 hitten_by_arrow = undefined;
+focus_bow = 0;
