@@ -11,7 +11,8 @@ with (other) {
 		facing = -hitfrom;//(faces the origin of the attack)
 		flash = 10;
 		
-		audio_play_sound(snd_arrow_hit, 7, false);
+		audio_sound_pitch(snd_fireball_hit, choose(.8, 1, 1.2));
+		audio_play_sound(snd_fireball_hit, 9, false);
 		
 		state = PLAYERSTATE.HURT;
 		hp -= 10;
@@ -19,4 +20,3 @@ with (other) {
 }
 
 instance_destroy();
-

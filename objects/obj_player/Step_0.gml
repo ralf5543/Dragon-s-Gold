@@ -88,9 +88,13 @@ if (room == rm_start) {
 		
 		case PLAYERSTATE.SPECIAL : 
 		if (character == "ranger") {
-			PlayerState_Ranger_Special();			
+			PlayerState_Ranger_Special();
+			
 		} else if (character == "knight") {
 			PlayerState_Knight_Special();
+			
+		} else if (character == "wizard") {
+			PlayerState_Wizard_Special();
 		}
 		break;
 	}

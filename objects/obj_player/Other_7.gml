@@ -22,6 +22,12 @@ if (sprite_index == spr_knight_shield_strip8) {
 
 }
 
+//shield animation
+if (sprite_index == spr_wizard_cast_strip5) {
+    can_sound_cast = true;
+
+}
+
 //death animation
 if (sprite_index == asset_get_index("spr_" + character + "_die_strip6")) {
 	image_index = -1;

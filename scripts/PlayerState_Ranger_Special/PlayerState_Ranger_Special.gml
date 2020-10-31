@@ -15,7 +15,7 @@ function PlayerState_Ranger_Special(){
 	focus_bow ++;
 	
 	if (key_special_released) {
-		if (focus_bow > 32) {//button pressed at least 2 seconds
+		if (focus_bow > 32) {//button pressed at least 1 second
 			audio_sound_pitch(snd_bow, choose(.8, 1, 1.2));//change the "bass" of the sound
 			audio_play_sound(snd_bow, 6, false);
 	
