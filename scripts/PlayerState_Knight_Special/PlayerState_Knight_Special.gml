@@ -15,6 +15,7 @@ function PlayerState_Knight_Special(){
 		with (shield) {
 			sprite_index = spr_knight_shieldHB_strip8;
 			image_xscale = other.facing;
+			shield_receiver = other.id
 		}
 		
 		can_attack = false;

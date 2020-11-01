@@ -74,7 +74,6 @@ healthbar_height = 24;//36 - border
 energybar_width = 192;//256 - border
 energybar_height = 10;//36 - border
 
-hitten_by_arrow = undefined;// verify if used !
 
 // ===================---------------- RANGER
 focus_bow = 0;

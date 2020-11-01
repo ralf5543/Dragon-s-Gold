@@ -4,3 +4,7 @@
 fireball_orientation = 1;
 
 is_casted = true;
+
+size = "small";
+
+can_play_sound = true;

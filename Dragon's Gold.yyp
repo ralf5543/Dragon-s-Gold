@@ -99,6 +99,7 @@
     {"id":{"name":"snd_fall_scream1","path":"sounds/snd_fall_scream1/snd_fall_scream1.yy",},"order":5,},
     {"id":{"name":"snd_cast","path":"sounds/snd_cast/snd_cast.yy",},"order":0,},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},"order":3,},
+    {"id":{"name":"spr_fireball_explosion_strip8","path":"sprites/spr_fireball_explosion_strip8/spr_fireball_explosion_strip8.yy",},"order":8,},
     {"id":{"name":"snd_hurt_male2","path":"sounds/snd_hurt_male2/snd_hurt_male2.yy",},"order":2,},
     {"id":{"name":"snd_stairs","path":"sounds/snd_stairs/snd_stairs.yy",},"order":1,},
     {"id":{"name":"snd_metal2","path":"sounds/snd_metal2/snd_metal2.yy",},"order":5,},

@@ -17,29 +17,43 @@ function PlayerState_Wizard_Special(){
 	
 	focus_fireball ++;
 	
-	if (focus_fireball > 64) {//button pressed at least 2 seconds
+	if (focus_fireball > 128) {//button pressed at least 4 seconds
 		if (can_cast) {
 			fireball = instance_create_layer(x + (other.facing * 64), y + 16, "layer_players", obj_fireball);
 			with (fireball) {
+				size = "small";
 				fireball_orientation = other.player_orientation;
 				image_xscale = other.facing;
 				image_speed = 0;
-				
-				//more focus, more speed
-				//speed = 16 * (other.focus_bow / 100);
-				//speed = clamp(speed, 4, 64);
-				
 			}
-			
+
 			can_cast = false;
 		}
+		
+		if (focus_fireball > 256) {// 8 seconds
 
-	}
+			with (fireball) {
+				size = "medium";
+				image_xscale = other.facing * 1.5;
+				image_yscale = 1.5;
+			}
+		}
+		
+		if (focus_fireball > 448) {// 14 seconds
+
+			with (fireball) {
+				size = "large";
+				image_xscale = other.facing * 2;
+				image_yscale = 2;
+			}
+		}
+
+	} 
 	
 	if (key_special_released) {
 
 		audio_pause_sound(snd_cast);
-		if (focus_fireball > 64) {
+		if (focus_fireball > 128) {
 			audio_sound_pitch(snd_fireball, choose(.8, 1, 1.2));
 			audio_play_sound(snd_fireball, 6, false);
 			
@@ -52,11 +66,10 @@ function PlayerState_Wizard_Special(){
 			}
 			
 		}
+		
 		focus_fireball = 0;
 		state = PLAYERSTATE.FREE;
 		can_attack = true;
 		can_cast = true;
 	}
-	
-	
 }
