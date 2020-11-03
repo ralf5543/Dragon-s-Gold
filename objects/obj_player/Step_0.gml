@@ -97,6 +97,14 @@ if (room == rm_start) {
 			PlayerState_Wizard_Special();
 		}
 		break;
+		
+		case PLAYERSTATE.WON : 
+		PlayerState_Won();
+		break;
+		
+		case PLAYERSTATE.LOSE : 
+		PlayerState_Lose();
+		break;
 	}
 	
 	if (state != PLAYERSTATE.SPECIAL) && (character == "knight") {

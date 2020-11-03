@@ -67,12 +67,43 @@ if (room != rm_start) {
 		}
 	}
 	
-	//creates a staiwary in a randoù hall at each floor
+	//creates a staiwary in a random hall at each floor
 	ds_list_find_value(halls_roof_list, random(halls_roof_list_size)).has_stairs = true;
 	ds_list_find_value(halls_middle_list, random(halls_middle_list_size)).has_stairs = true;
 	ds_list_find_value(halls_ground_list, random(halls_ground_list_size)).has_stairs = true;
 	
 	
+
+	//==================-------------- Create treasure chest at random positions
+	var chest = instance_create_layer(0, 0, "layer_walls", obj_chest);
+	chest.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 600;
+	chest.y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 16;
+	
+
+	//==================-------------- Create keys at random positions
+	var gold_key = instance_create_layer(0, 0, "layer_walls", obj_key);
+	var silver_key = instance_create_layer(0, 0, "layer_walls", obj_key);
+	var bronze_key = instance_create_layer(0, 0, "layer_walls", obj_key);
+	var tutu = instance_create_layer(0, 0, "layer_walls", obj_key);
+	
+	//var inst = instance_find(OBJECT, irandom(instance_number(OBJECT) - 1));
+	gold_key.value = "gold";
+	silver_key.value = "silver";
+	bronze_key.value = "bronze";
+	tutu.value = "bronze";
+	//gold_key.x = obj_hall_roof_A.hall_x + 200;
+	//gold_key.y = obj_hall_roof_A.hall_y - 32;
+	gold_key.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 200;
+	gold_key.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
+	
+	silver_key.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 300;
+	silver_key.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
+	
+	bronze_key.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 400;
+	bronze_key.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
+	
+	tutu.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 432;
+	tutu.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
 
 	//==================-------------- Players starting position
 	with (obj_player) {
@@ -89,4 +120,5 @@ if (room != rm_start) {
 			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
 		}
 	}	
+	
 }

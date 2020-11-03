@@ -2,6 +2,8 @@
 
 if (room != rm_start) {
 	
+	draw_set_font(fnt_20);
+	
 	for(var i = 0; i < obj_control.start_players; i ++) {
 		var player1 = instance_find(obj_player, 0);
 		var player2 = instance_find(obj_player, 1);
@@ -16,6 +18,10 @@ if (room != rm_start) {
 		
 		energybar_x = portrait_width + (gui_margin * 2) + (gui_margin * gui_zoom);
 		energybar_y = (gui_margin * 2) + healthbar_height;
+		
+		key_x = portrait_width + (gui_margin * 3) + (gui_margin * gui_zoom);
+		key_y = (gui_margin * 4) + healthbar_height + energybar_height;
+		key_spacer = (gui_margin * 4);
 	
 		//===============---------------- 1 player only
 		if (obj_control.start_players == 1) {
@@ -30,6 +36,31 @@ if (room != rm_start) {
 			//energyhbar
 			draw_sprite(spr_energyBackground, 0, energybar_x, energybar_y);
 			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y, (energy / energy_max) * energybar_width, energybar_height);
+			
+			//keys
+			if (has_bronze_key < 1) {
+				// semi opacity
+				draw_sprite_ext(spr_key, 2, key_x, key_y, 1.6, 1.6, 135, c_white, .5);
+			} else {
+				draw_sprite_ext(spr_key, 2, key_x, key_y, 1.6, 1.6, 135, c_white, 1);
+			}
+			draw_text(key_x + 32, key_y, "x" + string(has_bronze_key));
+			
+			if (has_silver_key < 1) {
+				// semi opacity
+				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.6, 1.6, 135, c_white, .5);
+			} else {
+				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.6, 1.6, 135, c_white, 1);
+			}
+			draw_text(key_x + 32 + key_spacer, key_y, "x" + string(has_silver_key));
+			
+			if (has_gold_key < 1) {
+				// semi opacity
+				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.6, 1.6, 135, c_white, .5);
+			} else {
+				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.6, 1.6, 135, c_white, 1);
+			}
+			draw_text(key_x + 32 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
 		}
 		
 		//===============---------------- 2 players

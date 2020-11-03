@@ -4,6 +4,8 @@ randomize();
 global.surface_width = surface_get_width(application_surface);
 global.surface_height = surface_get_height(application_surface);
 
+global.fnt_20 = fnt_20;
+
 window_set_fullscreen(true);
 
 for (var i = 0; i < 12; i++;) {

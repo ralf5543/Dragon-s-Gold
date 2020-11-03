@@ -34,7 +34,8 @@ enum PLAYERSTATE {
 	DEAD,
 	ATTACK,
 	SPECIAL,
-	SPECIAL_LONG
+	WON,
+	LOSE
 }
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
@@ -58,6 +59,7 @@ can_attack = true;
 can_footStep = true;
 can_landingSound = true;
 can_hurtSound = true;
+can_play_victory = true;
 
 hitfrom = undefined // direction of the incoming attack
 
@@ -66,6 +68,10 @@ hurt_hsp = 4;
 hurt_vsp = -5;
 hurt_grv = .4;
 hurt_done = 0;
+
+has_gold_key = 0;
+has_silver_key = 0;
+has_bronze_key = 0;
 
 // ===================---------------- GUI
 gui_margin = 20;
