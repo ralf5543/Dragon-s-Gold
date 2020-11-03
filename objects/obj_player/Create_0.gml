@@ -73,6 +73,10 @@ has_gold_key = 0;
 has_silver_key = 0;
 has_bronze_key = 0;
 
+is_invicible = false;
+invincible_timer = 0;
+blink_timer = 0;
+
 // ===================---------------- GUI
 gui_margin = 20;
 healthbar_width = 248;//256 - border

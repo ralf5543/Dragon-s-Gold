@@ -12,31 +12,33 @@ image_speed = 1;
 		
 
 with (other) {
-	if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) {
-		if (point_direction(other.x, other.y, x, y) > 90) {
-			hitfrom = -1;// attack from the right
-		} else {
-			hitfrom = 1;//attack from the left
-		}
+	if (!is_invicible) {
+		if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) {
+			if (point_direction(other.x, other.y, x, y) > 90) {
+				hitfrom = -1;// attack from the right
+			} else {
+				hitfrom = 1;//attack from the left
+			}
 		
-		facing = -hitfrom;//(faces the origin of the attack)
-		flash = 10;
+			facing = -hitfrom;//(faces the origin of the attack)
+			flash = 10;
 		
 		
-		state = PLAYERSTATE.HURT;
+			state = PLAYERSTATE.HURT;
 		
-		if (other.size == "small") {
-			hp -= 10;
+			if (other.size == "small") {
+				hp -= 10;
 			
-		} else if (other.size == "medium") {
-			hurt_hsp = 6;
-			hurt_vsp = -7;
-			hp -= 15
+			} else if (other.size == "medium") {
+				hurt_hsp = 6;
+				hurt_vsp = -7;
+				hp -= 15
 			
-		} else if (other.size == "large") {
-			hurt_hsp = 8;
-			hurt_vsp = -9;
-			hp -= 20
+			} else if (other.size == "large") {
+				hurt_hsp = 8;
+				hurt_vsp = -9;
+				hp -= 20
+			}
 		}
 	}
 }

@@ -56,18 +56,44 @@ if (room == rm_start) {
 	}
 		   
 } else {
-		image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
-		image_yscale = 1
+	image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
+	image_yscale = 1
 		
-		 if (facing == 1) {
-			player_orientation = 0;
-		 } else {
-			 player_orientation = 180;
-		 }
+	if (facing == 1) {
+		player_orientation = 0;
+	} else {
+		player_orientation = 180;
+	}
 		
-		 if (energy < energy_max) {
-			energy += .1;
-		 }
+	if (energy < energy_max) {
+		energy += .1;
+	}
+	var inst = true;
+	if (inst) {
+		alarm[3] = 32;
+		inst = false;
+	}
+	
+	//==========------------- Invicible "state"
+	if (is_invicible) {
+		
+		blink_timer ++;
+		invincible_timer ++;
+		
+		if (blink_timer == 8) {
+			if (image_alpha == 0) {
+				image_alpha = 1;
+			} else {
+				image_alpha = 0;
+			}
+			
+			blink_timer = 0;	
+		}
+		
+		if (invincible_timer == 128) {
+			is_invicible = false;
+		}
+	}
 
 	switch (state) {
 		case PLAYERSTATE.FREE : 

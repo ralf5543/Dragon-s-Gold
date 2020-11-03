@@ -6,6 +6,8 @@ function PlayerState_Dead(){
 		image_index = 0;
 		image_speed = 1;
 		audio_play_sound(choose(snd_death_male1, snd_death_male2, snd_death_male3), 7, false);
+		
+		alarm[2] = 256; // rebirth 8 seconds later
 	}
 
 }
