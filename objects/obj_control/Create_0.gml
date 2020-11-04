@@ -4,7 +4,7 @@ randomize();
 global.surface_width = surface_get_width(application_surface);
 global.surface_height = surface_get_height(application_surface);
 
-global.fnt_20 = fnt_20;
+global.fnt_14 = fnt_14;
 
 window_set_fullscreen(true);
 

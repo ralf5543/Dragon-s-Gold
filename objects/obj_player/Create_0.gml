@@ -78,11 +78,19 @@ invincible_timer = 0;
 blink_timer = 0;
 
 // ===================---------------- GUI
-gui_margin = 20;
-healthbar_width = 248;//256 - border
-healthbar_height = 24;//36 - border
-energybar_width = 192;//256 - border
-energybar_height = 10;//36 - border
+gui_zoom = 0;
+gui_margin = 0;
+healthbar_x = 0;
+healthbar_y = 0;
+healthbar_width = 0;
+healthbar_height = 0;
+energybar_width = 0;
+energybar_height = 0;
+energybar_x = 0;
+energybar_y = 0;		
+key_x = 0;
+key_y = 0;
+key_spacer = 0;
 
 
 // ===================---------------- RANGER
