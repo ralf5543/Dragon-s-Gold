@@ -68,11 +68,15 @@ if (room == rm_start) {
 	if (energy < energy_max) {
 		energy += .1;
 	}
-	var inst = true;
-	if (inst) {
-		alarm[3] = 32;
-		inst = false;
-	}
+	
+	if (is_sliding) {
+		x = x + (6 * facing);
+		
+		if (can_slide) {
+			alarm[3] = 16;
+			can_slide = false;
+		}
+	};
 	
 	//==========------------- Invicible "state"
 	if (is_invicible) {

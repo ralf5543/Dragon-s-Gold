@@ -1,4 +1,5 @@
-/// @description End Invicibility
-		show_debug_message("Et là  ?");
-is_invicible = false;
-show_debug_message("Ben alooors ?");
+/// @description Slide attack
+
+show_debug_message("test");
+is_sliding = false;
+state = PLAYERSTATE.FREE;

@@ -7,6 +7,16 @@ if (sprite_index == asset_get_index("spr_" + character + "_attack_strip7")) {
 	can_attack = true;
 }
 
+
+//dash animation
+if (sprite_index == asset_get_index("spr_" + character + "_dash_strip2")) {
+    sprite_index = asset_get_index("spr_" + character + "_dash_strip2");
+	image_speed = 0;
+	image_index = -1;
+	//state = PLAYERSTATE.FREE;
+	//can_attack = true;
+}
+
 //bow animation
 if (sprite_index == spr_ranger_bow_strip8) {
     //sprite_index = asset_get_index("spr_" + character + "_stand_strip2");

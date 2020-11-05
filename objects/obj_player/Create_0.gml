@@ -41,6 +41,8 @@ enum PLAYERSTATE {
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
 player_orientation = 0;// used by attacks direction
 
+is_sliding = false;
+
 flash = 0;
 
 image_index = 0;
@@ -62,6 +64,7 @@ can_hurtSound = true;
 can_play_victory = true;
 can_lose_key = true;
 can_lose_key_when_dead = true;
+can_slide = true;
 
 hitfrom = undefined // direction of the incoming attack
 

@@ -10,6 +10,7 @@ function PlayerState_Free(){
 	can_attack = true;
 	can_lose_key = true;
 	can_lose_key_when_dead = true;
+	can_slide = true;
 	
 //=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1
