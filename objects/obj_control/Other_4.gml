@@ -76,8 +76,39 @@ if (room != rm_start) {
 
 	//==================-------------- Create treasure chest at random positions
 	var chest = instance_create_layer(0, 0, "layer_walls", obj_chest);
-	chest.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 600;
-	chest.y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 16;
+	
+	//choose a random floor
+	var choose_floor = choose("roof", "middle", "ground");
+	
+	//choose a random hall
+	switch (choose_floor) {
+	    case "roof":
+	        var hall_nb = random(halls_roof_list_size);
+			//random position in the hall
+			chest.x = random_range(ds_list_find_value(other.halls_roof_list, hall_nb).hall_x + 128, room_width - 128); 
+			chest.y = ds_list_find_value(other.halls_roof_list, hall_nb).hall_y + 16;
+			show_debug_message("chest.x: " + string(chest.x));
+			show_debug_message("chest.y: " + string(chest.y));
+	        break;
+
+			
+	    case "middle":
+	        var hall_nb = random(halls_middle_list_size);
+			chest.x = random_range(ds_list_find_value(other.halls_middle_list, hall_nb).hall_x + 128, room_width - 128); 
+			chest.y = ds_list_find_value(other.halls_middle_list, hall_nb).hall_y + 16;
+			
+			show_debug_message("chest.x: " + string(chest.x));
+			show_debug_message("chest.y: " + string(chest.y));
+	        break
+			
+		case "ground":
+	        var hall_nb = random(halls_ground_list_size);
+			chest.x = random_range(ds_list_find_value(other.halls_ground_list, hall_nb).hall_x + 128, room_width - 128); 
+			chest.y = ds_list_find_value(other.halls_ground_list, hall_nb).hall_y + 16;
+			show_debug_message("chest.x: " + string(chest.x));
+			show_debug_message("chest.y: " + string(chest.y));
+	        break
+	}
 	
 
 	//==================-------------- Create keys at random positions
