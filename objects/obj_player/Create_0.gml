@@ -60,6 +60,8 @@ can_footStep = true;
 can_landingSound = true;
 can_hurtSound = true;
 can_play_victory = true;
+can_lose_key = true;
+can_lose_key_when_dead = true;
 
 hitfrom = undefined // direction of the incoming attack
 
@@ -69,9 +71,13 @@ hurt_vsp = -5;
 hurt_grv = .4;
 hurt_done = 0;
 
+//======------- Keys collect
 has_gold_key = 0;
 has_silver_key = 0;
 has_bronze_key = 0;
+key_win_bronze = false;
+key_win_silver = false;
+key_win_gold = false;
 
 is_invicible = false;
 invincible_timer = 0;

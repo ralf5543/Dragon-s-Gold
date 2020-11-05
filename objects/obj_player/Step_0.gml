@@ -94,6 +94,17 @@ if (room == rm_start) {
 			is_invicible = false;
 		}
 	}
+	
+	// Condition to win : 3 different keys in the chest
+	if (key_win_bronze) && (key_win_silver) && (key_win_gold) {
+		state = PLAYERSTATE.WON;
+		
+		with (obj_player) {
+			if (state != PLAYERSTATE.WON) {
+				state = PLAYERSTATE.LOSE;
+			}
+		}
+	}	
 
 	switch (state) {
 		case PLAYERSTATE.FREE : 

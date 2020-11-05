@@ -8,6 +8,8 @@ function PlayerState_Free(){
 	hurt_done = 0;
 	
 	can_attack = true;
+	can_lose_key = true;
+	can_lose_key_when_dead = true;
 	
 //=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1

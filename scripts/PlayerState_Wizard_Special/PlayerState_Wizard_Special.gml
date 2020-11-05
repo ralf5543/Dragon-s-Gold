@@ -17,7 +17,7 @@ function PlayerState_Wizard_Special(){
 	
 	focus_fireball ++;
 	
-	if (focus_fireball > 128) {//button pressed at least 4 seconds
+	if (focus_fireball > 96) {//button pressed at least 3 seconds
 		if (can_cast) {
 			fireball = instance_create_layer(x + (other.facing * 64), y + 16, "layer_players", obj_fireball);
 			with (fireball) {
@@ -30,7 +30,7 @@ function PlayerState_Wizard_Special(){
 			can_cast = false;
 		}
 		
-		if (focus_fireball > 256) {// 8 seconds
+		if (focus_fireball > 192) {// 6 seconds
 
 			with (fireball) {
 				size = "medium";
@@ -39,7 +39,7 @@ function PlayerState_Wizard_Special(){
 			}
 		}
 		
-		if (focus_fireball > 448) {// 14 seconds
+		if (focus_fireball > 288) {// 9 seconds
 
 			with (fireball) {
 				size = "large";
@@ -53,7 +53,7 @@ function PlayerState_Wizard_Special(){
 	if (key_special_released) {
 
 		audio_pause_sound(snd_cast);
-		if (focus_fireball > 128) {
+		if (focus_fireball > 96) {
 			audio_sound_pitch(snd_fireball, choose(.8, 1, 1.2));
 			audio_play_sound(snd_fireball, 6, false);
 			

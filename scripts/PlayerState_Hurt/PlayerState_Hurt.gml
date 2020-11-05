@@ -56,7 +56,119 @@ function PlayerState_Hurt(){
 		}
 
 		y += hurt_vsp;	
-	
+		
+		
+		//======================-------------------------- itemps drop
+		
+		
+		if (can_lose_key) {
+		
+		//if has at least ONE key
+			if (has_bronze_key + has_silver_key + has_gold_key > 0) {
+			
+				var chance = choose(0, 1, 2);
+				
+				// 1 chance for 3 to lose a key
+				if (chance > 1) {
+			
+					var random_value = choose("bronze", "silver", "gold");
+					switch (random_value) {
+						
+					    case "bronze":
+					       if (has_bronze_key > 0) {
+							   has_bronze_key --;
+							   
+							   var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+								with (bronze_key) {
+									value = "bronze";
+								}
+						   } else {
+							   var random_value_nobronze = choose("silver", "gold");
+							   if (random_value_nobronze == "silver") {
+								  if (has_silver_key > 0) {
+									  has_silver_key --;
+									  
+									  var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+										with (silver_key) {
+											value = "silver";
+										}
+								  } else {
+									  has_gold_key --;
+									  
+									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+										with (gold_key) {
+											value = "gold";
+										}
+								  }
+							   }
+						   }
+					    break;
+						
+					    case "silver":
+					       if (has_silver_key > 0) {
+							   has_silver_key --;
+							   
+							    var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+								with (silver_key) {
+									value = "silver";
+								}
+						   } else {
+							   var random_value_nosilver = choose("bronze", "gold");
+							   if (random_value_nosilver == "bronze") {
+								  if (has_bronze_key > 0) {
+									  has_bronze_key --;
+									  
+									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									with (bronze_key) {
+										value = "bronze";
+									}
+								  } else {
+									  has_gold_key --;
+									  
+									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+										with (gold_key) {
+											value = "gold";
+										}
+								  }
+							   }
+						   }
+					    break;
+						
+					    case "gold":
+					       if (has_gold_key > 0) {
+							   has_gold_key --;
+							   
+							    var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+								with (gold_key) {
+									value = "gold";
+								}
+						   } else {
+							   var random_value_nogold = choose("bronze", "silver");
+							   if (random_value_nogold == "bronze") {
+								  if (has_bronze_key > 0) {
+									has_bronze_key --;
+									  
+									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									with (bronze_key) {
+										value = "bronze";
+									}
+								  } else {
+									  has_silver_key --;
+									  
+									var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									with (silver_key) {
+										value = "silver";
+									}
+								  }
+							   }
+						   }
+						   show_debug_message("has_gold_key: " + string(has_gold_key));
+					    break;
+					}
+				}
+				can_lose_key = false;
+			}
+		}
 	}
 
 }
