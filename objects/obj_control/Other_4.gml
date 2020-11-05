@@ -74,84 +74,64 @@ if (room != rm_start) {
 	
 	
 
-	//==================-------------- Create treasure chest at random positions
+	//==================-------------- Create treasure chest at random position
 	var chest = instance_create_layer(0, 0, "layer_walls", obj_chest);
-	
-	//choose a random floor
-	var choose_floor = choose("roof", "middle", "ground");
-	
-	//choose a random hall
-	switch (choose_floor) {
-	    case "roof":
-	        var hall_nb = random(halls_roof_list_size);
-			//random position in the hall
-			chest.x = random_range(ds_list_find_value(other.halls_roof_list, hall_nb).hall_x + 128, room_width - 128); 
-			chest.y = ds_list_find_value(other.halls_roof_list, hall_nb).hall_y + 16;
-			show_debug_message("chest.x: " + string(chest.x));
-			show_debug_message("chest.y: " + string(chest.y));
-	        break;
+	Random_Position(chest);
 
-			
-	    case "middle":
-	        var hall_nb = random(halls_middle_list_size);
-			chest.x = random_range(ds_list_find_value(other.halls_middle_list, hall_nb).hall_x + 128, room_width - 128); 
-			chest.y = ds_list_find_value(other.halls_middle_list, hall_nb).hall_y + 16;
-			
-			show_debug_message("chest.x: " + string(chest.x));
-			show_debug_message("chest.y: " + string(chest.y));
-	        break
-			
-		case "ground":
-	        var hall_nb = random(halls_ground_list_size);
-			chest.x = random_range(ds_list_find_value(other.halls_ground_list, hall_nb).hall_x + 128, room_width - 128); 
-			chest.y = ds_list_find_value(other.halls_ground_list, hall_nb).hall_y + 16;
-			show_debug_message("chest.x: " + string(chest.x));
-			show_debug_message("chest.y: " + string(chest.y));
-	        break
+
+	//============================---------------------------- Create keys at random positions
+	
+	//======-------- BRONZE keys
+	for (var i = 0; i < 3; i ++) {
+		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		Random_Position(new_item);
+		
+		new_item.value = "bronze";
+
+	}
+	
+	
+	//======-------- SILVER keys
+	for (var i = 0; i < 3; i ++) {
+		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		Random_Position(new_item);
+		
+		new_item.value = "silver";
+
+	}
+	
+	
+	//======-------- GOLD keys
+	for (var i = 0; i < 3; i ++) {
+		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		Random_Position(new_item);
+		
+		new_item.value = "gold";
+
 	}
 	
 
-	//==================-------------- Create keys at random positions
-	var gold_key = instance_create_layer(0, 0, "layer_walls", obj_key);
-	var silver_key = instance_create_layer(0, 0, "layer_walls", obj_key);
-	var bronze_key = instance_create_layer(0, 0, "layer_walls", obj_key);
-	var tutu = instance_create_layer(0, 0, "layer_walls", obj_key);
-	
-	//var inst = instance_find(OBJECT, irandom(instance_number(OBJECT) - 1));
-	gold_key.value = "gold";
-	silver_key.value = "silver";
-	bronze_key.value = "bronze";
-	tutu.value = "bronze";
-	//gold_key.x = obj_hall_roof_A.hall_x + 200;
-	//gold_key.y = obj_hall_roof_A.hall_y - 32;
-	gold_key.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 200;
-	gold_key.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
-	
-	silver_key.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 300;
-	silver_key.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
-	
-	bronze_key.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 400;
-	bronze_key.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
-	
-	tutu.x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 432;
-	tutu.y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
-
 	//==================-------------- Players starting position
 	with (obj_player) {
-		//Places each player in a different used hall, at 1 tile from left of it
+		//Places each player in a different used hall, at 1 tile from left/right from it
 		
 		if (pad_num == 0) {			
-			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
+			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 128;
+			y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
 
 		} else if (pad_num == 1) {
-			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
+			x = room_width - 128;
+			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y - 32;
+			facing = -1;
 
 		} else if (pad_num == 2) {
-			x = ds_list_find_value(other.halls_roof_list, pad_num).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, pad_num).hall_y - 32;
+			x = room_width - 128;;
+			y = ds_list_find_value(other.halls_roof_list, ds_list_size(other.halls_ground_list) -1).hall_y - 32;
+			facing = -1;
 
+		} else {
+			x = ds_list_find_value(other.halls_ground_list, 0).hall_x + 128;
+			y = ds_list_find_value(other.halls_ground_list, 0).hall_y - 32;
 		}
 		
 		//starting position at game launch AND when players dies

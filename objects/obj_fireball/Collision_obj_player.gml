@@ -13,7 +13,7 @@ image_speed = 1;
 
 with (other) {
 	if (!is_invicible) {
-		if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) {
+		if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) && (other.is_deadly) {
 			if (point_direction(other.x, other.y, x, y) > 90) {
 				hitfrom = -1;// attack from the right
 			} else {
@@ -39,8 +39,8 @@ with (other) {
 				hurt_vsp = -9;
 				hp -= 20
 			}
+			//so it stops hitting the playing during the explosion animation
+			other.is_deadly = false;
 		}
 	}
 }
-
-//instance_destroy();

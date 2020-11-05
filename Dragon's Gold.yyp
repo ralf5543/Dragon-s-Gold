@@ -127,6 +127,7 @@
     {"id":{"name":"spr_wizard_attack_strip7","path":"sprites/spr_wizard_attack_strip7/spr_wizard_attack_strip7.yy",},"order":0,},
     {"id":{"name":"spr_healthBorder","path":"sprites/spr_healthBorder/spr_healthBorder.yy",},"order":5,},
     {"id":{"name":"CreateStairs","path":"scripts/CreateStairs/CreateStairs.yy",},"order":7,},
+    {"id":{"name":"Random_Position","path":"scripts/Random_Position/Random_Position.yy",},"order":13,},
     {"id":{"name":"spr_knight_shield_strip8","path":"sprites/spr_knight_shield_strip8/spr_knight_shield_strip8.yy",},"order":7,},
     {"id":{"name":"obj_hall_middle_D","path":"objects/obj_hall_middle_D/obj_hall_middle_D.yy",},"order":13,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},

@@ -8,3 +8,5 @@ is_casted = true;
 size = "small";
 
 can_play_sound = true;
+
+is_deadly = true;
