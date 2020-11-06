@@ -1,4 +1,4 @@
-/// @description Adds infos or colors to te player
+/// @description Adds infos or colors
 
 draw_self();// default draw, needed if draw event exists
 

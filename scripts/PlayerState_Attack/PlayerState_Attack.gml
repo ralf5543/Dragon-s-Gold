@@ -13,6 +13,14 @@ function PlayerState_Attack(){
 				image_index = 0;
 			}
 			
+			//use attack hitbox and checks for hits
+			var inst = instance_create_layer(x, y, "layer_players", obj_attack);
+			with (inst) {
+				sprite_index = asset_get_index("spr_" + other.character + "_dashHB_strip9");
+				image_xscale = other.facing;
+				attack_id_receiver = other.gamepad_id_owner;
+			}
+			
 			is_sliding = true;
 			
 			
@@ -23,14 +31,13 @@ function PlayerState_Attack(){
 				sprite_index = asset_get_index("spr_" + character + "_attack_strip7");
 				image_index = 0;
 			}
-		
-			
 	
 			//use attack hitbox and checks for hits
 			var inst = instance_create_layer(x, y, "layer_players", obj_attack);
 			with (inst) {
 				sprite_index = asset_get_index("spr_" + other.character + "_attackHB_strip7");
 				image_xscale = other.facing;
+				attack_id_receiver = other.gamepad_id_owner;
 			}
 		}
 		

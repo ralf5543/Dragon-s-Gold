@@ -70,10 +70,28 @@ if (room == rm_start) {
 	}
 	
 	if (is_sliding) {
-		x = x + (6 * facing);
+		var slideDistance = (6 * facing);
+		
+		//smoothly slow down the slide
+		retarder = retarder - clamp(retarder, 0, 6) / 5;
+		slideDistance = slideDistance + retarder
+		// detects a collision at (x + hsp) distance (won't slide into a wall !)
+		if (place_meeting(x + slideDistance, y, obj_wall)) {
+			//while detects NO collision at 1px (sign(hsp), so 1 and -1) x distance
+			while (!place_meeting(x + sign(slideDistance), y, obj_wall)) {
+				//move from the "rest" to be the closest as possible from collision
+			    x += sign(facing);
+			}
+		} else {
+			x += slideDistance;
+		}
 		
 		if (can_slide) {
+			//slides for 0.5 second
 			alarm[3] = 16;
+			
+			//stucks for 0.5 second more
+			alarm[0] = 32;
 			can_slide = false;
 		}
 	};

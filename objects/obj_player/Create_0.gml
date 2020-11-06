@@ -42,6 +42,7 @@ facing = 1;// tells which side character is facing (1 = right, -1 = left)
 player_orientation = 0;// used by attacks direction
 
 is_sliding = false;
+retarder = 0;//to slow down the slide
 
 flash = 0;
 

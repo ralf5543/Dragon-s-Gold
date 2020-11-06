@@ -14,5 +14,6 @@ function PlayerState_Won(){
 		image_index = 0;
 	}
 	
+	global.game_state = "over";
 
 }

@@ -28,4 +28,11 @@ if (room == rm_start) {
 		door_calculate = false;
 	}
 	
+	if (global.game_state == "over") {
+		
+		if (can_end_game) {
+			alarm[0] = 384;
+			can_end_game = false;
+		}
+	}
 }

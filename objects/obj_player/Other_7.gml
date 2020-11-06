@@ -13,8 +13,6 @@ if (sprite_index == asset_get_index("spr_" + character + "_dash_strip2")) {
     sprite_index = asset_get_index("spr_" + character + "_dash_strip2");
 	image_speed = 0;
 	image_index = -1;
-	//state = PLAYERSTATE.FREE;
-	//can_attack = true;
 }
 
 //bow animation

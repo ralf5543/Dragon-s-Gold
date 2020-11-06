@@ -4,6 +4,9 @@ randomize();
 global.surface_width = surface_get_width(application_surface);
 global.surface_height = surface_get_height(application_surface);
 
+global.game_state = undefined;//to restart game when over
+can_end_game = true;
+
 global.fnt_14 = fnt_14;
 
 window_set_fullscreen(true);
