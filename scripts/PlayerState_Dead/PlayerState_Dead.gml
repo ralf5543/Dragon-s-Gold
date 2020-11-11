@@ -4,7 +4,7 @@ function PlayerState_Dead(){
 	if (can_lose_key_when_dead) {
 		for (var i = 0; i < has_bronze_key; i ++) {
 			// 0, (60 * facing), to be sure key are not popping in a wall
-			var bronze_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_walls", obj_key);
+			var bronze_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_items", obj_key);
 			
 			with (bronze_key) {
 				value = "bronze";
@@ -13,7 +13,7 @@ function PlayerState_Dead(){
 		}
 		
 		for (var i = 0; i < has_silver_key; i ++) {
-			var silver_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_walls", obj_key);
+			var silver_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_items", obj_key);
 			
 			with (silver_key) {
 				value = "silver";
@@ -22,7 +22,7 @@ function PlayerState_Dead(){
 		}
 		
 		for (var i = 0; i < has_gold_key; i ++) {
-			var gold_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_walls", obj_key);
+			var gold_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_items", obj_key);
 			
 			with (gold_key) {
 				value = "gold";

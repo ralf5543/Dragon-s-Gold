@@ -75,7 +75,7 @@ if (room != rm_start) {
 	
 
 	//==================-------------- Create treasure chest at random position
-	var chest = instance_create_layer(0, 0, "layer_walls", obj_chest);
+	var chest = instance_create_layer(0, 0, "layer_items", obj_chest);
 	Random_Position(chest);
 
 
@@ -83,7 +83,7 @@ if (room != rm_start) {
 	
 	//======-------- BRONZE keys
 	for (var i = 0; i < 3; i ++) {
-		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		var new_item = instance_create_layer(0, 0, "layer_items", obj_key);
 		Random_Position(new_item);
 		
 		new_item.value = "bronze";
@@ -93,7 +93,7 @@ if (room != rm_start) {
 	
 	//======-------- SILVER keys
 	for (var i = 0; i < 3; i ++) {
-		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		var new_item = instance_create_layer(0, 0, "layer_items", obj_key);
 		Random_Position(new_item);
 		
 		new_item.value = "silver";
@@ -103,7 +103,7 @@ if (room != rm_start) {
 	
 	//======-------- GOLD keys
 	for (var i = 0; i < 3; i ++) {
-		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		var new_item = instance_create_layer(0, 0, "layer_items", obj_key);
 		Random_Position(new_item);
 		
 		new_item.value = "gold";
@@ -116,22 +116,22 @@ if (room != rm_start) {
 		//Places each player in a different used hall, at 1 tile from left/right from it
 		
 		if (pad_num == 0) {			
-			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
+			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 162;
+			y = ds_list_find_value(other.halls_roof_list, 0).hall_y;
 
 		} else if (pad_num == 1) {
-			x = room_width - 128;
-			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y - 32;
+			x = room_width - 96;
+			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y;
 			facing = -1;
 
 		} else if (pad_num == 2) {
-			x = room_width - 128;;
-			y = ds_list_find_value(other.halls_roof_list, ds_list_size(other.halls_ground_list) -1).hall_y - 32;
+			x = room_width - 96;;
+			y = ds_list_find_value(other.halls_roof_list, ds_list_size(other.halls_ground_list) -1).hall_y;
 			facing = -1;
 
 		} else {
-			x = ds_list_find_value(other.halls_ground_list, 0).hall_x + 128;
-			y = ds_list_find_value(other.halls_ground_list, 0).hall_y - 32;
+			x = ds_list_find_value(other.halls_ground_list, 0).hall_x + 162;
+			y = ds_list_find_value(other.halls_ground_list, 0).hall_y;
 		}
 		
 		//starting position at game launch AND when players dies

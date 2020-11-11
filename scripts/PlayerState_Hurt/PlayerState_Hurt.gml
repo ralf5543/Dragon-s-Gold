@@ -79,7 +79,7 @@ function PlayerState_Hurt(){
 							   has_bronze_key --;
 							   key_win_bronze = false;
 							   
-							   var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+							   var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 								with (bronze_key) {
 									value = "bronze";
 								}
@@ -90,7 +90,7 @@ function PlayerState_Hurt(){
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									  var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									  var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 										with (silver_key) {
 											value = "silver";
 										}
@@ -98,7 +98,7 @@ function PlayerState_Hurt(){
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 										with (gold_key) {
 											value = "gold";
 										}
@@ -112,7 +112,7 @@ function PlayerState_Hurt(){
 							   has_silver_key --;
 							   key_win_silver = false;
 							   
-							    var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+							    var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 								with (silver_key) {
 									value = "silver";
 								}
@@ -123,7 +123,7 @@ function PlayerState_Hurt(){
 									  has_bronze_key --;
 									  key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 									with (bronze_key) {
 										value = "bronze";
 									}
@@ -131,7 +131,7 @@ function PlayerState_Hurt(){
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 										with (gold_key) {
 											value = "gold";
 										}
@@ -145,7 +145,7 @@ function PlayerState_Hurt(){
 							   has_gold_key --;
 							   key_win_gold = false;
 							   
-							    var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+							    var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 								with (gold_key) {
 									value = "gold";
 								}
@@ -156,7 +156,7 @@ function PlayerState_Hurt(){
 									has_bronze_key --;
 									key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 									with (bronze_key) {
 										value = "bronze";
 									}
@@ -164,7 +164,7 @@ function PlayerState_Hurt(){
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_items", obj_key);
 									with (silver_key) {
 										value = "silver";
 									}
