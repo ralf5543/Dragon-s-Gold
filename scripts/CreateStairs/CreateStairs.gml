@@ -5,15 +5,15 @@ function CreateStairs(){
 		
 		if (hall_floor == "roof") {
 			
-			var newDoor = instance_create_layer(hall_x + 500, hall_y - 96, "layer_items", obj_stairway);
+			var newDoor = instance_create_layer(hall_x + 500, hall_y - 96, "layer_walls", obj_stairway);
 			newDoor.stairway_floor = hall_floor;
 		}
 		if (hall_floor == "middle") {
-			var newDoor = instance_create_layer(hall_x + 500, hall_y - 96, "layer_items", obj_stairway);
+			var newDoor = instance_create_layer(hall_x + 500, hall_y - 96, "layer_walls", obj_stairway);
 			newDoor.stairway_floor = hall_floor;
 		}
 		if (hall_floor == "ground") {
-			var newDoor = instance_create_layer(hall_x + 500, hall_y - 96, "layer_items", obj_stairway);
+			var newDoor = instance_create_layer(hall_x + 500, hall_y - 96, "layer_walls", obj_stairway);
 			newDoor.stairway_floor = hall_floor;
 		}
 	}

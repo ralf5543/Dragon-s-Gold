@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_knight_hurt_strip2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cbc56245-b7cf-4a79-ae96-db121c122ef3","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cbc56245-b7cf-4a79-ae96-db121c122ef3","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"LayerId":{"name":"7c9c667b-dd74-4c58-9632-14f1a0ca62da","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_knight_hurt_strip2","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"resourceVersion":"1.0","name":"cbc56245-b7cf-4a79-ae96-db121c122ef3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a623a288-fc12-4736-8229-40763efe3fa0","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a623a288-fc12-4736-8229-40763efe3fa0","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"LayerId":{"name":"7c9c667b-dd74-4c58-9632-14f1a0ca62da","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_knight_hurt_strip2","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"resourceVersion":"1.0","name":"a623a288-fc12-4736-8229-40763efe3fa0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cbc56245-b7cf-4a79-ae96-db121c122ef3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a623a288-fc12-4736-8229-40763efe3fa0",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_knight_hurt_strip2","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_knight_hurt_strip2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6f3959f8-b6ab-44d4-ab1d-23cc8c1fe189","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cbc56245-b7cf-4a79-ae96-db121c122ef3","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"98022458-e115-4f1c-ac91-7117b27e1e65","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a623a288-fc12-4736-8229-40763efe3fa0","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,21 +63,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_knight_hurt_strip2","path":"sprites/spr_knight_hurt_strip2/spr_knight_hurt_strip2.yy",},
-    "resourceVersion": "1.3",
-    "name": "spr_knight_hurt_strip2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7c9c667b-dd74-4c58-9632-14f1a0ca62da","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7c9c667b-dd74-4c58-9632-14f1a0ca62da","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "knight",
     "path": "folders/Sprites/Classes/knight.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_knight_hurt_strip2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

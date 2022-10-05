@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_wizard_stand_strip2",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cd53e880-75ad-4bee-aab9-e954a9946603","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd53e880-75ad-4bee-aab9-e954a9946603","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"LayerId":{"name":"79b60946-7ed0-43b6-a5f1-11e2163f88e5","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"resourceVersion":"1.0","name":"cd53e880-75ad-4bee-aab9-e954a9946603","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"af52a6e8-5d28-49d0-a284-74905b8d1265","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"af52a6e8-5d28-49d0-a284-74905b8d1265","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"LayerId":{"name":"79b60946-7ed0-43b6-a5f1-11e2163f88e5","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"resourceVersion":"1.0","name":"af52a6e8-5d28-49d0-a284-74905b8d1265","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd53e880-75ad-4bee-aab9-e954a9946603",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"af52a6e8-5d28-49d0-a284-74905b8d1265",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_wizard_stand_strip2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 4.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"98afb20b-15c7-4364-912d-15219c6cb36d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd53e880-75ad-4bee-aab9-e954a9946603","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8f36dde1-83e1-4ef6-838e-1eaee5cf1d09","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af52a6e8-5d28-49d0-a284-74905b8d1265","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,21 +63,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_wizard_stand_strip2","path":"sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",},
-    "resourceVersion": "1.3",
-    "name": "spr_wizard_stand_strip2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"79b60946-7ed0-43b6-a5f1-11e2163f88e5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"79b60946-7ed0-43b6-a5f1-11e2163f88e5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "wizard",
     "path": "folders/Sprites/Classes/wizard.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_wizard_stand_strip2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

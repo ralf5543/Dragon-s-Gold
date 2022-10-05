@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_ranger_stand_strip2",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f607bebe-7b7f-4b80-bf98-e209d8b3b2d6","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f607bebe-7b7f-4b80-bf98-e209d8b3b2d6","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"LayerId":{"name":"1be50d43-45f2-45d1-9e0d-c58efd82e4e3","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"resourceVersion":"1.0","name":"f607bebe-7b7f-4b80-bf98-e209d8b3b2d6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"923d9fa5-7d8c-4e92-9b0b-1ca0b5bf9ff2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"923d9fa5-7d8c-4e92-9b0b-1ca0b5bf9ff2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"LayerId":{"name":"1be50d43-45f2-45d1-9e0d-c58efd82e4e3","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"resourceVersion":"1.0","name":"923d9fa5-7d8c-4e92-9b0b-1ca0b5bf9ff2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f607bebe-7b7f-4b80-bf98-e209d8b3b2d6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"923d9fa5-7d8c-4e92-9b0b-1ca0b5bf9ff2",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_ranger_stand_strip2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 4.0,
@@ -43,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cea8740c-7e91-473c-b3de-f7526894468d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f607bebe-7b7f-4b80-bf98-e209d8b3b2d6","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4c006b4f-90e2-460f-9ed5-80286fd17bc9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"923d9fa5-7d8c-4e92-9b0b-1ca0b5bf9ff2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,21 +63,13 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_ranger_stand_strip2","path":"sprites/spr_ranger_stand_strip2/spr_ranger_stand_strip2.yy",},
-    "resourceVersion": "1.3",
-    "name": "spr_ranger_stand_strip2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1be50d43-45f2-45d1-9e0d-c58efd82e4e3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1be50d43-45f2-45d1-9e0d-c58efd82e4e3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "ranger",
     "path": "folders/Sprites/Classes/ranger.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_ranger_stand_strip2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
