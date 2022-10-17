@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_fireball",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -16,8 +20,4 @@
     "name": "Wizard",
     "path": "folders/Sounds/characters/Wizard.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_fireball",
-  "tags": [],
-  "resourceType": "GMSound",
 }

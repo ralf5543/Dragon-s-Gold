@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_cursor",
   "spriteId": {
     "name": "spr_cursor",
     "path": "sprites/spr_cursor/spr_cursor.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -27,8 +31,4 @@
     "name": "Select_screen",
     "path": "folders/Objects/Select_screen.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_cursor",
-  "tags": [],
-  "resourceType": "GMObject",
 }

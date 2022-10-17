@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_arrow_hit",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -16,8 +20,4 @@
     "name": "ranger",
     "path": "folders/Sounds/characters/ranger.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_arrow_hit",
-  "tags": [],
-  "resourceType": "GMSound",
 }

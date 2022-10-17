@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_death_male1",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.4,
   "preload": false,
@@ -16,8 +20,4 @@
     "name": "characters",
     "path": "folders/Sounds/characters.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_death_male1",
-  "tags": [],
-  "resourceType": "GMSound",
 }

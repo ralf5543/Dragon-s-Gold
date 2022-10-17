@@ -86,7 +86,11 @@ function PlayerState_Free(){
 	} else {
 		image_speed = 1;
 		if (hsp == 0) {
-			sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
+			if (character == "knight") {
+				sprite_index = asset_get_index("spr_knight_stand_strip25");
+			} else {
+				sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
+			}
 			
 		} else {
 			sprite_index = asset_get_index("spr_" + character + "_walk_strip8");
