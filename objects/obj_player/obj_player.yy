@@ -9,10 +9,7 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "spr_wizard",
-    "path": "sprites/spr_wizard/spr_wizard.yy",
-  },
+  "spriteMaskId": null,
   "persistent": true,
   "parentObjectId": null,
   "physicsObject": false,

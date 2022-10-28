@@ -114,10 +114,7 @@ if (room != rm_start) {
 	//==================-------------- Players starting position
 	with (obj_player) {
 		//Attach the corresponding character sprite to each player
-		//sprite_index = asset_get_index("spr_" + character);
-		sprite_index = asset_get_index("stick");
-		//sprite_index = asset_get_index("square");
-		//sprite_set_offset(sprite_index, 0, 0);
+		sprite_index = asset_get_index("spr_" + character);
 		skeleton_animation_mix(character +"-stand", character +"-walk", 0.3);
 		skeleton_animation_mix(character +"-walk", character +"-stand", 0.3);
 		
@@ -125,21 +122,21 @@ if (room != rm_start) {
 	
 		if (pad_num == 0) {			
 			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
+			y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
 
 		} else if (pad_num == 1) {
 			x = room_width - 128;
-			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y - 32;
+			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y + 32;
 			facing = -1;
 
 		} else if (pad_num == 2) {
 			x = room_width - 128;;
-			y = ds_list_find_value(other.halls_roof_list, ds_list_size(other.halls_ground_list) -1).hall_y - 32;
+			y = ds_list_find_value(other.halls_roof_list, ds_list_size(other.halls_ground_list) -1).hall_y + 32;
 			facing = -1;
 
 		} else {
 			x = ds_list_find_value(other.halls_ground_list, 0).hall_x + 128;
-			y = ds_list_find_value(other.halls_ground_list, 0).hall_y - 32;
+			y = ds_list_find_value(other.halls_ground_list, 0).hall_y + 32;
 		}
 		
 		//starting position at game launch AND when players dies

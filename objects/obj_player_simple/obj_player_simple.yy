@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "test",
-  "spriteId": null,
+  "name": "obj_player_simple",
+  "spriteId": {
+    "name": "spr_knight",
+    "path": "sprites/spr_knight/spr_knight.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -28,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Players",
+    "path": "folders/Objects/Players.yy",
   },
 }
