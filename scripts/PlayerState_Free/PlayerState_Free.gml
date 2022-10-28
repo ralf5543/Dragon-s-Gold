@@ -17,8 +17,10 @@ function PlayerState_Free(){
 	if (key_run) && (energy > 0) {
 		walksp = 8;
 		energy --;
+
 	} else {
 		walksp = 4;
+
 	}
 
 	hsp = move * walksp; // changes the direction from -4 (if walkspd = 4), to 4, on X axis.
@@ -85,17 +87,27 @@ function PlayerState_Free(){
 	} else {
 		//image_speed = 1;
 		if (hsp == 0) {
-			if skeleton_animation_get() != character + "-stand"
+			if skeleton_animation_get() != "stand"
 			    {
-			        skeleton_animation_set(character + "-stand");
+			        skeleton_animation_set("stand");
 			    }
 			
 		} else {
-			//for preventing looping on frame 1 of the animation
-			if skeleton_animation_get() != character + "-walk"
-			    {
-			        skeleton_animation_set(character + "-walk");
-			    }
+			if (key_run) && (energy > 0) {
+				walksp = 8;
+				energy --;
+		
+				//for preventing looping on frame 1 of the animation
+				if (skeleton_animation_get() != "run") {
+					    skeleton_animation_set("run");
+					}
+			} else {
+				//for preventing looping on frame 1 of the animation
+				if skeleton_animation_get() != "walk"
+				    {
+				        skeleton_animation_set("walk");
+				    }
+			}
 		};
 	};
 

@@ -61,12 +61,14 @@ if (room == rm_start) {
 		
 	if (facing == 1) {
 		skeleton_attachment_set("main-gauche", "main-gauche-bouclier");
-		skeleton_attachment_set("main-droite", "main-droite-epee");
+		skeleton_attachment_set("main-droite-epee", "main-droite-epee");
+		skeleton_attachment_set("main-droite-bouclier", -1);
 		player_orientation = 0;
 	} else {
 		player_orientation = 180;
 		skeleton_attachment_set("main-gauche", "main-gauche-epee");
-		skeleton_attachment_set("main-droite", "main-droite-bouclier");
+		skeleton_attachment_set("main-droite-epee", -1);
+		skeleton_attachment_set("main-droite-bouclier", "main-droite-bouclier");
 	}
 		
 	if (energy < energy_max) {

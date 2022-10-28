@@ -115,8 +115,8 @@ if (room != rm_start) {
 	with (obj_player) {
 		//Attach the corresponding character sprite to each player
 		sprite_index = asset_get_index("spr_" + character);
-		skeleton_animation_mix(character +"-stand", character +"-walk", 0.3);
-		skeleton_animation_mix(character +"-walk", character +"-stand", 0.3);
+		skeleton_animation_mix(+"stand", "walk", 0.3);
+		skeleton_animation_mix("walk", "stand", 0.3);
 		
 		//Places each player in a different used hall, at 1 tile from left/right from it
 	
