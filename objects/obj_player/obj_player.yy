@@ -10,8 +10,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "spr_wizard_stand_strip2",
-    "path": "sprites/spr_wizard_stand_strip2/spr_wizard_stand_strip2.yy",
+    "name": "spr_wizard",
+    "path": "sprites/spr_wizard/spr_wizard.yy",
   },
   "persistent": true,
   "parentObjectId": null,

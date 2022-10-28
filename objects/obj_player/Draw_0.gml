@@ -11,7 +11,12 @@ if (flash > 0) {
 
 if (room != rm_start) {
 	// Temp infos for debugging
+	//draw_set_color(c_white);
+	//draw_set_halign(fa_center);
+	//draw_text(x - 10, y - 70, "Player " + string(pad_num + 1));
+	
+	// Temp infos for debugging
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
-	draw_text(x - 10, y - 70, "Player " + string(pad_num + 1));
+	draw_text(x - 10, y - 90, "Y offset = " + string(sprite_get_yoffset(sprite_index)));
 }

@@ -60,9 +60,13 @@ if (room == rm_start) {
 	image_yscale = 1
 		
 	if (facing == 1) {
+		skeleton_attachment_set("main-gauche", "main-gauche-bouclier");
+		skeleton_attachment_set("main-droite", "main-droite-epee");
 		player_orientation = 0;
 	} else {
 		player_orientation = 180;
+		skeleton_attachment_set("main-gauche", "main-gauche-epee");
+		skeleton_attachment_set("main-droite", "main-droite-bouclier");
 	}
 		
 	if (energy < energy_max) {

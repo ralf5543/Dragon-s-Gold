@@ -1,8 +1,4 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "snd_cast",
-  "conversionMode": 0,
   "compression": 0,
   "volume": 0.27,
   "preload": false,
@@ -20,4 +16,8 @@
     "name": "Wizard",
     "path": "folders/Sounds/characters/Wizard.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "snd_cast",
+  "tags": [],
+  "resourceType": "GMSound",
 }

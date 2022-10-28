@@ -1,8 +1,4 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "snd_tada",
-  "conversionMode": 0,
   "compression": 0,
   "volume": 0.25,
   "preload": false,
@@ -20,4 +16,8 @@
     "name": "start_menu",
     "path": "folders/Sounds/start_menu.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "snd_tada",
+  "tags": [],
+  "resourceType": "GMSound",
 }

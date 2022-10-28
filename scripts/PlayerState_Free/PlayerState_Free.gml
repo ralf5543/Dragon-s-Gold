@@ -31,7 +31,6 @@ function PlayerState_Free(){
 	};
 
 
-
 	//=======---------- horizontal collisions
 	// detects a collision at (x + hsp) distance
 	if (place_meeting(x + hsp, y, obj_wall)) {
@@ -72,28 +71,31 @@ function PlayerState_Free(){
 	if (!place_meeting(x, y + 1, obj_wall)) {
 		//sprite_index = spr_player_air_strip2;
 		//stops the animation
-		image_speed = 0;
+		//image_speed = 0;
 		
 		//ascendant part from the jump
 		if (vsp > 0) {
 			//select the frame
-		    image_index = 0;
+		    //image_index = 0;
 		}
 		//descendant part from the jump
 		else {
-		    image_index = 1;
+		    //image_index = 1;
 		}
 	} else {
-		image_speed = 1;
+		//image_speed = 1;
 		if (hsp == 0) {
-			if (character == "knight") {
-				sprite_index = asset_get_index("spr_knight_stand_strip25");
-			} else {
-				sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
-			}
+			if skeleton_animation_get() != character + "-stand"
+			    {
+			        skeleton_animation_set(character + "-stand");
+			    }
 			
 		} else {
-			sprite_index = asset_get_index("spr_" + character + "_walk_strip8");
+			//for preventing looping on frame 1 of the animation
+			if skeleton_animation_get() != character + "-walk"
+			    {
+			        skeleton_animation_set(character + "-walk");
+			    }
 		};
 	};
 

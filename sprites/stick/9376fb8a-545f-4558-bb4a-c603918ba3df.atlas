@@ -1,0 +1,7 @@
+skeleton.png
+size:128,256
+filter:Linear,Linear
+pma:true
+scale:0.5
+stick-man-red-md
+bounds:0,0,75,150

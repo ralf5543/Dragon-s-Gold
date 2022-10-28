@@ -1,8 +1,4 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "snd_door_opened",
-  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -20,4 +16,8 @@
     "name": "level_design",
     "path": "folders/Sounds/level_design.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "snd_door_opened",
+  "tags": [],
+  "resourceType": "GMSound",
 }

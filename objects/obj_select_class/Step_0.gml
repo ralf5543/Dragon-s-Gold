@@ -8,7 +8,7 @@ if (gamepad_button_check_pressed(player_number, gp_face2)) {
 
 if (init_player_selection == true) {
 	//gives the next skin to each player
-	gamepad_id_receiver.sprite_index = asset_get_index("spr_" + selectClass[player_number] + "_stand_strip2");
+	gamepad_id_receiver.sprite_index = asset_get_index("spr_" + selectClass[player_number]);
 	
 	//moves the cursor to the next portrait for each new player
 	if (player_number > selectClass_columns - 1) {

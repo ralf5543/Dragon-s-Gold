@@ -1,8 +1,4 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "snd_fall_scream2",
-  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -20,4 +16,8 @@
     "name": "move",
     "path": "folders/Sounds/characters/move.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "snd_fall_scream2",
+  "tags": [],
+  "resourceType": "GMSound",
 }

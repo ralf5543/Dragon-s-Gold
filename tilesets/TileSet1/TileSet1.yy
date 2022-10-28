@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMTileSet",
-  "resourceVersion": "1.0",
-  "name": "TileSet1",
   "spriteId": {
     "name": "spr_tile_castle",
     "path": "sprites/spr_tile_castle/spr_tile_castle.yy",
@@ -22,7 +19,7 @@
   "out_columns": 4,
   "tile_count": 15,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
+    {"tiles":[
         0,
         23,
         18,
@@ -39,7 +36,7 @@
         16,
         14,
         13,
-      ],"closed_edge":false,},
+      ],"closed_edge":false,"resourceVersion":"1.0","name":"autotile_1","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -72,4 +69,8 @@
     "name": "Tile Sets",
     "path": "folders/Sprites/level_design/Tile Sets.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "TileSet1",
+  "tags": [],
+  "resourceType": "GMTileSet",
 }

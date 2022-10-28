@@ -1,8 +1,4 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "snd_victory_cry",
-  "conversionMode": 0,
   "compression": 0,
   "volume": 0.2,
   "preload": false,
@@ -20,4 +16,8 @@
     "name": "characters",
     "path": "folders/Sounds/characters.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "snd_victory_cry",
+  "tags": [],
+  "resourceType": "GMSound",
 }

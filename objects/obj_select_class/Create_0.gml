@@ -4,13 +4,13 @@
 selectClass_control = true;
 
 // Better for perfs to enter last array entries first
-selectClass[7] = "wizard";
-selectClass[6] = "wizard";
-selectClass[5] = "ranger";
-selectClass[4] = "wizard";
+selectClass[7] = "knight";
+selectClass[6] = "knight";
+selectClass[5] = "knight";
+selectClass[4] = "knight";
 selectClass[3] = "knight";
-selectClass[2] = "ranger";
-selectClass[1] = "wizard";
+selectClass[2] = "knight";
+selectClass[1] = "knight";
 selectClass[0] = "knight";
 
 //number of items in menu array
