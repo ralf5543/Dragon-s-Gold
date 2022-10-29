@@ -117,6 +117,15 @@ if (room != rm_start) {
 		sprite_index = asset_get_index("spr_" + character);
 		skeleton_animation_mix(+"stand", "walk", 0.3);
 		skeleton_animation_mix("walk", "stand", 0.3);
+		skeleton_animation_mix("walk", "run", 0.3);
+		skeleton_animation_mix("run", "walk", 0.3);
+		skeleton_animation_mix("walk", "jump-up", 0.3);
+		skeleton_animation_mix("run", "jump-up", 0.3);
+		skeleton_animation_mix("stand", "jump-up", 0.3);
+		skeleton_animation_mix("jump-up", "jump-down", 0.3);
+		skeleton_animation_mix("jump-down", "stand", 0.3);
+		skeleton_animation_mix("jump-down", "walk", 0.3);
+		skeleton_animation_mix("jump-down", "run", 0.3);
 		
 		//Places each player in a different used hall, at 1 tile from left/right from it
 	

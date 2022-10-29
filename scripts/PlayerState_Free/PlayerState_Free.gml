@@ -16,7 +16,7 @@ function PlayerState_Free(){
 	var move = key_right - key_left; // because true = 1 and false = -1
 	if (key_run) && (energy > 0) {
 		walksp = 8;
-		energy --;
+		//energy --;
 
 	} else {
 		walksp = 4;
@@ -29,7 +29,8 @@ function PlayerState_Free(){
 	// if detects a collision with wall 1px bellow it (so, if it's on the floor !)
 	//AND jump button is pressed
 	if (place_meeting(x, y + 1, obj_wall)) && (key_jump) {
-		vsp = -10;
+		//jump higher if running
+		if (key_run) && (energy > 0) {vsp = -10;} else {vsp = -8;}
 	};
 
 
@@ -71,18 +72,18 @@ function PlayerState_Free(){
 	//=======---------- Animations
 	// if detects NO collision with wall 1px bellow it (so, if it's in the air !)
 	if (!place_meeting(x, y + 1, obj_wall)) {
-		//sprite_index = spr_player_air_strip2;
-		//stops the animation
-		//image_speed = 0;
 		
-		//ascendant part from the jump
-		if (vsp > 0) {
-			//select the frame
-		    //image_index = 0;
-		}
 		//descendant part from the jump
+		if (vsp > 0) {
+			if skeleton_animation_get() != "jump-down" {
+				skeleton_animation_set("jump-down");
+			}
+		}
+		//ascendant part from the jump
 		else {
-		    //image_index = 1;
+		    if skeleton_animation_get() != "jump-up" {
+				skeleton_animation_set("jump-up");
+			}
 		}
 	} else {
 		//image_speed = 1;
@@ -95,7 +96,7 @@ function PlayerState_Free(){
 		} else {
 			if (key_run) && (energy > 0) {
 				walksp = 8;
-				energy --;
+				//energy --;
 		
 				//for preventing looping on frame 1 of the animation
 				if (skeleton_animation_get() != "run") {
