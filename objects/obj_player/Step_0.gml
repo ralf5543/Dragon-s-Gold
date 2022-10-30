@@ -27,11 +27,14 @@ key_start = gamepad_button_check_pressed(pad_num, gp_start);
 
 // used only for characters selection screen
 if (room == rm_start) {
-	
-	if (key_start) {
+		skeleton_animation_set("stand");
+		
+	if (key_start) || keyboard_check(vk_enter) {	
+		
 		
 		//Can push Start only once
 		if (can_push_start == true) {
+			
 			// create class selection menu linked to this instance
 			var inst = instance_create_layer(x, y + 250, "layer_players", obj_select_class);
 			

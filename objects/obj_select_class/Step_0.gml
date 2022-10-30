@@ -4,11 +4,13 @@
 if (gamepad_button_check_pressed(player_number, gp_face2)) {
 	selectClass_control = true;
 	obj_control.ready_players --;
+	skeleton_animation_set("stand");
 }
 
 if (init_player_selection == true) {
 	//gives the next skin to each player
 	gamepad_id_receiver.sprite_index = asset_get_index("spr_" + selectClass[player_number]);
+
 	
 	//moves the cursor to the next portrait for each new player
 	if (player_number > selectClass_columns - 1) {
@@ -96,6 +98,8 @@ if (selectClass_control) {
 	if (gamepad_button_check_pressed(player_number, gp_face1)) {
 		audio_sound_pitch(snd_tada, choose(.8, 1, 1.2));
 		audio_play_sound(snd_tada, 8, false);
+	
+		skeleton_animation_set("victory");
 		
 		selectClass_control = false;// deactive the class selector		
 		gamepad_id_receiver.character = selectClass[selectClass_cursor];// gives the character the selected class

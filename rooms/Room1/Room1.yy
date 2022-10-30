@@ -20,9 +20,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_42200752","properties":[],"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":32.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"layer_control","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"layer_players","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6EBA941D","properties":[],"isDnd":false,"objectId":{"name":"test","path":"objects/test/test.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1152.0,"y":256.0,},
-      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"layer_players","instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":64,"gridY":64,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"layer_tiles","tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":32,"SerialiseHeight":211,"TileCompressedData":[
 -12,-2147483648,1,0,-29,-2147483648,1,0,-3,-2147483648,1,0,-25,-2147483648,4,0,-2147483648,-2147483648,0,-31,-2147483648,-2,0,3,-2147483648,0,0,-9,-2147483648,1,0,-6,
 -2147483648,1,0,-6,-2147483648,1,0,-3,-2147483648,-2,0,-11,-2147483648,4,0,-2147483648,0,0,-4,-2147483648,1,0,-7,-2147483648,5,0,-2147483648,-2147483648,0,0,-9,-2147483648,
@@ -2788,7 +2786,6 @@
     {"name":"inst_4EEF648E","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_65D66466","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_3736815D","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_6EBA941D","path":"rooms/Room1/Room1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
