@@ -3,11 +3,10 @@ function PlayerState_Hurt(){
 
 	can_attack = false;
 	
-	if (sprite_index != asset_get_index("spr_" + character + "_hurt_strip2")) {
-		sprite_index = asset_get_index("spr_" + character + "_hurt_strip2");
-		image_index = 1;
-		image_speed = 0;
+	if (skeleton_animation_get() != "hurt") {
+		skeleton_animation_set("hurt");
 	}
+	
 	
 	if (hurt_done == 0) {
 		if (can_hurtSound) {

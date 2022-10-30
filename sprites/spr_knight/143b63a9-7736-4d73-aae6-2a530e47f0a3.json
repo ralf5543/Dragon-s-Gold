@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "GlG3tS/+Jrc", "spine": "4.0-from-4.1.16", "x": -60.06, "y": -3.66, "width": 126.04, "height": 120.8 },
+"skeleton": { "hash": "eVSTipc284c", "spine": "4.0-from-4.1.16", "x": -60.06, "y": -3.66, "width": 126.04, "height": 120.8 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3, "scaleY": 0.3 },
 	{ "name": "bone-principal", "parent": "root", "rotation": -90, "x": 1.86, "y": 114.15 },
@@ -326,6 +326,168 @@
 	}
 ],
 "animations": {
+	"attack1": {},
+	"hurt": {
+		"slots": {
+			"oeil-ferme": {
+				"attachment": [
+					{ "name": "oeil-ferme2" }
+				]
+			},
+			"oeil-ouvert": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"tete-dos": {
+				"attachment": [
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"torse-dos": {
+				"attachment": [
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 9.71 }
+				]
+			},
+			"bone-principal": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 9.21 }
+				]
+			},
+			"bone-visiere": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -20.56 }
+				]
+			},
+			"bone-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -7.29 }
+				]
+			},
+			"bone-avant-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 31.93 }
+				]
+			},
+			"bone-main-droite": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -10.7 }
+				]
+			},
+			"sourcil": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -9.73 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": -1.16, "y": 0.71 }
+				]
+			},
+			"sourcil2": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 15.26 }
+				]
+			},
+			"bras-gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 30.53 }
+				]
+			},
+			"bone-main-gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -33.67 }
+				]
+			},
+			"bone-cuisse-droite": {
+				"rotate": [
+					{ "value": 2.11 }
+				]
+			},
+			"bone-tibia-droite": {
+				"rotate": [
+					{ "value": -3.22 }
+				]
+			},
+			"bone-pied-droit": {
+				"rotate": [
+					{ "value": 7.05 }
+				]
+			},
+			"bone-cuisse-gauche": {
+				"rotate": [
+					{ "value": 7.66 }
+				]
+			},
+			"tibia-gauche": {
+				"rotate": [
+					{ "value": -5.64 }
+				]
+			},
+			"bone-pied-gauche": {
+				"rotate": [
+					{ "value": 0.19 }
+				]
+			},
+			"plume": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 9.45 }
+				]
+			},
+			"plume2": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 11.45 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.3333, "y": 0.766 }
+				]
+			},
+			"plume3": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 28.83 }
+				]
+			},
+			"target IK jambe gauche": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": 33.4, "y": 28.15 }
+				]
+			},
+			"target IK pied droit": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": -3.67, "y": -15.25 }
+				]
+			},
+			"target IK pied gauche": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": 13.68, "y": 30.47, "curve": "stepped" },
+					{ "time": 2.6667, "x": 13.68, "y": 30.47 }
+				]
+			}
+		}
+	},
 	"jump-down": {
 		"slots": {
 			"tete-dos": {
@@ -1404,6 +1566,207 @@
 				"rotate": [
 					{},
 					{ "time": 0.1333, "value": -0.17 }
+				]
+			}
+		}
+	},
+	"victory": {
+		"slots": {
+			"main-droite-bouclier": {
+				"attachment": [
+					{ "time": 1.7667, "name": null }
+				]
+			},
+			"oeil-ferme": {
+				"attachment": [
+					{ "time": 0.3333, "name": "oeil-ferme2" },
+					{ "time": 0.5333, "name": null }
+				]
+			},
+			"oeil-ouvert": {
+				"attachment": [
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.5333, "name": "oeil-ouvert" }
+				]
+			},
+			"tete-dos": {
+				"attachment": [
+					{ "time": 1.7667, "name": null }
+				]
+			},
+			"torse-dos": {
+				"attachment": [
+					{ "time": 1.7667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone-principal": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "y": -7.66 },
+					{ "time": 0.5333, "y": 1.28 },
+					{ "time": 0.9 },
+					{ "time": 1.4333, "y": 1.28 },
+					{ "time": 1.8 },
+					{ "time": 2.1667, "y": 1.28 },
+					{ "time": 2.5 },
+					{ "time": 2.9, "y": 1.28 },
+					{ "time": 3.2667 },
+					{ "time": 3.6333, "y": 1.28 },
+					{ "time": 4 },
+					{ "time": 4.4, "y": 1.28 }
+				]
+			},
+			"bone-tete": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -8.15 },
+					{ "time": 0.5333, "value": 9.09 },
+					{ "time": 0.9, "value": 7.29 },
+					{ "time": 1.4333, "value": 9.09 },
+					{ "time": 1.8, "value": 7.29 },
+					{ "time": 2.1667, "value": 9.09 },
+					{ "time": 2.5, "value": 7.29 },
+					{ "time": 2.9, "value": 9.09 },
+					{ "time": 3.2667, "value": 7.29 },
+					{ "time": 3.6333, "value": 9.09 },
+					{ "time": 4, "value": 7.29 },
+					{ "time": 4.4, "value": 9.09 }
+				]
+			},
+			"bone-visiere": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": -8.54 }
+				]
+			},
+			"bone-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -30.28 },
+					{ "time": 0.5333, "value": 168.25 },
+					{ "time": 0.9, "value": 153.55 },
+					{ "time": 1.4333, "value": 168.25 },
+					{ "time": 1.8, "value": 153.55 },
+					{ "time": 2.1667, "value": 168.25 },
+					{ "time": 2.5, "value": 153.55 },
+					{ "time": 2.9, "value": 168.25 },
+					{ "time": 3.2667, "value": 153.55 },
+					{ "time": 3.6333, "value": 168.25 },
+					{ "time": 4, "value": 153.55 },
+					{ "time": 4.4, "value": 168.25 }
+				]
+			},
+			"bone-avant-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 59.54 },
+					{ "time": 0.5333, "value": -23.72 },
+					{ "time": 0.9, "value": -6.93 },
+					{ "time": 1.4333, "value": -23.72 },
+					{ "time": 1.8, "value": -6.93 },
+					{ "time": 2.1667, "value": -23.72 },
+					{ "time": 2.5, "value": -6.93 },
+					{ "time": 2.9, "value": -23.72 },
+					{ "time": 3.2667, "value": -6.93 },
+					{ "time": 3.6333, "value": -23.72 },
+					{ "time": 4, "value": -6.93 },
+					{ "time": 4.4, "value": -23.72 }
+				]
+			},
+			"bone-main-droite": {
+				"rotate": [
+					{},
+					{ "time": 0.5333, "value": -43.4 }
+				]
+			},
+			"bras-gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -18.94 },
+					{ "time": 0.5333, "value": -7 },
+					{ "time": 0.9, "value": -10.36 },
+					{ "time": 1.4333, "value": -7 },
+					{ "time": 1.8, "value": -10.36 },
+					{ "time": 2.1667, "value": -7 },
+					{ "time": 2.5, "value": -10.36 },
+					{ "time": 2.9, "value": -7 },
+					{ "time": 3.2667, "value": -10.36 },
+					{ "time": 3.6333, "value": -7 },
+					{ "time": 4, "value": -10.36 },
+					{ "time": 4.4, "value": -7 }
+				]
+			},
+			"avant-bras-gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 41 },
+					{ "time": 0.5333, "value": 27.52 },
+					{ "time": 0.9, "value": 24.38 },
+					{ "time": 1.4333, "value": 27.52 },
+					{ "time": 1.8, "value": 24.38 },
+					{ "time": 2.1667, "value": 27.52 },
+					{ "time": 2.5, "value": 24.38 },
+					{ "time": 2.9, "value": 27.52 },
+					{ "time": 3.2667, "value": 24.38 },
+					{ "time": 3.6333, "value": 27.52 },
+					{ "time": 4, "value": 24.38 },
+					{ "time": 4.4, "value": 27.52 }
+				]
+			},
+			"bone-main-gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.5333, "value": -4.16 }
+				]
+			},
+			"bone-cuisse-droite": {
+				"rotate": [
+					{ "value": 2.11 }
+				]
+			},
+			"bone-tibia-droite": {
+				"rotate": [
+					{ "value": -3.22 }
+				]
+			},
+			"bone-pied-droit": {
+				"rotate": [
+					{ "value": 7.05 }
+				]
+			},
+			"bone-cuisse-gauche": {
+				"rotate": [
+					{ "value": 7.66 }
+				]
+			},
+			"tibia-gauche": {
+				"rotate": [
+					{ "value": -5.64 }
+				]
+			},
+			"bone-pied-gauche": {
+				"rotate": [
+					{ "value": 0.19 }
+				]
+			},
+			"plume": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 8.29 }
+				]
+			},
+			"plume2": {
+				"rotate": [
+					{},
+					{ "time": 0.9, "value": -14.29 },
+					{ "time": 1.7667, "value": -4.66 },
+					{ "time": 2.5, "value": -14.29 },
+					{ "time": 2.9333, "value": -6.19 },
+					{ "time": 3.2667, "value": -14.29 },
+					{ "time": 3.5667, "value": -19.88 },
+					{ "time": 4, "value": -14.29 }
 				]
 			}
 		}

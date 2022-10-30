@@ -110,6 +110,8 @@ if (room != rm_start) {
 
 	}
 	
+	instance_create_layer(ds_list_find_value(other.halls_roof_list, 0).hall_x + 800, ds_list_find_value(other.halls_roof_list, 0).hall_y - 200, "sandbag", obj_sandbag);
+	
 
 	//==================-------------- Players starting position
 	with (obj_player) {
@@ -126,6 +128,14 @@ if (room != rm_start) {
 		skeleton_animation_mix("jump-down", "stand", 0.3);
 		skeleton_animation_mix("jump-down", "walk", 0.3);
 		skeleton_animation_mix("jump-down", "run", 0.3);
+		skeleton_animation_mix("hurt", "walk", 0.3);
+		skeleton_animation_mix("hurt", "run", 0.3);
+		skeleton_animation_mix("hurt", "jump-up", 0.3);
+		skeleton_animation_mix("hurt", "jump-down", 0.3);
+		skeleton_animation_mix("walk", "hurt", 0.3);
+		skeleton_animation_mix("run", "hurt", 0.3);
+		skeleton_animation_mix("jump-up", "hurt", 0.3);
+		skeleton_animation_mix("jump-down", "hurt", 0.3);
 		
 		//Places each player in a different used hall, at 1 tile from left/right from it
 	
@@ -154,3 +164,6 @@ if (room != rm_start) {
 	}	
 	
 }
+	
+	
+		
