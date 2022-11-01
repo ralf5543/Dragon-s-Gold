@@ -145,7 +145,8 @@ if (room != rm_start) {
 	
 		if (pad_num == 0) {			
 			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 128;
-			y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
+			//y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
+			y = ds_list_find_value(other.halls_roof_list, 0).hall_y - 32;
 
 		} else if (pad_num == 1) {
 			x = room_width - 128;

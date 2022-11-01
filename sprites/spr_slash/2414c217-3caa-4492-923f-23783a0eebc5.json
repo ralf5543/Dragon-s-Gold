@@ -1,0 +1,137 @@
+{
+"skeleton": { "hash": "0DsnOalTDcY", "spine": "4.0-from-4.1.17", "x": -30.25, "y": 15.43, "width": 108.05, "height": 156.58 },
+"bones": [
+	{ "name": "root", "scaleX": 0.3, "scaleY": 0.3 },
+	{ "name": "bone-principal", "parent": "root", "rotation": -90, "x": -0.54, "y": 90.46 },
+	{ "name": "bone-tronc", "parent": "bone-principal", "length": 78.14, "x": -82.02, "y": -4.32 },
+	{ "name": "bone-bras-droit", "parent": "bone-tronc", "length": 51.21, "rotation": -9.21, "x": -2.18, "y": -57.09 },
+	{ "name": "bone-avant-bras-droit", "parent": "bone-bras-droit", "length": 51.01, "rotation": 16.91, "x": 53.24, "y": -1.75 },
+	{ "name": "bone-main-droite", "parent": "bone-avant-bras-droit", "length": 25.96, "rotation": -7.7, "x": 52.95, "y": -0.95 },
+	{ "name": "target IK jambe droite", "parent": "root", "x": -43.11, "y": -2.71 },
+	{ "name": "target IK jambe gauche", "parent": "root", "x": 30.81, "y": -2.71 },
+	{ "name": "target IK pied droit", "parent": "root", "x": 30.64, "y": -26.63 },
+	{ "name": "target IK pied gauche", "parent": "root", "x": 106.04, "y": -18.66 }
+],
+"slots": [
+	{ "name": "avant-bras-droit", "bone": "bone-avant-bras-droit" },
+	{ "name": "slash2", "bone": "bone-main-droite", "attachment": "BB-slash" },
+	{ "name": "slash", "bone": "bone-main-droite", "attachment": "slash2" },
+	{ "name": "BB-principal", "bone": "bone-principal" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"slash": {
+				"slash2": {
+					"type": "mesh",
+					"path": "standard/slash",
+					"color": "ff0000ff",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 5, -9.48, 325.38, 1, 1, 5, 18.34, 8.6, 1, 1, 5, -475.76, -34.79, 1, 1, 5, -503.58, 281.99, 1 ],
+					"hull": 4
+				}
+			},
+			"slash2": {
+				"BB-slash": {
+					"type": "boundingbox",
+					"vertexCount": 9,
+					"vertices": [ 15.39, 69.1, -28, 308.51, -198.27, 316.55, -391.09, 228.17, -481.07, 107.66, -469.82, -30.52, -296.29, 91.6, -177.39, 144.62, -52.05, 110.88 ]
+				}
+			}
+		}
+	},
+	{ "name": "alt1" },
+	{ "name": "standard" }
+],
+"animations": {
+	"attack": {
+		"slots": {
+			"slash": {
+				"rgba": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "fffffffe" },
+					{ "time": 0.3, "color": "ffffffd4" },
+					{ "time": 0.6333, "color": "ffffff00" }
+				]
+			},
+			"slash2": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.2333, "name": "BB-slash" }
+				]
+			}
+		},
+		"bones": {
+			"bone-principal": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -1.57, "y": 14.11 },
+					{ "time": 0.3, "x": 5.3, "y": 2.1 }
+				]
+			},
+			"bone-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "value": 158.21 },
+					{ "time": 0.3, "value": -27.72 }
+				]
+			},
+			"bone-avant-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "value": 39.73 },
+					{ "time": 0.3, "value": -14.92 }
+				]
+			},
+			"bone-main-droite": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "value": 24.61 },
+					{ "time": 0.2333, "value": -9.11 },
+					{ "time": 0.3, "value": -42.83 }
+				]
+			},
+			"target IK jambe droite": {
+				"translate": [
+					{},
+					{ "time": 0.3, "x": -88.67, "y": 3.56 }
+				]
+			},
+			"target IK jambe gauche": {
+				"translate": [
+					{},
+					{ "time": 0.3, "x": 3.66, "y": 8.64 }
+				]
+			},
+			"target IK pied droit": {
+				"translate": [
+					{},
+					{ "time": 0.3, "x": -43.85, "y": -20.64 }
+				]
+			},
+			"target IK pied gauche": {
+				"translate": [
+					{},
+					{ "time": 0.3, "x": -1.96, "y": -5.3 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"slash": {
+					"slash2": [
+						{ "time": 0.2333 },
+						{
+							"time": 0.3,
+							"vertices": [ 30.31438, -113.15134, -11.91842, -15.12981, 0, 0, 30.31438, -113.15134 ]
+						}
+					]
+				}
+			}
+		}
+	}
+}
+}

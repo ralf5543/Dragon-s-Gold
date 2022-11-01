@@ -19,7 +19,7 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
-hp = 50;// Life points
+hp = 5000;// Life points
 hp_max = hp;
 
 energy = 250;// Energy points (used to run)
