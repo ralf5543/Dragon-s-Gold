@@ -1,5 +1,6 @@
 
 function PlayerState_Free(){
+	image_speed = 1;
 	
 	//reinit the hurt values, so he can be thrown again !
 	hurt_hsp = 4;

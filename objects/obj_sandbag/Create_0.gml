@@ -62,8 +62,7 @@ hitfrom = undefined // direction of the incoming attack
 
 // used to "throw" the hit player
 hurt_hsp = 4;
-//hurt_vsp = -5;
-hurt_vsp = -50;
+hurt_vsp = -5;
 hurt_grv = .4;
 hurt_done = 0;
 

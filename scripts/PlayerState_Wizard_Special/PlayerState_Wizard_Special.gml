@@ -69,7 +69,6 @@ function PlayerState_Wizard_Special(){
 		
 		focus_fireball = 0;
 		state = PLAYERSTATE.FREE;
-		can_attack = true;
 		can_cast = true;
 	}
 }

@@ -23,11 +23,21 @@ key_jump = gamepad_button_check_pressed(pad_num, gp_face1);// A (green) button
 key_attack = gamepad_button_check_pressed(pad_num, gp_face3);// X (blue) button
 key_special = gamepad_button_check_pressed(pad_num, gp_face2);// B (red) button
 key_special_released = gamepad_button_check_released(pad_num, gp_face2);// B (red) button
+key_y = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
+
+if (key_y) {
+	if (skeleton_skin_get() != "standard") {
+		skeleton_skin_set("standard");
+	} else {
+		skeleton_skin_set("alt1");
+	}
+}
 
 // used only for characters selection screen
 if (room == rm_start) {
 		skeleton_animation_set("stand");
+		skeleton_skin_set("standard");
 		
 	if (key_start) || keyboard_check(vk_enter) {	
 		

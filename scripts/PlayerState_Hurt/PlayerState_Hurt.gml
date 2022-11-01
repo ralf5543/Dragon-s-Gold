@@ -4,7 +4,7 @@ function PlayerState_Hurt(){
 	can_attack = false;
 	
 	if (skeleton_animation_get() != "hurt") {
-		skeleton_animation_set("hurt");
+		skeleton_animation_set("hurt");		
 	}
 	
 	
@@ -12,7 +12,7 @@ function PlayerState_Hurt(){
 		if (can_hurtSound) {
 			audio_play_sound(choose(snd_hurt_male1, snd_hurt_male2, snd_hurt_male3), 8, false);
 			can_hurtSound = false;
-			alarm[1] = 32;
+			alarm[1] = 64;
 		}
 		
 		hurt_vsp += hurt_grv; //contuously accelerates bottom move
@@ -36,8 +36,7 @@ function PlayerState_Hurt(){
 		// detects a collision at (y + vsp) distance
 		if (place_meeting(x, y + hurt_vsp, obj_wall)) {
 			if (hurt_vsp > 1) {// just to stop the condition, and save perfs
-				hurt_done = 1;				
-			
+				hurt_done = 1;
 			};
 		
 			//while detects NO collision at 1px (sign(vsp), so 1 and -1) y distance

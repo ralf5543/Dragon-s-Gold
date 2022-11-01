@@ -13,6 +13,8 @@ key_special = 0;
 key_special_released = 0;
 key_start = 0;
 
+key_y = 0;
+
 
 hsp = 0; // horizontal speed
 vsp = 0; // vertical speed
@@ -24,6 +26,8 @@ hp_max = hp;
 
 energy = 250;// Energy points (used to run)
 energy_max = energy;
+
+image_speed = 1;
 
 state = PLAYERSTATE.FREE;
 
@@ -68,6 +72,7 @@ can_lose_key_when_dead = true;
 can_slide = true;
 
 hitfrom = undefined // direction of the incoming attack
+hit_by_attack = ds_list_create();
 
 // used to "throw" the hit player
 hurt_hsp = 4;

@@ -27,16 +27,21 @@ function PlayerState_Attack(){
 		} else {
 
 			// Start of the attack
-			if (sprite_index != asset_get_index("spr_" + character + "_attack_strip7")) {
-				sprite_index = asset_get_index("spr_" + character + "_attack_strip7");
-				image_index = 0;
+			if (skeleton_animation_get() != "attack") {
+				skeleton_animation_set("attack")
 			}
+			
+			//mask_index = spr_knight_attackHB_strip7;
+
+			
 	
-			//use attack hitbox and checks for hits
+			// use attack hitbox and checks for hits
 			var inst = instance_create_layer(x, y, "layer_players", obj_attack);
 			with (inst) {
 				sprite_index = asset_get_index("spr_" + other.character + "_attackHB_strip7");
 				image_xscale = other.facing;
+				
+				//to avoid hitting himself
 				attack_id_receiver = other.gamepad_id_owner;
 			}
 		}

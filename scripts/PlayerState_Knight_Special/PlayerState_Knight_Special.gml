@@ -23,7 +23,6 @@ function PlayerState_Knight_Special(){
 	
 	if (key_special_released) {
 		state = PLAYERSTATE.FREE;
-		can_attack = true;
 		instance_destroy(shield);
 	}
 }

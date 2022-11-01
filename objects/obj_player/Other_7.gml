@@ -1,10 +1,15 @@
 /// @description 
 
+//hurt animation
+if (skeleton_animation_get() == "hurt") {
+    image_index = -1;
+	image_speed = 0;
+	//state = PLAYERSTATE.FREE;
+}
+
 //attack animation
-if (sprite_index == asset_get_index("spr_" + character + "_attack_strip7")) {
-    sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
-	state = PLAYERSTATE.FREE;
-	can_attack = true;
+if (skeleton_animation_get() == "attack") {
+    state = PLAYERSTATE.FREE;
 }
 
 
