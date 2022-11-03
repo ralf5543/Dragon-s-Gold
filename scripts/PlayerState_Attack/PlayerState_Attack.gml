@@ -24,7 +24,6 @@ function PlayerState_Attack(){
 			
 			
 		} else {
-			show_debug_message("attack !")
 
 			// Start of the attack
 			if (skeleton_animation_get() != "attack") {
@@ -37,9 +36,13 @@ function PlayerState_Attack(){
 	
 			// use attack hitbox and checks for hits
 			//var inst = instance_create_layer(x, y, "layer_players", obj_attack);
-			var inst = instance_create_layer(x, y, "layer_players", Obj_test);
+			var inst = instance_create_layer(x, y, "layer_players", obj_attack);
 			with (inst) {
+				alarm_set(0, 1);
+				sprite_index = asset_get_index("spr_slash_strip9");
 				//sprite_index = asset_get_index("spr_slash");
+				//skeleton_animation_set("attack");
+				
 				image_xscale = other.facing;
 				
 				//to avoid hitting himself

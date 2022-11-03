@@ -1,6 +1,3 @@
-
-/// @description Hit ennemy
-
 if (can_hit == true) {//so apply only once
 
 	with (other) {
@@ -23,16 +20,4 @@ if (can_hit == true) {//so apply only once
 	}
 	can_hit = false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

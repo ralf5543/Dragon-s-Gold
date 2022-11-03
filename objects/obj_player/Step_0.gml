@@ -162,6 +162,7 @@ if (room == rm_start) {
 		
 		case PLAYERSTATE.ATTACK : 
 		PlayerState_Attack();
+	//	alarm_set(5,1);
 		break;
 		
 		case PLAYERSTATE.SPECIAL : 
