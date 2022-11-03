@@ -15,7 +15,6 @@
     {"id":{"name":"obj_hall_ground_D","path":"objects/obj_hall_ground_D/obj_hall_ground_D.yy",},"order":16,},
     {"id":{"name":"spr_knight_attack_strip7","path":"sprites/spr_knight_attack_strip7/spr_knight_attack_strip7.yy",},"order":0,},
     {"id":{"name":"CreateDoors","path":"scripts/CreateDoors/CreateDoors.yy",},"order":6,},
-    {"id":{"name":"test","path":"sprites/test/test.yy",},"order":8,},
     {"id":{"name":"spr_tile_castle","path":"sprites/spr_tile_castle/spr_tile_castle.yy",},"order":5,},
     {"id":{"name":"spr_fireball","path":"sprites/spr_fireball/spr_fireball.yy",},"order":7,},
     {"id":{"name":"spr_ranger_attack_strip7","path":"sprites/spr_ranger_attack_strip7/spr_ranger_attack_strip7.yy",},"order":0,},

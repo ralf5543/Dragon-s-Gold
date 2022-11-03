@@ -72,7 +72,6 @@ can_lose_key_when_dead = true;
 can_slide = true;
 
 hitfrom = undefined // direction of the incoming attack
-hit_by_attack = ds_list_create();
 
 // used to "throw" the hit player
 hurt_hsp = 4;

@@ -136,10 +136,9 @@ if (room != rm_start) {
 		skeleton_animation_mix("run", "hurt", 0.3);
 		skeleton_animation_mix("jump-up", "hurt", 0.3);
 		skeleton_animation_mix("jump-down", "hurt", 0.3);
-		//skeleton_animation_mix("walk", "attack", 0.2);
-		//skeleton_animation_mix("attack", "walk", 0.3);
-		//skeleton_animation_mix("stand", "attack", 0.2);
-		//skeleton_animation_mix("attack", "stand", 0.2);
+		skeleton_animation_mix("run", "dash", 0.1);
+		skeleton_animation_mix("dash", "stand", 0.3);
+		skeleton_animation_mix("dash", "run", 0.3);
 		
 		//Places each player in a different used hall, at 1 tile from left/right from it
 	

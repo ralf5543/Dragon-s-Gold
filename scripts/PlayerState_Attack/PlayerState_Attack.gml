@@ -7,9 +7,9 @@ function PlayerState_Attack(){
 		
 		if (energy > 0) && (key_run) {
 			// Start of the attack
-			if (sprite_index != asset_get_index("spr_" + character + "_dash_strip2")) {
-				sprite_index = asset_get_index("spr_" + character + "_dash_strip2");
-				image_index = 0;
+			// Start of the attack
+			if (skeleton_animation_get() != "dash") {
+				skeleton_animation_set("dash")
 			}
 			
 			//use attack hitbox and checks for hits
