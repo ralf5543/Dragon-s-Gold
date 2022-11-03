@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "7pkLp/SwjHo", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 138.58, "height": 182.86 },
+"skeleton": { "hash": "G3zXJxhR6XY", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 138.58, "height": 182.86 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3, "scaleY": 0.3 },
 	{ "name": "bone-principal", "parent": "root", "rotation": -90, "x": -0.54, "y": 108.72 },
@@ -647,8 +647,14 @@
 	"dash": {
 		"slots": {
 			"slash": {
+				"rgba": [
+					{ "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
 				"attachment": [
-					{ "name": null }
+					{ "name": null },
+					{ "time": 0.0667, "name": "slash" },
+					{ "time": 0.5667, "name": null }
 				]
 			},
 			"tete-face": {
@@ -691,7 +697,8 @@
 					{ "value": 16.8 },
 					{ "time": 0.1333, "value": 20.67, "curve": "stepped" },
 					{ "time": 0.4333, "value": 20.67 },
-					{ "time": 0.5667, "value": 16.8 }
+					{ "time": 0.5333, "value": 27.58 },
+					{ "time": 0.5667, "value": 27.95 }
 				]
 			},
 			"bone-bras-droit": {
@@ -835,7 +842,7 @@
 					{ "value": -13.71 },
 					{ "time": 0.0667, "value": -21.58, "curve": "stepped" },
 					{ "time": 0.5333, "value": -21.58 },
-					{ "time": 0.5667, "value": -13.71 }
+					{ "time": 0.5667, "value": -1.74 }
 				]
 			},
 			"plume3": {
@@ -871,6 +878,14 @@
 		},
 		"deform": {
 			"standard": {
+				"slash": {
+					"slash": [
+						{
+							"time": 0.0667,
+							"vertices": [ 36.47155, -13.95367, 36.47163, -13.95363, 417.29895, 19.49554, 417.29877, 19.49547 ]
+						}
+					]
+				},
 				"sourcil": {
 					"sourcil": [
 						{

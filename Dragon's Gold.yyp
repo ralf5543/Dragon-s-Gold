@@ -55,6 +55,7 @@
     {"id":{"name":"spr_wizard_die_strip6","path":"sprites/spr_wizard_die_strip6/spr_wizard_die_strip6.yy",},"order":5,},
     {"id":{"name":"snd_attack_miss","path":"sounds/snd_attack_miss/snd_attack_miss.yy",},"order":0,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":4,},
+    {"id":{"name":"test","path":"sprites/test/test.yy",},"order":8,},
     {"id":{"name":"PlayerState_Ranger_Special","path":"scripts/PlayerState_Ranger_Special/PlayerState_Ranger_Special.yy",},"order":8,},
     {"id":{"name":"snd_victory_music","path":"sounds/snd_victory_music/snd_victory_music.yy",},"order":14,},
     {"id":{"name":"spr_wizard_hurt_strip2","path":"sprites/spr_wizard_hurt_strip2/spr_wizard_hurt_strip2.yy",},"order":4,},

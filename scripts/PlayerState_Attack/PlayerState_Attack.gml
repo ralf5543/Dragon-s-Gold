@@ -31,8 +31,8 @@ function PlayerState_Attack(){
 			
 			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
 			with (inst) {
-				alarm_set(0, 1);
 				sprite_index = asset_get_index("spr_slash_strip9");
+				//sprite_index = asset_get_index("test");
 				
 				image_xscale = other.facing;
 				
