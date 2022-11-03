@@ -7,15 +7,14 @@ function PlayerState_Attack(){
 		
 		if (energy > 0) && (key_run) {
 			// Start of the attack
-			// Start of the attack
 			if (skeleton_animation_get() != "dash") {
 				skeleton_animation_set("dash")
 			}
 			
-			//use attack hitbox and checks for hits
-			var inst = instance_create_layer(x, y, "layer_players", obj_attack);
+
+			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
 			with (inst) {
-				sprite_index = asset_get_index("spr_" + other.character + "_dashHB_strip9");
+				sprite_index = asset_get_index("spr_" + other.character + "_dash_strip9");
 				image_xscale = other.facing;
 				attack_id_receiver = other.gamepad_id_owner;
 			}
@@ -30,18 +29,10 @@ function PlayerState_Attack(){
 				skeleton_animation_set("attack")
 			}
 			
-			//mask_index = spr_knight_attackHB_strip7;
-
-			
-	
-			// use attack hitbox and checks for hits
-			//var inst = instance_create_layer(x, y, "layer_players", obj_attack);
-			var inst = instance_create_layer(x, y, "layer_players", obj_attack);
+			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
 			with (inst) {
 				alarm_set(0, 1);
 				sprite_index = asset_get_index("spr_slash_strip9");
-				//sprite_index = asset_get_index("spr_slash");
-				//skeleton_animation_set("attack");
 				
 				image_xscale = other.facing;
 				
