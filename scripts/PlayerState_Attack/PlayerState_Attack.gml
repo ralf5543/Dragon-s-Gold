@@ -27,12 +27,14 @@ function PlayerState_Attack(){
 			// Start of the attack
 			if (skeleton_animation_get() != "attack") {
 				skeleton_animation_set("attack")
+				//ds_list_clear(hitByAttack);
 			}
+						
 			
 			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
 			with (inst) {
 				sprite_index = asset_get_index("spr_slash_strip9");
-				//sprite_index = asset_get_index("test");
+				//mask_index = spr_slash_strip9;
 				
 				image_xscale = other.facing;
 				

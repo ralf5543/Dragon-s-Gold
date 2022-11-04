@@ -110,11 +110,15 @@ if (room != rm_start) {
 
 	}
 	
+	
+	//temp debugingg object
 	instance_create_layer(ds_list_find_value(other.halls_roof_list, 0).hall_x + 800, ds_list_find_value(other.halls_roof_list, 0).hall_y - 200, "sandbag", obj_sandbag);
+	
 	
 
 	//==================-------------- Players starting position
 	with (obj_player) {
+		
 		//Attach the corresponding character sprite to each player
 		sprite_index = asset_get_index("spr_" + character);
 		skeleton_animation_mix(+"stand", "walk", 0.3);
@@ -139,6 +143,7 @@ if (room != rm_start) {
 		skeleton_animation_mix("run", "dash", 0.1);
 		skeleton_animation_mix("dash", "stand", 0.3);
 		skeleton_animation_mix("dash", "run", 0.3);
+		
 		
 		//Places each player in a different used hall, at 1 tile from left/right from it
 	
