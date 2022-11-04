@@ -9,9 +9,8 @@ function PlayerState_Won(){
 		can_play_victory = false;
 	}
 	
-	if (sprite_index != asset_get_index("spr_" + character + "_win_strip3")) {
-		sprite_index = asset_get_index("spr_" + character + "_win_strip3");
-		image_index = 0;
+	if (skeleton_animation_get() != "victory") {
+		skeleton_animation_set("victory")
 	}
 	
 	global.game_state = "over";
