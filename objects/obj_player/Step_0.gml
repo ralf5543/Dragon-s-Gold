@@ -27,10 +27,14 @@ key_y = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
 
 if (key_y) {
-	if (skeleton_skin_get() != "standard") {
-		skeleton_skin_set("standard");
-	} else {
+	if (skeleton_skin_get() == "standard") {
 		skeleton_skin_set("alt1");
+	} else if (skeleton_skin_get() == "alt1") {
+		skeleton_skin_set("alt2");
+	} else if (skeleton_skin_get() == "alt2") {
+		skeleton_skin_set("alt3");
+	} else if (skeleton_skin_get() == "alt3") {
+		skeleton_skin_set("standard");
 	}
 }
 
