@@ -30,12 +30,13 @@ function PlayerState_Dead(){
 			has_gold_key --;
 		}
 	}
+
+
 	
-	if (sprite_index != asset_get_index("spr_" + character + "_die_strip6")) {
-		sprite_index = asset_get_index("spr_" + character + "_die_strip6");
-		image_index = 0;
-		image_speed = 1;
+	if (skeleton_animation_get() != "dead") {
+		skeleton_animation_set("dead");		
 		audio_play_sound(choose(snd_death_male1, snd_death_male2, snd_death_male3), 7, false);
+		image_speed = 1;
 		
 		alarm[2] = 256; // rebirth 8 seconds later
 	}

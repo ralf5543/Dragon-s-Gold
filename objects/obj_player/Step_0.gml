@@ -75,18 +75,20 @@ if (room == rm_start) {
 } else {
 	image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
 	image_yscale = 1
+	
+	// TODO : draw animations for alternate facing !
 		
-	if (facing == 1) {
-		skeleton_attachment_set("main-gauche", "main-gauche-bouclier");
-		skeleton_attachment_set("main-droite-epee", "main-droite-epee");
-		skeleton_attachment_set("main-droite-bouclier", -1);
-		player_orientation = 0;
-	} else {
-		player_orientation = 180;
-		skeleton_attachment_set("main-gauche", "main-gauche-epee");
-		skeleton_attachment_set("main-droite-epee", -1);
-		skeleton_attachment_set("main-droite-bouclier", "main-droite-bouclier");
-	}
+	//if (facing == 1) {
+	//	skeleton_attachment_set("main-gauche", "main-gauche-bouclier");
+	//	skeleton_attachment_set("main-droite-epee", "main-droite-epee");
+	//	skeleton_attachment_set("main-droite-bouclier", -1);
+	//	player_orientation = 0;
+	//} else {
+	//	player_orientation = 180;
+	//	skeleton_attachment_set("main-gauche", "main-gauche-epee");
+	//	skeleton_attachment_set("main-droite-epee", -1);
+	//	skeleton_attachment_set("main-droite-bouclier", "main-droite-bouclier");
+	//}
 		
 	if (energy < energy_max) {
 		energy += .1;
