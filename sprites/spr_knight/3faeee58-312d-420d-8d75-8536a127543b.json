@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "nKLF9Ktz26U", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 170.75, "height": 141.18 },
+"skeleton": { "hash": "Vah2fdZ3ous", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 170.75, "height": 141.18 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3, "scaleY": 0.3 },
 	{ "name": "bone-principal", "parent": "root", "rotation": -90, "x": -0.54, "y": 108.72 },
@@ -13,7 +13,7 @@
 	{ "name": "sourcil", "parent": "bone-tete", "length": 10.25, "rotation": 52.92, "x": 52.71, "y": -40.3 },
 	{ "name": "sourcil2", "parent": "sourcil", "length": 10.03, "rotation": 28.15, "x": 10.25 },
 	{ "name": "sourcil3", "parent": "sourcil2", "length": 9.81, "rotation": -11.33, "x": 10.25, "y": 0.16 },
-	{ "name": "bras-gauche", "parent": "bone-tronc", "length": 51.26, "rotation": 13.84, "x": -2.52, "y": 13.19 },
+	{ "name": "bras-gauche", "parent": "bone-tronc", "length": 51.26, "rotation": 10.12, "x": -2.52, "y": 13.19 },
 	{ "name": "avant-bras-gauche", "parent": "bras-gauche", "length": 51.79, "rotation": 22.24, "x": 49.42, "y": -2.11 },
 	{ "name": "bone-main-gauche", "parent": "avant-bras-gauche", "length": 42.31, "rotation": 12.39, "x": 55.58, "y": 2.75 },
 	{ "name": "bone-cuisse-droite", "parent": "bone-tronc", "length": 46.72, "rotation": 0.99, "x": 91.76, "y": -32.72 },
@@ -61,7 +61,8 @@
 	{ "name": "avant-bras-droit", "bone": "bone-avant-bras-droit", "attachment": "avant-bras-droit" },
 	{ "name": "bras-droit", "bone": "bone-bras-droit", "attachment": "bras-droit" },
 	{ "name": "main-droite-bouclier", "bone": "bone-main-droite" },
-	{ "name": "slash", "bone": "bone-main-droite" }
+	{ "name": "slash", "bone": "bone-main-droite" },
+	{ "name": "bouclier-profil", "bone": "avant-bras-gauche", "attachment": "bouclier-profil" }
 ],
 "ik": [
 	{
@@ -107,6 +108,15 @@
 					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
 					"triangles": [ 1, 2, 3, 1, 3, 0 ],
 					"vertices": [ 56.83, -126.17, -104.97, -93.81, -64.37, 109.17, 97.43, 76.81 ],
+					"hull": 4
+				}
+			},
+			"bouclier-profil": {
+				"bouclier-profil": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 0, 1, 3 ],
+					"vertices": [ 103.53, -87.43, 21.47, -105.37, -25.08, 107.6, 56.98, 125.54 ],
 					"hull": 4
 				}
 			},
@@ -157,7 +167,7 @@
 				"sourcil": {
 					"type": "mesh",
 					"uvs": [ 0.25358, 0.01406, 0.41124, 0.32376, 0.69247, 0.45217, 0.90126, 0.59569, 0.97796, 0.76943, 0.98648, 0.97338, 0.78195, 0.78454, 0.55186, 0.69389, 0.3175, 0.75432, 0.16836, 0.64857, 0.01923, 0.44462, 0.15984, 0.43707, 0.1428, 0.18024, 0.23654, 0.3011 ],
-					"triangles": [ 8, 11, 13, 8, 1, 7, 8, 13, 1, 10, 11, 9, 8, 9, 11, 11, 12, 13, 13, 0, 1, 7, 2, 6, 7, 1, 2, 6, 4, 5, 6, 3, 4, 6, 2, 3 ],
+					"triangles": [ 13, 0, 1, 11, 12, 13, 8, 9, 11, 10, 11, 9, 8, 13, 1, 8, 1, 7, 8, 11, 13, 7, 1, 2, 7, 2, 6, 6, 2, 3, 6, 3, 4, 6, 4, 5 ],
 					"vertices": [ 1, 11, 12.96, -7.54, 1, 2, 10, 14.25, -4.11, 0.09746, 11, 4.76, -3.41, 0.90254, 1, 10, 2.96, -3.2, 1, 1, 9, 6.03, -3.96, 1, 1, 9, 1.32, -2.81, 1, 1, 9, -1.71, 0.51, 1, 2, 9, 7.1, 2.18, 0.93721, 10, -1.73, 3.42, 0.06279, 2, 10, 7.46, 2.98, 0.62042, 11, -3.29, 2.21, 0.37958, 1, 11, 4.76, 6.75, 1, 1, 11, 11.02, 6.68, 1, 1, 11, 18.07, 4.59, 1, 1, 11, 13.01, 2.46, 1, 1, 11, 15.67, -2.57, 1, 1, 11, 11.3, -1.41, 1 ],
 					"hull": 14
 				}
@@ -614,7 +624,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -840,7 +860,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -1123,6 +1153,11 @@
 					{ "time": 0.1333, "name": "bouclier-interieur" }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
 				"attachment": [
 					{ "name": null },
@@ -1385,7 +1420,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -1545,7 +1590,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -1944,7 +1999,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -2159,7 +2224,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -2456,6 +2531,199 @@
 			}
 		}
 	},
+	"shield": {
+		"slots": {
+			"bouclier": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.1, "name": "bouclier-profil" }
+				]
+			},
+			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-gauche": {
+				"attachment": [
+					{ "time": 0.1, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone-principal": {
+				"translate": [
+					{},
+					{ "time": 0.0667, "y": -19.12 }
+				]
+			},
+			"bone-visiere": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": 5.57 },
+					{ "time": 0.1667, "value": -4.42 }
+				]
+			},
+			"bone-plume": {
+				"rotate": [
+					{},
+					{ "time": 0.2333, "value": 9.85 }
+				]
+			},
+			"bone-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": -61.18 }
+				]
+			},
+			"bone-avant-bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": 73.21 }
+				]
+			},
+			"bone-main-droite": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": -29.91 }
+				]
+			},
+			"sourcil": {
+				"translate": [
+					{},
+					{ "time": 0.1, "x": -0.91, "y": 0.95 }
+				]
+			},
+			"sourcil2": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "value": -6.91 }
+				]
+			},
+			"sourcil3": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "value": -17.55 }
+				]
+			},
+			"bras-gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": 46.01 }
+				]
+			},
+			"bone-main-gauche": {
+				"scale": [
+					{},
+					{ "time": 0.0667, "x": 0.478 }
+				]
+			},
+			"bone-cuisse-droite": {
+				"rotate": [
+					{ "value": 6.12 }
+				]
+			},
+			"bone-tibia-droite": {
+				"rotate": [
+					{ "value": -10.93 }
+				]
+			},
+			"bone-pied-droit": {
+				"rotate": [
+					{ "value": 10.8 }
+				]
+			},
+			"bone-orteils": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": 11.75 }
+				]
+			},
+			"bone-cuisse-gauche": {
+				"rotate": [
+					{ "value": 7.66 }
+				]
+			},
+			"tibia-gauche": {
+				"rotate": [
+					{ "value": -5.64 }
+				]
+			},
+			"bone-pied-gauche": {
+				"rotate": [
+					{ "value": 0.19 }
+				]
+			},
+			"plume": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": -15.81 },
+					{ "time": 0.2333, "value": -10.61 }
+				]
+			},
+			"plume2": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": -6.36 },
+					{ "time": 0.3667, "value": 0.44 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.3667, "y": 1.119 }
+				]
+			},
+			"target IK jambe droite": {
+				"translate": [
+					{},
+					{ "time": 0.0667, "x": -66.28, "y": 11.47 }
+				]
+			},
+			"target IK jambe gauche": {
+				"translate": [
+					{},
+					{ "time": 0.0667, "x": 21.67, "y": -1.27 }
+				]
+			},
+			"target IK pied droit": {
+				"translate": [
+					{},
+					{ "time": 0.0667, "x": -21.69, "y": -42.18 }
+				]
+			},
+			"target IK pied gauche": {
+				"translate": [
+					{},
+					{ "time": 0.0667, "x": 22.94, "y": 2.55 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"bouclier-profil": {
+					"bouclier-profil": [
+						{
+							"time": 0.1,
+							"vertices": [ -9.75012, -15.88809, 10.6957, 13.74977, 24.28718, 1.51277, 3.84122, -28.1252 ]
+						},
+						{
+							"time": 0.1333,
+							"vertices": [ 7.26832, -7.18759, 7.26832, -7.18759, 7.26832, -7.18759, 7.26832, -7.18759 ]
+						}
+					]
+				}
+			}
+		}
+	},
 	"stand": {
 		"slots": {
 			"bouclier": {
@@ -2463,7 +2731,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -2659,7 +2937,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]
@@ -2848,7 +3136,17 @@
 					{ "name": null }
 				]
 			},
+			"bouclier-profil": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
 			"epee-seule": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"main-droite-ouverte": {
 				"attachment": [
 					{ "name": null }
 				]

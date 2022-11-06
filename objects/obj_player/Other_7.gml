@@ -30,12 +30,12 @@ if (sprite_index == spr_ranger_bow_strip8) {
 }
 
 //shield animation
-if (sprite_index == spr_knight_shield_strip8) {
-    image_index = -1;
-
+if (skeleton_animation_get() == "shield") {
+	image_index = -1;
+	image_speed = 0;
 }
 
-//shield animation
+//Fireball animation
 if (sprite_index == spr_wizard_cast_strip5) {
     can_sound_cast = true;
 
