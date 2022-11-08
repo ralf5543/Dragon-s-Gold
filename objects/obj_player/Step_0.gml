@@ -168,7 +168,6 @@ if (room == rm_start) {
 		
 		case PLAYERSTATE.ATTACK : 
 		PlayerState_Attack();
-	//	alarm_set(5,1);
 		break;
 		
 		case PLAYERSTATE.SPECIAL : 
@@ -190,12 +189,5 @@ if (room == rm_start) {
 		case PLAYERSTATE.LOSE : 
 		PlayerState_Lose();
 		break;
-	}
-	
-	if (state != PLAYERSTATE.SPECIAL) && (character == "knight") {
-		// todo : verify in a game with several knights
-		if (instance_exists(obj_shield)) {
-			instance_destroy(obj_shield);
-		}
 	}
 }

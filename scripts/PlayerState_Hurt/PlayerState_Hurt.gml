@@ -176,5 +176,10 @@ function PlayerState_Hurt(){
 			}
 		}
 	}
+	
+	// Knight only(lose shield protection)
+	if (instance_exists(shield)) {
+		instance_destroy(shield);
+	}
 
 }
