@@ -178,8 +178,8 @@ function PlayerState_Hurt(){
 	}
 	
 	// Knight only(lose shield protection)
-	if (instance_exists(shield)) {
-		instance_destroy(shield);
+	if (instance_exists(obj_shield)) {
+		instance_destroy(obj_shield);
 	}
 
 }

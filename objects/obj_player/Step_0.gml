@@ -123,7 +123,7 @@ if (room == rm_start) {
 	
 	//==========------------- Invicible "state"
 	if (is_invicible) {
-		
+
 		blink_timer ++;
 		invincible_timer ++;
 		
@@ -139,6 +139,7 @@ if (room == rm_start) {
 		
 		if (invincible_timer == 128) {
 			is_invicible = false;
+			invincible_timer = 0;
 		}
 	}
 	
