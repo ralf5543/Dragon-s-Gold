@@ -31,8 +31,9 @@ if (sprite_index == spr_ranger_bow_strip8) {
 
 //shield animation
 if (skeleton_animation_get() == "shield") {
-	image_index = -1;
-	image_speed = 0;
+	//loop on the 10th frame
+	image_index =10;
+	//image_speed = 0;
 }
 
 //Fireball animation
