@@ -13,8 +13,9 @@ if (room == rm_start) {
 		    _num++;
 		
 			draw_set_halign(fa_center);
-			draw_text(xx + (room_width / 8), yy + (room_height / 2), "Press START to join !");
+			draw_text(xx + (room_width / 8), yy + (room_height / 2), text_start_player);
 			draw_set_halign(fa_left);
+
 		} else {
 			draw_set_halign(fa_center);
 			draw_text(xx + (room_width / 8), yy + (room_height / 2), "No controller");

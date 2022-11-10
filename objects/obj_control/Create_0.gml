@@ -23,3 +23,5 @@ start_players = 0;// number of players who pushed Start
 ready_players = 0;// number of players who selected their character
 
 door_calculate = true //calculates door numbers only once
+
+text_start_player = "Press START to join !";

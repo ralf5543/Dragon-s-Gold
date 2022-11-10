@@ -99,7 +99,7 @@ if (selectClass_control) {
 		audio_sound_pitch(snd_tada, choose(.8, 1, 1.2));
 		audio_play_sound(snd_tada, 8, false);
 	
-		//skeleton_animation_set("victory");
+		skeleton_animation_set("victory");
 		
 		selectClass_control = false;// deactive the class selector		
 		gamepad_id_receiver.character = selectClass[selectClass_cursor];// gives the character the selected class

@@ -1,7 +1,6 @@
 
 
 with (other) {
-	show_debug_message("hit sandbag")
 	if (!is_invicible) {
 		if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) {
 			if (point_direction(other.x, other.y, x, y) > 90) {

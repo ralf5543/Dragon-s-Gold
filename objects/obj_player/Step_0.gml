@@ -26,28 +26,30 @@ key_special_released = gamepad_button_check_released(pad_num, gp_face2);// B (re
 key_y = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
 
-if (key_y) {
-	if (skeleton_skin_get() == "standard") {
-		skeleton_skin_set("alt1");
-	} else if (skeleton_skin_get() == "alt1") {
-		skeleton_skin_set("alt2");
-	} else if (skeleton_skin_get() == "alt2") {
-		skeleton_skin_set("alt3");
-	} else if (skeleton_skin_get() == "alt3") {
-		skeleton_skin_set("standard");
-	}
-}
+
 
 // used only for characters selection screen
 if (room == rm_start) {
-		skeleton_animation_set("stand");
+	if (skeleton_skin_get() != "standard")
+	{
 		skeleton_skin_set("standard");
+	}
+				
+	if (skeleton_animation_get() != "stand") {
+		skeleton_animation_set("stand");		
+	}
 		
-	if (key_start) || keyboard_check(vk_enter) {	
-		
+	if (key_start) {	
 		
 		//Can push Start only once
 		if (can_push_start == true) {
+	
+			//var list = ds_list_create();
+			//skeleton_skin_list(spr_knight, list);
+	
+			//// from 1 (alt1) to 4 (standard)
+			//skeleton_skin_set(list[| 4])
+			//ds_list_destroy(list);
 			
 			// create class selection menu linked to this instance
 			var inst = instance_create_layer(x, y + 250, "layer_players", obj_select_class);
@@ -69,6 +71,11 @@ if (room == rm_start) {
 			//tells the Controller that this player is ready
 			obj_control.start_players ++;
 			can_push_start = false;
+			
+			// Remove "push start" text
+			with (obj_control) {
+				text_start_player = "";
+			}
 		}
 	}
 		   

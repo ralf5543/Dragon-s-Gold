@@ -31,7 +31,7 @@ image_speed = 1;
 
 state = PLAYERSTATE.FREE;
 
-//enum : global variable you never want to change
+//enum : global variables you never want to change
 enum PLAYERSTATE {
 	FREE,
 	HURT,
@@ -58,6 +58,9 @@ pad_num = 0;
 // The class of the selected character
 character = "No class";
 gamepad_id_owner = 0;// gamepad id recovered from obj_control
+
+// Character skin
+skin = "default";
 
 // prevails from pushing serveral times on start button
 // and distort the ready players number
