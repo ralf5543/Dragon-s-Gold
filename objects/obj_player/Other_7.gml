@@ -12,12 +12,17 @@ if (skeleton_animation_get() == "attack") {
     state = PLAYERSTATE.FREE;
 }
 
-
 //dash animation
 if (sprite_index == asset_get_index("spr_" + character + "_dash_strip2")) {
     sprite_index = asset_get_index("spr_" + character + "_dash_strip2");
 	image_speed = 0;
 	image_index = -1;
+}
+
+//victory animation
+if (skeleton_animation_get() == "victory") {
+	//loop on the 40th frame
+	image_index =40;
 }
 
 //bow animation

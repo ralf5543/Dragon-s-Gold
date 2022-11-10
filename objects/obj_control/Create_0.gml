@@ -22,6 +22,8 @@ total_pads = 0;// number of plugged gamepads
 start_players = 0;// number of players who pushed Start
 ready_players = 0;// number of players who selected their character
 
-door_calculate = true //calculates door numbers only once
+knight_ready_players = 0;// number of knights (to manage skins)
+ranger_ready_players = 0;// number of rangers
+wizard_ready_players = 0;// number of wizards
 
-text_start_player = "Press START to join !";
+door_calculate = true //calculates door numbers only once

@@ -8,18 +8,20 @@ if (room == rm_start) {
 	for (var i = 0; i < 4; i++;) { //4 players max
 		var xx = (room_width / 4) * i;// centered on the screen quarter
 		var yy = 32;
+		
+		text_start_player = "";
 	
 		if gamepad_is_connected(i) {
 		    _num++;
-		
-			draw_set_halign(fa_center);
-			draw_text(xx + (room_width / 8), yy + (room_height / 2), text_start_player);
-			draw_set_halign(fa_left);
+			text_start_player = "Press START to join !"
+			
 
 		} else {
-			draw_set_halign(fa_center);
-			draw_text(xx + (room_width / 8), yy + (room_height / 2), "No controller");
-			draw_set_halign(fa_left);
+			text_start_player = "No controller!"
 		}
+		
+		draw_set_halign(fa_center);
+		draw_text(xx + (room_width / 8), yy + (room_height / 2), text_start_player);
+		draw_set_halign(fa_left);
 	}
 }

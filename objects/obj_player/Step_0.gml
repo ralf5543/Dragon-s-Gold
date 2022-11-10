@@ -30,14 +30,19 @@ key_start = gamepad_button_check_pressed(pad_num, gp_start);
 
 // used only for characters selection screen
 if (room == rm_start) {
-	if (skeleton_skin_get() != "standard")
-	{
+	if (
+		skeleton_skin_get() != "alt1" && skeleton_skin_get() != "alt2" && skeleton_skin_get() != "alt3"
+	) {
 		skeleton_skin_set("standard");
 	}
-				
-	if (skeleton_animation_get() != "stand") {
-		skeleton_animation_set("stand");		
-	}
+	
+	//character waiting for selection
+	if (isActive == false) {
+			if (skeleton_animation_get() != "stand") {
+			skeleton_animation_set("stand");		
+		}
+	}		
+	
 		
 	if (key_start) {	
 		
@@ -73,8 +78,13 @@ if (room == rm_start) {
 			can_push_start = false;
 			
 			// Remove "push start" text
+			if (isActive) {
+				show_debug_message("pad_num : " + string(pad_num))
 			with (obj_control) {
-				text_start_player = "";
+				
+					text_start_player = "";
+				}
+				
 			}
 		}
 	}

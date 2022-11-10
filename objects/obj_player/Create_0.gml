@@ -60,7 +60,7 @@ character = "No class";
 gamepad_id_owner = 0;// gamepad id recovered from obj_control
 
 // Character skin
-skin = "default";
+skin = "standard";
 
 // prevails from pushing serveral times on start button
 // and distort the ready players number

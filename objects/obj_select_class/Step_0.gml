@@ -4,7 +4,7 @@
 if (gamepad_button_check_pressed(player_number, gp_face2)) {
 	selectClass_control = true;
 	obj_control.ready_players --;
-	skeleton_animation_set("stand");
+	//skeleton_animation_set("stand");
 }
 
 if (init_player_selection == true) {
@@ -98,12 +98,67 @@ if (selectClass_control) {
 	if (gamepad_button_check_pressed(player_number, gp_face1)) {
 		audio_sound_pitch(snd_tada, choose(.8, 1, 1.2));
 		audio_play_sound(snd_tada, 8, false);
-	
-		skeleton_animation_set("victory");
 		
 		selectClass_control = false;// deactive the class selector		
 		gamepad_id_receiver.character = selectClass[selectClass_cursor];// gives the character the selected class
 		obj_control.ready_players ++;//tells the Controller that 1 more player pushed the start button
 		gamepad_id_receiver.isActive = true;//tells the Controller that the active player is ready to play
+
+
+//====================-------------------- Check if a same character is taken by multi players, and if so, give each one a different skin
+
+		switch (gamepad_id_receiver.character) {
+			case "knight" : 
+			obj_control.knight_ready_players ++
+			same_characters_number = obj_control.knight_ready_players; 
+			break;
+			
+			case "ranger" : 
+			obj_control.ranger_ready_players ++
+			same_characters_number = obj_control.ranger_ready_players; 
+			break;
+			
+			case "wizard" : 
+			obj_control.wizard_ready_players ++
+			same_characters_number = obj_control.wizard_ready_players; 
+			break;
+		}
+		
+
+		switch (same_characters_number) {
+							
+			case 2 : 
+			with(gamepad_id_receiver) {
+				skeleton_skin_set("alt1");
+			}
+
+			break;
+							
+			case 3 : 
+			with (gamepad_id_receiver) {
+				skeleton_skin_set("alt2");
+			}
+			break;
+							
+			case 4 :
+			with (gamepad_id_receiver) {
+				skeleton_skin_set("alt3");
+			}
+			break;
+		
+			default :
+			with (gamepad_id_receiver) {
+				skeleton_skin_set("standard");
+				break;
+			}	
+		}
+
+
+		with(gamepad_id_receiver) {
+		
+			if (skeleton_animation_get() != "victory") {
+				skeleton_animation_set("victory")
+			}
+		}
 	}
 }
