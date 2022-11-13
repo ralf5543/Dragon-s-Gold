@@ -24,6 +24,16 @@ if (!place_meeting(x, y, obj_shield) ) {
 		}
 	
 	}
+	
+	with (obj_player.gamepad_id_owner) {
+		if (skeleton_animation_get() == "attack") {
+			has_touched_ennemy1 = true;
+		}
+	
+		if (skeleton_animation_get() == "combo1") {
+			has_touched_ennemy2 = true;	
+		}
+	}
 			
 }
 
