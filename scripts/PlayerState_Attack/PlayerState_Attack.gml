@@ -28,6 +28,8 @@ function PlayerState_Attack(){
 			if (skeleton_animation_get() != "attack") {
 				skeleton_animation_set("attack")
 			}
+			
+			show_debug_message("gamepad_id_owner" + string(gamepad_id_owner));
 						
 			
 			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);

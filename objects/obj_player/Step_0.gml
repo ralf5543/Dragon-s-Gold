@@ -44,7 +44,7 @@ if (room == rm_start) {
 	}		
 	
 		
-	if (key_start) {	
+	if (key_start) or (keyboard_check_pressed(vk_enter)) {	
 		
 		//Can push Start only once
 		if (can_push_start == true) {

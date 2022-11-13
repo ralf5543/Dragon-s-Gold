@@ -112,7 +112,7 @@ if (room != rm_start) {
 	
 	
 	//temp debugingg object
-	instance_create_layer(ds_list_find_value(other.halls_roof_list, 0).hall_x + 800, ds_list_find_value(other.halls_roof_list, 0).hall_y - 200, "sandbag", obj_sandbag);
+	//instance_create_layer(ds_list_find_value(other.halls_roof_list, 0).hall_x + 800, ds_list_find_value(other.halls_roof_list, 0).hall_y - 200, "sandbag", obj_sandbag);
 	
 	
 
@@ -152,15 +152,15 @@ if (room != rm_start) {
 			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 128;
 			y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
 
-		} else if (pad_num == 1) {
-			x = room_width - 128;
-			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y + 32;
-			facing = -1;
+		//} else if (pad_num == 1) {
+		//	x = room_width - 128;
+		//	y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y + 32;
+		//	facing = -1;
 			
 			// debugging second player position
-			//} else if (pad_num == 1) {
-			//x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 360;
-			//y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
+			} else if (pad_num == 1) {
+			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 360;
+			y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
 
 		} else if (pad_num == 2) {
 			x = room_width - 128;;
