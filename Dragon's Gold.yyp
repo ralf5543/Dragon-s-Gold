@@ -110,6 +110,7 @@
     {"id":{"name":"snd_metal1","path":"sounds/snd_metal1/snd_metal1.yy",},"order":4,},
     {"id":{"name":"spr_ranger_walk_strip8","path":"sprites/spr_ranger_walk_strip8/spr_ranger_walk_strip8.yy",},"order":2,},
     {"id":{"name":"spr_ranger_hurt_strip2","path":"sprites/spr_ranger_hurt_strip2/spr_ranger_hurt_strip2.yy",},"order":4,},
+    {"id":{"name":"Player_Slide","path":"scripts/Player_Slide/Player_Slide.yy",},"order":16,},
     {"id":{"name":"snd_hurt_male3","path":"sounds/snd_hurt_male3/snd_hurt_male3.yy",},"order":3,},
     {"id":{"name":"obj_hall_middle_B","path":"objects/obj_hall_middle_B/obj_hall_middle_B.yy",},"order":11,},
     {"id":{"name":"snd_key_fall","path":"sounds/snd_key_fall/snd_key_fall.yy",},"order":11,},

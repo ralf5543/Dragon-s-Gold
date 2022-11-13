@@ -20,13 +20,13 @@ if (skeleton_animation_get() == "combo1") {
 //combo2 animation
 if (skeleton_animation_get() == "combo2") {
     state = PLAYERSTATE.FREE;
+	is_sliding = false;
 }
 
 //dash animation
-if (sprite_index == asset_get_index("spr_" + character + "_dash_strip2")) {
-    sprite_index = asset_get_index("spr_" + character + "_dash_strip2");
-	image_speed = 0;
+if (skeleton_animation_get() == "dash") {
 	image_index = -1;
+	image_speed = 0;
 }
 
 //victory animation

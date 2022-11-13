@@ -1,18 +1,7 @@
 
 function PlayerState_Combo2(){
 	
-	if (image_index > 9) {
-		x += 20 * facing;
-	}
-	
-	if (image_index > 12) && (image_index < 20) {
-		x -= 10 * facing;
-	}
-
-	
-	if (image_index > 20) {
-		x -= 20 * facing;
-	}
+	is_sliding = true;
 	
 	if (can_combo2 == true) {
 		audio_sound_pitch(snd_attack_miss, choose(.8, 1, 1.2));//change the "bass" of the sound
@@ -22,6 +11,7 @@ function PlayerState_Combo2(){
 		if (skeleton_animation_get() != "combo2") {
 			skeleton_animation_set("combo2")
 		}
+
 					
 			
 		var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
@@ -37,5 +27,5 @@ function PlayerState_Combo2(){
 		can_combo2 = false;
 	}
 	
-	has_touched_ennemy2 = false;
+	
 }

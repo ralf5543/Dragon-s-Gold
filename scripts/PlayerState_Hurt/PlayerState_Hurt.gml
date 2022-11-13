@@ -1,7 +1,5 @@
 
 function PlayerState_Hurt(){
-	
-	//show_debug_message("hitfrom" + string(hitfrom));
 
 	can_attack = false;
 	

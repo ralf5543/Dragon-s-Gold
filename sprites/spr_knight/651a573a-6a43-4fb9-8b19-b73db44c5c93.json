@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "xICnH7gvEAs", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 170.75, "height": 141.18 },
+"skeleton": { "hash": "UTri9a2u2wM", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 170.75, "height": 141.18 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3, "scaleY": 0.3 },
 	{ "name": "bone-principal", "parent": "root", "rotation": -90, "x": -0.54, "y": 108.72 },
@@ -1254,7 +1254,8 @@
 					{},
 					{ "time": 0.0667, "value": 10.81, "curve": "stepped" },
 					{ "time": 0.5333, "value": 10.81 },
-					{ "time": 0.5667 }
+					{ "time": 0.5667 },
+					{ "time": 0.8333, "value": -5.36 }
 				]
 			},
 			"bone-plume": {
@@ -1364,17 +1365,23 @@
 			},
 			"bone-cuisse-droite": {
 				"rotate": [
-					{ "value": 6.12 }
+					{ "value": 6.12, "curve": "stepped" },
+					{ "time": 0.5667, "value": 6.12 },
+					{ "time": 0.8333, "value": -37.66 }
 				]
 			},
 			"bone-tibia-droite": {
 				"rotate": [
-					{ "value": -10.93 }
+					{ "value": -10.93, "curve": "stepped" },
+					{ "time": 0.5667, "value": -10.93 },
+					{ "time": 0.8333, "value": 12.41 }
 				]
 			},
 			"bone-pied-droit": {
 				"rotate": [
-					{ "value": 10.8 }
+					{ "value": 10.8, "curve": "stepped" },
+					{ "time": 0.5667, "value": 10.8 },
+					{ "time": 0.8333, "value": 24.06 }
 				]
 			},
 			"bone-orteils": {
@@ -1384,22 +1391,30 @@
 			},
 			"bone-cuisse-gauche": {
 				"rotate": [
-					{ "value": 7.66 }
+					{ "value": 7.66, "curve": "stepped" },
+					{ "time": 0.5667, "value": 7.66 },
+					{ "time": 0.8333, "value": 33.48 }
 				]
 			},
 			"tibia-gauche": {
 				"rotate": [
-					{ "value": -5.64 }
+					{ "value": -5.64, "curve": "stepped" },
+					{ "time": 0.5667, "value": -5.64 },
+					{ "time": 0.8333, "value": -58.29 }
 				]
 			},
 			"bone-pied-gauche": {
 				"rotate": [
-					{ "value": 0.19 }
+					{ "value": 0.19, "curve": "stepped" },
+					{ "time": 0.5667, "value": 0.19 },
+					{ "time": 0.8333, "value": 39.9 }
 				]
 			},
 			"plume": {
 				"rotate": [
-					{ "value": -28.42 }
+					{ "value": -28.42, "curve": "stepped" },
+					{ "time": 0.5667, "value": -28.42 },
+					{ "time": 0.8333, "value": -22.81 }
 				]
 			},
 			"plume2": {
@@ -1407,7 +1422,8 @@
 					{ "value": -13.71 },
 					{ "time": 0.0667, "value": -21.58, "curve": "stepped" },
 					{ "time": 0.5333, "value": -21.58 },
-					{ "time": 0.5667, "value": -1.74 }
+					{ "time": 0.5667, "value": -1.74 },
+					{ "time": 0.8333, "value": 3.96 }
 				]
 			},
 			"plume3": {
@@ -1510,8 +1526,7 @@
 					{ "time": 0.3333, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "time": 0.0667, "name": "slash" },
-					{ "time": 0.5667, "name": null }
+					{ "time": 0.0667, "name": "slash" }
 				]
 			},
 			"tete-face": {
@@ -1544,114 +1559,81 @@
 			"bone-visiere": {
 				"rotate": [
 					{},
-					{ "time": 0.0667, "value": 10.81, "curve": "stepped" },
-					{ "time": 0.5333, "value": 10.81 },
-					{ "time": 0.5667 }
+					{ "time": 0.0667, "value": 10.81 }
 				]
 			},
 			"bone-plume": {
 				"rotate": [
 					{ "value": 16.8 },
-					{ "time": 0.1333, "value": 20.67, "curve": "stepped" },
-					{ "time": 0.4333, "value": 20.67 },
-					{ "time": 0.5333, "value": 27.58 },
-					{ "time": 0.5667, "value": 27.95 }
+					{ "time": 0.1333, "value": 20.67 }
 				]
 			},
 			"bone-bras-droit": {
 				"rotate": [
 					{ "value": -66.69 },
 					{ "time": 0.0667, "value": -19.09 },
-					{ "time": 0.1333, "value": 97.46, "curve": "stepped" },
-					{ "time": 0.4333, "value": 97.46 },
-					{ "time": 0.5333, "value": -19.09 },
-					{ "time": 0.5667, "value": -66.69 }
+					{ "time": 0.1333, "value": 97.46 }
 				],
 				"translate": [
 					{},
 					{ "time": 0.0667, "x": 0.02, "y": 18.77 },
-					{ "time": 0.1333, "x": 1.19, "y": 57.11, "curve": "stepped" },
-					{ "time": 0.4333, "x": 1.19, "y": 57.11 },
-					{ "time": 0.5333, "x": 0.02, "y": 18.77 },
-					{ "time": 0.5667 }
+					{ "time": 0.1333, "x": 1.19, "y": 57.11 }
 				]
 			},
 			"bone-avant-bras-droit": {
 				"rotate": [
 					{ "value": 77.01 },
 					{ "time": 0.0667, "value": 62.82 },
-					{ "time": 0.1333, "value": -13.93, "curve": "stepped" },
-					{ "time": 0.4333, "value": -13.93 },
-					{ "time": 0.5333, "value": 62.82 },
-					{ "time": 0.5667, "value": 77.01 }
+					{ "time": 0.1333, "value": -13.93 }
 				]
 			},
 			"bone-main-droite": {
 				"rotate": [
 					{ "value": -13.61 },
 					{ "time": 0.0667, "value": -29.7 },
-					{ "time": 0.1333, "value": -69.09, "curve": "stepped" },
-					{ "time": 0.4333, "value": -69.09 },
-					{ "time": 0.5333, "value": -29.7 },
-					{ "time": 0.5667, "value": -13.61 }
+					{ "time": 0.1333, "value": -69.09 }
 				]
 			},
 			"sourcil": {
 				"translate": [
 					{},
-					{ "time": 0.1333, "x": -0.79, "y": 0.6, "curve": "stepped" },
-					{ "time": 0.4333, "x": -0.79, "y": 0.6 },
-					{ "time": 0.5667 }
+					{ "time": 0.1333, "x": -0.79, "y": 0.6 }
 				]
 			},
 			"sourcil2": {
 				"translate": [
 					{},
-					{ "time": 0.1333, "x": -1.01, "y": 1.24, "curve": "stepped" },
-					{ "time": 0.4333, "x": -1.01, "y": 1.24 },
-					{ "time": 0.5667 }
+					{ "time": 0.1333, "x": -1.01, "y": 1.24 }
 				]
 			},
 			"sourcil3": {
 				"rotate": [
 					{},
-					{ "time": 0.1333, "value": -6.92, "curve": "stepped" },
-					{ "time": 0.4333, "value": -6.92 },
-					{ "time": 0.5667 }
+					{ "time": 0.1333, "value": -6.92 }
 				]
 			},
 			"bras-gauche": {
 				"rotate": [
 					{ "value": -21.81 },
 					{ "time": 0.0667, "value": -48.78 },
-					{ "time": 0.1333, "value": -69.27, "curve": "stepped" },
-					{ "time": 0.4333, "value": -69.27 },
-					{ "time": 0.5333, "value": -48.78 },
-					{ "time": 0.5667, "value": -21.81 }
+					{ "time": 0.1333, "value": -69.27 }
 				],
 				"translate": [
 					{},
-					{ "time": 0.1333, "x": 8.94, "y": -56.8, "curve": "stepped" },
-					{ "time": 0.4333, "x": 8.94, "y": -56.8 },
-					{ "time": 0.5667 }
+					{ "time": 0.1333, "x": 8.94, "y": -56.8 }
 				]
 			},
 			"avant-bras-gauche": {
 				"rotate": [
 					{ "value": 28.1 },
 					{ "time": 0.0667, "value": 59.07 },
-					{ "time": 0.1333, "value": 82.26, "curve": "stepped" },
-					{ "time": 0.4333, "value": 82.26 },
-					{ "time": 0.5333, "value": 59.07 },
-					{ "time": 0.5667, "value": 28.1 }
+					{ "time": 0.1333, "value": 82.26 }
 				]
 			},
 			"bone-main-gauche": {
 				"rotate": [
 					{},
-					{ "time": 0.1333, "value": -14.18, "curve": "stepped" },
-					{ "time": 0.4333, "value": -14.18 },
-					{ "time": 0.5667 }
+					{ "time": 0.1333, "value": -14.18 }
 				]
 			},
 			"bone-cuisse-droite": {
@@ -1697,9 +1679,7 @@
 			"plume2": {
 				"rotate": [
 					{ "value": -13.71 },
-					{ "time": 0.0667, "value": -21.58, "curve": "stepped" },
-					{ "time": 0.5333, "value": -21.58 },
-					{ "time": 0.5667, "value": -1.74 }
+					{ "time": 0.0667, "value": -21.58 }
 				]
 			},
 			"plume3": {
@@ -1707,9 +1687,7 @@
 					{ "value": 11.56 },
 					{ "time": 0.0667, "value": 25.51 },
 					{ "time": 0.1333, "value": 33.28, "curve": "stepped" },
-					{ "time": 0.4333, "value": 33.28 },
-					{ "time": 0.5333, "value": 25.51 },
-					{ "time": 0.5667, "value": 11.56 }
+					{ "time": 0.4333, "value": 33.28 }
 				]
 			},
 			"target IK jambe droite": {

@@ -1,6 +1,7 @@
 
 function PlayerState_Attack(){
 	
+	
 	if (can_attack == true) {
 		audio_sound_pitch(snd_attack_miss, choose(.8, 1, 1.2));//change the "bass" of the sound
 		audio_play_sound(snd_attack_miss, 6, false);
@@ -20,7 +21,8 @@ function PlayerState_Attack(){
 			}
 			
 			is_sliding = true;
-			
+		
+			alarm[0] = 32;
 			
 		} else {
 
@@ -29,7 +31,7 @@ function PlayerState_Attack(){
 				skeleton_animation_set("attack")
 			}
 			
-			show_debug_message("gamepad_id_owner" + string(gamepad_id_owner));
+			is_sliding = true;
 						
 			
 			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
@@ -48,7 +50,8 @@ function PlayerState_Attack(){
 		can_attack = false;
 	}
 		
-		if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 18) && (image_index < 38) {
+		if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 22) && (image_index < 38) {
+			show_debug_message("combo 1 SUITE A");
 			state = PLAYERSTATE.COMBO1;
 		}
 		
