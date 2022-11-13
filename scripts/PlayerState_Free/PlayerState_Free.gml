@@ -9,6 +9,10 @@ function PlayerState_Free(){
 	hurt_done = 0;
 	
 	can_attack = true;
+	can_combo1 = true;
+	has_touched_ennemy1 = false;
+	can_combo2 = true;
+	has_touched_ennemy2 = false;
 	can_lose_key = true;
 	can_lose_key_when_dead = true;
 	can_slide = true;

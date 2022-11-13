@@ -37,6 +37,8 @@ enum PLAYERSTATE {
 	HURT,
 	DEAD,
 	ATTACK,
+	COMBO1,
+	COMBO2,
 	SPECIAL,
 	WON,
 	LOSE
@@ -59,13 +61,16 @@ pad_num = 0;
 character = "No class";
 gamepad_id_owner = 0;// gamepad id recovered from obj_control
 
-// Character skin
-skin = "standard";
-
 // prevails from pushing serveral times on start button
 // and distort the ready players number
 can_push_start = true;
 can_attack = true;
+
+can_combo1 = true;
+has_touched_ennemy1 = false;
+can_combo2 = true;
+has_touched_ennemy2 = false;
+
 can_footStep = true;
 can_landingSound = true;
 can_hurtSound = true;

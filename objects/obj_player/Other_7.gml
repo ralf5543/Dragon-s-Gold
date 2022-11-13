@@ -12,6 +12,16 @@ if (skeleton_animation_get() == "attack") {
     state = PLAYERSTATE.FREE;
 }
 
+//combo1 animation
+if (skeleton_animation_get() == "combo1") {
+    state = PLAYERSTATE.FREE;
+}
+
+//combo2 animation
+if (skeleton_animation_get() == "combo2") {
+    state = PLAYERSTATE.FREE;
+}
+
 //dash animation
 if (sprite_index == asset_get_index("spr_" + character + "_dash_strip2")) {
     sprite_index = asset_get_index("spr_" + character + "_dash_strip2");

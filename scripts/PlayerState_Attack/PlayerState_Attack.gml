@@ -39,8 +39,15 @@ function PlayerState_Attack(){
 				//to avoid hitting himself
 				attack_id_receiver = other.gamepad_id_owner;
 			}
+			
 		}
+
 		
 		can_attack = false;
 	}
+		
+		if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 18) && (image_index < 38) {
+			state = PLAYERSTATE.COMBO1;
+		}
+		
 }

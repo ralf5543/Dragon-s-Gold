@@ -187,6 +187,15 @@ if (room == rm_start) {
 		case PLAYERSTATE.ATTACK : 
 		PlayerState_Attack();
 		break;
+		break;
+		
+		case PLAYERSTATE.COMBO1 : 
+		PlayerState_Combo1();
+		break;
+		
+		case PLAYERSTATE.COMBO2 : 
+		PlayerState_Combo2();
+		break;
 		
 		case PLAYERSTATE.SPECIAL : 
 		if (character == "ranger") {
