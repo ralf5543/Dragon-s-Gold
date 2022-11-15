@@ -75,7 +75,7 @@ if (room != rm_start) {
 	
 
 	//==================-------------- Create treasure chest at random position
-	var chest = instance_create_layer(0, 0, "layer_walls", obj_chest);
+	var chest = instance_create_layer(0, 0, "layer_players", obj_chest);
 	Random_Position(chest);
 
 
@@ -83,7 +83,7 @@ if (room != rm_start) {
 	
 	//======-------- BRONZE keys
 	for (var i = 0; i < 3; i ++) {
-		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
 		Random_Position(new_item);
 		
 		new_item.value = "bronze";
@@ -93,7 +93,7 @@ if (room != rm_start) {
 	
 	//======-------- SILVER keys
 	for (var i = 0; i < 3; i ++) {
-		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
 		Random_Position(new_item);
 		
 		new_item.value = "silver";
@@ -103,7 +103,7 @@ if (room != rm_start) {
 	
 	//======-------- GOLD keys
 	for (var i = 0; i < 3; i ++) {
-		var new_item = instance_create_layer(0, 0, "layer_walls", obj_key);
+		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
 		Random_Position(new_item);
 		
 		new_item.value = "gold";

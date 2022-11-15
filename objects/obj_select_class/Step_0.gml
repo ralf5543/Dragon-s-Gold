@@ -4,7 +4,6 @@
 if (gamepad_button_check_pressed(player_number, gp_face2)) {
 	selectClass_control = true;
 	obj_control.ready_players --;
-	//skeleton_animation_set("stand");
 }
 
 if (init_player_selection == true) {
@@ -96,8 +95,8 @@ if (selectClass_control) {
 	
 	// A button to valid player's choice
 	if (gamepad_button_check_pressed(player_number, gp_face1)) or (keyboard_check_pressed(vk_tab)) {
-		audio_sound_pitch(snd_tada, choose(.8, 1, 1.2));
-		audio_play_sound(snd_tada, 8, false);
+		//audio_sound_pitch(snd_tada, choose(.8, 1, 1.2));
+		//audio_play_sound(snd_tada, 8, false);
 		
 		selectClass_control = false;// deactive the class selector		
 		gamepad_id_receiver.character = selectClass[selectClass_cursor];// gives the character the selected class

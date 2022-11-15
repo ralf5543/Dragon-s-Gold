@@ -24,8 +24,8 @@
 		if(i == 0) {
 			view_xport[i] = 0;
 			view_yport[i] = 0;
-			view_wport[i] = window_width / 2;
-			view_hport[i] = window_height / 2;
+			view_wport[i] = window_width;
+			view_hport[i] = window_height;
 		}
 		// if 2 players
 		if(i == 1) {

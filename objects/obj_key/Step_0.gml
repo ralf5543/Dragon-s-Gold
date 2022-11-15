@@ -1,5 +1,8 @@
 /// @description Insert description here
 
+//wait a sec at game launch, sa all keys don't ring at the same time !
+alarm[0] = 64;
+
 switch (value) {
 	case "gold" : 
 	image_index = 0;
