@@ -4,7 +4,6 @@
 if (skeleton_animation_get() == "hurt") {
     image_index = -1;
 	image_speed = 0;
-	//state = PLAYERSTATE.FREE;
 }
 
 //attack animation

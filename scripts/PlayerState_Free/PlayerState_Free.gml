@@ -16,12 +16,13 @@ function PlayerState_Free(){
 	can_lose_key = true;
 	can_lose_key_when_dead = true;
 	can_slide = true;
+	is_hurt = false;
 	
 //=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1
 	if (key_run) && (energy > 0) {
 		walksp = 8;
-		//energy --;
+		energy --;
 
 	} else {
 		walksp = 4;

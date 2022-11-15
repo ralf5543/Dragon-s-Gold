@@ -44,6 +44,9 @@ enum PLAYERSTATE {
 	LOSE
 }
 
+// because with combos, "state" get a number, not a FREEPLAYERSTATE. Dunno why...
+is_hurt = false;
+
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
 player_orientation = 0;// used by attacks direction
 

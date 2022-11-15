@@ -2,10 +2,8 @@
 function PlayerState_Combo1(){
 	
 	is_sliding = true;
-		show_debug_message("combo 1 SUITE B");
 	
 	if (can_combo1 == true) {
-		show_debug_message("combo 1 SUITE C");
 		audio_sound_pitch(snd_attack_miss, choose(.8, 1, 1.2));//change the "bass" of the sound
 		audio_play_sound(snd_attack_miss, 6, false);
 
