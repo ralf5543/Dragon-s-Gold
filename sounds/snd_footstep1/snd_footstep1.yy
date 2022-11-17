@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_footstep1",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_footstep1.wav",
-  "duration": 0.08627,
+  "duration": 0.08127,
   "parent": {
     "name": "move",
     "path": "folders/Sounds/characters/move.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_footstep1",
-  "tags": [],
-  "resourceType": "GMSound",
 }

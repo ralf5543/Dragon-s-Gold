@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_cast",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.27,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_cast.wav",
-  "duration": 1.467857,
+  "duration": 1.462857,
   "parent": {
     "name": "Wizard",
     "path": "folders/Sounds/characters/Wizard.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_cast",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -124,9 +124,15 @@ function PlayerState_Free(){
 		
 		//if on floor
 		if (can_footStep == true) && (place_meeting(x, y + 1, obj_wall)) {
+			
+			
 			audio_play_sound(choose(snd_footstep1, snd_footstep2, snd_footstep3, snd_footstep4), 1, false);
 			can_footStep = false;
-			alarm[1] = 16;//so 1 sound every 2 frames
+			if (key_run) {
+				alarm[1] = 20;//so 1 sound every 2 frames
+			} else {
+				alarm[1] = 16;//so 1 sound every 2 frames
+			}
 		}
 	}
 	

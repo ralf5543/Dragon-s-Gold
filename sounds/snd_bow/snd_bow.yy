@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_bow",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_bow.wav",
-  "duration": 0.509694,
+  "duration": 0.504694,
   "parent": {
     "name": "ranger",
     "path": "folders/Sounds/characters/ranger.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_bow",
-  "tags": [],
-  "resourceType": "GMSound",
 }

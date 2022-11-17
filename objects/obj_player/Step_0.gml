@@ -79,7 +79,7 @@ if (room == rm_start) {
 			
 			// Remove "push start" text
 			if (isActive) {
-				show_debug_message("pad_num : " + string(pad_num))
+				//show_debug_message("pad_num : " + string(pad_num))
 			with (obj_control) {
 				
 					text_start_player = "";

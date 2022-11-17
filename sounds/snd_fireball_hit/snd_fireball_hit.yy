@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_fireball_hit",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_fireball_hit.wav",
-  "duration": 0.705227,
+  "duration": 0.700227,
   "parent": {
     "name": "Wizard",
     "path": "folders/Sounds/characters/Wizard.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_fireball_hit",
-  "tags": [],
-  "resourceType": "GMSound",
 }

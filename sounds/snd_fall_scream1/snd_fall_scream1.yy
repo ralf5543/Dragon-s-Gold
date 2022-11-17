@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_fall_scream1",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.4,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_fall_scream1.ogg",
-  "duration": 4.811327,
+  "duration": 4.806327,
   "parent": {
     "name": "move",
     "path": "folders/Sounds/characters/move.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_fall_scream1",
-  "tags": [],
-  "resourceType": "GMSound",
 }

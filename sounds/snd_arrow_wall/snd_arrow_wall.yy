@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_arrow_wall",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_arrow_wall.wav",
-  "duration": 1.388379,
+  "duration": 1.383379,
   "parent": {
     "name": "ranger",
     "path": "folders/Sounds/characters/ranger.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_arrow_wall",
-  "tags": [],
-  "resourceType": "GMSound",
 }
