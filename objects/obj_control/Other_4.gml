@@ -46,6 +46,8 @@ if (room != rm_start) {
 		if (!instance_exists(ds_list_find_value(halls_roof_list, i))) {
 			hall_roof = instance_create_layer(x, y, "layer_walls", ds_list_find_value(halls_roof_list, i));
 			hall_roof.hall_number = i;
+			
+			show_debug_message(string(hall_roof.x) + string(hall_roof.y))
 		}
 	}
 		
