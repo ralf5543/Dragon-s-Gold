@@ -1,5 +1,12 @@
 /// @description 
 
+//jump up animation
+if (skeleton_animation_get() == "jump-up") {
+	image_index = -1;
+	image_speed = 0;
+	//show_debug_message("fini jump-up");
+}
+
 //hurt animation
 if (skeleton_animation_get() == "hurt") {
     image_index = -1;

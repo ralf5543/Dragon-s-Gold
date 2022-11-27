@@ -82,6 +82,9 @@ function PlayerState_Free(){
 		//descendant part from the jump
 		if (vsp > 0) {
 			if skeleton_animation_get() != "jump-down" {
+				
+				image_speed = 1;
+				show_debug_message("index anim" + string(image_index))
 				skeleton_animation_set("jump-down");
 			}
 		}
