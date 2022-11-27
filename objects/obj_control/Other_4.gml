@@ -125,6 +125,8 @@ if (room != rm_start) {
 		skeleton_animation_mix("walk", "stand", 0.3);
 		skeleton_animation_mix("walk", "run", 0.3);
 		skeleton_animation_mix("run", "walk", 0.3);
+		skeleton_animation_mix("run", "stand", 0.3);
+		skeleton_animation_mix("stand", "run", 0.3);
 		skeleton_animation_mix("walk", "jump-up", 0.3);
 		skeleton_animation_mix("run", "jump-up", 0.3);
 		skeleton_animation_mix("stand", "jump-up", 0.3);
