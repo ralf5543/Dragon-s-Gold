@@ -20,28 +20,28 @@ function PlayerState_Ranger_Special(){
 			
 			if (skeleton_animation_get() != "bow-end") {
 				skeleton_animation_set("bow-end");	
-				show_debug_message("aaa")
-				show_debug_message("image speed" + string(image_speed))
-				show_debug_message("image index" + string(image_index))
 			}
+			
+			
 	
 			//use ranger hitbox
-			var inst = instance_create_layer(x, y + 16, "layer_players", obj_arrow);
+			var inst = instance_create_layer(x + (20 * facing), y - 55, "layer_players", obj_arrow);
 			with (inst) {
 				arrow_orientation = other.facing;
 				image_xscale = arrow_orientation;
+				attack_id_receiver = other.gamepad_id_owner;
 				
 				//more focus, more speed
-				speed = 16 * (other.focus_bow / 100);
-				speed = clamp(speed, 4, 64);
+				speed_orientation = (16 * (other.focus_bow / 100)) * arrow_orientation;
+				speed = clamp(speed_orientation, -64, 64);
 			
 				// more focus, more straight shot
 				vsp = -1 * (floor(other.focus_bow / 10));
 				vsp = clamp(vsp, -2, 0);
 
 				// random_range adds a bit of random to the angle
-				direction = other.player_orientation + random_range(-3, 3);
-				
+				direction = arrow_orientation + random_range(-3, 3);
+			
 			}
 		} else {
 			state = PLAYERSTATE.FREE;

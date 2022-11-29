@@ -43,8 +43,8 @@ if (skeleton_animation_get() == "victory") {
 
 //bow animation
 if (skeleton_animation_get() == "bow") {
-	//loop on the 34th frame
-	image_index =34;
+	//loop on the 40th frame
+	image_index =40;
 	
 				show_debug_message("bow")
 }

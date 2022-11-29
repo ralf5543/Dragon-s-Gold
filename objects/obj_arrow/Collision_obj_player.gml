@@ -1,7 +1,9 @@
 /// @description Hit ennemy
 
 with (other) {
-	if (!is_invicible) && (no_wall) {
+	//show_debug_message("other.attack_id_receiver" + string(other.attack_id_receiver));
+	//show_debug_message("id" + string(id));
+	if (!is_invicible) && (other.no_wall) && (id != other.attack_id_receiver) && (vsp > 0) {
 		if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) {
 			if (point_direction(other.x, other.y, x, y) > 90) {
 				hitfrom = -1;// attack from the right
@@ -17,8 +19,10 @@ with (other) {
 			state = PLAYERSTATE.HURT;
 			hp -= 10;
 		}
+		
+		instance_destroy();
 	}
 }
 
-instance_destroy();
+
 
