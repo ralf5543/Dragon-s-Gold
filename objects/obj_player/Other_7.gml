@@ -42,12 +42,18 @@ if (skeleton_animation_get() == "victory") {
 }
 
 //bow animation
-if (sprite_index == spr_ranger_bow_strip8) {
-    //sprite_index = asset_get_index("spr_" + character + "_stand_strip2");
-	//state = PLAYERSTATE.FREE;
-	//can_attack = true;
-	image_index = -1;
-	image_speed = 0;
+if (skeleton_animation_get() == "bow") {
+	//loop on the 34th frame
+	image_index =34;
+	
+				show_debug_message("bow")
+}
+
+//bow end animation
+if (skeleton_animation_get() == "bow-end") {
+	state = PLAYERSTATE.FREE;
+	
+				show_debug_message("bow end")
 }
 
 //shield animation

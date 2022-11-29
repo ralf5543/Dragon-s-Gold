@@ -4,9 +4,8 @@ function PlayerState_Ranger_Special(){
 	if (can_attack == true) {
 
 		// Start of the attack
-		if (sprite_index != spr_ranger_bow_strip8) {
-			sprite_index = spr_ranger_bow_strip8;
-			image_index = 0;
+		if (skeleton_animation_get() != "bow") {
+			skeleton_animation_set("bow");		
 		}
 		
 		can_attack = false;
@@ -18,6 +17,13 @@ function PlayerState_Ranger_Special(){
 		if (focus_bow > 32) {//button pressed at least 1 second
 			audio_sound_pitch(snd_bow, choose(.8, 1, 1.2));//change the "bass" of the sound
 			audio_play_sound(snd_bow, 6, false);
+			
+			if (skeleton_animation_get() != "bow-end") {
+				skeleton_animation_set("bow-end");	
+				show_debug_message("aaa")
+				show_debug_message("image speed" + string(image_speed))
+				show_debug_message("image index" + string(image_index))
+			}
 	
 			//use ranger hitbox
 			var inst = instance_create_layer(x, y + 16, "layer_players", obj_arrow);
@@ -37,9 +43,9 @@ function PlayerState_Ranger_Special(){
 				direction = other.player_orientation + random_range(-3, 3);
 				
 			}
+		} else {
+			state = PLAYERSTATE.FREE;
 		}
 		focus_bow = 0;
-		state = PLAYERSTATE.FREE;
-		can_attack = true;
 	}
 }
