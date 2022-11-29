@@ -144,6 +144,8 @@ if (room != rm_start) {
 		skeleton_animation_mix("jump-down", "hurt", 0.3);
 		skeleton_animation_mix("dash", "stand", 0.3);
 		skeleton_animation_mix("dash", "run", 0.3);
+		//skeleton_animation_mix("attack", "stand", 0.3);
+		//skeleton_animation_mix("stand", "attack", 0.3);
 		
 		//KNIGHT animations
 		skeleton_animation_mix("shield", "stand", 0.2);
