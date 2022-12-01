@@ -4,7 +4,6 @@
 if (skeleton_animation_get() == "jump-up") {
 	image_index = -1;
 	image_speed = 0;
-	//show_debug_message("fini jump-up");
 }
 
 //hurt animation
@@ -45,15 +44,11 @@ if (skeleton_animation_get() == "victory") {
 if (skeleton_animation_get() == "bow") {
 	//loop on the 40th frame
 	image_index =40;
-	
-				show_debug_message("bow")
 }
 
 //bow end animation
 if (skeleton_animation_get() == "bow-end") {
 	state = PLAYERSTATE.FREE;
-	
-				show_debug_message("bow end")
 }
 
 //shield animation

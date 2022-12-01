@@ -22,7 +22,7 @@ function PlayerState_Free(){
 	var move = key_right - key_left; // because true = 1 and false = -1
 	if (key_run) && (energy > 0) {
 		walksp = 8;
-		//energy --;
+		energy --;
 
 	} else {
 		walksp = 4;
@@ -84,7 +84,6 @@ function PlayerState_Free(){
 			if skeleton_animation_get() != "jump-down" {
 				
 				image_speed = 1;
-				show_debug_message("index anim" + string(image_index))
 				skeleton_animation_set("jump-down");
 			}
 		}
@@ -105,7 +104,7 @@ function PlayerState_Free(){
 		} else {
 			if (key_run) && (energy > 0) {
 				walksp = 8;
-				//energy --;
+				energy --;
 		
 				//for preventing looping on frame 1 of the animation
 				if (skeleton_animation_get() != "run") {

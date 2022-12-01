@@ -15,7 +15,7 @@ function PlayerState_Combo1(){
 			
 		var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
 		with (inst) {
-			sprite_index = asset_get_index("spr_" +  other.character + "_combo1_strip");
+			sprite_index = asset_get_index("spr_" +  other.character + "_combo1");
 				
 			image_xscale = other.facing;
 				

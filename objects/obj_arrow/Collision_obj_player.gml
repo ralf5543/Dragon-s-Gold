@@ -1,28 +1,26 @@
-/// @description Hit ennemy
 
-with (other) {
-	//show_debug_message("other.attack_id_receiver" + string(other.attack_id_receiver));
-	//show_debug_message("id" + string(id));
-	if (!is_invicible) && (other.no_wall) && (id != other.attack_id_receiver) && (vsp > 0) {
-		if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) {
-			if (point_direction(other.x, other.y, x, y) > 90) {
-				hitfrom = -1;// attack from the right
+
+
+if (other.id != attack_id_receiver) {
+		
+	// "is_hurt" var, because "state" get a number, not a FREEPLAYERSTATE. Dunno why...
+	if (other.is_invicible == false) && (other.is_hurt == false) && (other.state != PLAYERSTATE.HURT) && (other.state != PLAYERSTATE.DEAD) {
+		if  (vsp > 0) {	
+			if ((x - other.x) > 0) {
+				other.hitfrom = -1;// attack from the right
 			} else {
-				hitfrom = 1;//attack from the left
+				other.hitfrom = 1;//attack from the left
 			}
-		
-			facing = -hitfrom;//(faces the origin of the attack)
-			flash = 10;
-		
+
+			other.facing = -other.hitfrom;//(faces the origin of the attack)
+			other.flash = 10;
+					
 			audio_play_sound(snd_arrow_hit, 7, false);
 		
-			state = PLAYERSTATE.HURT;
-			hp -= 10;
+			other.state = PLAYERSTATE.HURT;
+			other.hp -= 10;
+	
+			instance_destroy();
 		}
-		
-		instance_destroy();
 	}
 }
-
-
-

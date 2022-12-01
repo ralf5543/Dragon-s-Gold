@@ -1,8 +1,6 @@
 if (!place_meeting(x, y, obj_shield) ) {
 	//if the attack is not meeting a shield (even if touching a player's collision box)
 	
-	
-	
 	if (other.id != attack_id_receiver) {
 		
 		// "is_hurt" var, because "state" get a number, not a FREEPLAYERSTATE. Dunno why...
