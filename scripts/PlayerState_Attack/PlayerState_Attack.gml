@@ -14,7 +14,7 @@ function PlayerState_Attack(){
 
 			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
 			with (inst) {
-				sprite_index = asset_get_index("spr_" + other.character + "_dash_strip9");
+				sprite_index = asset_get_index("spr_" + other.character + "_dash");
 				image_xscale = other.facing;
 				attack_id_receiver = other.gamepad_id_owner;
 			}

@@ -9,8 +9,7 @@ if (sprite_index == asset_get_index("spr_" + character + "_attack_strip7")) {
 
 
 //dash animation
-if (sprite_index == asset_get_index("spr_" + character + "_dash_strip2")) {
-    sprite_index = asset_get_index("spr_" + character + "_dash_strip2");
+if (sprite_index == asset_get_index("spr_" + character + "_dash")) {
 	image_speed = 0;
 	image_index = -1;
 }
