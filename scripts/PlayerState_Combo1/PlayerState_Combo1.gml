@@ -26,10 +26,17 @@ function PlayerState_Combo1(){
 		can_combo1 = false;
 	}
 	
+	if (character == "ranger") {
+		if (image_index > 20) {
+			is_sliding = false;
+		}
+	}
+	
 		
 	if (can_combo2) && (has_touched_ennemy2) && (key_attack) && (image_index > 28) && (image_index < 38) {
 		state = PLAYERSTATE.COMBO2;
 	}
 	
 	has_touched_ennemy1 = false;
+
 }

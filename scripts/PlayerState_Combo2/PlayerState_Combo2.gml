@@ -1,8 +1,11 @@
 
 function PlayerState_Combo2(){
-	show_debug_message("aaa")
+
+	is_sliding = false;
 	
-	is_sliding = true;
+	if (character == "knight") {
+		is_sliding = true;
+	}
 	
 	if (can_combo2 == true) {
 		audio_sound_pitch(snd_attack_miss, choose(.8, 1, 1.2));//change the "bass" of the sound

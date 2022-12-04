@@ -119,7 +119,11 @@ if (room == rm_start) {
 			Player_Slide(8)
 		}
 		else if (skeleton_animation_get() == "combo1") {
-			Player_Slide(5)
+			if (character == "knight") {
+				Player_Slide(5)
+			} else {
+				Player_Slide(3)
+			}
 		}
 		else if (skeleton_animation_get() == "combo2") {
 			Player_Slide(3)
