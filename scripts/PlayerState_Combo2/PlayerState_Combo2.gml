@@ -1,5 +1,6 @@
 
 function PlayerState_Combo2(){
+	show_debug_message("aaa")
 	
 	is_sliding = true;
 	
