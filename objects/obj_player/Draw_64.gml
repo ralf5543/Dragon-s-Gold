@@ -34,7 +34,7 @@ if (room != rm_start) {
 		draw_set_font(fnt_14);
 			
 		//Portrait
-		draw_sprite(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin);
+		draw_sprite(asset_get_index("spr_portrait_" + character + skeleton_skin_get()), 0, gui_margin, gui_margin);
 		
 		//healthbar
 		draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y);
