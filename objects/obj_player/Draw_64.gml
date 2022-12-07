@@ -34,7 +34,7 @@ if (room != rm_start) {
 		draw_set_font(fnt_14);
 			
 		//Portrait
-		draw_sprite(asset_get_index("spr_portrait_" + character + skeleton_skin_get()), 0, gui_margin, gui_margin);
+		draw_sprite(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin);
 		
 		//healthbar
 		draw_sprite(spr_healthBackground, 0, healthbar_x, healthbar_y);
@@ -99,7 +99,7 @@ if (room != rm_start) {
 		with (player1) {	
 				
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x, healthbar_y, 1 * gui_zoom, 1 * gui_zoom, 0, c_white, 1);
@@ -141,7 +141,7 @@ if (room != rm_start) {
 		with (player2) {
 
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2), 1 * gui_zoom, 1 * gui_zoom, 0, c_white, 1);
@@ -205,7 +205,7 @@ if (room != rm_start) {
 			draw_set_font(fnt_12);
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x, healthbar_y, gui_zoom, gui_zoom, 0, c_white, 1);
@@ -266,7 +266,7 @@ if (room != rm_start) {
 			key_spacer = (gui_margin * 4);
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1);
@@ -322,7 +322,7 @@ if (room != rm_start) {
 			key_spacer = (gui_margin * 4);
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin + (global.surface_width / 2), gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin + (global.surface_width / 2), gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1);
@@ -380,7 +380,7 @@ if (room != rm_start) {
 		with (player1) {
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x, healthbar_y, gui_zoom, gui_zoom, 0, c_white, 1);
@@ -421,7 +421,7 @@ if (room != rm_start) {
 		with (player2) {
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin + (global.surface_width / 2), gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin + (global.surface_width / 2), gui_margin, gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x + (global.surface_width / 2), healthbar_y, gui_zoom, gui_zoom, 0, c_white, 1);
@@ -462,7 +462,7 @@ if (room != rm_start) {
 		with (player3) {
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin, gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x, healthbar_y + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1);
@@ -503,7 +503,7 @@ if (room != rm_start) {
 		with (player4) {
 			
 			//Portrait
-			draw_sprite_ext(asset_get_index("spr_portrait_" + character), 0, gui_margin + (global.surface_width / 2), gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
+			draw_sprite_ext(asset_get_index("spr_portrait_" + character + "_" + skeleton_skin_get()), 0, gui_margin + (global.surface_width / 2), gui_margin + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1 );
 			
 			//healthbar
 			draw_sprite_ext(spr_healthBackground, 0, healthbar_x + (global.surface_width / 2), healthbar_y + (global.surface_height / 2), gui_zoom, gui_zoom, 0, c_white, 1);
