@@ -9,7 +9,8 @@ can_end_game = true;
 
 global.fnt_14 = fnt_14;
 
-//window_set_fullscreen(true);
+window_set_fullscreen(true);
+
 
 for (var i = 0; i < 12; i++;) {
 	player[i] = noone;
