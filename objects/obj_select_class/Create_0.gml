@@ -6,10 +6,10 @@ selectClass_control = true;
 // Better for perfs to enter last array entries first
 selectClass[7] = "knight";
 selectClass[6] = "ranger";
-selectClass[5] = "knight";
+selectClass[5] = "wizard";
 selectClass[4] = "ranger";
 selectClass[3] = "knight";
-selectClass[2] = "knight";
+selectClass[2] = "wizard";
 selectClass[1] = "ranger";
 selectClass[0] = "knight";
 

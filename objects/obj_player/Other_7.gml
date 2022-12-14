@@ -64,10 +64,10 @@ if (skeleton_animation_get() == "shield-block") {
 }
 
 //Fireball animation
-if (sprite_index == spr_wizard_cast_strip5) {
-    can_sound_cast = true;
+//if (sprite_index == spr_wizard_cast_strip5) {
+//    can_sound_cast = true;
 
-}
+//}
 
 //death animation
 if (skeleton_animation_get() == "dead") {
