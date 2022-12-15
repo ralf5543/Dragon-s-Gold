@@ -34,6 +34,7 @@
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},"order":1,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":1,},
     {"id":{"name":"obj_hall_middle_C","path":"objects/obj_hall_middle_C/obj_hall_middle_C.yy",},"order":12,},
+    {"id":{"name":"spr_wizard_dash","path":"sprites/spr_wizard_dash/spr_wizard_dash.yy",},"order":6,},
     {"id":{"name":"PlayerState_Lose","path":"scripts/PlayerState_Lose/PlayerState_Lose.yy",},"order":12,},
     {"id":{"name":"obj_key","path":"objects/obj_key/obj_key.yy",},"order":5,},
     {"id":{"name":"PlayerState_Wizard_Special","path":"scripts/PlayerState_Wizard_Special/PlayerState_Wizard_Special.yy",},"order":10,},
