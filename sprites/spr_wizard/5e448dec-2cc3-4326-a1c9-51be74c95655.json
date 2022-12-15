@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "5OOSWshCNPA", "spine": "4.0-from-4.1.17", "x": -36.75, "y": -7.67, "width": 82.5, "height": 117.39 },
+"skeleton": { "hash": "zTU+Miqwl5M", "spine": "4.0-from-4.1.17", "x": -36.75, "y": -7.67, "width": 82.5, "height": 117.39 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3444, "scaleY": 0.3444 },
 	{ "name": "taille", "parent": "root", "x": -5.04, "y": 82.92 },
@@ -732,6 +732,18 @@
 		}
 	},
 	"dash": {
+		"slots": {
+			"slash": {
+				"rgba": [
+					{ "time": 0.3, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.3, "name": "slash" }
+				]
+			}
+		},
 		"bones": {
 			"taille": {
 				"translate": [
