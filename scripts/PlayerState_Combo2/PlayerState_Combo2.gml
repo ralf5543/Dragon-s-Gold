@@ -17,15 +17,18 @@ function PlayerState_Combo2(){
 		}
 
 					
-			
-		var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
-		with (inst) {
-			sprite_index = asset_get_index("spr_" + other.character + "_combo2");
+		if (character != "wizard") {
+			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
+			with (inst) {
+				sprite_index = asset_get_index("spr_" + other.character + "_combo2");
 				
-			image_xscale = other.facing;
+				image_xscale = other.facing;
 				
-			//to avoid hitting himself
-			attack_id_receiver = other.gamepad_id_owner;
+				//to avoid hitting himself
+				attack_id_receiver = other.gamepad_id_owner;
+			}
+		} else {
+			alarm[4] = 48;
 		}
 		
 		can_combo2 = false;

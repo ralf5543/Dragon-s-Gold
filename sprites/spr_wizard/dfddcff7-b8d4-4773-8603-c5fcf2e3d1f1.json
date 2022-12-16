@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "6Bor4VS2mNY", "spine": "4.0-from-4.1.17", "x": -36.75, "y": -7.67, "width": 82.5, "height": 117.39 },
+"skeleton": { "hash": "Owa/7Lm1VOo", "spine": "4.0-from-4.1.17", "x": -36.75, "y": -7.67, "width": 82.5, "height": 117.39 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3444, "scaleY": 0.3444 },
 	{ "name": "taille", "parent": "root", "x": -5.04, "y": 82.92 },
@@ -932,6 +932,184 @@
 						}
 					]
 				}
+			}
+		}
+	},
+	"combo2": {
+		"slots": {
+			"cristal": {
+				"rgba": [
+					{ "time": 0.3333, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "3df4f7ff", "curve": "stepped" },
+					{ "time": 1, "color": "3df4f7ff" },
+					{ "time": 1.2333, "color": "ffffffff" }
+				]
+			},
+			"main-droite": {
+				"attachment": [
+					{ "name": "main-droite-eclair" }
+				]
+			}
+		},
+		"bones": {
+			"pli3": {
+				"rotate": [
+					{ "value": 3.07 },
+					{ "time": 0.6667, "value": 8.75 },
+					{ "time": 0.7667, "value": 17.03 },
+					{ "time": 1, "value": -6.05 },
+					{ "time": 1.2333, "value": 17.03 }
+				]
+			},
+			"pied gauche": {
+				"rotate": [
+					{ "value": -30.31 }
+				]
+			},
+			"barbe2": {
+				"rotate": [
+					{ "value": -3.98 }
+				]
+			},
+			"barbe3": {
+				"rotate": [
+					{ "value": -1.42 }
+				]
+			},
+			"target jambe gauche": {
+				"translate": [
+					{ "x": 13.31, "y": 5.64 }
+				]
+			},
+			"bras gauche": {
+				"rotate": [
+					{ "value": 90.61 },
+					{ "time": 0.2667, "value": 73.06, "curve": "stepped" },
+					{ "time": 0.6667, "value": 73.06 },
+					{ "time": 0.7667, "value": 59.92 }
+				]
+			},
+			"barbe1": {
+				"rotate": [
+					{ "value": 1.12 }
+				]
+			},
+			"taille": {
+				"translate": [
+					{ "x": 0.95, "y": 6.63 }
+				]
+			},
+			"torse": {
+				"rotate": [
+					{ "value": 2.02 }
+				]
+			},
+			"tete": {
+				"rotate": [
+					{ "value": 0.09 },
+					{ "time": 0.3333, "value": 6.36 },
+					{ "time": 0.6667, "value": 2.83 },
+					{ "time": 0.7667, "value": -6.88 }
+				]
+			},
+			"pli4": {
+				"rotate": [
+					{ "value": -9.64 },
+					{ "time": 0.2, "value": 3.53 },
+					{ "time": 0.6667, "value": -3.91 },
+					{ "time": 0.7667, "value": -19.66 },
+					{ "time": 1, "value": -27.5 },
+					{ "time": 1.2333, "value": -19.66 }
+				],
+				"scale": [
+					{ "time": 0.7667 },
+					{ "time": 1, "x": 1.103 },
+					{ "time": 1.2333 }
+				]
+			},
+			"orteils droite": {
+				"rotate": [
+					{ "value": 43.6 },
+					{ "time": 0.2, "value": 11.02 }
+				]
+			},
+			"pied droite": {
+				"rotate": [
+					{ "value": -13.93 }
+				]
+			},
+			"bras droit": {
+				"rotate": [
+					{ "value": -6.82 },
+					{ "time": 0.2667, "value": 158.78, "curve": "stepped" },
+					{ "time": 0.6667, "value": 158.78 },
+					{ "time": 0.7667, "value": 137.36 }
+				]
+			},
+			"target jambe droite": {
+				"translate": [
+					{ "x": -20.41, "y": 11.62 },
+					{ "time": 0.2, "x": -1.18, "y": -1.95 }
+				]
+			},
+			"avant bras droit": {
+				"rotate": [
+					{ "value": -1 },
+					{ "time": 0.6667, "value": 5.33 },
+					{ "time": 0.7667, "value": -19 }
+				]
+			},
+			"chapeau1": {
+				"rotate": [
+					{ "value": 9.28 }
+				]
+			},
+			"avant bras gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -30.79, "curve": "stepped" },
+					{ "time": 0.6667, "value": -30.79 },
+					{ "time": 0.7667, "value": -40.3 }
+				]
+			},
+			"main gauche": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -33.24 },
+					{ "time": 0.6667, "value": -17.19 },
+					{ "time": 0.7667, "value": -18.59 }
+				]
+			},
+			"main droite": {
+				"rotate": [
+					{ "time": 0.6667, "value": 15.94 }
+				]
+			},
+			"bord1": {
+				"rotate": [
+					{ "time": 0.7667 },
+					{ "time": 1, "value": 14.7 },
+					{ "time": 1.2333 }
+				]
+			},
+			"bord3": {
+				"rotate": [
+					{ "time": 0.7667 },
+					{ "time": 1, "value": -3.16 },
+					{ "time": 1.2333 }
+				]
+			},
+			"chapeau3": {
+				"rotate": [
+					{ "time": 0.7667 },
+					{ "time": 1, "value": -9.26 },
+					{ "time": 1.2333 }
+				],
+				"scale": [
+					{ "time": 0.7667 },
+					{ "time": 1, "x": 1.136 },
+					{ "time": 1.2333 }
+				]
 			}
 		}
 	},
