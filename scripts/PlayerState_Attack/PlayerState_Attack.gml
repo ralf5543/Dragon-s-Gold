@@ -49,7 +49,7 @@ function PlayerState_Attack(){
 		can_attack = false;
 	}
 
-		if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 22) && (image_index < 38) {
+		if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 16) && (image_index < 38) {
 			state = PLAYERSTATE.COMBO1;
 		}
 		
