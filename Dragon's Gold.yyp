@@ -6,6 +6,7 @@
     {"id":{"name":"spr_portrait_knight_alt3","path":"sprites/spr_portrait_knight_alt3/spr_portrait_knight_alt3.yy",},"order":7,},
     {"id":{"name":"spr_ranger_combo2","path":"sprites/spr_ranger_combo2/spr_ranger_combo2.yy",},"order":4,},
     {"id":{"name":"spr_knight_attack","path":"sprites/spr_knight_attack/spr_knight_attack.yy",},"order":6,},
+    {"id":{"name":"spr_lightning_hitbox","path":"sprites/spr_lightning_hitbox/spr_lightning_hitbox.yy",},"order":7,},
     {"id":{"name":"spr_energyBar","path":"sprites/spr_energyBar/spr_energyBar.yy",},"order":2,},
     {"id":{"name":"spr_knight","path":"sprites/spr_knight/spr_knight.yy",},"order":0,},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":9,},

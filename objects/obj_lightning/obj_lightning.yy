@@ -9,7 +9,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_lightning_hitbox",
+    "path": "sprites/spr_lightning_hitbox/spr_lightning_hitbox.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

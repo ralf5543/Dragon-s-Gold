@@ -2,13 +2,13 @@
 
 //jump up animation
 if (skeleton_animation_get() == "jump-up") {
-	image_index = -1;
+	image_index = 0;
 	image_speed = 0;
 }
 
 //hurt animation
 if (skeleton_animation_get() == "hurt") {
-    image_index = -1;
+    image_index = 0;
 	image_speed = 0;
 }
 
@@ -71,6 +71,6 @@ if (skeleton_animation_get() == "shield-block") {
 
 //death animation
 if (skeleton_animation_get() == "dead") {
-	image_index = -1;
+	image_index = 0;
 	image_speed = 0;
 }
