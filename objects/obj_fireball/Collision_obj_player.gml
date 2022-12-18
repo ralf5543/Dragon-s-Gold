@@ -9,18 +9,16 @@ if (other.id != attack_id_receiver) {
 		can_play_sound = false;
 	}
 
-	sprite_index = spr_fireball_explosion;
-	speed = 0;
 	
-	x = other.x;
 		
-
+if (sprite_index != spr_fireball_explosion) {
+	//because, strangely, the explosion	animation caase dommage with shield block...
 	with (other) {
 		if (!is_invicible) {
 			if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) && (other.is_deadly) {
 				hitfrom = other.fireball_orientation;
 		
-				facing = hitfrom;//(faces the origin of the attack)
+				facing = -hitfrom;//(faces the origin of the attack)
 				flash = 10;
 		
 		
@@ -45,4 +43,9 @@ if (other.id != attack_id_receiver) {
 		}
 	
 	}
+}	
+		sprite_index = spr_fireball_explosion;
+	speed = 0;
+	
+	x = other.x;
 }

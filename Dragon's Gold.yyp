@@ -58,6 +58,7 @@
     {"id":{"name":"snd_landing","path":"sounds/snd_landing/snd_landing.yy",},"order":4,},
     {"id":{"name":"snd_attack_miss","path":"sounds/snd_attack_miss/snd_attack_miss.yy",},"order":0,},
     {"id":{"name":"spr_portrait_wizard_standard","path":"sprites/spr_portrait_wizard_standard/spr_portrait_wizard_standard.yy",},"order":13,},
+    {"id":{"name":"spr_fireball_collision_box","path":"sprites/spr_fireball_collision_box/spr_fireball_collision_box.yy",},"order":9,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":4,},
     {"id":{"name":"test","path":"sprites/test/test.yy",},"order":8,},
     {"id":{"name":"PlayerState_Ranger_Special","path":"scripts/PlayerState_Ranger_Special/PlayerState_Ranger_Special.yy",},"order":8,},
@@ -149,9 +150,9 @@
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
     {"name":"macOS","path":"options/mac/options_mac.yy",},
-    {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"Main","path":"options/main/options_main.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
@@ -208,6 +209,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.9.1.51",
+    "IDEVersion": "2022.11.0.54",
   },
 }

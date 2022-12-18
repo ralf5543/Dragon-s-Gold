@@ -18,7 +18,7 @@ function PlayerState_Wizard_Special(){
 	
 	if (focus_fireball > 96) {//button pressed at least 3 seconds
 		if (can_cast) {
-			fireball = instance_create_layer(x + (other.facing * 8), y - 64, "front_objects", obj_fireball);
+			fireball = instance_create_layer(x + (other.facing * 12), y - 64, "front_objects", obj_fireball);
 			with (fireball) {
 				skeleton_animation_set("invocation");
 				size = "small";

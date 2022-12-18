@@ -9,7 +9,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_fireball_collision_box",
+    "path": "sprites/spr_fireball_collision_box/spr_fireball_collision_box.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
