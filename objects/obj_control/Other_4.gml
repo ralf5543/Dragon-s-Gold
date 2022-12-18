@@ -158,6 +158,9 @@ if (room != rm_start) {
 		//skeleton_animation_mix("run", "bow", 0.3);
 		//skeleton_animation_mix("bow", "run", 0.3);
 		
+		//WIZARD animations
+		skeleton_animation_mix("fireball-throw", "stand", 0.3);
+		
 		
 		//Places each player in a different used hall, at 1 tile from left/right from it
 	

@@ -10,3 +10,5 @@ size = "small";
 can_play_sound = true;
 
 is_deadly = true;
+
+attack_id_receiver = undefined;// Origin character of the fireball

@@ -7,9 +7,8 @@ function PlayerState_Wizard_Special(){
 	if (can_attack == true) {
 
 		// Start of the attack
-		if (sprite_index != spr_wizard_cast_strip5) {
-			sprite_index = spr_wizard_cast_strip5;
-			image_index = 0;
+		if (skeleton_animation_get() != "fireball-invocation") {
+			skeleton_animation_set("fireball-invocation");		
 		}	
 
 		can_attack = false;
@@ -19,12 +18,14 @@ function PlayerState_Wizard_Special(){
 	
 	if (focus_fireball > 96) {//button pressed at least 3 seconds
 		if (can_cast) {
-			fireball = instance_create_layer(x + (other.facing * 64), y + 16, "layer_players", obj_fireball);
+			fireball = instance_create_layer(x + (other.facing * 8), y - 64, "front_objects", obj_fireball);
 			with (fireball) {
+				skeleton_animation_set("invocation");
 				size = "small";
-				fireball_orientation = other.player_orientation;
-				image_xscale = other.facing;
-				image_speed = 0;
+				fireball_orientation = other.facing;
+				attack_id_receiver = other.gamepad_id_owner;
+				image_xscale = other.facing * 0.3;
+				image_yscale = 0.3;
 			}
 
 			can_cast = false;
@@ -34,8 +35,8 @@ function PlayerState_Wizard_Special(){
 
 			with (fireball) {
 				size = "medium";
-				image_xscale = other.facing * 1.5;
-				image_yscale = 1.5;
+				image_xscale = other.facing * 0.6;
+				image_yscale = 0.6;
 			}
 		}
 		
@@ -43,8 +44,8 @@ function PlayerState_Wizard_Special(){
 
 			with (fireball) {
 				size = "large";
-				image_xscale = other.facing * 2;
-				image_yscale = 2;
+				image_xscale = other.facing;
+				image_yscale = 1;
 			}
 		}
 
@@ -56,19 +57,22 @@ function PlayerState_Wizard_Special(){
 		if (focus_fireball > 96) {
 			audio_sound_pitch(snd_fireball, choose(.8, 1, 1.2));
 			audio_play_sound(snd_fireball, 6, false);
+			if (skeleton_skin_get() != "fireball-throw") {
+					skeleton_animation_set("fireball-throw");
+				}
 			
 			with (fireball) {
+				
+				if (skeleton_skin_get() != "fireball") {
+					skeleton_animation_set("fireball");
+				}
 				is_casted = false;
-				speed = 16;
-				direction = other.player_orientation;
+				speed = 16 * other.facing;
+				direction = other.facing;
 				image_angle = 0;
 				image_index = 1;
 			}
 			
 		}
-		
-		focus_fireball = 0;
-		state = PLAYERSTATE.FREE;
-		can_cast = true;
 	}
 }

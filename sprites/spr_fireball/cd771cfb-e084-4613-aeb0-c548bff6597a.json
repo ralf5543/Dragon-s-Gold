@@ -1,0 +1,108 @@
+{
+"skeleton": { "hash": "LOdA0kqIqaI", "spine": "4.0-from-4.1.17", "x": -31.63, "y": -29.63, "width": 68.98, "height": 74.72 },
+"bones": [
+	{ "name": "root", "scaleX": 0.5748, "scaleY": 0.5748 },
+	{ "name": "invoc", "parent": "root", "x": 135.09, "y": -23.45 }
+],
+"slots": [
+	{ "name": "fireball_1", "bone": "invoc", "attachment": "fireball_1" },
+	{ "name": "fireball_2", "bone": "invoc" },
+	{ "name": "fireball_3", "bone": "invoc" },
+	{ "name": "fireball_4", "bone": "invoc" },
+	{ "name": "flame_0", "bone": "invoc" },
+	{ "name": "flame_1", "bone": "invoc" },
+	{ "name": "flame_2", "bone": "invoc" },
+	{ "name": "flame_3", "bone": "invoc" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"fireball_1": {
+				"fireball_1": { "x": -130.11, "y": 36.9, "width": 120, "height": 130 }
+			},
+			"fireball_2": {
+				"fireball_2": { "x": -130.11, "y": 36.9, "width": 120, "height": 130 }
+			},
+			"fireball_3": {
+				"fireball_3": { "x": -130.11, "y": 36.9, "width": 120, "height": 130 }
+			},
+			"fireball_4": {
+				"fireball_4": { "x": -130.11, "y": 36.9, "width": 120, "height": 130 }
+			},
+			"flame_0": {
+				"flame_0": { "x": -187.55, "y": 38.45, "rotation": 86.52, "width": 120, "height": 216 }
+			},
+			"flame_1": {
+				"flame_1": { "x": -187.55, "y": 38.45, "rotation": 86.52, "width": 120, "height": 216 }
+			},
+			"flame_2": {
+				"flame_2": { "x": -187.55, "y": 38.45, "rotation": 86.52, "width": 120, "height": 216 }
+			},
+			"flame_3": {
+				"flame_3": { "x": -187.55, "y": 38.45, "rotation": 86.52, "width": 120, "height": 216 }
+			}
+		}
+	}
+],
+"animations": {
+	"fireball": {
+		"slots": {
+			"fireball_1": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"flame_0": {
+				"attachment": [
+					{ "name": "flame_0" },
+					{ "time": 0.1, "name": null }
+				]
+			},
+			"flame_1": {
+				"attachment": [
+					{ "time": 0.1, "name": "flame_1" },
+					{ "time": 0.1667, "name": null }
+				]
+			},
+			"flame_2": {
+				"attachment": [
+					{ "time": 0.1667, "name": "flame_2" },
+					{ "time": 0.2667, "name": null }
+				]
+			},
+			"flame_3": {
+				"attachment": [
+					{ "time": 0.2667, "name": "flame_3" }
+				]
+			}
+		}
+	},
+	"invocation": {
+		"slots": {
+			"fireball_1": {
+				"attachment": [
+					{ "time": 0.1333, "name": null }
+				]
+			},
+			"fireball_2": {
+				"attachment": [
+					{ "time": 0.1333, "name": "fireball_2" },
+					{ "time": 0.2667, "name": null }
+				]
+			},
+			"fireball_3": {
+				"attachment": [
+					{ "time": 0.2667, "name": "fireball_3" },
+					{ "time": 0.4, "name": null }
+				]
+			},
+			"fireball_4": {
+				"attachment": [
+					{ "time": 0.4, "name": "fireball_4" }
+				]
+			}
+		}
+	}
+}
+}

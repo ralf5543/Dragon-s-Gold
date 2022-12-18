@@ -7,9 +7,10 @@ with (other) {
 		audio_play_sound(snd_fireball_hit, 6, false);
 		can_play_sound = false;
 		
-		sprite_index = spr_fireball_explosion_strip8;
+		if (skeleton_skin_get() != "explosion") {
+			skeleton_animation_set("explosion");
+		}
 		speed = 0;
-		image_speed = 1;
 	}
 }
 

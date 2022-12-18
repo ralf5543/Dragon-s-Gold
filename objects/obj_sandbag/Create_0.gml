@@ -93,15 +93,6 @@ key_x = 0;
 key_y = 0;
 key_spacer = 0;
 
-
-// ===================---------------- RANGER
-focus_bow = 0;
-
-// ===================---------------- WIZARD
-focus_fireball = 0;
-can_sound_cast = true;
-can_cast = true;
-
 can_hit = true;//so the attack will hit only once
 
 attack_id_receiver = undefined;

@@ -8,7 +8,7 @@ if (can_play_sound) {
 
 //if small fireball, fireball and arrow are destroyed
 if (size == "small") {
-	sprite_index = spr_fireball_explosion_strip8;
+	sprite_index = spr_fireball_explosion;
 	speed = 0;
 	image_speed = 1;
 	instance_destroy(other);

@@ -11,18 +11,16 @@ if (other.id != attack_id_receiver) {
 
 	sprite_index = spr_fireball_explosion;
 	speed = 0;
+	
+	x = other.x;
 		
 
 	with (other) {
 		if (!is_invicible) {
 			if (state != PLAYERSTATE.HURT) && (state != PLAYERSTATE.DEAD) && (other.is_deadly) {
-				if (point_direction(other.x, other.y, x, y) > 90) {
-					hitfrom = -1;// attack from the right
-				} else {
-					hitfrom = 1;//attack from the left
-				}
+				hitfrom = other.fireball_orientation;
 		
-				facing = -hitfrom;//(faces the origin of the attack)
+				facing = hitfrom;//(faces the origin of the attack)
 				flash = 10;
 		
 		

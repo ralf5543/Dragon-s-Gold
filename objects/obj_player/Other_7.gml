@@ -63,11 +63,19 @@ if (skeleton_animation_get() == "shield-block") {
 	image_index =10;
 }
 
-//Fireball animation
-//if (sprite_index == spr_wizard_cast_strip5) {
-//    can_sound_cast = true;
+//Fireball animations
+if (skeleton_animation_get() == "fireball-invocation") {
+	image_index =30;
+	can_sound_cast = true;
+}
 
-//}
+if (skeleton_animation_get() == "fireball-throw") {
+	image_index =30;
+	focus_fireball = 0;
+	can_cast = true;
+	can_sound_cast = true;
+	state = PLAYERSTATE.FREE;
+}
 
 //death animation
 if (skeleton_animation_get() == "dead") {

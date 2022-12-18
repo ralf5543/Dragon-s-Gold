@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_metal1",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.5,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_metal1.wav",
-  "duration": 0.734138,
+  "duration": 0.729138,
   "parent": {
     "name": "attack",
     "path": "folders/Sounds/characters/attack.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_metal1",
-  "tags": [],
-  "resourceType": "GMSound",
 }

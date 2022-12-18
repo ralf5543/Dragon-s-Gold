@@ -1,0 +1,130 @@
+{
+"skeleton": { "hash": "ueo74rSzlUE", "spine": "4.0-from-4.1.17", "x": -194.56, "y": -69.13, "width": 198.55, "height": 130.59 },
+"bones": [
+	{ "name": "root", "x": -73.13, "y": 1.63, "scaleX": 0.5748, "scaleY": 0.5748 },
+	{ "name": "explosion", "parent": "root", "rotation": 90.36, "x": -2.48, "y": 120.32 }
+],
+"slots": [
+	{ "name": "Explodez_1", "bone": "explosion" },
+	{ "name": "Explodez_2", "bone": "explosion" },
+	{ "name": "Explodez_3", "bone": "explosion" },
+	{ "name": "Explodez_4", "bone": "explosion" },
+	{ "name": "Explodez_5", "bone": "explosion" },
+	{ "name": "Explodez_6", "bone": "explosion" },
+	{ "name": "Explodez_7", "bone": "explosion" },
+	{ "name": "Explodez_8", "bone": "explosion", "attachment": "Explodez_8" },
+	{ "name": "Explodez_9", "bone": "explosion" },
+	{ "name": "Explodez_10", "bone": "explosion" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Explodez_1": {
+				"Explodez_1": { "x": -129.61, "y": -45.76, "width": 237, "height": 196 }
+			},
+			"Explodez_2": {
+				"Explodez_2": { "x": -129.61, "y": -14.26, "width": 207, "height": 279 }
+			},
+			"Explodez_3": {
+				"Explodez_3": { "x": -130.11, "y": 1.24, "width": 204, "height": 297 }
+			},
+			"Explodez_4": {
+				"Explodez_4": { "x": -130.11, "y": 0.74, "width": 210, "height": 304 }
+			},
+			"Explodez_5": {
+				"Explodez_5": { "x": -129.61, "y": 21.4, "width": 213, "height": 314 }
+			},
+			"Explodez_6": {
+				"Explodez_6": { "x": -130.11, "y": 31.73, "width": 216, "height": 332 }
+			},
+			"Explodez_7": {
+				"Explodez_7": { "x": -129.61, "y": 32.23, "width": 217, "height": 341 }
+			},
+			"Explodez_8": {
+				"Explodez_8": { "x": -129.61, "y": 36.9, "width": 225, "height": 344 }
+			},
+			"Explodez_9": {
+				"Explodez_9": { "x": -130.11, "y": 34.81, "width": 226, "height": 343 }
+			},
+			"Explodez_10": {
+				"Explodez_10": { "x": -129.61, "y": 26.57, "width": 223, "height": 340 }
+			}
+		}
+	}
+],
+"animations": {
+	"explosion": {
+		"slots": {
+			"Explodez_1": {
+				"attachment": [
+					{ "name": "Explodez_1" },
+					{ "time": 0.0667, "name": null }
+				]
+			},
+			"Explodez_2": {
+				"attachment": [
+					{ "name": "Explodez_2" },
+					{ "time": 0.1333, "name": null }
+				]
+			},
+			"Explodez_3": {
+				"attachment": [
+					{ "time": 0.1333, "name": "Explodez_3" },
+					{ "time": 0.2, "name": null }
+				]
+			},
+			"Explodez_4": {
+				"attachment": [
+					{ "time": 0.2, "name": "Explodez_4" },
+					{ "time": 0.2667, "name": null }
+				]
+			},
+			"Explodez_5": {
+				"attachment": [
+					{ "time": 0.2667, "name": "Explodez_5" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Explodez_6": {
+				"attachment": [
+					{ "time": 0.3333, "name": "Explodez_6" },
+					{ "time": 0.4, "name": null }
+				]
+			},
+			"Explodez_7": {
+				"attachment": [
+					{ "time": 0.4, "name": "Explodez_7" },
+					{ "time": 0.4667, "name": null }
+				]
+			},
+			"Explodez_8": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.4667, "name": "Explodez_8" },
+					{ "time": 0.5333, "name": null }
+				]
+			},
+			"Explodez_9": {
+				"attachment": [
+					{ "time": 0.5333, "name": "Explodez_9" },
+					{ "time": 0.6, "name": null }
+				]
+			},
+			"Explodez_10": {
+				"attachment": [
+					{ "time": 0.6, "name": "Explodez_10" }
+				]
+			}
+		},
+		"bones": {
+			"explosion": {
+				"translate": [
+					{ "time": 0.0667, "x": -13.45, "y": -0.09 },
+					{ "time": 0.2667, "x": 3.82, "y": 0.02 }
+				]
+			}
+		}
+	}
+}
+}

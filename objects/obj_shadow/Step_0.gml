@@ -16,9 +16,6 @@ image_xscale = 1 - ((y - shadow_id_receiver.y) / 300);
 
 
 
-//show_debug_message("shadow_id_receiver" + string(shadow_id_receiver))
-
-
 
 
 

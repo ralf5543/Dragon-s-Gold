@@ -29,7 +29,6 @@ if (!place_meeting(x, y, obj_shield) ) {
 				
 				if (skeleton_animation_get() == "attack") {
 					has_touched_ennemy1 = true;
-					show_debug_message("attack")
 				}
 				
 				
