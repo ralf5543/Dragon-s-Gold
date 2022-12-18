@@ -11,6 +11,11 @@ if (other.id != attack_id_receiver) {
 			} else {
 				other.hitfrom = 1;//attack from the left
 			}
+			vsp = 0;
+			speed = 0;
+			grv = 0;
+			x = other.x;
+			y = other.y;
 
 			other.facing = -other.hitfrom;//(faces the origin of the attack)
 			other.flash = 10;
@@ -18,8 +23,8 @@ if (other.id != attack_id_receiver) {
 			audio_play_sound(snd_arrow_hit, 7, false);
 		
 			other.state = PLAYERSTATE.HURT;
-			other.hp -= 10;
-	
+			other.hp -= 10;	
+			
 			instance_destroy();
 		}
 	}

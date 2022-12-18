@@ -5,7 +5,7 @@ can_play_sound = true;
 vsp = 0; // vertical speed
 grv = .1; // gravity
 
-no_wall = true;// not touching a wall
+toto = 0;
 
 arrow_orientation = undefined;// Facing the same as the bower
 

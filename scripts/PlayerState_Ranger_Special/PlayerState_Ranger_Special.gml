@@ -25,7 +25,7 @@ function PlayerState_Ranger_Special(){
 			
 	
 			//use ranger hitbox
-			var inst = instance_create_layer(x + (20 * facing), y - 55, "layer_players", obj_arrow);
+			var inst = instance_create_layer(x + (20 * facing), y - 55, "front_objects", obj_arrow);
 			with (inst) {
 				arrow_orientation = other.facing;
 				image_xscale = arrow_orientation;
