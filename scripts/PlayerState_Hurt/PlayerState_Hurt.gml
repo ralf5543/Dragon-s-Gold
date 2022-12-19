@@ -79,9 +79,12 @@ function PlayerState_Hurt(){
 							   has_bronze_key --;
 							   key_win_bronze = false;
 							   
-							   var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+							   var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 								with (bronze_key) {
-									value = "bronze";
+									value = KEYVALUE.BRASS;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 								}
 						   } else {
 							   var random_value_nobronze = choose("silver", "gold");
@@ -90,17 +93,23 @@ function PlayerState_Hurt(){
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									  var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									  var silver_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 										with (silver_key) {
-											value = "silver";
+											value = KEYVALUE.SILVER;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 										}
 								  } else {
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 										with (gold_key) {
-											value = "gold";
+											value = KEYVALUE.GOLD;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 										}
 								  }
 							   }
@@ -112,9 +121,12 @@ function PlayerState_Hurt(){
 							   has_silver_key --;
 							   key_win_silver = false;
 							   
-							    var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+							    var silver_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 								with (silver_key) {
-									value = "silver";
+									value = KEYVALUE.SILVER;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 								}
 						   } else {
 							   var random_value_nosilver = choose("bronze", "gold");
@@ -123,17 +135,23 @@ function PlayerState_Hurt(){
 									  has_bronze_key --;
 									  key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 									with (bronze_key) {
-										value = "bronze";
+										value = KEYVALUE.BRASS;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 									}
 								  } else {
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 										with (gold_key) {
-											value = "gold";
+											value = KEYVALUE.GOLD;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 										}
 								  }
 							   }
@@ -145,9 +163,12 @@ function PlayerState_Hurt(){
 							   has_gold_key --;
 							   key_win_gold = false;
 							   
-							    var gold_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+							    var gold_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 								with (gold_key) {
-									value = "gold";
+									value = KEYVALUE.GOLD;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 								}
 						   } else {
 							   var random_value_nogold = choose("bronze", "silver");
@@ -156,17 +177,23 @@ function PlayerState_Hurt(){
 									has_bronze_key --;
 									key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 									with (bronze_key) {
-										value = "bronze";
+										value = KEYVALUE.BRASS;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 									}
 								  } else {
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									var silver_key = instance_create_layer(x, y + random_range(0, 60), "layer_walls", obj_key);
+									var silver_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
 									with (silver_key) {
-										value = "silver";
+										value = KEYVALUE.SILVER;
+									image_xscale = 0.5;
+									image_yscale = 0.5;
+									can_play_sound = true;
 									}
 								  }
 							   }
@@ -182,6 +209,11 @@ function PlayerState_Hurt(){
 	// Knight only(lose shield protection)
 	if (instance_exists(obj_shield)) {
 		instance_destroy(obj_shield);
+	}
+	
+	// Wizard only(lose fireball invocation)
+	if (instance_exists(obj_fireball)) {
+		instance_destroy(obj_fireball);
 	}
 
 }

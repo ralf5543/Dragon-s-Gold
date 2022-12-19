@@ -1,19 +1,17 @@
 /// @description Insert description here
 
-//wait a sec at game launch, sa all keys don't ring at the same time !
-alarm[0] = 64;
 
 switch (value) {
-	case "gold" : 
-	image_index = 0;
+	case KEYVALUE.BRASS : 
+	sprite_index = spr_brass_key;
 	break;	
 	
-	case "silver" : 
-	image_index = 1;
+	case KEYVALUE.SILVER : 
+	sprite_index = spr_silver_key;
 	break;	
 	
-	case "bronze" : 
-	image_index = 2;
+	case KEYVALUE.GOLD : 
+	sprite_index = spr_golden_key;
 	break;	
 }
 
@@ -45,7 +43,7 @@ if (place_meeting(x, y + vsp, obj_wall)) {
 	}
 	vsp = 0;
 	if (can_play_sound) {
-		audio_play_sound(snd_key_fall, 6, 0);
+		audio_play_sound(snd_key_fall, 6, false);
 		can_play_sound = false;
 	}
 }

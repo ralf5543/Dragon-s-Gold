@@ -22,7 +22,7 @@ function PlayerState_Free(){
 	var move = key_right - key_left; // because true = 1 and false = -1
 	if (key_run) && (energy > 0) {
 		walksp = 8;
-		energy --;
+		//energy --;
 
 	} else {
 		walksp = 4;
@@ -103,8 +103,6 @@ function PlayerState_Free(){
 			
 		} else {
 			if (key_run) && (energy > 0) {
-				walksp = 8;
-				energy --;
 		
 				//for preventing looping on frame 1 of the animation
 				if (skeleton_animation_get() != "run") {

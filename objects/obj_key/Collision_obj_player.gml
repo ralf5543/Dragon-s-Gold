@@ -8,15 +8,15 @@ if (other.state != PLAYERSTATE.HURT) && (other.state != PLAYERSTATE.DEAD) {
 	audio_play_sound(snd_key_grab, 9, 0);
 
 	switch (value) {
-		case "gold" : 
+		case KEYVALUE.GOLD : 
 		other.has_gold_key ++;
 		break;	
 	
-		case "silver" : 
+		case KEYVALUE.SILVER : 
 		other.has_silver_key ++;
 		break;	
 	
-		case "bronze" : 
+		case KEYVALUE.BRASS : 
 		other.has_bronze_key ++;
 		break;	
 	}

@@ -4,28 +4,34 @@ function PlayerState_Dead(){
 	if (can_lose_key_when_dead) {
 		for (var i = 0; i < has_bronze_key; i ++) {
 			// 0, (60 * facing), to be sure key are not popping in a wall
-			var bronze_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_walls", obj_key);
+			var bronze_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(-50, -100), "layer_walls", obj_key);
 			
 			with (bronze_key) {
-				value = "bronze";
+				value = KEYVALUE.BRASS;
+				image_xscale = 0.5;
+				image_yscale = 0.5;
 			}
 			has_bronze_key --;
 		}
 		
 		for (var i = 0; i < has_silver_key; i ++) {
-			var silver_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_walls", obj_key);
+			var silver_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(-50, -100), "layer_walls", obj_key);
 			
 			with (silver_key) {
-				value = "silver";
+				value = KEYVALUE.SILVER;
+				image_xscale = 0.5;
+				image_yscale = 0.5;
 			}
 			has_silver_key --;
 		}
 		
 		for (var i = 0; i < has_gold_key; i ++) {
-			var gold_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(0, 60), "layer_walls", obj_key);
+			var gold_key = instance_create_layer(x + random_range(0, (60 * facing)), y + random_range(-50, -100), "layer_walls", obj_key);
 			
 			with (gold_key) {
-				value = "gold";
+				value = KEYVALUE.GOLD;
+				image_xscale = 0.5;
+				image_yscale = 0.5;
 			}
 			has_gold_key --;
 		}

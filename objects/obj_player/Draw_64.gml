@@ -48,25 +48,25 @@ if (room != rm_start) {
 		//keys
 		if (has_bronze_key < 1) {
 			// semi opacity
-			draw_sprite_ext(spr_key, 2, key_x, key_y, 1.6, 1.6, 135, c_white, .4);
+			draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1, 1, 135, c_white, .4);
 		} else {
-			draw_sprite_ext(spr_key, 2, key_x, key_y, 1.6, 1.6, 135, c_white, 1);
+			draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1, 1, 135, c_white, 1);
 		}
 		draw_text(key_x + 32, key_y, "x" + string(has_bronze_key));
 			
 		if (has_silver_key < 1) {
 			// semi opacity
-			draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.6, 1.6, 135, c_white, .4);
+			draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1, 1, 135, c_white, .4);
 		} else {
-			draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.6, 1.6, 135, c_white, 1);
+			draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1, 1, 135, c_white, 1);
 		}
 		draw_text(key_x + 32 + key_spacer, key_y, "x" + string(has_silver_key));
 			
 		if (has_gold_key < 1) {
 			// semi opacity
-			draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.6, 1.6, 135, c_white, .4);
+			draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, .4);
 		} else {
-			draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.6, 1.6, 135, c_white, 1);
+			draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, 1);
 		}
 		draw_text(key_x + 32 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
 	}
@@ -109,30 +109,30 @@ if (room != rm_start) {
 			//energyhbar
 			draw_sprite_ext(spr_energyBackground, 0, energybar_x, energybar_y, 1 * gui_zoom, 1 * gui_zoom, 0, c_white, 1);
 			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y, (energy / energy_max) * energybar_width, energybar_height);
-			draw_sprite_ext(spr_key, 2, key_x, key_y, 1.2, 1.2, 135, c_white, .5);
+			draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1.2, 1.2, 135, c_white, .5);
 				
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x, key_y, 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x, key_y, 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20, key_y, "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + key_spacer, key_y, "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + (key_spacer * 2), key_y, "x" + string(has_gold_key));			
 		}
@@ -155,25 +155,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20, key_y + (global.surface_height / 2), "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + key_spacer, key_y + (global.surface_height / 2), "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + (key_spacer * 2), key_y + (global.surface_height / 2), "x" + string(has_gold_key));
 		}
@@ -215,30 +215,30 @@ if (room != rm_start) {
 			//energyhbar
 			draw_sprite_ext(spr_energyBackground, 0, energybar_x, energybar_y, 1 * gui_zoom, 1 * gui_zoom, 0, c_white, 1);
 			draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y, (energy / energy_max) * energybar_width, energybar_height);
-			draw_sprite_ext(spr_key, 2, key_x, key_y, 1.2, 1.2, 135, c_white, .5);
+			draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1.2, 1.2, 135, c_white, .5);
 			
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x, key_y, 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x, key_y, 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20, key_y, "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + key_spacer, key_y, "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1.2, 1.2, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
 				
@@ -280,25 +280,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12, key_y + (global.surface_height / 2), "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + key_spacer, key_y + (global.surface_height / 2), "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (key_spacer * 2), key_y + (global.surface_height / 2), "x" + string(has_gold_key));
 			
@@ -336,25 +336,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (global.surface_width / 2), key_y + (global.surface_height / 2), "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), "x" + string(player3.has_gold_key));
 		}
@@ -394,25 +394,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x, key_y, 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x, key_y, 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12, key_y, "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y, 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + key_spacer, key_y, "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
 		}
@@ -435,25 +435,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x + (global.surface_width / 2), key_y, 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x + (global.surface_width / 2), key_y, 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x + (global.surface_width / 2), key_y, 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x + (global.surface_width / 2), key_y, 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (global.surface_width / 2), key_y, "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer + (global.surface_width / 2), key_y, 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer + (global.surface_width / 2), key_y, 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer + (global.surface_width / 2), key_y, 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer + (global.surface_width / 2), key_y, 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + key_spacer + (global.surface_width / 2), key_y, "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y, 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y, 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y, 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y, 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (key_spacer * 2) + (global.surface_width / 2), key_y, "x" + string(player2.has_gold_key));
 		}
@@ -476,25 +476,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12, key_y + (global.surface_height / 2), "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + key_spacer, key_y + (global.surface_height / 2), "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (key_spacer * 2), key_y + (global.surface_height / 2), "x" + string(has_gold_key));
 			}
@@ -517,25 +517,25 @@ if (room != rm_start) {
 			//keys
 			if (has_bronze_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 2, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_brass_key, 0, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 2, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_brass_key, 0, key_x + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (global.surface_width / 2), key_y + (global.surface_height / 2), "x" + string(has_bronze_key));
 			
 			if (has_silver_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 1, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + key_spacer + (global.surface_width / 2), key_y + (global.surface_height / 2), "x" + string(has_silver_key));
 			
 			if (has_gold_key < 1) {
 				// semi opacity
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, .4);
 			} else {
-				draw_sprite_ext(spr_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
+				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), 1, 1, 135, c_white, 1);
 			}
 			draw_text(key_x + 12 + (key_spacer * 2) + (global.surface_width / 2), key_y + (global.surface_height / 2), "x" + string(has_gold_key));
 		}

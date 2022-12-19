@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_key",
   "spriteId": {
-    "name": "spr_key",
-    "path": "sprites/spr_key/spr_key.yy",
+    "name": "spr_null",
+    "path": "sprites/spr_null/spr_null.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,6 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

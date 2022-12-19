@@ -7,7 +7,7 @@ with (other) {
 			
 		audio_sound_pitch(snd_unlock, choose(.8, 1, 1.2));
 		audio_play_sound(snd_unlock, 10, false);
-		//audio_play_sound(snd_key_fall, 8, false);
+		audio_play_sound(snd_key_fall, 8, false);
 	}
 	
 	if (has_silver_key > 0) && (!key_win_silver) {
@@ -16,7 +16,7 @@ with (other) {
 			
 		audio_sound_pitch(snd_unlock, choose(.8, 1, 1.2));
 		audio_play_sound(snd_unlock, 10, false);
-		//audio_play_sound(snd_key_fall, 8, false);
+		audio_play_sound(snd_key_fall, 8, false);
 	}
 	
 	if (has_gold_key > 0) && (!key_win_gold) {
@@ -25,7 +25,7 @@ with (other) {
 			
 		audio_sound_pitch(snd_unlock, choose(.8, 1, 1.2));
 		audio_play_sound(snd_unlock, 10, false);
-		//audio_play_sound(snd_key_fall, 8, false);
+		audio_play_sound(snd_key_fall, 8, false);
 	}
 }
 

@@ -85,9 +85,12 @@ if (room != rm_start) {
 	for (var i = 0; i < 3; i ++) {
 		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
 		Random_Position(new_item);
+		with (new_item) {
+			value = KEYVALUE.BRASS;
+			image_xscale = 0.5;
+			image_yscale = 0.5;	
+		}
 		
-		new_item.value = "bronze";
-
 	}
 	
 	
@@ -95,9 +98,11 @@ if (room != rm_start) {
 	for (var i = 0; i < 3; i ++) {
 		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
 		Random_Position(new_item);
-		
-		new_item.value = "silver";
-
+		with (new_item) {
+			value = KEYVALUE.SILVER;
+			image_xscale = 0.5;
+			image_yscale = 0.5;	
+		}
 	}
 	
 	
@@ -105,9 +110,11 @@ if (room != rm_start) {
 	for (var i = 0; i < 3; i ++) {
 		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
 		Random_Position(new_item);
-		
-		new_item.value = "gold";
-
+		with (new_item) {
+			value = KEYVALUE.GOLD;
+			image_xscale = 0.5;
+			image_yscale = 0.5;
+		}
 	}
 	
 	

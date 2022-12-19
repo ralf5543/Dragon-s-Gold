@@ -179,7 +179,6 @@ if (room == rm_start) {
 		case PLAYERSTATE.ATTACK : 
 		PlayerState_Attack();
 		break;
-		break;
 		
 		case PLAYERSTATE.COMBO1 : 
 		PlayerState_Combo1();
