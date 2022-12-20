@@ -1,5 +1,6 @@
 /// @description Insert description here
 
+show_debug_message("alleeeeeeeeeeeeeeeeeez")
 if (can_play_sound) {
 	audio_sound_pitch(snd_fireball_hit, choose(.8, 1, 1.2));
 	audio_play_sound(snd_fireball_hit, 6, false);
@@ -12,13 +13,16 @@ switch (size) {
 			
 		    switch (size) {
 				case "small":
+				show_debug_message("pitite")
 				speed = 0;
 				other.speed = 0;
 				sprite_index = spr_fireball_explosion;
 				other.sprite_index = spr_fireball_explosion;
 				break;
 				
-				case "medium" or "large":
+				case "medium":
+				case "large":
+				show_debug_message("moyenne ou grosse")
 				other.speed = 0;
 				other.sprite_index = spr_fireball_explosion;
 				break;
@@ -61,7 +65,8 @@ switch (size) {
 				other.sprite_index = spr_fireball_explosion;
 				break;
 				
-				case "medium" or "small":
+				case "medium":
+				case "small":
 				speed = 0;
 				sprite_index = spr_fireball_explosion;
 				break;
@@ -70,13 +75,3 @@ switch (size) {
 		break;
 }
 			
-if (size == "small") {
-	sprite_index = spr_fireball_explosion;
-	speed = 0;
-	image_speed = 1;
-	instance_destroy(other);
-
-// if medium or large fireball, arrow is destroyed
-} else {
-	instance_destroy(other);
-}
