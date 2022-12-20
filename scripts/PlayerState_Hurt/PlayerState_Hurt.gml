@@ -217,12 +217,16 @@ function PlayerState_Hurt(){
 	
 	// Knight only(lose shield protection)
 	if (instance_exists(obj_shield)) {
-		instance_destroy(obj_shield);
+		if (obj_shield.shield_receiver == id) {
+			instance_destroy(obj_shield);
+		}
 	}
 	
 	// Wizard only(lose fireball invocation)
 	if (instance_exists(obj_fireball)) {
-		instance_destroy(obj_fireball);
+		if (obj_fireball.attack_id_receiver == id) {
+			instance_destroy(obj_fireball);
+		}
 	}
 
 }

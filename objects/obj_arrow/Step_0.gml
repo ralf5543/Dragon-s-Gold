@@ -1,7 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description orientation
 
 vsp += grv;
 y += vsp;
 
-image_angle = arrow_orientation * (direction - vsp);
+if (vsp > 0) {
+	image_angle = arrow_orientation * (direction - (vsp * 3));
+}
