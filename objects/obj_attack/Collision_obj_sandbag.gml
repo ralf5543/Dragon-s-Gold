@@ -20,6 +20,8 @@ if (!place_meeting(x, y, obj_shield) ) {
 		
 			other.state = PLAYERSTATE.HURT;
 			other.hp -= 10;
+			
+			AddBlood();
 		}
 
 //======================================------------------ COMBO LAUNCHING

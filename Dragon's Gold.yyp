@@ -21,10 +21,12 @@
     {"id":{"name":"spr_fireball","path":"sprites/spr_fireball/spr_fireball.yy",},"order":0,},
     {"id":{"name":"spr_portrait_ranger_standard","path":"sprites/spr_portrait_ranger_standard/spr_portrait_ranger_standard.yy",},"order":8,},
     {"id":{"name":"snd_fireball_hit","path":"sounds/snd_fireball_hit/snd_fireball_hit.yy",},"order":2,},
+    {"id":{"name":"AddBlood","path":"scripts/AddBlood/AddBlood.yy",},"order":17,},
     {"id":{"name":"snd_metal3","path":"sounds/snd_metal3/snd_metal3.yy",},"order":6,},
     {"id":{"name":"spr_skulls2","path":"sprites/spr_skulls2/spr_skulls2.yy",},"order":11,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_hall_ground_A","path":"objects/obj_hall_ground_A/obj_hall_ground_A.yy",},"order":17,},
+    {"id":{"name":"spr_blood","path":"sprites/spr_blood/spr_blood.yy",},"order":13,},
     {"id":{"name":"spr_ranger","path":"sprites/spr_ranger/spr_ranger.yy",},"order":1,},
     {"id":{"name":"snd_death_male1","path":"sounds/snd_death_male1/snd_death_male1.yy",},"order":15,},
     {"id":{"name":"spr_healthBar","path":"sprites/spr_healthBar/spr_healthBar.yy",},"order":4,},
@@ -135,6 +137,7 @@
     {"id":{"name":"spr_portrait_ranger_alt3","path":"sprites/spr_portrait_ranger_alt3/spr_portrait_ranger_alt3.yy",},"order":11,},
     {"id":{"name":"snd_bow","path":"sounds/snd_bow/snd_bow.yy",},"order":2,},
     {"id":{"name":"obj_hall_middle_A","path":"objects/obj_hall_middle_A/obj_hall_middle_A.yy",},"order":10,},
+    {"id":{"name":"obj_blood","path":"objects/obj_blood/obj_blood.yy",},"order":7,},
     {"id":{"name":"snd_bump","path":"sounds/snd_bump/snd_bump.yy",},"order":0,},
     {"id":{"name":"spr_ranger_dash","path":"sprites/spr_ranger_dash/spr_ranger_dash.yy",},"order":5,},
     {"id":{"name":"PlayerState_Combo2","path":"scripts/PlayerState_Combo2/PlayerState_Combo2.yy",},"order":15,},
@@ -212,6 +215,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.11.0.54",
+    "IDEVersion": "2022.9.1.51",
   },
 }

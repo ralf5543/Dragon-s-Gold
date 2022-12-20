@@ -1,0 +1,185 @@
+{
+"skeleton": { "hash": "qauCHz37l3s", "spine": "4.0-from-4.1.17", "x": -63.41, "y": -55.05, "width": 130.81, "height": 110.64 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "blood1", "parent": "root", "x": 2, "scaleX": 0.545, "scaleY": 0.545 },
+	{ "name": "blood2", "parent": "root", "x": 6, "y": -2 },
+	{ "name": "blood3", "parent": "root", "x": 8, "y": -4 }
+],
+"slots": [
+	{ "name": "images/blood_slash_0", "bone": "blood1" },
+	{ "name": "images/blood_slash_1", "bone": "blood1" },
+	{ "name": "images/blood_slash_2", "bone": "blood1" },
+	{ "name": "images/blood_slash_3", "bone": "blood1" },
+	{ "name": "images/blood_slash_4", "bone": "blood1", "attachment": "blood_slash_4" },
+	{ "name": "images/blood_splat_0", "bone": "blood2" },
+	{ "name": "images/blood_splat_1", "bone": "blood2" },
+	{ "name": "images/blood_splat_2", "bone": "blood2" },
+	{ "name": "images/blood_splat_d", "bone": "blood3" },
+	{ "name": "images/blood_splat_c", "bone": "blood3" },
+	{ "name": "images/blood_splat_b", "bone": "blood3" },
+	{ "name": "images/blood_splat_a", "bone": "blood3" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"images/blood_slash_0": {
+				"blood_slash_0": { "y": 0.5, "width": 240, "height": 203 }
+			},
+			"images/blood_slash_1": {
+				"blood_slash_1": { "y": 0.5, "width": 240, "height": 203 }
+			},
+			"images/blood_slash_2": {
+				"blood_slash_2": { "y": 0.5, "width": 240, "height": 203 }
+			},
+			"images/blood_slash_3": {
+				"blood_slash_3": { "y": 0.5, "width": 240, "height": 203 }
+			},
+			"images/blood_slash_4": {
+				"blood_slash_4": { "y": 0.5, "width": 240, "height": 203 }
+			},
+			"images/blood_splat_0": {
+				"blood_splat_0": { "y": 0.5, "width": 128, "height": 61 }
+			},
+			"images/blood_splat_1": {
+				"blood_splat_1": { "y": 0.5, "width": 128, "height": 61 }
+			},
+			"images/blood_splat_2": {
+				"blood_splat_2": { "y": 0.5, "width": 128, "height": 61 }
+			},
+			"images/blood_splat_a": {
+				"blood_splat_a": { "x": 0.5, "y": 0.5, "width": 111, "height": 95 }
+			},
+			"images/blood_splat_b": {
+				"blood_splat_b": { "x": 0.5, "y": 0.5, "width": 111, "height": 95 }
+			},
+			"images/blood_splat_c": {
+				"blood_splat_c": { "x": 0.5, "y": 0.5, "width": 111, "height": 95 }
+			},
+			"images/blood_splat_d": {
+				"blood_splat_d": { "x": 0.5, "y": 0.5, "width": 111, "height": 95 }
+			}
+		}
+	}
+],
+"animations": {
+	"blood1": {
+		"slots": {
+			"images/blood_slash_3": {
+				"attachment": [
+					{ "name": "blood_slash_3" },
+					{ "time": 0.1, "name": null }
+				]
+			},
+			"images/blood_slash_4": {
+				"rgba": [
+					{ "time": 0.1, "color": "ffffffff" },
+					{ "time": 0.4667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.1, "name": "blood_slash_4" }
+				]
+			}
+		},
+		"bones": {
+			"blood1": {
+				"translate": [
+					{ "x": 25.22, "y": 4.32 }
+				],
+				"scale": [
+					{ "time": 0.1 },
+					{ "time": 0.4667, "x": 1.625, "y": 1.625 }
+				]
+			}
+		}
+	},
+	"blood2": {
+		"slots": {
+			"images/blood_slash_4": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"images/blood_splat_0": {
+				"attachment": [
+					{ "name": "blood_splat_0" },
+					{ "time": 0.0667, "name": null }
+				]
+			},
+			"images/blood_splat_1": {
+				"attachment": [
+					{ "time": 0.0667, "name": "blood_splat_1" },
+					{ "time": 0.1667, "name": null }
+				]
+			},
+			"images/blood_splat_2": {
+				"rgba": [
+					{ "time": 0.1667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1667, "name": "blood_splat_2" }
+				]
+			}
+		},
+		"bones": {
+			"blood2": {
+				"translate": [
+					{ "x": 49.95, "y": 2.96, "curve": "stepped" },
+					{ "time": 0.1667, "x": 49.95, "y": 2.96 },
+					{ "time": 0.4, "x": 86.22, "y": 2.96 }
+				],
+				"scale": [
+					{ "time": 0.1667 },
+					{ "time": 0.4, "x": 1.685, "y": 1.685 }
+				]
+			}
+		}
+	},
+	"blood3": {
+		"slots": {
+			"images/blood_slash_4": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"images/blood_splat_a": {
+				"attachment": [
+					{ "name": "blood_splat_a" },
+					{ "time": 0.1, "name": null }
+				]
+			},
+			"images/blood_splat_b": {
+				"attachment": [
+					{ "time": 0.1, "name": "blood_splat_b" },
+					{ "time": 0.2, "name": null }
+				]
+			},
+			"images/blood_splat_c": {
+				"attachment": [
+					{ "time": 0.2, "name": "blood_splat_c" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"images/blood_splat_d": {
+				"rgba": [
+					{ "time": 0.3333, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.3333, "name": "blood_splat_d" }
+				]
+			}
+		},
+		"bones": {
+			"blood3": {
+				"translate": [
+					{ "x": 40.62, "y": 16.44 }
+				]
+			}
+		}
+	}
+}
+}

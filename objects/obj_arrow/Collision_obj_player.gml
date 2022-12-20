@@ -19,6 +19,8 @@ if (other.id != attack_id_receiver) {
 		
 			other.state = PLAYERSTATE.HURT;
 			other.hp -= 10;
+			
+			AddBlood();
 	
 			instance_destroy();
 		}

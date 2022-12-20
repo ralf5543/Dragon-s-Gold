@@ -9,7 +9,6 @@ function PlayerState_Hurt(){
 		skeleton_animation_set("hurt");		
 	}
 	
-	
 	if (hurt_done == 0) {
 		if (can_hurtSound) {
 			audio_play_sound(choose(snd_hurt_male1, snd_hurt_male2, snd_hurt_male3), 8, false);
@@ -79,7 +78,7 @@ function PlayerState_Hurt(){
 							   has_bronze_key --;
 							   key_win_bronze = false;
 							   
-							   var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+							   var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 								with (bronze_key) {
 									value = KEYVALUE.BRASS;
 									image_xscale = 0.5;
@@ -94,7 +93,7 @@ function PlayerState_Hurt(){
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									  var silver_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+									  var silver_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 										with (silver_key) {
 											value = KEYVALUE.SILVER;
 									image_xscale = 0.5;
@@ -106,7 +105,7 @@ function PlayerState_Hurt(){
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 										with (gold_key) {
 											value = KEYVALUE.GOLD;
 									image_xscale = 0.5;
@@ -124,7 +123,7 @@ function PlayerState_Hurt(){
 							   has_silver_key --;
 							   key_win_silver = false;
 							   
-							    var silver_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+							    var silver_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 								with (silver_key) {
 									value = KEYVALUE.SILVER;
 									image_xscale = 0.5;
@@ -139,7 +138,7 @@ function PlayerState_Hurt(){
 									  has_bronze_key --;
 									  key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 									with (bronze_key) {
 										value = KEYVALUE.BRASS;
 									image_xscale = 0.5;
@@ -151,7 +150,7 @@ function PlayerState_Hurt(){
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 										with (gold_key) {
 											value = KEYVALUE.GOLD;
 									image_xscale = 0.5;
@@ -169,7 +168,7 @@ function PlayerState_Hurt(){
 							   has_gold_key --;
 							   key_win_gold = false;
 							   
-							    var gold_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+							    var gold_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 								with (gold_key) {
 									value = KEYVALUE.GOLD;
 									image_xscale = 0.5;
@@ -184,7 +183,7 @@ function PlayerState_Hurt(){
 									has_bronze_key --;
 									key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 									with (bronze_key) {
 										value = KEYVALUE.BRASS;
 									image_xscale = 0.5;
@@ -196,7 +195,7 @@ function PlayerState_Hurt(){
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									var silver_key = instance_create_layer(x, y + random_range(-50, -100), "layer_walls", obj_key);
+									var silver_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
 									with (silver_key) {
 										value = KEYVALUE.SILVER;
 									image_xscale = 0.5;
