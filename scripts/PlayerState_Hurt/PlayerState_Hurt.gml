@@ -85,6 +85,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 								}
 						   } else {
 							   var random_value_nobronze = choose("silver", "gold");
@@ -99,6 +100,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 										}
 								  } else {
 									  has_gold_key --;
@@ -110,6 +112,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 										}
 								  }
 							   }
@@ -127,6 +130,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 								}
 						   } else {
 							   var random_value_nosilver = choose("bronze", "gold");
@@ -141,6 +145,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 									}
 								  } else {
 									  has_gold_key --;
@@ -152,6 +157,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 										}
 								  }
 							   }
@@ -169,6 +175,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 								}
 						   } else {
 							   var random_value_nogold = choose("bronze", "silver");
@@ -183,6 +190,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 									}
 								  } else {
 									  has_silver_key --;
@@ -194,6 +202,7 @@ function PlayerState_Hurt(){
 									image_xscale = 0.5;
 									image_yscale = 0.5;
 									can_play_sound = true;
+									vsp = random_range(-5, -15);
 									}
 								  }
 							   }

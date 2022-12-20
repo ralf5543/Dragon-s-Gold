@@ -36,8 +36,13 @@ if (skeleton_animation_get() == "dash") {
 
 //victory animation
 if (skeleton_animation_get() == "victory") {
-	//loop on the 40th frame
-	image_index =40;
+	if (character == "wizard") {
+		//loop on the 30th frame
+		image_index =30;
+	} else {
+		//loop on the 40th frame
+		image_index =40;
+	}
 }
 
 //bow animation

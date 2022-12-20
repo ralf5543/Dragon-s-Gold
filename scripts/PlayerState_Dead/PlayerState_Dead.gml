@@ -10,6 +10,7 @@ function PlayerState_Dead(){
 				value = KEYVALUE.BRASS;
 				image_xscale = 0.5;
 				image_yscale = 0.5;
+				vsp = random_range(-5, -15);
 			}
 			has_bronze_key --;
 		}
@@ -21,6 +22,7 @@ function PlayerState_Dead(){
 				value = KEYVALUE.SILVER;
 				image_xscale = 0.5;
 				image_yscale = 0.5;
+				vsp = random_range(-5, -15);
 			}
 			has_silver_key --;
 		}
@@ -32,6 +34,7 @@ function PlayerState_Dead(){
 				value = KEYVALUE.GOLD;
 				image_xscale = 0.5;
 				image_yscale = 0.5;
+				vsp = random_range(-5, -15);
 			}
 			has_gold_key --;
 		}
