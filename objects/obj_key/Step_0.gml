@@ -28,7 +28,8 @@ if (place_meeting(x + hsp, y, obj_wall)) {
 		//move from the "rest" to be the closest as possible from collision
 		x += sign(hsp);
 	}
-	hsp = 0;
+	
+	hsp = 0;//stop key movement when ejected
 }
 
 x += hsp;
@@ -46,6 +47,7 @@ if (place_meeting(x, y + vsp, obj_wall)) {
 		audio_play_sound(snd_key_fall, 6, false);
 		can_play_sound = false;
 	}
+	hsp = 0;
 }
 
 y += vsp;

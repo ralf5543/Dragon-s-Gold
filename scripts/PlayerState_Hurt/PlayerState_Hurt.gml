@@ -16,6 +16,7 @@ function PlayerState_Hurt(){
 			alarm[1] = 64;
 		}
 		
+		
 		hurt_vsp += hurt_grv; //contuously accelerates bottom move
 
 
@@ -69,8 +70,21 @@ function PlayerState_Hurt(){
 				
 				// 1 chance for 3 to lose a key
 				if (chance > 1) {
+					
+					function EjectKey() {
+						image_xscale = 0.5;
+						image_yscale = 0.5;
+						can_play_sound = true;
+						vsp = random_range(-5, -10);
+						hsp = lengthdir_x(3, other.hitfrom);
+					}
+					
+					
+					
+									
 			
 					var random_value = choose("bronze", "silver", "gold");
+					show_debug_message("random_value " + string(random_value));
 					switch (random_value) {
 						
 					    case "bronze":
@@ -78,13 +92,11 @@ function PlayerState_Hurt(){
 							   has_bronze_key --;
 							   key_win_bronze = false;
 							   
-							   var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+							   var bronze_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 								with (bronze_key) {
 									value = KEYVALUE.BRASS;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+									EjectKey();
+									
 								}
 						   } else {
 							   var random_value_nobronze = choose("silver", "gold");
@@ -93,25 +105,19 @@ function PlayerState_Hurt(){
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									  var silver_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+									  var silver_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 										with (silver_key) {
 											value = KEYVALUE.SILVER;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+											EjectKey();
 										}
 								  } else {
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+									  var gold_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 										with (gold_key) {
 											value = KEYVALUE.GOLD;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+											EjectKey();
 										}
 								  }
 							   }
@@ -123,13 +129,10 @@ function PlayerState_Hurt(){
 							   has_silver_key --;
 							   key_win_silver = false;
 							   
-							    var silver_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+							    var silver_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 								with (silver_key) {
 									value = KEYVALUE.SILVER;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+									EjectKey();
 								}
 						   } else {
 							   var random_value_nosilver = choose("bronze", "gold");
@@ -138,25 +141,19 @@ function PlayerState_Hurt(){
 									  has_bronze_key --;
 									  key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+									var bronze_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 									with (bronze_key) {
 										value = KEYVALUE.BRASS;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+										EjectKey();
 									}
 								  } else {
 									  has_gold_key --;
 									  key_win_gold = false;
 									  
-									  var gold_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+									  var gold_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 										with (gold_key) {
 											value = KEYVALUE.GOLD;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+											EjectKey();
 										}
 								  }
 							   }
@@ -168,13 +165,10 @@ function PlayerState_Hurt(){
 							   has_gold_key --;
 							   key_win_gold = false;
 							   
-							    var gold_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+							    var gold_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 								with (gold_key) {
 									value = KEYVALUE.GOLD;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+									EjectKey();
 								}
 						   } else {
 							   var random_value_nogold = choose("bronze", "silver");
@@ -183,25 +177,19 @@ function PlayerState_Hurt(){
 									has_bronze_key --;
 									key_win_bronze = false;
 									  
-									var bronze_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+									var bronze_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 									with (bronze_key) {
 										value = KEYVALUE.BRASS;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+										EjectKey();
 									}
 								  } else {
 									  has_silver_key --;
 									  key_win_silver = false;
 									  
-									var silver_key = instance_create_layer(x, y + random_range(-50, -100), "front_objects", obj_key);
+									var silver_key = instance_create_layer(x, y - 64, "front_objects", obj_key);
 									with (silver_key) {
 										value = KEYVALUE.SILVER;
-									image_xscale = 0.5;
-									image_yscale = 0.5;
-									can_play_sound = true;
-									vsp = random_range(-5, -15);
+										EjectKey();
 									}
 								  }
 							   }
