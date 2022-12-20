@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "otmC/LdY+dY", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 170.75, "height": 141.18 },
+"skeleton": { "hash": "elkqfbHgii8", "spine": "4.0-from-4.1.17", "x": -60.78, "y": -5.37, "width": 170.75, "height": 141.18 },
 "bones": [
 	{ "name": "root", "scaleX": 0.3, "scaleY": 0.3 },
 	{ "name": "bone-principal", "parent": "root", "rotation": -90, "x": -0.54, "y": 108.72 },
@@ -2848,7 +2848,7 @@
 			},
 			"oeil": {
 				"attachment": [
-					{ "time": 0.6333, "name": null }
+					{ "time": 0.5333, "name": "oeil-ferme" }
 				]
 			},
 			"tete-dos": {
@@ -2876,6 +2876,7 @@
 					{ "time": 0.6667 }
 				],
 				"scale": [
+					{},
 					{ "time": 0.6, "y": 0.98 },
 					{ "time": 0.6667 }
 				]
@@ -2986,7 +2987,8 @@
 			},
 			"bone-cuisse-droite": {
 				"rotate": [
-					{ "value": 2.11 }
+					{ "value": 48.2 },
+					{ "time": 0.6, "value": 2.11 }
 				],
 				"translate": [
 					{ "x": 6.92, "y": 20.39 }
@@ -2994,12 +2996,14 @@
 			},
 			"bone-tibia-droite": {
 				"rotate": [
-					{ "value": -3.22 }
+					{ "value": 12.41 },
+					{ "time": 0.6, "value": -3.22 }
 				]
 			},
 			"bone-pied-droit": {
 				"rotate": [
-					{ "value": 7.05 }
+					{ "value": 9.81 },
+					{ "time": 0.6, "value": 7.05 }
 				]
 			},
 			"bone-orteils": {
@@ -3013,17 +3017,20 @@
 			},
 			"bone-cuisse-gauche": {
 				"rotate": [
-					{ "value": 7.66 }
+					{ "value": -70.17 },
+					{ "time": 0.6, "value": 7.66 }
 				]
 			},
 			"tibia-gauche": {
 				"rotate": [
-					{ "value": -5.64 }
+					{ "value": -34.22 },
+					{ "time": 0.6, "value": -5.64 }
 				]
 			},
 			"bone-pied-gauche": {
 				"rotate": [
-					{ "value": 0.19 }
+					{ "value": -4.49 },
+					{ "time": 0.6, "value": 0.19 }
 				]
 			},
 			"bone-pied-gauche-orteils": {
