@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_attack_miss",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_attack_miss.wav",
-  "duration": 0.19076,
+  "duration": 0.18576,
   "parent": {
     "name": "attack",
     "path": "folders/Sounds/characters/attack.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_attack_miss",
-  "tags": [],
-  "resourceType": "GMSound",
 }

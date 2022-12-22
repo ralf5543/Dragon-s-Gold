@@ -1,6 +1,5 @@
 /// @description Players commands
 
-
 // stops the character when sticks are released
 key_left = 0
 key_right = 0;
@@ -25,7 +24,6 @@ key_special = gamepad_button_check_pressed(pad_num, gp_face2);// B (red) button
 key_special_released = gamepad_button_check_released(pad_num, gp_face2);// B (red) button
 key_y = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);	
-
 
 
 // used only for characters selection screen
@@ -206,6 +204,10 @@ if (room == rm_start) {
 		
 		case PLAYERSTATE.LOSE : 
 		PlayerState_Lose();
+		break;
+		
+		case PLAYERSTATE.CROSSINGDDOOR : 
+		PlayerState_Crossing_Door();
 		break;
 	}
 }

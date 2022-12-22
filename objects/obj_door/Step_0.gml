@@ -1,28 +1,6 @@
 /// @description Left or right Door frame
 
-if (side == "left") {
-	image_index = 0;
-} else {
-	image_index = 1;
+if (side == "right") {
+	image_xscale = -1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

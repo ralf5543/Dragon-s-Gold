@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_death_male3",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.41,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_death_male3.wav",
-  "duration": 1.607167,
+  "duration": 1.602167,
   "parent": {
     "name": "characters",
     "path": "folders/Sounds/characters.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_death_male3",
-  "tags": [],
-  "resourceType": "GMSound",
 }

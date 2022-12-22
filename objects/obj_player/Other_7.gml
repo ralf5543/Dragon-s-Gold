@@ -2,13 +2,15 @@
 
 //jump up animation
 if (skeleton_animation_get() == "jump-up") {
-	image_index = 0;
+	var num = skeleton_animation_get_frames(skeleton_animation_get());
+	image_index = num -1;
 	image_speed = 0;
 }
 
 //hurt animation
 if (skeleton_animation_get() == "hurt") {
-    image_index = 0;
+    var num = skeleton_animation_get_frames(skeleton_animation_get());
+	image_index = num -1;
 	image_speed = 0;
 }
 
@@ -30,7 +32,8 @@ if (skeleton_animation_get() == "combo2") {
 
 //dash animation
 if (skeleton_animation_get() == "dash") {
-	image_index = -1;
+	var num = skeleton_animation_get_frames(skeleton_animation_get());
+	image_index = num -1;
 	image_speed = 0;
 }
 
@@ -84,6 +87,7 @@ if (skeleton_animation_get() == "fireball-throw") {
 
 //death animation
 if (skeleton_animation_get() == "dead") {
-	image_index = 0;
+	var num = skeleton_animation_get_frames(skeleton_animation_get());
+	image_index = num -1;
 	image_speed = 0;
 }

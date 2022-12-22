@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_bump",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_bump.wav",
-  "duration": 0.021667,
+  "duration": 0.016667,
   "parent": {
     "name": "start_menu",
     "path": "folders/Sounds/start_menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_bump",
-  "tags": [],
-  "resourceType": "GMSound",
 }

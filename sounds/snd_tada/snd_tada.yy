@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_tada",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.25,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_tada.mp3",
-  "duration": 2.120938,
+  "duration": 2.115937,
   "parent": {
     "name": "start_menu",
     "path": "folders/Sounds/start_menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_tada",
-  "tags": [],
-  "resourceType": "GMSound",
 }

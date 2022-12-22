@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_victory_music",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.5,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_victory_music.wav",
-  "duration": 4.533313,
+  "duration": 4.528313,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_victory_music",
-  "tags": [],
-  "resourceType": "GMSound",
 }

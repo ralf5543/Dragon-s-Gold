@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_victory_cry",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 0.2,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_victory_cry.wav",
-  "duration": 3.035188,
+  "duration": 3.030187,
   "parent": {
     "name": "characters",
     "path": "folders/Sounds/characters.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_victory_cry",
-  "tags": [],
-  "resourceType": "GMSound",
 }

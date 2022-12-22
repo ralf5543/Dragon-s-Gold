@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_start",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_start.wav",
-  "duration": 0.148855,
+  "duration": 0.143855,
   "parent": {
     "name": "start_menu",
     "path": "folders/Sounds/start_menu.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_start",
-  "tags": [],
-  "resourceType": "GMSound",
 }

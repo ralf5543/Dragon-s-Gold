@@ -1,0 +1,13 @@
+door.png
+size:225,207
+filter:Linear,Linear
+pma:true
+door-left1
+bounds:2,126,79,221
+rotate:90
+door-left2
+bounds:2,2,60,194
+rotate:90
+door-left2-shadow
+bounds:2,64,60,194
+rotate:90

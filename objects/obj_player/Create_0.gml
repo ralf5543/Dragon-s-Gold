@@ -2,6 +2,9 @@
 
 isActive = false;// will turn to true when pushing Start button
 
+can_use_keys = true;
+// situations when players are auto controlled (passing through doors, stairs...)
+
 key_left = 0;
 key_right = 0;
 key_up = 0;
@@ -41,7 +44,8 @@ enum PLAYERSTATE {
 	COMBO2,
 	SPECIAL,
 	WON,
-	LOSE
+	LOSE,
+	CROSSINGDDOOR
 }
 
 // because with combos, "state" get a number, not a FREEPLAYERSTATE. Dunno why...
@@ -125,3 +129,7 @@ focus_bow = 0;
 focus_fireball = 0;
 can_sound_cast = true;
 can_cast = true;
+
+can_cross_doors = true;
+is_crossing_door = false;
+countdown_door = 64;

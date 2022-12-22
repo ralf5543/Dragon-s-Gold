@@ -1,4 +1,8 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_hurt_male3",
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_hurt_male3.wav",
-  "duration": 0.490624,
+  "duration": 0.485624,
   "parent": {
     "name": "attack",
     "path": "folders/Sounds/characters/attack.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_hurt_male3",
-  "tags": [],
-  "resourceType": "GMSound",
 }
