@@ -1,0 +1,16 @@
+door.png
+size:223,349
+filter:Linear,Linear
+pma:true
+chambranle-full
+bounds:2,126,79,221
+chambranle-half
+bounds:164,126,57,221
+door-left2
+bounds:2,2,60,194
+rotate:90
+door-left2-shadow
+bounds:2,64,60,194
+rotate:90
+door-tunnel
+bounds:83,126,79,221
