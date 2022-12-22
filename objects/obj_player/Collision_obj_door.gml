@@ -5,7 +5,6 @@
 if (other.is_opening) {
 	
 	if (place_meeting(x,  y + 1, obj_wall)) {
-		show_debug_message("ça touche")
 		
 		state = PLAYERSTATE.CROSSINGDDOOR;
 		audio_play_sound(snd_door_opened, 5, 0);
@@ -15,9 +14,6 @@ if (other.is_opening) {
 			image_speed = 1;
 			is_opening = false;
 		}
-	} else {
-		x = x;
-		hsp = 0;
 	}
 }
 

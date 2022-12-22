@@ -14,10 +14,9 @@ function PlayerState_Crossing_Door(){
 	if (can_cross_doors) {
 
 		if (skeleton_animation_get() != "stand") {
-			skeleton_animation_set("stand");
-		
-			alarm[5] = 96;
+			skeleton_animation_set("stand");				
 		}
+		alarm[5] = 96;
 			
 		can_cross_doors = false;
 	}
