@@ -1,6 +1,5 @@
 
 function PlayerState_Hurt(){
-	
 	is_hurt = true;
 
 	can_attack = false;

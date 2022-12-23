@@ -1,6 +1,8 @@
 
 function PlayerState_Crossing_Door(){
 	if (is_crossing_door) {
+		
+		is_invicible = true;
 		x = x + 1 * (facing);
 		countdown_door --;
 		

@@ -1,11 +1,12 @@
 
 
-
 if (other.id != attack_id_receiver) {
-		
+
 	// "is_hurt" var, because "state" get a number, not a FREEPLAYERSTATE. Dunno why...
 	if (other.is_invicible == false) && (other.is_hurt == false) && (other.state != PLAYERSTATE.HURT) && (other.state != PLAYERSTATE.DEAD) {
-		if  (vsp > 0) {	
+
+		
+		if  (vsp != 0) {	
 			if ((x - other.x) > 0) {
 				other.hitfrom = -1;// attack from the right
 			} else {

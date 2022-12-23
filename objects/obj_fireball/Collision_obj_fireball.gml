@@ -1,6 +1,5 @@
 /// @description Insert description here
 
-show_debug_message("alleeeeeeeeeeeeeeeeeez")
 if (can_play_sound) {
 	audio_sound_pitch(snd_fireball_hit, choose(.8, 1, 1.2));
 	audio_play_sound(snd_fireball_hit, 6, false);

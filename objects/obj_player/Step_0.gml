@@ -134,14 +134,16 @@ if (room == rm_start) {
 		blink_timer ++;
 		invincible_timer ++;
 		
-		if (blink_timer == 8) {
-			if (image_alpha == 0) {
-				image_alpha = 1;
-			} else {
-				image_alpha = 0;
-			}
+		if (state != PLAYERSTATE.CROSSINGDDOOR) {
+			if (blink_timer == 8) {
+				if (image_alpha == 0) {
+					image_alpha = 1;
+				} else {
+					image_alpha = 0;
+				}
 			
-			blink_timer = 0;	
+				blink_timer = 0;	
+			}
 		}
 		
 		if (invincible_timer == 128) {

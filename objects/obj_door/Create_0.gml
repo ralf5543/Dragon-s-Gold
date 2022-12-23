@@ -3,6 +3,7 @@
 side = undefined; // either "left" or "right" door in a hall
 
 door_number = undefined;// The nth of the door in existings doors instances
+facing = undefined;//check if a characte assing through is not backwards (after been hurt)
 
 skeleton_animation_set("open");
 image_speed = 0;
