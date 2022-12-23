@@ -33,8 +33,6 @@ with (obj_player) {
 			pushback = 10 * facing;
 		}
 		
-		show_debug_message("pushback" + string(pushback))
-		
 		// detects a collision at (x + hsp) distance (won't slide into a wall !)
 	if (place_meeting(x + pushback, y, obj_wall)) {
 		//while detects NO collision at 1px (sign(hsp), so 1 and -1) x distance

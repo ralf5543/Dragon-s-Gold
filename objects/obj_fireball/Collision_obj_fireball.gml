@@ -12,7 +12,6 @@ switch (size) {
 			
 		    switch (size) {
 				case "small":
-				show_debug_message("pitite")
 				speed = 0;
 				other.speed = 0;
 				sprite_index = spr_fireball_explosion;
@@ -21,7 +20,6 @@ switch (size) {
 				
 				case "medium":
 				case "large":
-				show_debug_message("moyenne ou grosse")
 				other.speed = 0;
 				other.sprite_index = spr_fireball_explosion;
 				break;

@@ -88,7 +88,6 @@ function PlayerState_Hurt(){
 									
 			
 					var random_value = choose("bronze", "silver", "gold");
-					show_debug_message("random_value " + string(random_value));
 					switch (random_value) {
 						
 					    case "bronze":
