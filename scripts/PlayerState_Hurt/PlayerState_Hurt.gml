@@ -10,7 +10,12 @@ function PlayerState_Hurt(){
 	
 	if (hurt_done == 0) {
 		if (can_hurtSound) {
-			audio_play_sound(choose(snd_hurt_male1, snd_hurt_male2, snd_hurt_male3), 8, false);
+			if (sexe == "male") {
+				audio_play_sound(choose(snd_hurt_male1, snd_hurt_male2, snd_hurt_male3, snd_hurt_male4), 8, false);
+			} else {
+				audio_play_sound(choose(snd_hurt_female1, snd_hurt_female2, snd_hurt_female3, snd_hurt_female4), 8, false);
+			}
+			
 			can_hurtSound = false;
 			alarm[1] = 64;
 		}

@@ -34,7 +34,8 @@ function PlayerState_Free(){
 	
 	// if detects a collision with wall 1px bellow it (so, if it's on the floor !)
 	//AND jump button is pressed
-	if (place_meeting(x, y + 1, obj_wall)) && (key_jump) {
+	if (place_meeting(x, y + 1, obj_wall)) && (key_jump) && (energy > 50) {
+		energy = energy - 50;
 		//jump higher if running
 		if (key_run) && (energy > 0) {vsp = -10;} else {vsp = -8;}
 	};
@@ -59,6 +60,13 @@ function PlayerState_Free(){
 		if (vsp > .4) {//strange, the vsp seems to be stuck at 0.4, and not 0...
 			if (can_landingSound) {
 				audio_play_sound(snd_landing, 5, false);
+
+			
+				if (character == "knight") {
+					audio_play_sound(snd_metal_step, 5, false);
+
+				}
+			
 				can_landingSound = false;
 				alarm[1] = 16;
 			}
@@ -126,12 +134,17 @@ function PlayerState_Free(){
 		if (can_footStep == true) && (place_meeting(x, y + 1, obj_wall)) {
 			
 			
-			audio_play_sound(choose(snd_footstep1, snd_footstep2, snd_footstep3, snd_footstep4), 1, false);
+			audio_play_sound(choose(snd_footstep1, snd_footstep2, snd_footstep3, snd_footstep4), 2, false);
 			can_footStep = false;
 			if (key_run) {
 				alarm[1] = 20;//so 1 sound every 2 frames
 			} else {
 				alarm[1] = 16;//so 1 sound every 2 frames
+			}
+			
+			if (character == "knight") {
+				audio_play_sound(snd_metal_step, 1, false, choose(0.1, 0.2, 0.3), 0, choose(0.5, 1, 1.5));
+
 			}
 		}
 	}

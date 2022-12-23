@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_fall_scream1",
+  "name": "snd_lightning",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.4,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,10 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_fall_scream1.ogg",
-  "duration": 4.806327,
+  "soundFile": "snd_lightning.wav",
+  "duration": 1.865079,
   "parent": {
-    "name": "move",
-    "path": "folders/Sounds/characters/move.yy",
+    "name": "Wizard",
+    "path": "folders/Sounds/characters/Wizard.yy",
   },
 }

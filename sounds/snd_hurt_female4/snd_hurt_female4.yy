@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_fall_scream2",
+  "name": "snd_hurt_female4",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,10 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_fall_scream2.wav",
-  "duration": 3.552,
+  "soundFile": "snd_hurt_female4.wav",
+  "duration": 0.461111,
   "parent": {
-    "name": "move",
-    "path": "folders/Sounds/characters/move.yy",
+    "name": "attack",
+    "path": "folders/Sounds/characters/attack.yy",
   },
 }

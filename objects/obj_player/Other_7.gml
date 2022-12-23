@@ -28,6 +28,10 @@ if (skeleton_animation_get() == "combo1") {
 if (skeleton_animation_get() == "combo2") {
     state = PLAYERSTATE.FREE;
 	is_sliding = false;
+	
+	if (character == "wizard") {
+		audio_stop_sound(snd_cast);
+	}
 }
 
 //dash animation
@@ -74,7 +78,6 @@ if (skeleton_animation_get() == "shield-block") {
 //Fireball animations
 if (skeleton_animation_get() == "fireball-invocation") {
 	image_index =30;
-	can_sound_cast = true;
 }
 
 if (skeleton_animation_get() == "fireball-throw") {

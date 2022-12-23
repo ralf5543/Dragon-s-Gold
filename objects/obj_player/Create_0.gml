@@ -2,9 +2,6 @@
 
 isActive = false;// will turn to true when pushing Start button
 
-can_use_keys = true;
-// situations when players are auto controlled (passing through doors, stairs...)
-
 key_left = 0;
 key_right = 0;
 key_up = 0;
@@ -29,6 +26,8 @@ hp_max = hp;
 
 energy = 250;// Energy points (used to run)
 energy_max = energy;
+
+sexe = undefined;
 
 image_speed = 1;
 
@@ -130,6 +129,7 @@ focus_fireball = 0;
 can_sound_cast = true;
 can_cast = true;
 
+// ===================---------------- DOORS MANAGEMENT
 can_cross_doors = true;
 is_crossing_door = false;
 countdown_door = 64;

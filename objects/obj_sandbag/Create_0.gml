@@ -27,7 +27,7 @@ energy_max = energy;
 
 state = PLAYERSTATE.FREE;
 
-
+sexe = undefined;
 
 facing = 1;// tells which side character is facing (1 = right, -1 = left)
 player_orientation = 0;// used by attacks direction

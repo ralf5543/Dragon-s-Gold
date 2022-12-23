@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_shield.wav",
-  "duration": 1.578957,
+  "duration": 0.624989,
   "parent": {
     "name": "knight",
     "path": "folders/Sounds/characters/knight.yy",

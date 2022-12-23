@@ -1,7 +1,7 @@
 
 function PlayerState_Wizard_Special(){
 	if (can_sound_cast) {
-		audio_play_sound(snd_cast, 6, false);
+		audio_play_sound(snd_cast, 6, false, 0.2);
 		can_sound_cast = false;
 	}
 	if (can_attack == true) {
@@ -18,6 +18,8 @@ function PlayerState_Wizard_Special(){
 	
 	if (focus_fireball > 96) {//button pressed at least 3 seconds
 		if (can_cast) {
+			audio_play_sound(snd_init_fire, 6, false);
+			audio_play_sound(snd_fire, 6, true);
 			fireball = instance_create_layer(x + (other.facing * 12), y - 64, "front_objects", obj_fireball);
 			with (fireball) {
 				skeleton_animation_set("invocation");
@@ -53,7 +55,10 @@ function PlayerState_Wizard_Special(){
 	
 	if (key_special_released) {
 
-		audio_pause_sound(snd_cast);
+		audio_stop_sound(snd_cast);
+		audio_stop_sound(snd_init_fire);
+		audio_stop_sound(snd_fire);
+		
 		if (focus_fireball > 96) {
 			audio_sound_pitch(snd_fireball, choose(.8, 1, 1.2));
 			audio_play_sound(snd_fireball, 6, false);

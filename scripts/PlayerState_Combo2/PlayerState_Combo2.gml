@@ -28,6 +28,7 @@ function PlayerState_Combo2(){
 				attack_id_receiver = other.gamepad_id_owner;
 			}
 		} else {
+			audio_play_sound(snd_cast, 4, false, 0.8);
 			alarm[4] = 48;
 		}
 		

@@ -34,6 +34,9 @@ if (state != PLAYERSTATE.HURT) {
 				x = instance_find(obj_door, other.door_number + 1).x + 64;
 				y = instance_find(obj_door, other.door_number + 1).y -8;
 			}
+			
+			audio_play_sound(snd_door_closed, 4, false, 0.3);
+			
 			is_invicible = false;
 			state =  PLAYERSTATE.FREE;
 	

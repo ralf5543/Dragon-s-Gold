@@ -212,4 +212,10 @@ if (room == rm_start) {
 		PlayerState_Crossing_Door();
 		break;
 	}
+	
+	if (character =="ranger") {
+		sexe = "female";
+	} else {
+		sexe =  "male"
+	}
 }
