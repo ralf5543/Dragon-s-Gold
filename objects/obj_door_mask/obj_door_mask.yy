@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level_design",
-    "path": "folders/Objects/level_design.yy",
+    "name": "doors",
+    "path": "folders/Objects/level_design/doors.yy",
   },
 }

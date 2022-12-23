@@ -9,9 +9,10 @@ image_speed = 0;
 
 is_opening = true;
 
-var mask = instance_create_layer(x, y, "front_decorations", obj_door_mask);
+var doorMask = instance_create_layer(x, y, "front_objects", obj_door_mask);
 
-with (mask) {
+with (doorMask) {
 	skeleton_animation_set("mask");
 }
 
+var wallMask = instance_create_layer(x + 54, y - 50, "front_objects", obj_wall_mask);
