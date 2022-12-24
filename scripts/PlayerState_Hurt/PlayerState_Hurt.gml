@@ -1,5 +1,12 @@
 
 function PlayerState_Hurt(){
+	//re init variables used with the stairs
+	can_take_stairs = true;
+	is_taking_stairs = false;
+	has_taken_stairs = 0;
+	stairs_direction = undefined;
+	has_finished_stairs = false;
+	
 	is_hurt = true;
 
 	can_attack = false;

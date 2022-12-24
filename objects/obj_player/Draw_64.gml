@@ -26,20 +26,19 @@ if (room != rm_start) {
 	key_x = portrait_width + (gui_margin * 3);
 	key_y = (gui_margin * 4) + healthbar_height + energybar_height;
 	key_spacer = (gui_margin * 4);
-	
-	draw_set_color(c_white);
-	draw_text(gui_margin + 200, gui_margin + 200, "Percent " + string(percent));
-	
-	
-	// black bars transition
-	if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
-		draw_set_color(c_black);
+
+				
+			// black bars transition
+			//if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
+			//	draw_set_color(c_black);
 	
 	
-		//percent = percent + 0.1;
-		draw_rectangle(0, 0, w, percent * h_half, false);
-		draw_rectangle(0, h, w,h - ( percent * h_half), false);
-	}
+			//	//percent = percent + 0.1;
+			//	draw_rectangle(0, 0, w, percent * h_half / 2, false);
+			//	draw_rectangle(0, h_half, w, h_half - ( percent * (h_half/ 2)), false);
+			//}
+	
+	
 
 	
 	//=================================----------------------------------- 1 player only
@@ -84,6 +83,16 @@ if (room != rm_start) {
 			draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, 1);
 		}
 		draw_text(key_x + 32 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
+		
+			// black bars transition
+		if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
+			draw_set_color(c_black);
+	
+	
+			//percent = percent + 0.1;
+			draw_rectangle(0, 0, w, percent * h_half, false);
+			draw_rectangle(0, h, w,h - ( percent * h_half), false);
+		}
 	}
 		
 	//=================================----------------------------------- 2 players
@@ -149,7 +158,8 @@ if (room != rm_start) {
 			} else {
 				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 0.8, 0.8, 135, c_white, 1);
 			}
-			draw_text(key_x + 20 + (key_spacer * 2), key_y, "x" + string(has_gold_key));			
+			draw_text(key_x + 20 + (key_spacer * 2), key_y, "x" + string(has_gold_key));	
+
 		}
 			
 		// =======-------- Player 2
@@ -191,6 +201,7 @@ if (room != rm_start) {
 				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y + (global.surface_height / 2), 0.8, 0.8, 135, c_white, 1);
 			}
 			draw_text(key_x + 20 + (key_spacer * 2), key_y + (global.surface_height / 2), "x" + string(has_gold_key));
+	
 		}
 
 		
