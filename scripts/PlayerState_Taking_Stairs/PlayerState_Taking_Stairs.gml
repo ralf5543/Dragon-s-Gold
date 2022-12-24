@@ -16,6 +16,17 @@ function PlayerState_Taking_Stairs(){
 			skeleton_animation_set("walk");		
 		}
 		
+		if (can_footStep == true) {
+			audio_play_sound(choose(snd_footstep1, snd_footstep2, snd_footstep3, snd_footstep4), 1, false);
+			
+			if (character == "knight") {
+				audio_play_sound(snd_metal_step, 5, false, 0.3);
+
+			}
+			can_footStep = false;	
+			alarm[1] = 20;
+		}
+		
 		is_invicible = true;
 		y = y - 0.2;
 		//x = x + lengthdir_x(1, instance_nearest(x, y, obj_stairway));

@@ -224,9 +224,19 @@ if (room == rm_start) {
 	}
 }
 
+//percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
 
-if (has_finished_stairs == true) {
-	percent = max(0, percent - max((percent / 10), 0.05))
+
+//if (is_taking_stairs == true) {
+//	percent = max(0, percent - max((percent / 10), 0.05))
+//} else {
+//	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
+//}
+
+
+if (has_taken_stairs >= 60) {
+	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
+	
 } else {
-	percent = min(1, percent + max((1 - percent / 10), 0.05));
+	percent = max(0, percent - max((percent / 10), 0.05))
 }

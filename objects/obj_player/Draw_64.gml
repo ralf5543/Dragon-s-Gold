@@ -27,10 +27,16 @@ if (room != rm_start) {
 	key_y = (gui_margin * 4) + healthbar_height + energybar_height;
 	key_spacer = (gui_margin * 4);
 	
+	draw_set_color(c_white);
+	draw_text(gui_margin + 200, gui_margin + 200, "Percent " + string(percent));
+	
+	
 	// black bars transition
-	if (has_finished_stairs == true) {
+	if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
 		draw_set_color(c_black);
 	
+	
+		//percent = percent + 0.1;
 		draw_rectangle(0, 0, w, percent * h_half, false);
 		draw_rectangle(0, h, w,h - ( percent * h_half), false);
 	}

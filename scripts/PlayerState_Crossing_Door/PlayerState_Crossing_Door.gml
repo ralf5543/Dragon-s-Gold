@@ -8,6 +8,11 @@ function PlayerState_Crossing_Door(){
 		
 		if (can_footStep == true) {
 			audio_play_sound(choose(snd_footstep1, snd_footstep2, snd_footstep3, snd_footstep4), 1, false);
+			
+			if (character == "knight") {
+				audio_play_sound(snd_metal_step, 5, false, 0.3);
+
+			}
 			can_footStep = false;	
 			alarm[1] = 20;
 		}
