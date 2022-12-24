@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Random_Position",
+  "name": "PlayerState_Taking_Stairs",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

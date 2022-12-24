@@ -5,8 +5,6 @@ can_play_sound = true;
 vsp = 0; // vertical speed
 grv = .1; // gravity
 
-toto = 0;
-
 arrow_orientation = undefined;// Facing the same as the bower
 
 attack_id_receiver = undefined;// Origin character of the attack

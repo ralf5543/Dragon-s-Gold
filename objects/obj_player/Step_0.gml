@@ -134,7 +134,7 @@ if (room == rm_start) {
 		blink_timer ++;
 		invincible_timer ++;
 		
-		if (state != PLAYERSTATE.CROSSINGDDOOR) {
+		if (state != PLAYERSTATE.CROSSINGDDOOR) && (state != PLAYERSTATE.TAKINGSTAIRS) {
 			if (blink_timer == 8) {
 				if (image_alpha == 0) {
 					image_alpha = 1;
@@ -211,6 +211,10 @@ if (room == rm_start) {
 		case PLAYERSTATE.CROSSINGDDOOR : 
 		PlayerState_Crossing_Door();
 		break;
+		
+		case PLAYERSTATE.TAKINGSTAIRS : 
+		PlayerState_Taking_Stairs();
+		break;
 	}
 	
 	if (character =="ranger") {
@@ -218,4 +222,11 @@ if (room == rm_start) {
 	} else {
 		sexe =  "male"
 	}
+}
+
+
+if (has_finished_stairs == true) {
+	percent = max(0, percent - max((percent / 10), 0.05))
+} else {
+	percent = min(1, percent + max((1 - percent / 10), 0.05));
 }

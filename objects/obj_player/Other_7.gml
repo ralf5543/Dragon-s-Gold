@@ -7,6 +7,13 @@ if (skeleton_animation_get() == "jump-up") {
 	image_speed = 0;
 }
 
+//look up animation
+if (skeleton_animation_get() == "looking-up") {
+	var num = skeleton_animation_get_frames(skeleton_animation_get());
+	image_index = num -1;
+	image_speed = 0;
+}
+
 //hurt animation
 if (skeleton_animation_get() == "hurt") {
     var num = skeleton_animation_get_frames(skeleton_animation_get());

@@ -44,7 +44,8 @@ enum PLAYERSTATE {
 	SPECIAL,
 	WON,
 	LOSE,
-	CROSSINGDDOOR
+	CROSSINGDDOOR,
+	TAKINGSTAIRS
 }
 
 // because with combos, "state" get a number, not a FREEPLAYERSTATE. Dunno why...
@@ -133,3 +134,14 @@ can_cast = true;
 can_cross_doors = true;
 is_crossing_door = false;
 countdown_door = 64;
+
+// ===================---------------- STAIRS MANAGEMENT
+w = display_get_gui_width();
+h = display_get_gui_height();
+h_half = h / 2;
+percent = 1; // 0 = no black screen, 1 = 100% black screen
+can_take_stairs = true;
+is_taking_stairs = false;
+has_taken_stairs = 0;
+stairs_direction = undefined;
+has_finished_stairs = false;

@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "yZs0XYjvqkE", "spine": "4.0-from-4.1.17", "x": -33.82, "y": -5.81, "width": 74.44, "height": 104.41 },
+"skeleton": { "hash": "NSsq9THp/fY", "spine": "4.0-from-4.1.17", "x": -33.82, "y": -5.81, "width": 74.44, "height": 104.41 },
 "bones": [
 	{ "name": "root", "scaleX": 0.2856, "scaleY": 0.2856 },
 	{ "name": "bone principal", "parent": "root", "x": 3.33, "y": 107.89 },
@@ -4217,6 +4217,97 @@
 					{ "time": 0.6667, "x": 36.16, "y": 51.5 },
 					{ "time": 0.7667, "x": 34.63, "y": 44.36 },
 					{ "time": 0.8333, "x": 36.16, "y": 51.5 }
+				]
+			}
+		}
+	},
+	"looking-up": {
+		"bones": {
+			"bone crane": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 24.9 },
+					{ "time": 0.6667, "value": 20.67 }
+				]
+			},
+			"bras-gauche": {
+				"rotate": [
+					{ "time": 0.2 },
+					{ "time": 0.5333, "value": -6.04 }
+				]
+			},
+			"bras-droit": {
+				"rotate": [
+					{},
+					{ "time": 0.5333, "value": 10.31 }
+				]
+			},
+			"jambe-droite": {
+				"rotate": [
+					{ "value": -3.77 }
+				]
+			},
+			"mollet-droite": {
+				"rotate": [
+					{ "value": 4.78 }
+				]
+			},
+			"jambe-gauche": {
+				"rotate": [
+					{ "value": 4.48 }
+				]
+			},
+			"mollet-gauche": {
+				"rotate": [
+					{ "value": -7.53 }
+				]
+			},
+			"carquois-exterieur": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": 6.29 }
+				]
+			},
+			"cape3b": {
+				"rotate": [
+					{ "time": 0.1333 },
+					{ "time": 0.4667, "value": -6 }
+				]
+			},
+			"cape4b": {
+				"rotate": [
+					{ "time": 0.2667 },
+					{ "time": 0.6, "value": -9.91 }
+				]
+			},
+			"capuche-devant": {
+				"rotate": [
+					{ "time": 0.2 },
+					{ "time": 0.5333, "value": 8.09 }
+				]
+			},
+			"petite-meche2": {
+				"rotate": [
+					{},
+					{ "time": 0.4667, "value": -6.4 }
+				]
+			},
+			"petite-meche1": {
+				"rotate": [
+					{},
+					{ "time": 0.4667, "value": -8.19 }
+				]
+			},
+			"petite-meche3": {
+				"rotate": [
+					{},
+					{ "time": 0.4667, "value": -5.17 }
+				]
+			},
+			"petite-meche4": {
+				"rotate": [
+					{},
+					{ "time": 0.4667, "value": -9.93 }
 				]
 			}
 		}

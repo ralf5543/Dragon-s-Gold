@@ -27,6 +27,15 @@ if (room != rm_start) {
 	key_y = (gui_margin * 4) + healthbar_height + energybar_height;
 	key_spacer = (gui_margin * 4);
 	
+	// black bars transition
+	if (has_finished_stairs == true) {
+		draw_set_color(c_black);
+	
+		draw_rectangle(0, 0, w, percent * h_half, false);
+		draw_rectangle(0, h, w,h - ( percent * h_half), false);
+	}
+
+	
 	//=================================----------------------------------- 1 player only
 	if (obj_control.start_players == 1) {
 		gui_zoom = 1;// make gui smaller for split screen
