@@ -1,7 +1,7 @@
 /// @description Controls
 
 // On Start menu page, launch the game when all players have selected their character
-if (room == rm_start) {
+if (room == rm_select) {
 	//!=0, to let the time of the gamepads detection
 	if (ready_players >= start_players) && (start_players != 0) {
 		with (obj_player) {
@@ -11,10 +11,9 @@ if (room == rm_start) {
 			}				
 		}
 
-	    room_goto_next();
-		
+	    room_goto(rm_game);
 	}
-} else {  
+} else if (room == rm_game) {  
 	if (door_calculate) {
 		//attributes an order to each existing DOOR instance
 		for (var i = 0; i < instance_number(obj_door); i ++) {

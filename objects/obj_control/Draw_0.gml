@@ -1,7 +1,7 @@
 /// @description Temp gamepads infos
 // You can write your code in this editor
 
-if (room == rm_start) {
+if (room == rm_select) {
 	var _num = 0;//number of plugged gamepads
 	draw_set_color(c_black);
 

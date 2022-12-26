@@ -27,7 +27,7 @@ key_start = gamepad_button_check_pressed(pad_num, gp_start);
 
 
 // used only for characters selection screen
-if (room == rm_start) {
+if (room == rm_select) {
 	if (
 		skeleton_skin_get() != "alt1" && skeleton_skin_get() != "alt2" && skeleton_skin_get() != "alt3"
 	) {
@@ -43,6 +43,8 @@ if (room == rm_start) {
 	
 		
 	if (key_start) or (keyboard_check_pressed(vk_enter)) {	
+		
+		show_debug_message("sttttart")
 		
 		//Can push Start only once
 		if (can_push_start == true) {
@@ -69,6 +71,7 @@ if (room == rm_start) {
 		   
 			   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
 			   gamepad_id_receiver = other.gamepad_id_owner;
+
 			}
 			
 			//tells the Controller that this player is ready
@@ -87,7 +90,7 @@ if (room == rm_start) {
 		}
 	}
 		   
-} else {
+} else if (room == rm_game) {
 	image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
 	image_yscale = 1
 	
@@ -222,9 +225,9 @@ if (room == rm_start) {
 	} else {
 		sexe =  "male"
 	}
-}
-
-//percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
+	
+	
+	//percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
 
 
 //if (is_taking_stairs == true) {
@@ -234,9 +237,13 @@ if (room == rm_start) {
 //}
 
 
-if (has_taken_stairs >= 60) {
-	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
+	if (has_taken_stairs >= 60) {
+		percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
 	
-} else {
-	percent = max(0, percent - max((percent / 10), 0.05))
+	} else {
+		percent = max(0, percent - max((percent / 10), 0.05))
+	}
+	
 }
+
+

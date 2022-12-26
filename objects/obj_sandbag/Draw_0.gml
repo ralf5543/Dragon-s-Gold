@@ -9,7 +9,7 @@ if (flash > 0) {
 	shader_reset();//prevents the shader to apply to all
 };
 
-if (room != rm_start) {
+if (room == rm_game) {
 	// Temp infos for debugging
 	//draw_set_color(c_white);
 	//draw_set_halign(fa_center);

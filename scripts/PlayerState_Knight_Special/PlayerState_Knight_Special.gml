@@ -9,7 +9,7 @@ function PlayerState_Knight_Special(){
 		audio_play_sound(snd_shield, 6, false);
 	
 		//use attack hitbox and checks for hits
-		shield = instance_create_layer(x, y, "layer_players", obj_shield);
+		//shield = instance_create_layer(x, y, "layer_players", obj_shield);
 		with (shield) {
 			image_xscale = other.facing;
 			shield_receiver = other.id;

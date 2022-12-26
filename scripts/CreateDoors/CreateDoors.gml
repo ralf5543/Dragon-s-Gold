@@ -1,6 +1,6 @@
 
 function CreateDoors(){
-	if (room != rm_start) {
+	if (room == rm_game) {
 		// creates a door on the extreme left of the room, except if it is the first one of the floor
 		if (hall_number > 0) {
 			door_left = instance_create_layer(hall_x + 82, hall_y + 32, "layer_walls", obj_door);

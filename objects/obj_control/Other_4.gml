@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 
-if (room != rm_start) {
+if (room == rm_game) {
 
 	//list of all castle roof rooms objets, used or not
 	halls_roof_list = ds_list_create();

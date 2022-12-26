@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CreateStairs(){
-	if (room != rm_start) {
+	if (room == rm_game) {
 		
 		if (hall_floor == "roof") {
 			
