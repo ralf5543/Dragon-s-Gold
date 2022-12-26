@@ -2,19 +2,13 @@
 
 if (state != PLAYERSTATE.HURT) {
 
-	//taking stairs, up or down
-	if (gamepad_button_check_pressed(pad_num, gp_padd)) or (gamepad_button_check_pressed(pad_num, gp_padu)) {
-		state = PLAYERSTATE.TAKINGSTAIRS;
-		//is_taking_stairs = true;
-		//alarm[6] = 64;
-	}
-
-	if (gamepad_button_check_pressed(pad_num, gp_padd)) {
+	if (gamepad_button_check_pressed(pad_num, gp_padd)) && (other.stairway_floor != "ground") {
 		stairs_direction = "down";
-	} else if (gamepad_button_check_pressed(pad_num, gp_padu)) {
+		state = PLAYERSTATE.TAKINGSTAIRS;
+	} else if (gamepad_button_check_pressed(pad_num, gp_padu)) && (other.stairway_floor != "roof") {
 		stairs_direction = "up";
+		state = PLAYERSTATE.TAKINGSTAIRS;
 	}
-
 	
 	if (has_finished_stairs == true) {
 

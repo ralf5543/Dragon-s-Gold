@@ -2,7 +2,6 @@
 function PlayerState_Taking_Stairs(){
 	
 	if (can_take_stairs) {
-		show_debug_message("can_take_stairs")
 		if (skeleton_animation_get() != "looking-up") {
 			skeleton_animation_set("looking-up");	
 		}
