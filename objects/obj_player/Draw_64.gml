@@ -1,6 +1,6 @@
 /// @description Healthbar
 
-if (room == rm_game) {
+if (room  == rm_game) {
 	
 	for(var i = 0; i < obj_control.start_players; i ++) {
 		var player1 = instance_find(obj_player, 0);

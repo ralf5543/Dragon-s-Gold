@@ -39,4 +39,10 @@ switch (state) {
 	PlayerState_Lose();
 	break;
 }
-
+	
+if (state != PLAYERSTATE.SPECIAL) && (character == "knight") {
+	// todo : verify in a game with several knights
+	if (instance_exists(obj_shield)) {
+		instance_destroy(obj_shield);
+	}
+}

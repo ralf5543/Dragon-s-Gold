@@ -11,7 +11,8 @@ if (room == rm_select) {
 			}				
 		}
 
-	    room_goto(rm_game);
+	    room_goto_next();
+		
 	}
 } else if (room == rm_game) {  
 	if (door_calculate) {

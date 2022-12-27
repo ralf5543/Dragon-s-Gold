@@ -44,8 +44,6 @@ if (room == rm_select) {
 		
 	if (key_start) or (keyboard_check_pressed(vk_enter)) {	
 		
-		show_debug_message("sttttart")
-		
 		//Can push Start only once
 		if (can_push_start == true) {
 	
@@ -71,7 +69,6 @@ if (room == rm_select) {
 		   
 			   //give gamepad id to the obj_select_class, via gamepad_id_receiver var
 			   gamepad_id_receiver = other.gamepad_id_owner;
-
 			}
 			
 			//tells the Controller that this player is ready
@@ -226,15 +223,14 @@ if (room == rm_select) {
 		sexe =  "male"
 	}
 	
-	
 	//percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
 
 
-//if (is_taking_stairs == true) {
-//	percent = max(0, percent - max((percent / 10), 0.05))
-//} else {
-//	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
-//}
+	//if (is_taking_stairs == true) {
+	//	percent = max(0, percent - max((percent / 10), 0.05))
+	//} else {
+	//	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
+	//}
 
 
 	if (has_taken_stairs >= 60) {
@@ -243,7 +239,6 @@ if (room == rm_select) {
 	} else {
 		percent = max(0, percent - max((percent / 10), 0.05))
 	}
-	
-}
 
+}
 

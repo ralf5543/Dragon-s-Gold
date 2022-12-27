@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (room == rm_game) {
+if (room  == rm_game) {
 	
 	var shadow = instance_create_layer(x, y, "layer_players", obj_shadow);
 	with (shadow) {
