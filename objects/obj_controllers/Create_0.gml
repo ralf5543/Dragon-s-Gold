@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-free_stick = true;//if true, can use the stick again
+for (var i = 0; i < 12; i++;) {
+	player[i] = noone;
+}
 
+total_pads = 0;// number of plugged gamepads
 
 
 

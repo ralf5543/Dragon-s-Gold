@@ -1,8 +1,8 @@
 /// @description Gamepads detection
 
-//show_debug_message("Event = " + async_load[? "event_type"]);        // Debug code so you can see which event has been
-//show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered and the pad associated with it.
-//show_debug_message("test async ");
+show_debug_message("Event = " + async_load[? "event_type"]);        // Debug code so you can see which event has been
+show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered and the pad associated with it.
+show_debug_message("test async ");
 
 switch(async_load[? "event_type"])             // Parse the async_load map to see which event has been triggered
 {
@@ -53,3 +53,26 @@ case "gamepad lost":                           // Gamepad has been removed or ot
 
     break;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
