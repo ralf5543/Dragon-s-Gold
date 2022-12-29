@@ -11,6 +11,7 @@
     {"id":{"name":"spr_knight","path":"sprites/spr_knight/spr_knight.yy",},"order":0,},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":9,},
     {"id":{"name":"PlayerState_Hurt","path":"scripts/PlayerState_Hurt/PlayerState_Hurt.yy",},"order":3,},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":9,},
     {"id":{"name":"spr_ranger_combo1","path":"sprites/spr_ranger_combo1/spr_ranger_combo1.yy",},"order":3,},
     {"id":{"name":"spr_column","path":"sprites/spr_column/spr_column.yy",},"order":10,},
     {"id":{"name":"fnt_10","path":"fonts/fnt_10/fnt_10.yy",},"order":3,},
@@ -66,6 +67,7 @@
     {"id":{"name":"shd_white","path":"shaders/shd_white/shd_white.yy",},"order":0,},
     {"id":{"name":"snd_smash","path":"sounds/snd_smash/snd_smash.yy",},"order":7,},
     {"id":{"name":"spr_wizard_attack","path":"sprites/spr_wizard_attack/spr_wizard_attack.yy",},"order":3,},
+    {"id":{"name":"spr_start_screen","path":"sprites/spr_start_screen/spr_start_screen.yy",},"order":0,},
     {"id":{"name":"obj_shadow","path":"objects/obj_shadow/obj_shadow.yy",},"order":6,},
     {"id":{"name":"snd_hurt_female4","path":"sounds/snd_hurt_female4/snd_hurt_female4.yy",},"order":22,},
     {"id":{"name":"sandbag","path":"sprites/sandbag/sandbag.yy",},"order":7,},
@@ -247,6 +249,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"doors","folderPath":"folders/Sprites/level_design/doors.yy","order":8,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"select_screen","folderPath":"folders/Sprites/select_screen.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy","order":8,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"start_screen","folderPath":"folders/Sprites/start_screen.yy","order":14,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

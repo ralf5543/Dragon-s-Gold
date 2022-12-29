@@ -85,14 +85,14 @@ if (room  == rm_game) {
 		draw_text(key_x + 32 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
 		
 			// black bars transition
-		if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
-			draw_set_color(c_black);
+		//if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
+		//	draw_set_color(c_black);
 	
 	
-			//percent = percent + 0.1;
-			draw_rectangle(0, 0, w, percent * h_half, false);
-			draw_rectangle(0, h, w,h - ( percent * h_half), false);
-		}
+		//	//percent = percent + 0.1;
+		//	draw_rectangle(0, 0, w, percent * h_half, false);
+		//	draw_rectangle(0, h, w,h - ( percent * h_half), false);
+		//}
 	}
 		
 	//=================================----------------------------------- 2 players

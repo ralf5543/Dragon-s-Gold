@@ -222,23 +222,15 @@ if (room == rm_select) {
 	} else {
 		sexe =  "male"
 	}
-	
-	//percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
 
 
-	//if (is_taking_stairs == true) {
-	//	percent = max(0, percent - max((percent / 10), 0.05))
-	//} else {
+
+	//if (has_taken_stairs >= 60) {
 	//	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
-	//}
-
-
-	if (has_taken_stairs >= 60) {
-		percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
 	
-	} else {
-		percent = max(0, percent - max((percent / 10), 0.05))
-	}
+	//} else {
+	//	percent = max(0, percent - max((percent / 10), 0.05))
+	//}
 
 }
 
