@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level_design",
-    "path": "folders/Objects/level_design.yy",
+    "name": "halls",
+    "path": "folders/Objects/level_design/halls.yy",
   },
 }
