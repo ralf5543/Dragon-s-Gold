@@ -3,6 +3,12 @@
 //Item ease in
 menu_x += (menu_x_target - menu_x) / menu_speed;
 
+function validateMenuItem() {
+	menu_x_target = gui_width + 200;
+	menu_comitted = menu_cursor;
+	menu_control = false;
+}
+
 //keyboard controls
 if (menu_control) {
     
@@ -29,10 +35,17 @@ if (menu_control) {
     }
     
     if (keyboard_check_pressed(vk_enter)) or (gamepad_button_check_pressed(0, gp_face1)) {
-   	 menu_x_target = gui_width + 200;
-   	 menu_comitted = menu_cursor;
-   	 menu_control = false;
+		validateMenuItem()
     }
+	
+	var mouse_y_gui = device_mouse_y_to_gui(0);
+	if (mouse_y_gui < menu_y) && (mouse_y_gui > menu_top) {
+		menu_cursor = (menu_y - mouse_y_gui) div (menu_itemheight * 1.5);
+		
+		if (mouse_check_button_pressed(mb_left)) {
+			validateMenuItem()
+		}
+	}
 
     if (menu_comitted != -1) {
    	 switch (menu_comitted) {
