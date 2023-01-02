@@ -26,6 +26,10 @@ if (room  == rm_game) {
 	key_x = portrait_width + (gui_margin * 3);
 	key_y = (gui_margin * 4) + healthbar_height + energybar_height;
 	key_spacer = (gui_margin * 4);
+	
+	dpad_width = 218 * gui_zoom;
+	
+	//==========------------- Equipment sprites
 
 				
 			// black bars transition
@@ -59,7 +63,7 @@ if (room  == rm_game) {
 		draw_sprite(spr_energyBackground, 0, energybar_x, energybar_y);
 		draw_sprite_stretched(spr_energyBar, 0, energybar_x, energybar_y, (energy / energy_max) * energybar_width, energybar_height);
 			
-		//keys
+		//======----- keys
 		if (has_bronze_key < 1) {
 			// semi opacity
 			draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1, 1, 135, c_white, .4);
@@ -83,6 +87,68 @@ if (room  == rm_game) {
 			draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, 1);
 		}
 		draw_text(key_x + 32 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
+		
+		
+		//======----- D-Pad
+		draw_sprite_ext(spr_dpad, 0, dpad_width + gui_margin, display_get_gui_height() - (dpad_width + gui_margin), 1, 1, 0, c_white, 0.5);
+		
+		function DisplayEquipment(argument0) {
+			if (argument0 == 0) {
+				var pos_x = dpad_width + gui_margin;
+				var pos_y = display_get_gui_height() - ((dpad_width + 72) + gui_margin);
+			} else if (argument0 == 1) {
+				var pos_x = (dpad_width + 72) + gui_margin;
+				var pos_y = display_get_gui_height() - (dpad_width + gui_margin);
+			} else if (argument0 == 2) {
+				var pos_x = (dpad_width) + gui_margin;
+				var pos_y = display_get_gui_height() - ((dpad_width - 72) + gui_margin);
+			} else if (argument0 == 3) {
+				var pos_x = (dpad_width - 72) + gui_margin;
+				var pos_y = display_get_gui_height() - (dpad_width + gui_margin);
+			}
+			
+			switch (EquipmentSlot[argument0]) {
+				case EQUIPMENT_TYPE.POTION_HEALTH : 
+				draw_sprite_ext(spr_potion, 0, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+				break;	
+	
+				case EQUIPMENT_TYPE.POTION_ENERGY : 
+				draw_sprite_ext(spr_potion, 1, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+				break;	
+	
+				case EQUIPMENT_TYPE.POTION_POISON : 
+				draw_sprite_ext(spr_potion, 2, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+				break;	
+			}
+		}
+		
+		//======----- Equipment
+		
+		for (var i = 0; i < array_length(EquipmentSlot); i++;) {
+			if (EquipmentSlot[i] != undefined) {
+				DisplayEquipment(i);
+			}
+		}
+		
+		//if (EquipmentSlot[0] != undefined) {
+		//	DisplayEquipment(0);
+		//}
+			
+		//if (EquipmentSlot[1] != undefined) {	
+		//	DisplayEquipment(1);
+		//}
+
+			
+		//if (EquipmentSlot[2] != undefined) {	
+		//	DisplayEquipment(2);
+		//}
+
+			
+		//if (EquipmentSlot[3] != undefined) {	
+		//	DisplayEquipment(3);
+		//}
+
+		
 		
 			// black bars transition
 		//if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
