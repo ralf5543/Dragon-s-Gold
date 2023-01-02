@@ -12,8 +12,7 @@ key_attack = 0;
 key_special = 0;
 key_special_released = 0;
 key_start = 0;
-
-key_y = 0;
+key_action = 0;
 
 
 hsp = 0; // horizontal speed
@@ -112,7 +111,7 @@ EquipmentSlot[2] = undefined;
 EquipmentSlot[1] = undefined;
 EquipmentSlot[0] = undefined;
 
-EquipmentSprite = undefined;
+equipments_number = 0;
 
 //======------- Potions collect
 has_health_potion = 0;
@@ -155,6 +154,7 @@ h = display_get_gui_height();
 h_half = h / 2;
 percent = 1; // 0 = no black screen, 1 = 100% black screen
 can_take_stairs = true;
+free_stick = 1;//to avoid taking stairs multiple times with analogic stick
 is_taking_stairs = false;
 has_taken_stairs = 0;
 stairs_direction = undefined;

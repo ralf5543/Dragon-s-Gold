@@ -40,6 +40,7 @@ function PlayerState_Taking_Stairs(){
 			has_taken_stairs = 0;
 			can_take_stairs = true;
 			has_finished_stairs = true;
+			can_take_stairs_controller = true;
 		}
 	}
 

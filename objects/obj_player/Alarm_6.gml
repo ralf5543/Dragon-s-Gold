@@ -22,4 +22,3 @@ is_taking_stairs = true;
 
 
 
-

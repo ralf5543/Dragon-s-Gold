@@ -2,12 +2,20 @@
 
 if (state != PLAYERSTATE.HURT) {
 
-	if (gamepad_button_check_pressed(pad_num, gp_padd)) && (other.stairway_floor != "ground") {
-		stairs_direction = "down";
-		state = PLAYERSTATE.TAKINGSTAIRS;
-	} else if (gamepad_button_check_pressed(pad_num, gp_padu)) && (other.stairway_floor != "roof") {
-		stairs_direction = "up";
-		state = PLAYERSTATE.TAKINGSTAIRS;
+	if (free_stick == 1) {
+
+		if (max(gamepad_axis_value(pad_num, gp_axislv), 0)) && (other.stairway_floor != "ground") {
+			key_down = undefined;
+			stairs_direction = "down";
+			state = PLAYERSTATE.TAKINGSTAIRS;
+			free_stick = 0;
+			alarm[7] = 64;
+		} else if (abs(min(gamepad_axis_value(pad_num, gp_axislv), 0))) && (other.stairway_floor != "roof") {
+			stairs_direction = "up";
+			state = PLAYERSTATE.TAKINGSTAIRS;
+			free_stick = 0;
+			alarm[7] = 64;
+		}
 	}
 	
 	if (has_finished_stairs == true) {

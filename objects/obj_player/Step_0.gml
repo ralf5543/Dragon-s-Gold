@@ -22,8 +22,13 @@ key_jump = gamepad_button_check_pressed(pad_num, gp_face1);// A (green) button
 key_attack = gamepad_button_check_pressed(pad_num, gp_face3);// X (blue) button
 key_special = gamepad_button_check_pressed(pad_num, gp_face2);// B (red) button
 key_special_released = gamepad_button_check_released(pad_num, gp_face2);// B (red) button
-key_y = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
-key_start = gamepad_button_check_pressed(pad_num, gp_start);	
+key_action = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
+key_start = gamepad_button_check_pressed(pad_num, gp_start);
+
+key_equipment_up = gamepad_button_check_pressed(pad_num, gp_padu);
+key_equipment_right = gamepad_button_check_pressed(pad_num, gp_padr);
+key_equipment_down = gamepad_button_check_pressed(pad_num, gp_padd);
+key_equipment_left = gamepad_button_check_pressed(pad_num, gp_padl);
 
 
 // used only for characters selection screen
@@ -223,7 +228,7 @@ if (room == rm_select) {
 		sexe =  "male"
 	}
 
-
+//show_debug_message("can_take_stairs_controller" + string(can_take_stairs_controller))
 
 	//if (has_taken_stairs >= 60) {
 	//	percent = min(1.2, percent + max((1.2 - percent / 10), 0.05));
@@ -232,5 +237,19 @@ if (room == rm_select) {
 	//	percent = max(0, percent - max((percent / 10), 0.05))
 	//}
 
+	//use items
+	
+	if (key_equipment_up) {
+		if (EquipmentSlot[0] != undefined) {
+			if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION_HEALTH) {
+				has_health_potion --;
+			} else if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION_ENERGY) {
+				has_energy_potion --;
+			} else if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION_POISON) {
+				has_poison_potion --;
+			}
+			EquipmentSlot[0] = undefined;
+		}
+	}
 }
 
