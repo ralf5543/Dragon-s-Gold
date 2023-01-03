@@ -37,7 +37,7 @@ function PlayerState_Free(){
 	// if detects a collision with wall 1px bellow it (so, if it's on the floor !)
 	//AND jump button is pressed
 	if (place_meeting(x, y + 1, obj_wall)) && (key_jump) && (energy > 50) {
-		energy = energy - 50;
+		//energy = energy - 50;
 		//jump higher if running
 		if (key_run) && (energy > 0) {vsp = -10;} else {vsp = -8;}
 	};
@@ -71,6 +71,13 @@ function PlayerState_Free(){
 			
 				can_landingSound = false;
 				alarm[1] = 16;
+				
+				repeat(2) {
+					with (instance_create_layer(x, y, "layer_players", obj_dust)) {
+						vsp = 0;
+					}
+					
+				}
 			}
 		};
 		

@@ -109,6 +109,6 @@
   "nineSlice": null,
   "parent": {
     "name": "ranger",
-    "path": "folders/Sprites/Classes/ranger.yy",
+    "path": "folders/Sprites/players/Classes/ranger.yy",
   },
 }

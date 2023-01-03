@@ -85,6 +85,6 @@
   "nineSlice": null,
   "parent": {
     "name": "knight",
-    "path": "folders/Sprites/Classes/knight.yy",
+    "path": "folders/Sprites/players/Classes/knight.yy",
   },
 }
