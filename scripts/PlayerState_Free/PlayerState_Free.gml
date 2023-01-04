@@ -72,12 +72,7 @@ function PlayerState_Free(){
 				can_landingSound = false;
 				alarm[1] = 16;
 				
-				repeat(2) {
-					with (instance_create_layer(x, y, "layer_players", obj_dust)) {
-						vsp = 0;
-					}
-					
-				}
+				instance_create_layer(x, y, "layer_players", obj_dust_jump);
 			}
 		};
 		
@@ -123,8 +118,9 @@ function PlayerState_Free(){
 		
 				//for preventing looping on frame 1 of the animation
 				if (skeleton_animation_get() != "run") {
-					    skeleton_animation_set("run");
-					}
+					skeleton_animation_set("run");
+				}	
+					
 			} else {
 				//for preventing looping on frame 1 of the animation
 				if skeleton_animation_get() != "walk"
@@ -147,6 +143,11 @@ function PlayerState_Free(){
 			can_footStep = false;
 			if (key_run) {
 				alarm[1] = 20;//so 1 sound every 2 frames
+				
+				with (instance_create_layer(x, y, "layer_players", obj_dust_run)) {
+					vsp = 0;
+				}
+				
 			} else {
 				alarm[1] = 16;//so 1 sound every 2 frames
 			}
