@@ -82,6 +82,7 @@
     {"id":{"name":"spr_fireball_collision_box","path":"sprites/spr_fireball_collision_box/spr_fireball_collision_box.yy",},"order":9,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":0,},
     {"id":{"name":"test","path":"sprites/test/test.yy",},"order":8,},
+    {"id":{"name":"Drink_Potion","path":"scripts/Drink_Potion/Drink_Potion.yy",},"order":22,},
     {"id":{"name":"PlayerState_Ranger_Special","path":"scripts/PlayerState_Ranger_Special/PlayerState_Ranger_Special.yy",},"order":8,},
     {"id":{"name":"snd_victory_music","path":"sounds/snd_victory_music/snd_victory_music.yy",},"order":14,},
     {"id":{"name":"spr_skulls1","path":"sprites/spr_skulls1/spr_skulls1.yy",},"order":1,},

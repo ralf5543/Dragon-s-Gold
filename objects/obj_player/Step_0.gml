@@ -241,14 +241,13 @@ if (room == rm_select) {
 	
 	if (key_equipment_up) {
 		if (EquipmentSlot[0] != undefined) {
-			if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION_HEALTH) {
-				has_health_potion --;
-			} else if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION_ENERGY) {
-				has_energy_potion --;
-			} else if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION_POISON) {
-				has_poison_potion --;
-			}
+			 if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION) {
+
+				Drink_Potion(EquipmentSlot[0]);
+			 }
+
 			EquipmentSlot[0] = undefined;
+			equipments_number -- ;
 		}
 	}
 }

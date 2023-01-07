@@ -116,6 +116,7 @@ equipments_number = 0;
 //======------- Potions collect
 has_health_potion = 0;
 has_energy_potion = 0;
+has_invincibility_potion = 0;
 has_poison_potion = 0;
 
 // ===================---------------- GUI

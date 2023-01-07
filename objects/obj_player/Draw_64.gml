@@ -92,33 +92,47 @@ if (room  == rm_game) {
 		//======----- D-Pad
 		draw_sprite_ext(spr_dpad, 0, dpad_width + gui_margin, display_get_gui_height() - (dpad_width + gui_margin), 1, 1, 0, c_white, 0.5);
 		
-		function DisplayEquipment(argument0) {
-			if (argument0 == 0) {
+		function DisplayEquipment(argument) {
+			if (argument == 0) {
 				var pos_x = dpad_width + gui_margin;
 				var pos_y = display_get_gui_height() - ((dpad_width + 72) + gui_margin);
-			} else if (argument0 == 1) {
+			} else if (argument == 1) {
 				var pos_x = (dpad_width + 72) + gui_margin;
 				var pos_y = display_get_gui_height() - (dpad_width + gui_margin);
-			} else if (argument0 == 2) {
+			} else if (argument == 2) {
 				var pos_x = (dpad_width) + gui_margin;
 				var pos_y = display_get_gui_height() - ((dpad_width - 72) + gui_margin);
-			} else if (argument0 == 3) {
+			} else if (argument == 3) {
 				var pos_x = (dpad_width - 72) + gui_margin;
 				var pos_y = display_get_gui_height() - (dpad_width + gui_margin);
 			}
 			
-			switch (EquipmentSlot[argument0]) {
-				case EQUIPMENT_TYPE.POTION_HEALTH : 
-				draw_sprite_ext(spr_potion, 0, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
-				break;	
+			switch (EquipmentSlot[argument]) {
+				//case EQUIPMENT_TYPE.POTION :
+
+				
+				//switch(EquipmentSlot[argument0].potion_type) {
+					case POTION_TYPE.HEALTH : 
+					draw_sprite_ext(spr_potion, 0, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+					//show_debug_message("heakth")
+					break;	
 	
-				case EQUIPMENT_TYPE.POTION_ENERGY : 
-				draw_sprite_ext(spr_potion, 1, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
-				break;	
+					case POTION_TYPE.ENERGY : 
+					draw_sprite_ext(spr_potion, 1, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+					//show_debug_message("energy")
+					break;	
 	
-				case EQUIPMENT_TYPE.POTION_POISON : 
-				draw_sprite_ext(spr_potion, 2, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
-				break;	
+					case POTION_TYPE.INVINCIBILITY : 
+					draw_sprite_ext(spr_potion, 2, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+					//show_debug_message("invicinbility")
+					break;	
+	
+					case POTION_TYPE.POISON : 
+					draw_sprite_ext(spr_potion, 3, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
+					//show_debug_message("poison")
+					break;	
+				
+				//break;
 			}
 		}
 		
