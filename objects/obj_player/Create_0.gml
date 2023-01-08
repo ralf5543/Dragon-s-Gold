@@ -122,6 +122,7 @@ has_poison_potion = 0;
 is_drinking_health_potion = false;
 is_drinking_energy_potion = false;
 is_drinking_invincibility_potion = false;
+can_drink = true;// drink sound
 
 // ===================---------------- GUI
 gui_zoom = 0;

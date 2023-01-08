@@ -4,4 +4,8 @@ function PlayerState_Drinking_Potion(){
 	if (skeleton_animation_get() != "drink-potion") {
 		skeleton_animation_set("drink-potion");				
 	}
+	if (can_drink) {
+		audio_play_sound(snd_drink, 4, false);
+		can_drink = false;
+	}
 }

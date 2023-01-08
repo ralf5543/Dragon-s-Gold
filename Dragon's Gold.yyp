@@ -153,6 +153,7 @@
     {"id":{"name":"snd_fall_male2","path":"sounds/snd_fall_male2/snd_fall_male2.yy",},"order":6,},
     {"id":{"name":"obj_hall_roof_C","path":"objects/obj_hall_roof_C/obj_hall_roof_C.yy",},"order":10,},
     {"id":{"name":"snd_battlecry_male3","path":"sounds/snd_battlecry_male3/snd_battlecry_male3.yy",},"order":10,},
+    {"id":{"name":"snd_drink","path":"sounds/snd_drink/snd_drink.yy",},"order":15,},
     {"id":{"name":"spr_null","path":"sprites/spr_null/spr_null.yy",},"order":1,},
     {"id":{"name":"snd_fall_female1","path":"sounds/snd_fall_female1/snd_fall_female1.yy",},"order":8,},
     {"id":{"name":"snd_footstep2","path":"sounds/snd_footstep2/snd_footstep2.yy",},"order":1,},

@@ -56,6 +56,7 @@ if (skeleton_animation_get() == "drink-potion") {
 	}
 	
     state = PLAYERSTATE.FREE;
+	can_drink = true;
 }
 
 //attack animation
