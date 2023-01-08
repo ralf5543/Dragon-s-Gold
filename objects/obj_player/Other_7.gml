@@ -21,6 +21,43 @@ if (skeleton_animation_get() == "hurt") {
 	image_speed = 0;
 }
 
+//drink potion animation
+if (skeleton_animation_get() == "drink-potion") {
+
+	if (is_drinking_health_potion) {
+		if (hp != hp_max) {
+			
+			while (hp < hp_max) {
+				// todo : make it raise slowly (doesn't work actually ;(
+				hp = hp + 0.5;
+			}
+		
+			if (hp >= hp_max) {
+				hp = hp_max;
+				is_drinking_health_potion = false;
+			}
+		}
+	}
+	
+	else if (is_drinking_energy_potion) {
+		if (energy != energy_max) {
+			
+			while (energy < energy_max) {
+				energy = energy +5;
+			
+				if (energy >= energy_max) {
+					energy = energy_max;
+					is_drinking_energy_potion = false;
+				}
+			}
+		}
+	} else if (is_drinking_invincibility_potion) {
+		is_invicible = true;
+	}
+	
+    state = PLAYERSTATE.FREE;
+}
+
 //attack animation
 if (skeleton_animation_get() == "attack") {
     state = PLAYERSTATE.FREE;

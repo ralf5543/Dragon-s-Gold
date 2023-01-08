@@ -21,4 +21,6 @@ function Drink_Potion(argument){
 		has_poison_potion --;
 		break;
 	}
+	
+	
 }

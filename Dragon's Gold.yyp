@@ -29,6 +29,7 @@
     {"id":{"name":"spr_skulls2","path":"sprites/spr_skulls2/spr_skulls2.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_hall_ground_A","path":"objects/obj_hall_ground_A/obj_hall_ground_A.yy",},"order":0,},
+    {"id":{"name":"PlayerState_Drinking_Potion","path":"scripts/PlayerState_Drinking_Potion/PlayerState_Drinking_Potion.yy",},"order":14,},
     {"id":{"name":"spr_blood","path":"sprites/spr_blood/spr_blood.yy",},"order":1,},
     {"id":{"name":"spr_ranger","path":"sprites/spr_ranger/spr_ranger.yy",},"order":1,},
     {"id":{"name":"snd_death_male1","path":"sounds/snd_death_male1/snd_death_male1.yy",},"order":15,},

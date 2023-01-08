@@ -44,7 +44,8 @@ enum PLAYERSTATE {
 	WON,
 	LOSE,
 	CROSSINGDDOOR,
-	TAKINGSTAIRS
+	TAKINGSTAIRS,
+	DRINKINGPOTION
 }
 
 // because with combos, "state" get a number, not a FREEPLAYERSTATE. Dunno why...

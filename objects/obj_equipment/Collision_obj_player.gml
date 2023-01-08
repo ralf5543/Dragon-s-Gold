@@ -104,8 +104,7 @@ with (other) {
 					} else {
 						EquipmentSlot[1] = other.type;
 					}
-					
-					show_debug_message("EquipmentSlot[1] : " + string(EquipmentSlot[1]));
+
 					
 				} else if (EquipmentSlot[2] == undefined) {
 					if (other.type == EQUIPMENT_TYPE.POTION) {

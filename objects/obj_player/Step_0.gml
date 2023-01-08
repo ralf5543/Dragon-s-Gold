@@ -230,6 +230,10 @@ if (room == rm_select) {
 		case PLAYERSTATE.TAKINGSTAIRS : 
 		PlayerState_Taking_Stairs();
 		break;
+		
+		case PLAYERSTATE.DRINKINGPOTION : 
+		PlayerState_Drinking_Potion();
+		break;
 	}
 	
 	if (character =="ranger") {
@@ -252,6 +256,7 @@ if (room == rm_select) {
 	if (key_equipment_up) {
 		if (EquipmentSlot[0] != undefined) {
 			 if (EquipmentSlot[0] == "potion_health") || (EquipmentSlot[0] == "potion_energy") || (EquipmentSlot[0] == "potion_invincibility") || (EquipmentSlot[0] == "potion_poison") {
+				state = PLAYERSTATE.DRINKINGPOTION;
 				Drink_Potion(EquipmentSlot[0]);
 			 }
 
@@ -261,10 +266,9 @@ if (room == rm_select) {
 	}
 	
 	if (key_equipment_right) {
-		show_debug_message("aaaa");
 		if (EquipmentSlot[1] != undefined) {
-			show_debug_message("EquipmentSlot[1]" + string(EquipmentSlot[1]));
 			 if (EquipmentSlot[1] == "potion_health") || (EquipmentSlot[1] == "potion_energy") || (EquipmentSlot[1] == "potion_invincibility") || (EquipmentSlot[1] == "potion_poison") {
+				state = PLAYERSTATE.DRINKINGPOTION;
 				Drink_Potion(EquipmentSlot[1]);
 			 }
 
@@ -276,6 +280,7 @@ if (room == rm_select) {
 	if (key_equipment_down) {
 		if (EquipmentSlot[2] != undefined) {
 			 if (EquipmentSlot[1] == "potion_health") || (EquipmentSlot[2] == "potion_energy") || (EquipmentSlot[2] == "potion_invincibility") || (EquipmentSlot[2] == "potion_poison") {
+				state = PLAYERSTATE.DRINKINGPOTION;
 				Drink_Potion(EquipmentSlot[2]);
 			 }
 
@@ -287,6 +292,7 @@ if (room == rm_select) {
 	if (key_equipment_left) {
 		if (EquipmentSlot[3] != undefined) {
 			 if (EquipmentSlot[3] == "potion_health") || (EquipmentSlot[3] == "potion_energy") || (EquipmentSlot[3] == "potion_invincibility") || (EquipmentSlot[3] == "potion_poison") {
+				state = PLAYERSTATE.DRINKINGPOTION;
 				Drink_Potion(EquipmentSlot[1]);
 			 }
 
@@ -295,27 +301,9 @@ if (room == rm_select) {
 		}
 	}
 	
-	if (is_drinking_health_potion) {
-		if (hp != hp_max) {
-			hp = hp + 0.5;
-			if (hp == hp_max) {
-				is_drinking_health_potion = false;
-			}
-		}
+	function isDrinkingHealthPotion() {
+		
 	}
 	
-	if (is_drinking_energy_potion) {
-		if (energy != energy_max) {
-			energy = energy +5;
-			if (energy >= energy_max) {
-				energy = energy_max;
-				is_drinking_energy_potion = false;
-			}
-		}
-	}
-	
-	if (is_drinking_invincibility_potion) {
-		is_invicible = true;
-	}
 }
 
