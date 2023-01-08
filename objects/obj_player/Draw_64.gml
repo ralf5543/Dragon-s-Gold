@@ -112,22 +112,22 @@ if (room  == rm_game) {
 
 				
 				//switch(EquipmentSlot[argument0].potion_type) {
-					case POTION_TYPE.HEALTH : 
+					case "potion_health" : 
 					draw_sprite_ext(spr_potion, 0, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
 					//show_debug_message("heakth")
 					break;	
 	
-					case POTION_TYPE.ENERGY : 
+					case "potion_energy" : 
 					draw_sprite_ext(spr_potion, 1, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
 					//show_debug_message("energy")
 					break;	
 	
-					case POTION_TYPE.INVINCIBILITY : 
+					case "potion_invincibility" : 
 					draw_sprite_ext(spr_potion, 2, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
 					//show_debug_message("invicinbility")
 					break;	
 	
-					case POTION_TYPE.POISON : 
+					case "potion_poison" : 
 					draw_sprite_ext(spr_potion, 3, pos_x, pos_y, 1.5, 1.5, 0, c_white, 1);
 					//show_debug_message("poison")
 					break;	

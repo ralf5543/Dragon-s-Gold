@@ -11,12 +11,8 @@ with (other) {
 		
 				audio_play_sound(snd_key_grab, 9, 0);
 
-					show_debug_message("other.type : " + string(other.type));
 				switch (other.type) {
 					case EQUIPMENT_TYPE.POTION : 
-					
-					show_debug_message("other.potion_type : " + string(other.potion_type));
-					
 					
 					switch(other.potion_type) {
 					
@@ -43,17 +39,68 @@ with (other) {
 				if (EquipmentSlot[0] == undefined) {
 					
 					if (other.type == EQUIPMENT_TYPE.POTION) {
-						EquipmentSlot[0] = other.potion_type;
+						
+						switch(other.potion_type) {
+					
+							case 0 : 
+							has_health_potion ++;
+							EquipmentSlot[0] = "potion_health";
+							break;	
+	
+							case 1 : 
+							has_energy_potion ++;
+							EquipmentSlot[0] = "potion_energy";
+							break;	
+	
+							//case POTION_TYPE.INVINCIBILITY : 
+							case 2 : 
+							has_invincibility_potion ++;
+							EquipmentSlot[0] = "potion_invincibility";
+							break;	
+	
+							//case POTION_TYPE.POISON : 
+							case 3 : 
+							has_poison_potion ++;
+							EquipmentSlot[0] = "potion_poison";
+							break;	
+						}
+						
+						
+						
 					} else {
 						EquipmentSlot[0] = other.type;
 					}
 					
-					show_debug_message("EquipmentSlot[0] : " + string(EquipmentSlot[0]));
-					
 					
 				} else if (EquipmentSlot[1] == undefined) {
 					if (other.type == EQUIPMENT_TYPE.POTION) {
-						EquipmentSlot[1] = other.potion_type;
+						
+						
+						switch(other.potion_type) {
+					
+							case 0 : 
+							has_health_potion ++;
+							EquipmentSlot[1] = "potion_health";
+							break;	
+	
+							case 1 : 
+							has_energy_potion ++;
+							EquipmentSlot[1] = "potion_energy";
+							break;	
+	
+							//case POTION_TYPE.INVINCIBILITY : 
+							case 2 : 
+							has_invincibility_potion ++;
+							EquipmentSlot[1] = "potion_invincibility";
+							break;	
+	
+							//case POTION_TYPE.POISON : 
+							case 3 : 
+							has_poison_potion ++;
+							EquipmentSlot[1] = "potion_poison";
+							break;	
+						}
+						
 					} else {
 						EquipmentSlot[1] = other.type;
 					}
@@ -62,21 +109,72 @@ with (other) {
 					
 				} else if (EquipmentSlot[2] == undefined) {
 					if (other.type == EQUIPMENT_TYPE.POTION) {
-						EquipmentSlot[2] = other.potion_type;
+						
+						switch(other.potion_type) {
+					
+							case POTION_TYPE.HEALTH : 
+							//case 0 : 
+							has_health_potion ++;
+							EquipmentSlot[2] = "potion_health";
+							break;	
+	
+							case POTION_TYPE.ENERGY : 
+							//case 1 : 
+							has_energy_potion ++;
+							EquipmentSlot[2] = "potion_energy";
+							break;	
+	
+							case POTION_TYPE.INVINCIBILITY : 
+							//case 2 : 
+							has_invincibility_potion ++;
+							EquipmentSlot[2] = "potion_invincibility";
+							break;	
+	
+							case POTION_TYPE.POISON : 
+							//case 3 : 
+							has_poison_potion ++;
+							EquipmentSlot[2] = "potion_poison";
+							break;	
+						}
+						
 					} else {
 						EquipmentSlot[2] = other.type;
 					}
 					
-					show_debug_message("EquipmentSlot[2] : " + string(EquipmentSlot[2]));
-					
 				} else if (EquipmentSlot[3] == undefined) {
 					if (other.type == EQUIPMENT_TYPE.POTION) {
-						EquipmentSlot[3] = other.potion_type;
+						
+						switch(other.potion_type) {
+					
+							//case POTION_TYPE.HEALTH : 
+							case 0 : 
+							has_health_potion ++;
+							EquipmentSlot[3] = "potion_health";
+							break;	
+	
+							//case POTION_TYPE.ENERGY : 
+							case 1 : 
+							has_energy_potion ++;
+							EquipmentSlot[3] = "potion_energy";
+							break;	
+	
+							//case POTION_TYPE.INVINCIBILITY : 
+							case 2 : 
+							has_invincibility_potion ++;
+							EquipmentSlot[3] = "potion_invincibility";
+							break;	
+	
+							//case POTION_TYPE.POISON : 
+							case 3 : 
+							has_poison_potion ++;
+							EquipmentSlot[3] = "potion_poison";
+							break;	
+						}
+						
 					} else {
 						EquipmentSlot[3] = other.type;
 					}
-					
-					show_debug_message("EquipmentSlot[3] : " + string(EquipmentSlot[3]));
+
 				}
 			
 				equipments_number ++;

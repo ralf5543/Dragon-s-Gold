@@ -140,7 +140,8 @@ if (room == rm_select) {
 		invincible_timer ++;
 		
 		if (state != PLAYERSTATE.CROSSINGDDOOR) && (state != PLAYERSTATE.TAKINGSTAIRS) {
-			if (blink_timer == 8) {
+
+			if (blink_timer >= 8) {
 				if (image_alpha == 0) {
 					image_alpha = 1;
 				} else {
@@ -150,10 +151,19 @@ if (room == rm_select) {
 				blink_timer = 0;	
 			}
 		}
-		
-		if (invincible_timer == 128) {
-			is_invicible = false;
-			invincible_timer = 0;
+		if (is_drinking_invincibility_potion) {
+			if (invincible_timer >= 320 + irandom_range(0, 320)) {// between 5 and 10 secs
+				is_invicible = false;
+				is_drinking_invincibility_potion = false;
+				invincible_timer = 0;
+				image_alpha = 1;
+			}
+		} else {
+			if (invincible_timer >= 128) {
+				is_invicible = false;
+				invincible_timer = 0;
+				image_alpha = 1;// just to be sure he's visible again
+			}
 		}
 	}
 	
@@ -241,14 +251,71 @@ if (room == rm_select) {
 	
 	if (key_equipment_up) {
 		if (EquipmentSlot[0] != undefined) {
-			 if (EquipmentSlot[0] == EQUIPMENT_TYPE.POTION) {
-
+			 if (EquipmentSlot[0] == "potion_health") || (EquipmentSlot[0] == "potion_energy") || (EquipmentSlot[0] == "potion_invincibility") || (EquipmentSlot[0] == "potion_poison") {
 				Drink_Potion(EquipmentSlot[0]);
 			 }
 
 			EquipmentSlot[0] = undefined;
 			equipments_number -- ;
 		}
+	}
+	
+	if (key_equipment_right) {
+		show_debug_message("aaaa");
+		if (EquipmentSlot[1] != undefined) {
+			show_debug_message("EquipmentSlot[1]" + string(EquipmentSlot[1]));
+			 if (EquipmentSlot[1] == "potion_health") || (EquipmentSlot[1] == "potion_energy") || (EquipmentSlot[1] == "potion_invincibility") || (EquipmentSlot[1] == "potion_poison") {
+				Drink_Potion(EquipmentSlot[1]);
+			 }
+
+			EquipmentSlot[1] = undefined;
+			equipments_number -- ;
+		}
+	}
+	
+	if (key_equipment_down) {
+		if (EquipmentSlot[2] != undefined) {
+			 if (EquipmentSlot[1] == "potion_health") || (EquipmentSlot[2] == "potion_energy") || (EquipmentSlot[2] == "potion_invincibility") || (EquipmentSlot[2] == "potion_poison") {
+				Drink_Potion(EquipmentSlot[2]);
+			 }
+
+			EquipmentSlot[2] = undefined;
+			equipments_number -- ;
+		}
+	}
+	
+	if (key_equipment_left) {
+		if (EquipmentSlot[3] != undefined) {
+			 if (EquipmentSlot[3] == "potion_health") || (EquipmentSlot[3] == "potion_energy") || (EquipmentSlot[3] == "potion_invincibility") || (EquipmentSlot[3] == "potion_poison") {
+				Drink_Potion(EquipmentSlot[1]);
+			 }
+
+			EquipmentSlot[3] = undefined;
+			equipments_number -- ;
+		}
+	}
+	
+	if (is_drinking_health_potion) {
+		if (hp != hp_max) {
+			hp = hp + 0.5;
+			if (hp == hp_max) {
+				is_drinking_health_potion = false;
+			}
+		}
+	}
+	
+	if (is_drinking_energy_potion) {
+		if (energy != energy_max) {
+			energy = energy +5;
+			if (energy >= energy_max) {
+				energy = energy_max;
+				is_drinking_energy_potion = false;
+			}
+		}
+	}
+	
+	if (is_drinking_invincibility_potion) {
+		is_invicible = true;
 	}
 }
 

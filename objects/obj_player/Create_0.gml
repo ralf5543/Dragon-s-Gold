@@ -20,11 +20,11 @@ vsp = 0; // vertical speed
 grv = .4; // gravity
 walksp = 4; // walk speed
 
-hp = 50;// Life points
-hp_max = hp;
+hp_max = 50;
+hp = hp_max;// Life points
 
-energy = 250;// Energy points (used to run)
-energy_max = energy;
+energy_max = 250;// Energy points (used to run)
+energy = energy_max;
 
 sexe = undefined;
 
@@ -118,6 +118,9 @@ has_health_potion = 0;
 has_energy_potion = 0;
 has_invincibility_potion = 0;
 has_poison_potion = 0;
+is_drinking_health_potion = false;
+is_drinking_energy_potion = false;
+is_drinking_invincibility_potion = false;
 
 // ===================---------------- GUI
 gui_zoom = 0;
@@ -160,3 +163,4 @@ is_taking_stairs = false;
 has_taken_stairs = 0;
 stairs_direction = undefined;
 has_finished_stairs = false;
+

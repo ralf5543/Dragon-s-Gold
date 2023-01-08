@@ -2,16 +2,22 @@
 
 function Drink_Potion(argument){
 	switch (argument) {
-		case POTION_TYPE.HEALTH : 
+		case "potion_health" : 
 		has_health_potion --;
+		is_drinking_health_potion = true;
 		break;
-		case POTION_TYPE.ENERGY : 
+		
+		case "potion_energy" : 
 		has_energy_potion --;
+		is_drinking_energy_potion = true;
 		break;
-		case POTION_TYPE.INVINCIBILITY : 
+		
+		case "potion_invincibility" : 
 		has_invincibility_potion --;
+		is_drinking_invincibility_potion = true;
 		break;
-		case POTION_TYPE.POISON : 
+		
+		case "potion_poison" : 
 		has_poison_potion --;
 		break;
 	}
