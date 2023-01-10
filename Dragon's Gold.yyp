@@ -188,7 +188,7 @@
     {"id":{"name":"obj_hall_middle_A","path":"objects/obj_hall_middle_A/obj_hall_middle_A.yy",},"order":4,},
     {"id":{"name":"snd_hurt_female1","path":"sounds/snd_hurt_female1/snd_hurt_female1.yy",},"order":18,},
     {"id":{"name":"obj_blood","path":"objects/obj_blood/obj_blood.yy",},"order":7,},
-    {"id":{"name":"spr_dpad","path":"sprites/spr_dpad/spr_dpad.yy",},"order":12,},
+    {"id":{"name":"spr_dpad","path":"sprites/spr_dpad/spr_dpad.yy",},"order":6,},
     {"id":{"name":"snd_battlecry_male5","path":"sounds/snd_battlecry_male5/snd_battlecry_male5.yy",},"order":8,},
     {"id":{"name":"snd_battlecry_female3","path":"sounds/snd_battlecry_female3/snd_battlecry_female3.yy",},"order":15,},
     {"id":{"name":"snd_bump","path":"sounds/snd_bump/snd_bump.yy",},"order":0,},
@@ -284,6 +284,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"snd_shield.aiff","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.11.0.54",
+    "IDEVersion": "2022.9.1.51",
   },
 }

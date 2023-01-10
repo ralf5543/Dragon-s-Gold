@@ -127,6 +127,8 @@ can_drink = true;// drink sound
 // ===================---------------- GUI
 player_split_x = 0;//linked to the split screen position
 player_split_y = 0;
+player_split_width = 0;
+player_split_height = 0;
 gui_zoom = 0;
 gui_margin = 0;
 healthbar_x = 0;
