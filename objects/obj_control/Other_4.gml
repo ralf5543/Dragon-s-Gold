@@ -151,6 +151,7 @@ if (room == rm_game) {
 		skeleton_animation_mix("jump-down", "hurt", 0.3);
 		skeleton_animation_mix("dash", "stand", 0.3);
 		skeleton_animation_mix("dash", "run", 0.3);
+		skeleton_animation_mix("drink-potion", "stand", 0.3);
 		//skeleton_animation_mix("attack", "stand", 0.3);
 		//skeleton_animation_mix("stand", "attack", 0.3);
 		

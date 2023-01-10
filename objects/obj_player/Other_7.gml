@@ -57,6 +57,7 @@ if (skeleton_animation_get() == "drink-potion") {
 	
     state = PLAYERSTATE.FREE;
 	can_drink = true;
+	audio_play_sound(snd_potion_heal, 4, false);
 }
 
 //attack animation

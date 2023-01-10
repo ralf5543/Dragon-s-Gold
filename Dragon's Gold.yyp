@@ -107,6 +107,7 @@
     {"id":{"name":"snd_shield_hit","path":"sounds/snd_shield_hit/snd_shield_hit.yy",},"order":1,},
     {"id":{"name":"snd_hurt_male4","path":"sounds/snd_hurt_male4/snd_hurt_male4.yy",},"order":21,},
     {"id":{"name":"snd_battlecry_male1","path":"sounds/snd_battlecry_male1/snd_battlecry_male1.yy",},"order":12,},
+    {"id":{"name":"snd_potion_heal","path":"sounds/snd_potion_heal/snd_potion_heal.yy",},"order":16,},
     {"id":{"name":"spr_shield_strip4","path":"sprites/spr_shield_strip4/spr_shield_strip4.yy",},"order":3,},
     {"id":{"name":"PlayerState_Knight_Special","path":"scripts/PlayerState_Knight_Special/PlayerState_Knight_Special.yy",},"order":8,},
     {"id":{"name":"obj_hall_roof_D","path":"objects/obj_hall_roof_D/obj_hall_roof_D.yy",},"order":11,},
