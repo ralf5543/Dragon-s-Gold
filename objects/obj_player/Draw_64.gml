@@ -57,6 +57,7 @@ if (room  == rm_game) {
 		
 	dpad_margin_x = ((dpad_width / 2) + player_split_x) + gui_margin;
 	dpad_margin_y = ((player_split_y + player_split_height) - ((dpad_width / 2) + gui_margin));
+	
 	//======================------------------------ Equipment
 	draw_sprite_ext(spr_dpad, 0, dpad_margin_x, dpad_margin_y, gui_zoom, gui_zoom, 0, c_white, 0.5);
 		
@@ -101,26 +102,15 @@ if (room  == rm_game) {
 			break;	
 
 		}
-	}
-		
-			
+	}		
 		
 	for (var i = 0; i < array_length(EquipmentSlot); i++;) {
 		if (EquipmentSlot[i] != undefined) {
 			DisplayEquipment(i);
 		}
 	}
-
 	
-	//=================================----------------------------------- 1 player only
-	if (obj_control.start_players == 1) {
-		gui_zoom = 1;// make gui smaller for split screen
-		player_split_x = 0;
-		player_split_y = 0;
-		player_split_width = global.surface_width;
-		player_split_height = global.surface_height;
-			
-		//======----- keys
+	//======----- keys
 		if (has_bronze_key < 1) {
 			// semi opacity
 			draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 1, 1, 135, c_white, .4);
@@ -144,6 +134,15 @@ if (room  == rm_game) {
 			draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 1, 1, 135, c_white, 1);
 		}
 		draw_text(key_x + 32 + (key_spacer * 2), key_y, "x" + string(has_gold_key));
+
+	
+	//=================================----------------------------------- 1 player only
+	if (obj_control.start_players == 1) {
+		gui_zoom = 1;// make gui smaller for split screen
+		player_split_x = 0;
+		player_split_y = 0;
+		player_split_width = global.surface_width;
+		player_split_height = global.surface_height;
 		
 	
 	}
@@ -181,30 +180,30 @@ if (room  == rm_game) {
 			player_split_height = (global.surface_height / 2);
 				
 			//keys
-			if (has_bronze_key < 1) {
-				// semi opacity
-				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 0.8, 0.8, 135, c_white, .4);
-			} else {
-				draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 0.8, 0.8, 135, c_white, 1);
-			}
-			draw_text(key_x + 20, key_y, "x" + string(has_bronze_key));
+			//if (has_bronze_key < 1) {
+			//	// semi opacity
+			//	draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 0.8, 0.8, 135, c_white, .4);
+			//} else {
+			//	draw_sprite_ext(spr_brass_key, 0, key_x, key_y, 0.8, 0.8, 135, c_white, 1);
+			//}
+			//draw_text(key_x + 20, key_y, "x" + string(has_bronze_key));
 			
 			
-			if (has_silver_key < 1) {
-				// semi opacity
-				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 0.8, 0.8, 135, c_white, .4);
-			} else {
-				draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 0.8, 0.8, 135, c_white, 1);
-			}
-			draw_text(key_x + 20 + key_spacer, key_y, "x" + string(has_silver_key));
+			//if (has_silver_key < 1) {
+			//	// semi opacity
+			//	draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 0.8, 0.8, 135, c_white, .4);
+			//} else {
+			//	draw_sprite_ext(spr_silver_key, 0, key_x + key_spacer, key_y, 0.8, 0.8, 135, c_white, 1);
+			//}
+			//draw_text(key_x + 20 + key_spacer, key_y, "x" + string(has_silver_key));
 			
-			if (has_gold_key < 1) {
-				// semi opacity
-				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 0.8, 0.8, 135, c_white, .4);
-			} else {
-				draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 0.8, 0.8, 135, c_white, 1);
-			}
-			draw_text(key_x + 20 + (key_spacer * 2), key_y, "x" + string(has_gold_key));	
+			//if (has_gold_key < 1) {
+			//	// semi opacity
+			//	draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 0.8, 0.8, 135, c_white, .4);
+			//} else {
+			//	draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2), key_y, 0.8, 0.8, 135, c_white, 1);
+			//}
+			//draw_text(key_x + 20 + (key_spacer * 2), key_y, "x" + string(has_gold_key));	
 			
 			
 		
