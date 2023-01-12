@@ -143,7 +143,7 @@ key_x = 0;
 key_y = 0;
 key_spacer = 0;
 dpad_width = 0;
-
+fnt_size = 0;
 
 // ===================---------------- RANGER
 focus_bow = 0;
