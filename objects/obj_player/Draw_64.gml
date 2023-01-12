@@ -307,7 +307,7 @@ if (room  == rm_game) {
 			draw_set_font(fnt_10);
 			gui_zoom = .5;
 			player_split_x = 0;
-			player_split_y = (global.surface_width / 2);
+			player_split_y = (global.surface_height / 2);
 			player_split_width = (global.surface_width / 2);
 			player_split_height = (global.surface_height / 2);
 			
