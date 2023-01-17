@@ -26,7 +26,7 @@ function PlayerState_Attack(){
 			}
 		}
 		
-		if (energy > 0) && (key_run) {
+		if (energy > 0) && (key_run) && (character != "thief") {
 			// Start of the attack
 			if (skeleton_animation_get() != "dash") {
 				skeleton_animation_set("dash")
@@ -51,7 +51,9 @@ function PlayerState_Attack(){
 				skeleton_animation_set("attack")
 			}
 			
-			is_sliding = true;
+			if (character != "thief") {
+				is_sliding = true;
+			}
 						
 			
 			var inst = instance_create_layer(x, y - 60, "layer_players", obj_attack);
@@ -70,8 +72,10 @@ function PlayerState_Attack(){
 		can_attack = false;
 	}
 
-		if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 16) && (image_index < 38) {
-			state = PLAYERSTATE.COMBO1;
-		}
+	if (character != "thief") {
+			if (can_combo1) && (has_touched_ennemy1) && (key_attack) && (image_index > 16) && (image_index < 38) {
+				state = PLAYERSTATE.COMBO1;
+			}
+	}
 		
 }

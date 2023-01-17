@@ -7,7 +7,7 @@
     "path": "sprites/spr_null/spr_null.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
