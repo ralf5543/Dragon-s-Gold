@@ -121,6 +121,11 @@ if (selectClass_control) {
 			obj_control.wizard_ready_players ++
 			same_characters_number = obj_control.wizard_ready_players; 
 			break;
+			
+			case "thief" : 
+			obj_control.thief_ready_players ++
+			same_characters_number = obj_control.wizard_ready_players; 
+			break;
 		}
 		
 

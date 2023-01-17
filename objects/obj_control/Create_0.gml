@@ -21,5 +21,6 @@ ready_players = 0;// number of players who selected their character
 knight_ready_players = 0;// number of knights (to manage skins)
 ranger_ready_players = 0;// number of rangers
 wizard_ready_players = 0;// number of wizards
+thief_ready_players = 0;// number of thieves
 
 door_calculate = true //calculates door numbers only once
