@@ -274,11 +274,11 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Classes","folderPath":"folders/Sprites/players/Classes.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"knight","folderPath":"folders/Sprites/players/Classes/knight.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"ranger","folderPath":"folders/Sprites/players/Classes/ranger.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"thief","folderPath":"folders/Sprites/players/Classes/thief.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"wizard","folderPath":"folders/Sprites/players/Classes/wizard.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"select_screen","folderPath":"folders/Sprites/select_screen.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"start_screen","folderPath":"folders/Sprites/start_screen.yy","order":14,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy","order":8,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"thief","folderPath":"folders/Sprites/players/Classes/thief.yy","order":4,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
