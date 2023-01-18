@@ -78,6 +78,14 @@ is_invicible = false;
 invincible_timer = 0;
 blink_timer = 0;
 
+//======------- Equipment
+EquipmentSlot[3] = undefined;
+EquipmentSlot[2] = undefined;
+EquipmentSlot[1] = undefined;
+EquipmentSlot[0] = undefined;
+
+equipments_number = 0;
+
 // ===================---------------- GUI
 gui_zoom = 0;
 gui_margin = 0;

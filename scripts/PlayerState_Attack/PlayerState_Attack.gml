@@ -9,13 +9,18 @@ function PlayerState_Attack(){
 				
 		// 1 chance for 3 to cry
 		if (chance > 1) {
-			if (sexe == "male") {
+			if (character == "thief") {
+				audio_sound_pitch(snd_steal_try, choose(.8, 1, 1.2));
+				audio_play_sound(snd_steal_try, 6, false, 0.5);
+				
+			} else if (sexe == "male") {
 				audio_sound_pitch(snd_battlecry_male1, choose(.8, 1, 1.2));
 				audio_sound_pitch(snd_battlecry_male2, choose(.8, 1, 1.2));
 				audio_sound_pitch(snd_battlecry_male3, choose(.8, 1, 1.2));
 				audio_sound_pitch(snd_battlecry_male4, choose(.8, 1, 1.2));
 				audio_sound_pitch(snd_battlecry_male5, choose(.8, 1, 1.2));
 				audio_play_sound(choose(snd_battlecry_male1, snd_battlecry_male2, snd_battlecry_male3, snd_battlecry_male4, snd_battlecry_male5), 6, false, 0.5);
+				
 			} else {
 				audio_sound_pitch(snd_battlecry_female1, choose(.8, 1, 1.2));
 				audio_sound_pitch(snd_battlecry_female2, choose(.8, 1, 1.2));

@@ -35,7 +35,10 @@ if (!place_meeting(x, y, obj_shield) ) {
 						show_debug_message("T'as des trucs à voler !");
 						var chance = choose(0, 1);
 							show_debug_message("chance : " + string(chance));
-						if (chance == 1) {// steals something !
+						if (chance == 1) {// steals something !							
+							
+							audio_play_sound(snd_steal_success, 7, false);
+							
 							show_debug_message("Vol réussi !");
 							//if (other.has_bronze_key or other.has_silver_key or other.has_gold_key and other.equipments_number > 0) {
 								//var chance2 = choose(0, 1);

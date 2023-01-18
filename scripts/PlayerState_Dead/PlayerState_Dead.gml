@@ -44,10 +44,15 @@ function PlayerState_Dead(){
 	
 	if (skeleton_animation_get() != "dead") {
 		skeleton_animation_set("dead");	
-		if (sexe == "male") {
-			audio_play_sound(choose(snd_death_male1, snd_death_male2, snd_death_male3), 7, false);
+		
+		if (character == "thief") {
+			audio_play_sound(choose(snd_death_thief1, snd_death_thief2), 7, false);
 		} else {
-			audio_play_sound(choose(snd_death_female1, snd_death_female2, snd_death_female3), 7, false);
+			if (sexe == "male") {
+				audio_play_sound(choose(snd_death_male1, snd_death_male2, snd_death_male3), 7, false);
+			} else {
+				audio_play_sound(choose(snd_death_female1, snd_death_female2, snd_death_female3), 7, false);
+			}
 		}
 		
 		image_speed = 1;
