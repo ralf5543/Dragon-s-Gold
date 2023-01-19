@@ -23,18 +23,62 @@ if (!place_meeting(x, y, obj_shield) ) {
 				other.hp -= 10;
 			
 				AddBlood();
+				
 			} else {
+				// ======================------------------------- THIEF ONLY -------------------------======================
+				
 				//show_debug_message("tentative de vol")
 				//StealItem(other, obj_player);
 				
 				if (can_steal) {
+					
+					function StealBronzeKey() {
+						show_debug_message("Vol clé de bronze !");
+						other.has_bronze_key --;
+
+						with (obj_player) {
+			
+							if (gamepad_id_owner == other.attack_id_receiver) {
+								has_bronze_key ++;
+							}
+						}
+										
+					}
+					
+					function StealSilverKey() {
+						show_debug_message("Vol clé d'argent !");
+						other.has_silver_key --;
+
+						with (obj_player) {
+			
+							if (gamepad_id_owner == other.attack_id_receiver) {
+								has_silver_key ++;
+							}
+						}
+										
+					}
+					
+					function StealGoldKey() {
+						show_debug_message("Vol clé en or !");
+						other.has_gold_key --;
+
+						with (obj_player) {
+			
+							if (gamepad_id_owner == other.attack_id_receiver) {
+								has_gold_key ++;
+							}
+						}
+										
+					}
 					
 					can_steal = false;
 				
 					if (other.has_bronze_key or other.has_silver_key or other.has_gold_key or other.equipments_number > 0) {
 						show_debug_message("T'as des trucs à voler !");
 						var chance = choose(0, 1);
-							show_debug_message("chance : " + string(chance));
+						show_debug_message("chance : " + string(chance));
+						
+						
 						if (chance == 1) {// steals something !							
 							
 							audio_play_sound(snd_steal_success, 7, false);
@@ -44,65 +88,84 @@ if (!place_meeting(x, y, obj_shield) ) {
 								//var chance2 = choose(0, 1);
 				
 								//if (chance2 == 0) {// steals key !
-									//show_debug_message("Vol réussi !");
-									if (other.has_bronze_key and !other.has_silver_key and !other.has_gold_key) {
-										show_debug_message("Vol clé de bronze!");
-										other.has_bronze_key --;
-										//with(other.id == attack_id_receiver) {
-										//	other.has_bronze_key ++;
-										//}
-										with (obj_player) {
-			
-											if (gamepad_id_owner == other.attack_id_receiver) {
-												has_bronze_key ++;
-											}
-										}
-										//other.has_bronze_key ++;
-									} else if (!other.has_bronze_key and other.has_silver_key and !other.has_gold_key) {
-										show_debug_message("Vol clé d'argent!");
-										other.has_silver_key --;
-										//with(other.id == attack_id_receiver) {
-										//	other.has_silver_key ++;
-										//}
-										with (obj_player) {
-			
-											if (gamepad_id_owner == other.attack_id_receiver) {
-												has_silver_key ++;
-											}
-										}
-										//other.has_silver_key ++;
-									} else if (!other.has_bronze_key and !other.has_silver_key and other.has_gold_key) {
-										show_debug_message("Vol clé en or!");
-										other.has_gold_key --;
-										//with(other.id == attack_id_receiver) {
-										//	other.has_gold_key ++;
-										//}
-										with (obj_player) {
-			
-											if (gamepad_id_owner == other.attack_id_receiver) {
-												has_gold_key ++;
-											}
-										}
-										//other.has_gold_key ++;
-									}
+							// has bronze key(s) only
+							if (other.has_bronze_key and !other.has_silver_key and !other.has_gold_key) {
+								StealBronzeKey();
+										
+							// has silver key(s) only
+							} else if (!other.has_bronze_key and other.has_silver_key and !other.has_gold_key) {
+								StealSilverKey();
+
+							// has gold key(s) only
+							} else if (!other.has_bronze_key and !other.has_silver_key and other.has_gold_key) {
+								StealGoldKey();
+
+
+							// has bronze and silver key(s)
+							} else if (other.has_bronze_key and other.has_silver_key and !other.has_gold_key) {
+										
+								var chanceBS = choose(0, 1);
+										
+								if (chanceBS == 0) {
+									StealBronzeKey();
+								} else {
+									StealSilverKey();
 								}
+
+
+							// has bronze and gold key(s)
+							} else if (other.has_bronze_key and !other.has_silver_key and other.has_gold_key) {
+										
+								var chanceBG = choose(0, 1);
+										
+								if (chanceBG == 0) {
+									StealBronzeKey();
+								} else {
+									StealGoldKey();
+								}
+
+							// has silver and gold key(s)
+							} else if (!other.has_bronze_key and other.has_silver_key and other.has_gold_key) {
+										
+								var chanceSG = choose(0, 1);
+										
+								if (chanceSG == 0) {
+									StealSilverKey();
+								} else {
+									StealGoldKey();
+								}										
+							
+							
+							// has all types of key(s)
+							} else if (other.has_bronze_key and other.has_silver_key and other.has_gold_key) {
+										
+								var chanceBSG = choose(0, 1, 2);
+										
+								if (chanceBSG == 0) {
+									StealBronzeKey();
+								} else if (chanceBSG == 1) {
+									StealSilverKey();
+								} else {
+									StealGoldKey();
+								}
+										
 							}
-						else {
-						show_debug_message("Vol raté...");
 						}
+					}
 					
+				} else {
+					show_debug_message("Vol raté...");
 				}
+					
+			}
 					
 				//} else {
 				//	show_debug_message("ah zut, t'avais rien...")
 				//}
 				
 				
-				
-
-				
-				
-			}
+		
+			
 		}
 
 //======================================------------------ COMBO LAUNCHING

@@ -140,3 +140,10 @@ if (skeleton_animation_get() == "dead") {
 	image_index = num -1;
 	image_speed = 0;
 }
+
+//thief rolling animation
+if (skeleton_animation_get() == "rolling") {
+    state = PLAYERSTATE.FREE;
+	can_play_roll = true;
+	rolling_distance = 5;
+}

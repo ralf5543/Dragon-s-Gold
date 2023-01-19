@@ -153,6 +153,10 @@ focus_fireball = 0;
 can_sound_cast = true;
 can_cast = true;
 
+// ===================---------------- THIEF
+can_play_roll = true;
+rolling_distance = 5;
+
 // ===================---------------- DOORS MANAGEMENT
 can_cross_doors = true;
 is_crossing_door = false;

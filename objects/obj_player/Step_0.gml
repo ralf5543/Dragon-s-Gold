@@ -204,14 +204,23 @@ if (room == rm_select) {
 		break;
 		
 		case PLAYERSTATE.SPECIAL : 
-		if (character == "ranger") {
-			PlayerState_Ranger_Special();
-			
-		} else if (character == "knight") {
+		switch (character) {
+			case "knight" :
 			PlayerState_Knight_Special();
+			break;
 			
-		} else if (character == "wizard") {
+			case "ranger" :
+			PlayerState_Ranger_Special();
+			break;
+			
+			case "wizard" :
 			PlayerState_Wizard_Special();
+			break;
+			
+			case "thief" :
+			PlayerState_Thief_Special();
+			break;
+			
 		}
 		break;
 		
