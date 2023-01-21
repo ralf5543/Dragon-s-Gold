@@ -72,49 +72,113 @@ if (!place_meeting(x, y, obj_shield) ) {
 					}
 					
 					function StealItems() {
-						//if enough place in inventory
-						with (obj_player) {
-							if (equipments_number < array_length(EquipmentSlot)) {
+						function addPotionsToThiefInventory(argument) {
+											with (obj_player) {
+												if (equipments_number < array_length(EquipmentSlot)) {
+													if (argument == "potion_health") {
+														if (EquipmentSlot[0] == undefined) {
+															EquipmentSlot[0] = "potion_health";
+														} else if (EquipmentSlot[1] == undefined) {
+															EquipmentSlot[1] = "potion_health";
+														} else if (EquipmentSlot[2] == undefined) {
+															EquipmentSlot[2] = "potion_health";
+														} else {
+															EquipmentSlot[3] = "potion_health";
+														}
+													} else if (argument == "potion_energy") {
+														if (EquipmentSlot[0] == undefined) {
+															EquipmentSlot[0] = "potion_energy";
+														} else if (EquipmentSlot[1] == undefined) {
+															EquipmentSlot[1] = "potion_energy";
+														} else if (EquipmentSlot[2] == undefined) {
+															EquipmentSlot[2] = "potion_energy";
+														} else {
+															EquipmentSlot[3] = "potion_energy";
+														}
+														
+													} else if (argument == "potion_invincibility") {
+														if (EquipmentSlot[0] == undefined) {
+															EquipmentSlot[0] = "potion_invincibility";
+														} else if (EquipmentSlot[1] == undefined) {
+															EquipmentSlot[1] = "potion_invincibility";
+														} else if (EquipmentSlot[2] == undefined) {
+															EquipmentSlot[2] = "potion_invincibility";
+														} else {
+															EquipmentSlot[3] = "potion_invincibility";
+														}
+														
+													}
+												}
+												show_debug_message("Me voilà en possession de ta potion de" + string(argument));
+											}
+											}
+							
+							
 								var chanceItems = choose(0, 1, 2, 3);
 								
 								switch (chanceItems) {
-						
-							    case 0 :
-								    if (EquipmentSlot[0] != undefined) {
-										show_debug_message("haha, je t'ai piqué ton objet 0");
-									} else {
-										StealItems();
-									}
-									break;  																
-						
-							    case 1 :
-								    if (EquipmentSlot[1] != undefined) {
-										show_debug_message("haha, je t'ai piqué ton objet 1");
-									} else {
-										StealItems();
-									}
-									break;  
 							
 						
-							    case 2 :
-								    if (EquipmentSlot[2] != undefined) {
-										show_debug_message("haha, je t'ai piqué ton objet 2");
-									} else {
-										StealItems();
-									}
-									break;  
+								    case 0 :
+									    if (other.EquipmentSlot[0] != undefined) {
+											//var toto = other.EquipmentSlot[0];
+											show_debug_message("haha, je t'ai viré ton objet 1 : " + string(other.EquipmentSlot[0]));
+											
+											addPotionsToThiefInventory(other.EquipmentSlot[0]);
+											
+											
+											other.EquipmentSlot[0] = undefined;
+											
+										} else {
+											StealItems();
+										}
+										break;  																
+						
+								    case 1 :
+									    if (other.EquipmentSlot[1] != undefined) {
+											//var toto = other.EquipmentSlot[0];
+											show_debug_message("haha, je t'ai viré ton objet 1 : " + string(other.EquipmentSlot[1]));
+											
+											addPotionsToThiefInventory(other.EquipmentSlot[1]);
+											
+											
+											other.EquipmentSlot[1] = undefined;
+	
+										} else {
+											StealItems();
+										}
+										break;  
+							
+						
+								    case 2 :
+									    if (other.EquipmentSlot[2] != undefined) {
+											//var toto = other.EquipmentSlot[0];
+											show_debug_message("haha, je t'ai viré ton objet 2 : " + string(other.EquipmentSlot[2]));
+											
+											addPotionsToThiefInventory(other.EquipmentSlot[2]);
+											
+											other.EquipmentSlot[2] = undefined;
+										} else {
+											StealItems();
+										}
+										break;  
 																	
 						
-							    case 3 :
-								    if (EquipmentSlot[3] != undefined) {
-										show_debug_message("haha, je t'ai piqué ton objet 3");
-									} else {
-										StealItems();
-									}
-									break;  									
+								    case 3 :
+									    if (other.EquipmentSlot[3] != undefined) {
+											//var toto = other.EquipmentSlot[3];
+											show_debug_message("haha, je t'ai viré ton objet 3 : " + string(other.EquipmentSlot[3]));
+											
+											addPotionsToThiefInventory(other.EquipmentSlot[3]);
+											
+											other.EquipmentSlot[3] = undefined;
+										} else {
+											StealItems();
+										}
+										break;  									
 								}
-							}
-						}
+							//}
+						//}
 					}
 					
 					function StealKeys() {
@@ -184,6 +248,11 @@ if (!place_meeting(x, y, obj_shield) ) {
 					}
 					
 					can_steal = false;
+					
+					show_debug_message("other.has_bronze_key" + string(other.has_bronze_key));
+					show_debug_message("other.has_silver_key" + string(other.has_silver_key));
+					show_debug_message("other.has_gold_key" + string(other.has_gold_key));
+					show_debug_message("other.equipments_number" + string(other.equipments_number));
 				
 					if (other.has_bronze_key or other.has_silver_key or other.has_gold_key or other.equipments_number > 0) {
 						show_debug_message("T'as des trucs à voler !");
@@ -196,17 +265,12 @@ if (!place_meeting(x, y, obj_shield) ) {
 							audio_play_sound(snd_steal_success, 7, false);
 							
 							show_debug_message("Vol réussi !");
-							//if (other.has_bronze_key or other.has_silver_key or other.has_gold_key and other.equipments_number > 0) {
-								//var chance2 = choose(0, 1);
-				
-								//if (chance2 == 0) {// steals key !
-							// has bronze key(s) only
 							
 							
-							if (other.has_bronze_key or other.has_silver_key or other.has_gold_key and other.equipments_number == 0) {
+							if (other.has_bronze_key or other.has_silver_key or other.has_gold_key) and (other.equipments_number == 0) {
 								show_debug_message("Tu n'as point de potion, mais tu as des clés !!!");
 								StealKeys();
-							} else if (!other.has_bronze_key or !other.has_silver_key or !other.has_gold_key and other.equipments_number > 0) {
+							} else if (!other.has_bronze_key and !other.has_silver_key and !other.has_gold_key) and (other.equipments_number > 0) {
 								show_debug_message("Tu n'as point de clés, mais tu as des items !!!");
 								StealItems();
 							} else {
