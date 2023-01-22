@@ -5,9 +5,9 @@ if (room == rm_game) {
 
 	//list of all castle roof rooms objets, used or not
 	halls_roof_list = ds_list_create();
-	ds_list_add(halls_roof_list, obj_hall_roof_A);
-	ds_list_add(halls_roof_list, obj_hall_roof_B);
-	ds_list_add(halls_roof_list, obj_hall_roof_C);
+	ds_list_add(halls_roof_list, obj_hall_laboratory);
+	ds_list_add(halls_roof_list, obj_hall_bastions);
+	ds_list_add(halls_roof_list, obj_hall_torture);
 	ds_list_add(halls_roof_list, obj_hall_roof_D);
 
 	//list of all castle middle rooms objets, used or not

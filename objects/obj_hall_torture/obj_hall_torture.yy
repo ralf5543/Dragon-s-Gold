@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_hall_roof_C",
+  "name": "obj_hall_torture",
   "spriteId": null,
   "solid": false,
   "visible": true,

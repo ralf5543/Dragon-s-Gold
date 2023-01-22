@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_hall_roof_B",
+  "name": "obj_hall_laboratory",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "halls",
-    "path": "folders/Objects/level_design/halls.yy",
+    "name": "roof",
+    "path": "folders/Objects/level_design/halls/roof.yy",
   },
 }
