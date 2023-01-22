@@ -8,7 +8,7 @@ function PlayerState_Thief_Special(){
 		}
 		if (can_play_roll) {
 			audio_play_sound(snd_roll, 6, false);
-			//energy = energy - 50;
+			energy = energy - 50;
 		}
 		can_play_roll = false;
 		

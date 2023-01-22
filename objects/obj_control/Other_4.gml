@@ -176,15 +176,15 @@ if (room == rm_game) {
 			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 128;
 			y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 33;
 
-		//} else if (pad_num == 1) {
-		//	x = room_width - 128;
-		//	y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y + 33;
-		//	facing = -1;
+		} else if (pad_num == 1) {
+			x = room_width - 128;
+			y = ds_list_find_value(other.halls_ground_list, ds_list_size(other.halls_ground_list) -1).hall_y + 33;
+			facing = -1;
 			
-			 //debugging second player position
-			} else if (pad_num == 1) {
-			x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 360;
-			y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
+			// //debugging second player position
+			//} else if (pad_num == 1) {
+			//x = ds_list_find_value(other.halls_roof_list, 0).hall_x + 360;
+			//y = ds_list_find_value(other.halls_roof_list, 0).hall_y + 32;
 
 		} else if (pad_num == 2) {
 			x = room_width - 128;;

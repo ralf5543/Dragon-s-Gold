@@ -73,112 +73,109 @@ if (!place_meeting(x, y, obj_shield) ) {
 					
 					function StealItems() {
 						function addPotionsToThiefInventory(argument) {
-											with (obj_player) {
-												if (equipments_number < array_length(EquipmentSlot)) {
-													if (argument == "potion_health") {
-														if (EquipmentSlot[0] == undefined) {
-															EquipmentSlot[0] = "potion_health";
-														} else if (EquipmentSlot[1] == undefined) {
-															EquipmentSlot[1] = "potion_health";
-														} else if (EquipmentSlot[2] == undefined) {
-															EquipmentSlot[2] = "potion_health";
-														} else {
-															EquipmentSlot[3] = "potion_health";
-														}
-													} else if (argument == "potion_energy") {
-														if (EquipmentSlot[0] == undefined) {
-															EquipmentSlot[0] = "potion_energy";
-														} else if (EquipmentSlot[1] == undefined) {
-															EquipmentSlot[1] = "potion_energy";
-														} else if (EquipmentSlot[2] == undefined) {
-															EquipmentSlot[2] = "potion_energy";
-														} else {
-															EquipmentSlot[3] = "potion_energy";
-														}
+							with (obj_player) {
+								if (equipments_number < array_length(EquipmentSlot)) and (gamepad_id_owner == other.attack_id_receiver) {
+									if (argument == "potion_health") {
+										if (EquipmentSlot[0] == undefined) {
+											EquipmentSlot[0] = "potion_health";
+										} else if (EquipmentSlot[1] == undefined) {
+											EquipmentSlot[1] = "potion_health";
+										} else if (EquipmentSlot[2] == undefined) {
+											EquipmentSlot[2] = "potion_health";
+										} else {
+											EquipmentSlot[3] = "potion_health";
+										}
+									} else if (argument == "potion_energy") {
+										if (EquipmentSlot[0] == undefined) {
+											EquipmentSlot[0] = "potion_energy";
+										} else if (EquipmentSlot[1] == undefined) {
+											EquipmentSlot[1] = "potion_energy";
+										} else if (EquipmentSlot[2] == undefined) {
+											EquipmentSlot[2] = "potion_energy";
+										} else {
+											EquipmentSlot[3] = "potion_energy";
+										}
 														
-													} else if (argument == "potion_invincibility") {
-														if (EquipmentSlot[0] == undefined) {
-															EquipmentSlot[0] = "potion_invincibility";
-														} else if (EquipmentSlot[1] == undefined) {
-															EquipmentSlot[1] = "potion_invincibility";
-														} else if (EquipmentSlot[2] == undefined) {
-															EquipmentSlot[2] = "potion_invincibility";
-														} else {
-															EquipmentSlot[3] = "potion_invincibility";
-														}
+									} else if (argument == "potion_invincibility") {
+										if (EquipmentSlot[0] == undefined) {
+											EquipmentSlot[0] = "potion_invincibility";
+										} else if (EquipmentSlot[1] == undefined) {
+											EquipmentSlot[1] = "potion_invincibility";
+										} else if (EquipmentSlot[2] == undefined) {
+											EquipmentSlot[2] = "potion_invincibility";
+										} else {
+											EquipmentSlot[3] = "potion_invincibility";
+										}
 														
-													}
-												}
-												show_debug_message("Me voilà en possession de ta potion de" + string(argument));
-											}
-											}
+									}
+									equipments_number ++;
+								}
+								show_debug_message("Me voilà en possession de ta potion de" + string(argument));
+							}
+						}
 							
 							
-								var chanceItems = choose(0, 1, 2, 3);
+						var chanceItems = choose(0, 1, 2, 3);
 								
-								switch (chanceItems) {
-							
+						switch (chanceItems) {					
 						
-								    case 0 :
-									    if (other.EquipmentSlot[0] != undefined) {
-											//var toto = other.EquipmentSlot[0];
-											show_debug_message("haha, je t'ai viré ton objet 1 : " + string(other.EquipmentSlot[0]));
+							case 0 :
+								if (other.EquipmentSlot[0] != undefined) {
+									show_debug_message("haha, je t'ai viré ton objet 1 : " + string(other.EquipmentSlot[0]));
 											
-											addPotionsToThiefInventory(other.EquipmentSlot[0]);
+									addPotionsToThiefInventory(other.EquipmentSlot[0]);	
 											
+									other.EquipmentSlot[0] = undefined;
+									other.equipments_number -- ;
 											
-											other.EquipmentSlot[0] = undefined;
-											
-										} else {
-											StealItems();
-										}
-										break;  																
+								} else {
+									StealItems();
+								}
+								break;  																
 						
-								    case 1 :
-									    if (other.EquipmentSlot[1] != undefined) {
-											//var toto = other.EquipmentSlot[0];
-											show_debug_message("haha, je t'ai viré ton objet 1 : " + string(other.EquipmentSlot[1]));
+							case 1 :
+								if (other.EquipmentSlot[1] != undefined) {
+									show_debug_message("haha, je t'ai viré ton objet 1 : " + string(other.EquipmentSlot[1]));
 											
-											addPotionsToThiefInventory(other.EquipmentSlot[1]);
+									addPotionsToThiefInventory(other.EquipmentSlot[1]);	
 											
-											
-											other.EquipmentSlot[1] = undefined;
+									other.EquipmentSlot[1] = undefined;
+									other.equipments_number -- ;
 	
-										} else {
-											StealItems();
-										}
-										break;  
+								} else {
+									StealItems();
+								}
+								break;  
 							
 						
-								    case 2 :
-									    if (other.EquipmentSlot[2] != undefined) {
-											//var toto = other.EquipmentSlot[0];
-											show_debug_message("haha, je t'ai viré ton objet 2 : " + string(other.EquipmentSlot[2]));
+							case 2 :
+								if (other.EquipmentSlot[2] != undefined) {
+									show_debug_message("haha, je t'ai viré ton objet 2 : " + string(other.EquipmentSlot[2]));
 											
-											addPotionsToThiefInventory(other.EquipmentSlot[2]);
+									addPotionsToThiefInventory(other.EquipmentSlot[2]);
 											
-											other.EquipmentSlot[2] = undefined;
-										} else {
-											StealItems();
-										}
-										break;  
+									other.EquipmentSlot[2] = undefined;
+									other.equipments_number -- ;
+								} else {
+									StealItems();
+								}
+								break;  
 																	
 						
-								    case 3 :
-									    if (other.EquipmentSlot[3] != undefined) {
-											//var toto = other.EquipmentSlot[3];
-											show_debug_message("haha, je t'ai viré ton objet 3 : " + string(other.EquipmentSlot[3]));
+							case 3 :
+								if (other.EquipmentSlot[3] != undefined) {
+									show_debug_message("haha, je t'ai viré ton objet 3 : " + string(other.EquipmentSlot[3]));
 											
-											addPotionsToThiefInventory(other.EquipmentSlot[3]);
+									addPotionsToThiefInventory(other.EquipmentSlot[3]);
 											
-											other.EquipmentSlot[3] = undefined;
-										} else {
-											StealItems();
-										}
-										break;  									
+									other.EquipmentSlot[3] = undefined;
+									other.equipments_number -- ;
+								} else {
+									StealItems();
 								}
-							//}
-						//}
+								break;  									
+						}
+
 					}
 					
 					function StealKeys() {
@@ -256,9 +253,9 @@ if (!place_meeting(x, y, obj_shield) ) {
 				
 					if (other.has_bronze_key or other.has_silver_key or other.has_gold_key or other.equipments_number > 0) {
 						show_debug_message("T'as des trucs à voler !");
-						var chance = choose(0, 1);
+						//var chance = choose(0, 1);
+						var chance = choose(1); // Actually 100% chances to steal
 						show_debug_message("chance : " + string(chance));
-						
 						
 						if (chance == 1) {// steals something !							
 							

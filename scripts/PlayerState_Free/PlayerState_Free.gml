@@ -24,7 +24,7 @@ function PlayerState_Free(){
 	var move = key_right - key_left; // because true = 1 and false = -1
 	if (key_run) && (energy > 0) {
 		walksp = 8;
-		//energy --;
+		energy --;
 
 	} else {
 		walksp = 4;
@@ -37,7 +37,7 @@ function PlayerState_Free(){
 	// if detects a collision with wall 1px bellow it (so, if it's on the floor !)
 	//AND jump button is pressed
 	if (place_meeting(x, y + 1, obj_wall)) && (key_jump) && (energy > 50) {
-		//energy = energy - 50;
+		energy = energy - 50;
 		//jump higher if running
 		if (key_run) && (energy > 0) {vsp = -10;} else {vsp = -8;}
 	};
