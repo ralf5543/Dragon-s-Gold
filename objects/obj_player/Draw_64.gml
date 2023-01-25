@@ -133,6 +133,18 @@ if (room  == rm_game) {
 			draw_sprite_ext(spr_golden_key, 0, key_x + (key_spacer * 2) + player_split_x, key_y + player_split_y, gui_zoom, gui_zoom, 135, c_white, 1);
 		}
 		draw_text(key_x + (key_spacer * 2) + player_split_x, key_y + player_split_y + (32 * gui_zoom), "x" + string(has_gold_key));
+		
+		if (key_win_bronze) {
+			draw_sprite_ext(spr_check, 0, key_x + player_split_x, key_y + player_split_y, gui_zoom, gui_zoom, 0, c_white, 1);
+		}
+		
+		if (key_win_silver) {
+			draw_sprite_ext(spr_check, 0, key_x + key_spacer + player_split_x, key_y + player_split_y, gui_zoom, gui_zoom, 0, c_white, 1);
+		}
+		
+		if (key_win_gold) {
+			draw_sprite_ext(spr_check, 0, key_x + (key_spacer * 2) + player_split_x, key_y + player_split_y, gui_zoom, gui_zoom, 0, c_white, 1);
+		}
 
 	
 	//=================================----------------------------------- 1 player only
