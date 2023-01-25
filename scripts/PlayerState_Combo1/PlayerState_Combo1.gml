@@ -38,10 +38,19 @@ function PlayerState_Combo1(){
 			is_sliding = false;
 		}
 	}
-	
-		
-	if (can_combo2) && (has_touched_ennemy2) && (key_attack) && (image_index > 16) && (image_index < 38) {
-		state = PLAYERSTATE.COMBO2;
+	var num = skeleton_animation_get_frames(skeleton_animation_get());
+	if (character == "knight") {
+		if (can_combo2) && (has_touched_ennemy2) && (key_attack) && (image_index > (num - 5)) && (image_index < (num)) {
+			state = PLAYERSTATE.COMBO2;
+		}
+	} else if (character == "ranger") {
+		if (can_combo2) && (has_touched_ennemy2) && (key_attack) && (image_index > (num - 50)) && (image_index < (num)) {
+			state = PLAYERSTATE.COMBO2;
+		}
+	} else if (character == "wizard") {
+		if (can_combo2) && (has_touched_ennemy2) && (key_attack) && (image_index > (num - 25)) && (image_index < (num)) {
+			state = PLAYERSTATE.COMBO2;
+		}
 	}
 	
 	has_touched_ennemy1 = false;
