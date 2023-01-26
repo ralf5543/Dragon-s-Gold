@@ -45,7 +45,8 @@ enum PLAYERSTATE {
 	LOSE,
 	CROSSINGDDOOR,
 	TAKINGSTAIRS,
-	DRINKINGPOTION
+	DRINKINGPOTION,
+	LOCKPICKING // Thief only
 }
 
 // because with combos, "state" get a number, not a FREEPLAYERSTATE. Dunno why...
@@ -101,6 +102,7 @@ has_bronze_key = 0;
 key_win_bronze = false;
 key_win_silver = false;
 key_win_gold = false;
+chest_keys_missing = 3;
 
 is_invicible = false;
 invincible_timer = 0;
@@ -156,6 +158,8 @@ can_cast = true;
 // ===================---------------- THIEF
 can_play_roll = true;
 rolling_distance = 5;
+focus_lockpick = 0;
+can_lockpick = true;
 
 // ===================---------------- DOORS MANAGEMENT
 can_cross_doors = true;

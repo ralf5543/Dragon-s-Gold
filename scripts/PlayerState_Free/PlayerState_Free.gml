@@ -19,6 +19,8 @@ function PlayerState_Free(){
 	is_hurt = false;
 	can_take_stairs = true;
 	is_taking_stairs = false;
+	focus_lockpick = 0;
+	can_lockpick = true;
 	
 //=======---------- Calculate movements
 	var move = key_right - key_left; // because true = 1 and false = -1

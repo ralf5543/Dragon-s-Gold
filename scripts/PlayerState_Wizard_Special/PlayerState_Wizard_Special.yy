@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player states",
-    "path": "folders/Scripts/Player states.yy",
+    "name": "wizard",
+    "path": "folders/Scripts/Player states/wizard.yy",
   },
 }

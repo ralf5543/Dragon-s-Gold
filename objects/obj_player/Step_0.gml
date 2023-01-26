@@ -23,6 +23,7 @@ key_attack = gamepad_button_check_pressed(pad_num, gp_face3);// X (blue) button
 key_special = gamepad_button_check_pressed(pad_num, gp_face2);// B (red) button
 key_special_released = gamepad_button_check_released(pad_num, gp_face2);// B (red) button
 key_action = gamepad_button_check_pressed(pad_num, gp_face4);// Y (yellow) button
+key_action_released = gamepad_button_check_released(pad_num, gp_face4);// Y (yellow) button
 key_start = gamepad_button_check_pressed(pad_num, gp_start);
 
 key_equipment_up = gamepad_button_check_pressed(pad_num, gp_padu);
@@ -203,6 +204,10 @@ if (room == rm_select) {
 		PlayerState_Combo2();
 		break;
 		
+		case PLAYERSTATE.LOCKPICKING : 
+		PlayerState_Lockpicking();
+		break;
+		
 		case PLAYERSTATE.SPECIAL : 
 		switch (character) {
 			case "knight" :
@@ -310,8 +315,17 @@ if (room == rm_select) {
 		}
 	}
 	
-	function isDrinkingHealthPotion() {
+	if (character == "thief") {
 		
+		if (key_action_released) {
+			state = PLAYERSTATE.FREE;
+			
+			with (obj_lockpick_bar) {
+				if (lockpick_id_receiver == other.gamepad_id_owner) {
+					instance_destroy();
+				}
+			}
+		}
 	}
 	
 }
