@@ -168,8 +168,7 @@ if (room == rm_select) {
 		}
 	}
 	
-	// Condition to win : 3 different keys in the chest
-	if (key_win_bronze) && (key_win_silver) && (key_win_gold) {
+	function Win() {
 		state = PLAYERSTATE.WON;
 		
 		with (obj_player) {
@@ -177,6 +176,11 @@ if (room == rm_select) {
 				state = PLAYERSTATE.LOSE;
 			}
 		}
+	}
+	
+	// Condition to win : 3 different keys in the chest
+	if (key_win_bronze) && (key_win_silver) && (key_win_gold) {
+		Win();
 	}	
 
 	switch (state) {
@@ -205,7 +209,7 @@ if (room == rm_select) {
 		break;
 		
 		case PLAYERSTATE.LOCKPICKING : 
-		PlayerState_Lockpicking();
+		PlayerState_Lockpicking(argument0, argument1);
 		break;
 		
 		case PLAYERSTATE.SPECIAL : 

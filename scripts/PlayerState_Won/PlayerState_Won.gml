@@ -1,5 +1,6 @@
 
 function PlayerState_Won(){
+	show_debug_message("allez, gagné !")
 
 	can_attack = false;
 	

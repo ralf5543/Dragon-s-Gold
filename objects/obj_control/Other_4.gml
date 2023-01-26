@@ -75,7 +75,7 @@ if (room == rm_game) {
 	
 
 	//==================-------------- Create treasure chest at random position
-	var chest = instance_create_layer(0, 0, "front_objects", obj_chest);
+	var chest = instance_create_layer(0, -96, "back_decorations", obj_chest);
 	Random_Position(chest);
 
 
@@ -119,7 +119,7 @@ if (room == rm_game) {
 	
 	
 	//temp debugingg object
-	instance_create_layer(ds_list_find_value(other.halls_roof_list, 0).hall_x + 800, ds_list_find_value(other.halls_roof_list, 0).hall_y - 200, "sandbag", obj_sandbag);
+	//instance_create_layer(ds_list_find_value(other.halls_roof_list, 0).hall_x + 800, ds_list_find_value(other.halls_roof_list, 0).hall_y - 200, "sandbag", obj_sandbag);
 	
 	
 

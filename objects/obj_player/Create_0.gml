@@ -160,6 +160,8 @@ can_play_roll = true;
 rolling_distance = 5;
 focus_lockpick = 0;
 can_lockpick = true;
+object_lockpicked = undefined;
+has_unlocked = false;
 
 // ===================---------------- DOORS MANAGEMENT
 can_cross_doors = true;

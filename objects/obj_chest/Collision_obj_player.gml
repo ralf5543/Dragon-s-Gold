@@ -33,8 +33,14 @@ with (other) {
 	
 	if (character == "thief") {
 		if (key_action) {
-			state = PLAYERSTATE.LOCKPICKING;
-			
+			if (focus_lockpick < sprite_get_width(spr_lockpick_bar)) {
+				state = PLAYERSTATE.LOCKPICKING;
+				object_lockpicked = "chest";
+			}			
+		}
+		
+		if (has_unlocked) {
+			Win();
 		}
 	}
 }

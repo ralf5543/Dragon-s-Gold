@@ -1,8 +1,8 @@
 
 
 function Random_Position(new_item){
-	//var choose_floor = choose("roof", "middle", "ground");
-	var choose_floor = choose("roof");
+	var choose_floor = choose("roof", "middle", "ground");
+	//var choose_floor = choose("roof");
 		
 	switch (choose_floor) {
 		case "roof":
