@@ -1,0 +1,22 @@
+{
+"skeleton": { "hash": "8Q9+0cGlzAg", "spine": "4.0-from-4.1.19", "x": -233.98, "y": -11.97, "width": 476, "height": 390 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "desktop", "bone": "root", "attachment": "desktop" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"desktop": {
+				"desktop": { "path": "images/desktop.png", "x": 4.02, "y": 183.03, "width": 476, "height": 390 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {}
+}
+}

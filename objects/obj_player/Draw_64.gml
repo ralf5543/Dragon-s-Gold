@@ -80,22 +80,22 @@ if (room  == rm_game) {
 				
 			//switch(EquipmentSlot[argument0].potion_type) {
 			case "potion_health" : 
-			draw_sprite_ext(spr_potion, 0, pos_x, pos_y, 1.5 * gui_zoom, 1.5 * gui_zoom, 0, c_white, 1);
+			draw_sprite_ext(spr_potion, 0, pos_x, pos_y, 0.25 * gui_zoom, 0.25 * gui_zoom, 0, c_white, 1);
 			//show_debug_message("heakth")
 			break;	
 	
 			case "potion_energy" : 
-			draw_sprite_ext(spr_potion, 1, pos_x, pos_y, 1.5 * gui_zoom, 1.5 * gui_zoom, 0, c_white, 1);
+			draw_sprite_ext(spr_potion, 1, pos_x, pos_y, 0.25 * gui_zoom, 0.25 * gui_zoom, 0, c_white, 1);
 			//show_debug_message("energy")
 			break;	
 	
 			case "potion_invincibility" : 
-			draw_sprite_ext(spr_potion, 2, pos_x, pos_y, 1.5 * gui_zoom, 1.5 * gui_zoom, 0, c_white, 1);
+			draw_sprite_ext(spr_potion, 2, pos_x, pos_y, 0.25 * gui_zoom, 0.25 * gui_zoom, 0, c_white, 1);
 			//show_debug_message("invicinbility")
 			break;	
 	
 			case "potion_poison" : 
-			draw_sprite_ext(spr_potion, 3, pos_x, pos_y, 1.5 * gui_zoom, 1.5 * gui_zoom, 0, c_white, 1);
+			draw_sprite_ext(spr_potion, 3, pos_x, pos_y, 0.25 * gui_zoom, 0.25 * gui_zoom, 0, c_white, 1);
 			//show_debug_message("poison")
 			break;	
 

@@ -28,6 +28,8 @@ y = ystart + sin(get_timer() / 500000) * 5;
 switch (type) {
 	case EQUIPMENT_TYPE.POTION : 
 	sprite_index = spr_potion;
+	image_xscale = 0.2;
+	image_yscale = 0.2;
 	break;
 }
 

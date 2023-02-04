@@ -1,0 +1,11 @@
+cauldron.png
+size:324,298
+filter:Linear,Linear
+pma:true
+bubble
+bounds:304,252,44,18
+offsets:1,1,46,20
+rotate:90
+cauldron
+bounds:2,2,300,294
+offsets:1,1,302,296
