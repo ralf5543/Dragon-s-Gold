@@ -83,16 +83,28 @@ if (room == rm_game) {
 	Random_Position(chest, 16);
 	
 	//==================-------------- TORCHS
-	for (var i = 0; i < 30; i ++) {
-		var torch = instance_create_layer(0, 0, "back_objects", obj_torch);
-		Random_Position(torch, -60);
-		with (torch) {
-			image_xscale = 1;
-			image_yscale = 1;	
+	
+	function PlaceTorchs(argument0, argument1) {
+		//argument0 = floor;
+		//argument1 = hall number;
+		for (var i = 0; i < 3; i ++) {
+			var torch = instance_create_layer(0, 0, "back_objects", obj_torch);
+			with (torch) {
+				x = ds_list_find_value(argument0, argument1).hall_x + 240 + (800 * i);
+				y = ds_list_find_value(argument0, argument1).hall_y - 60;
+			}
 		}
-		
 	}
 
+	PlaceTorchs(other.halls_roof_list, 0);
+	PlaceTorchs(other.halls_roof_list, 1);
+	PlaceTorchs(other.halls_roof_list, 2);
+	PlaceTorchs(other.halls_middle_list, 0);
+	PlaceTorchs(other.halls_middle_list, 1);
+	PlaceTorchs(other.halls_middle_list, 2);
+	PlaceTorchs(other.halls_ground_list, 0);
+	PlaceTorchs(other.halls_ground_list, 1);
+	PlaceTorchs(other.halls_ground_list, 2);
 
 	//============================---------------------------- Create keys at random positions
 	
