@@ -2,8 +2,10 @@
 // You can write your code in this editor
 
 if !surface_exists(surf) {
-    var _cw = camera_get_view_width(view_camera[0]);
-    var _ch = camera_get_view_height(view_camera[0]);
+    //var _cw = camera_get_view_width(view_camera[0]);
+    //var _ch = camera_get_view_height(view_camera[0]);
+	var _cw = room_width;
+	var _ch = room_height;
     surf = surface_create(_cw, _ch);
     surface_set_target(surf);
     draw_set_colour(c_black);
@@ -12,10 +14,14 @@ if !surface_exists(surf) {
     surface_reset_target();
 } else {
 	if (surface_exists(surf)) {
-	var _cw = camera_get_view_width(view_camera[0]);
-	var _ch = camera_get_view_height(view_camera[0]);
-	var _cx = camera_get_view_x(view_camera[0]);
-	var _cy = camera_get_view_y(view_camera[0]);
+	//var _cw = camera_get_view_width(view_camera[0]);
+	//var _ch = camera_get_view_height(view_camera[0]);
+	//var _cx = camera_get_view_x(view_camera[0]);
+	//var _cy = camera_get_view_y(view_camera[0]);
+	var _cw = room_width;
+	var _ch = room_height;
+	var _cx = 0;
+	var _cy = 0;
 	surface_set_target(surf);
 	draw_set_color(c_black);
 	draw_set_alpha(0.8);
