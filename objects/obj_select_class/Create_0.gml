@@ -26,9 +26,9 @@ selectClass_filled = selectClass_items mod selectClass_columns;
 //the current selected item
 selectClass_cursor = 0;
 
-cursor = instance_create_layer(x, y, "layer_above", obj_cursor);
-
 portrait_size = 128;// size of the portrait square
+
+cursor = instance_create_layer(x - (portrait_size * 1.5), y, "layer_above", obj_cursor);
 
 free_stick = true;// if false, can't use gamepad stick for a few milliseconds
 init_player_selection = true;
