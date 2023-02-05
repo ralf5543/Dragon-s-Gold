@@ -28,11 +28,17 @@ if !surface_exists(surf) {
 	draw_rectangle(0, 0, _cw, _ch, 0);
 	gpu_set_blendmode(bm_subtract);
 	with (obj_lightParent) {
+		
+	//gpu_set_blendmode(bm_subtract);
 		var _sw = sprite_width / 2;
 		var _sh = sprite_height / 2;
 		switch(object_index) {
 			case obj_torch:
+			gpu_set_blendmode(bm_subtract);
 			    draw_sprite_ext(spr_light, 0, x - _cx, y - _cy, 0.5 + random(0.05), 0.5 + random(0.05), 0, c_white, 1);
+				gpu_set_blendmode(bm_normal);
+				gpu_set_blendmode(bm_add);
+			    draw_sprite_ext(spr_light, 0, x - _cx, y - _cy, 0.5 + random(0.05), 0.5 + random(0.05), 0, c_orange, 0.3);
 			    break;
 			//case oGhost:
 			//    draw_sprite_ext(sLight, 0, x + _sw - _cx, y + _sh - _cy, 0.75, 0.75, 0, c_white, 1);

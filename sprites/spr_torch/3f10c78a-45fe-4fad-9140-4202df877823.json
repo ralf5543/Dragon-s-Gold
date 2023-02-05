@@ -1,0 +1,76 @@
+{
+"skeleton": { "hash": "Jz03ZPoGqIs", "spine": "4.0-from-4.1.19", "x": -16.59, "y": -25.12, "width": 33.03, "height": 100.81 },
+"bones": [
+	{ "name": "root", "scaleX": 0.2753, "scaleY": 0.2753 },
+	{ "name": "stick", "parent": "root", "x": -1, "y": 10 },
+	{ "name": "light", "parent": "root", "x": 1.02, "y": 188.9 }
+],
+"slots": [
+	{ "name": "torch", "bone": "stick", "attachment": "stick" },
+	{ "name": "torch1", "bone": "light" },
+	{ "name": "torch2", "bone": "light" },
+	{ "name": "torch3", "bone": "light" },
+	{ "name": "torch4", "bone": "light" },
+	{ "name": "torch5", "bone": "light", "attachment": "torch5" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"torch": {
+				"stick": { "x": 0.72, "y": -6.75, "width": 120, "height": 189 }
+			},
+			"torch1": {
+				"torch1": { "x": -1.5, "y": 0.6, "width": 53, "height": 207 }
+			},
+			"torch2": {
+				"torch2": { "x": -1.48, "y": 6.55, "width": 53, "height": 221 }
+			},
+			"torch3": {
+				"torch3": { "x": 0.5, "y": 10, "width": 53, "height": 222 }
+			},
+			"torch4": {
+				"torch4": { "x": -2.47, "y": -13.45, "width": 51, "height": 175 }
+			},
+			"torch5": {
+				"torch5": { "x": 0.99, "y": -5.93, "width": 56, "height": 184 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"torch1": {
+				"attachment": [
+					{ "name": "torch1" },
+					{ "time": 0.0667, "name": null }
+				]
+			},
+			"torch2": {
+				"attachment": [
+					{ "time": 0.0667, "name": "torch2" },
+					{ "time": 0.1667, "name": null }
+				]
+			},
+			"torch3": {
+				"attachment": [
+					{ "time": 0.1667, "name": "torch3" },
+					{ "time": 0.2333, "name": null }
+				]
+			},
+			"torch4": {
+				"attachment": [
+					{ "time": 0.2333, "name": "torch4" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"torch5": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		}
+	}
+}
+}

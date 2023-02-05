@@ -87,8 +87,8 @@ if (room == rm_game) {
 		var torch = instance_create_layer(0, 0, "back_objects", obj_torch);
 		Random_Position(torch, -60);
 		with (torch) {
-			image_xscale = 0.2;
-			image_yscale = 0.2;	
+			image_xscale = 1;
+			image_yscale = 1;	
 		}
 		
 	}
