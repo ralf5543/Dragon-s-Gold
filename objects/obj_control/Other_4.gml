@@ -80,7 +80,18 @@ if (room == rm_game) {
 		image_xscale = 0.25;
 		image_yscale = 0.25;	
 	}
-	Random_Position(chest);
+	Random_Position(chest, 16);
+	
+	//==================-------------- TORCHS
+	for (var i = 0; i < 30; i ++) {
+		var torch = instance_create_layer(0, 0, "back_objects", obj_torch);
+		Random_Position(torch, -60);
+		with (torch) {
+			image_xscale = 0.2;
+			image_yscale = 0.2;	
+		}
+		
+	}
 
 
 	//============================---------------------------- Create keys at random positions
@@ -88,7 +99,7 @@ if (room == rm_game) {
 	//======-------- BRONZE keys
 	for (var i = 0; i < 3; i ++) {
 		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
-		Random_Position(new_item);
+		Random_Position(new_item, 16);
 		with (new_item) {
 			value = KEYVALUE.BRASS;
 			image_xscale = 0.5;
@@ -101,7 +112,7 @@ if (room == rm_game) {
 	//======-------- SILVER keys
 	for (var i = 0; i < 3; i ++) {
 		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
-		Random_Position(new_item);
+		Random_Position(new_item, 16);
 		with (new_item) {
 			value = KEYVALUE.SILVER;
 			image_xscale = 0.5;
@@ -113,7 +124,7 @@ if (room == rm_game) {
 	//======-------- GOLD keys
 	for (var i = 0; i < 3; i ++) {
 		var new_item = instance_create_layer(0, 0, "layer_players", obj_key);
-		Random_Position(new_item);
+		Random_Position(new_item, 16);
 		with (new_item) {
 			value = KEYVALUE.GOLD;
 			image_xscale = 0.5;
