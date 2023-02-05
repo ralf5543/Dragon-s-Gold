@@ -75,7 +75,11 @@ if (room == rm_game) {
 	
 
 	//==================-------------- Create treasure chest at random position
-	var chest = instance_create_layer(0, -96, "back_decorations", obj_chest);
+	var chest = instance_create_layer(0, -78, "back_decorations", obj_chest);
+	with (chest) {
+		image_xscale = 0.25;
+		image_yscale = 0.25;	
+	}
 	Random_Position(chest);
 
 

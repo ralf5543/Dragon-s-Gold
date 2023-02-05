@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "level_design",
-    "path": "folders/Sprites/level_design.yy",
+    "name": "keys",
+    "path": "folders/Sprites/level_design/objects/functionnal/keys.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
