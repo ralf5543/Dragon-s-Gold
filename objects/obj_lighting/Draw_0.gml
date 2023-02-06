@@ -26,23 +26,30 @@ if !surface_exists(surf) {
 	draw_set_color(c_black);
 	draw_set_alpha(0.8);
 	draw_rectangle(0, 0, _cw, _ch, 0);
-	gpu_set_blendmode(bm_subtract);
+	
 	with (obj_lightParent) {
 		switch(object_index) {
 			case obj_torch:
-			//gpu_set_blendmode(bm_subtract);
+				gpu_set_blendmode(bm_subtract);
 			    draw_sprite_ext(spr_light, 0, x - _cx, y - 16 - _cy, 0.5 + random(0.05), 0.5 + random(0.05), 0, c_white, 1);
-			//	gpu_set_blendmode(bm_normal);
-			//	gpu_set_blendmode(bm_add);
-			  //  draw_sprite_ext(spr_light, 0, x - _cx, y - _cy, 0.5 + random(0.05), 0.5 + random(0.05), 0, c_orange, 0.3);
 			    break;
-			//case oGhost:
-			//    draw_sprite_ext(sLight, 0, x + _sw - _cx, y + _sh - _cy, 0.75, 0.75, 0, c_white, 1);
-			//    break;
-			//case oPlayer:
-			//    draw_sprite_ext(sLight, 0, x - _cx, y - _sh - _cy, 1, 1, 0, c_white, 1);            
-			//    break;
-			
+
+			case obj_fireball:
+				gpu_set_blendmode(bm_subtract);
+				
+				if (size ="small") {
+					var fireballZoom = 0.1;
+
+				} else if (size ="medium") {
+					var fireballZoom = 0.2;
+				} else {
+					var fireballZoom = 0.3;
+				}
+				draw_sprite_ext(spr_light, 0, x - _cx, y - _cy, fireballZoom + random(0.05), fireballZoom + random(0.05), 0, c_white, 1);
+				gpu_set_blendmode(bm_normal);
+				gpu_set_blendmode(bm_add);
+				draw_sprite_ext(spr_light, 0, x - _cx, y - _cy, fireballZoom, fireballZoom, 0, c_orange, 0.4);
+				break;
 	    }
 	}
 	gpu_set_blendmode(bm_normal);

@@ -1,7 +1,7 @@
 /// @description Debugging infos
 
 
-draw_self();// default draw, needed if draw event exists
+draw_self();
 
 
 //debugging infos
