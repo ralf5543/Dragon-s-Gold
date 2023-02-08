@@ -13,7 +13,6 @@ if !surface_exists(surf) {
     draw_rectangle(0, 0, _cw, _cw, false);
     surface_reset_target();
 } else {
-	if (surface_exists(surf)) {
 	//var _cw = camera_get_view_width(view_camera[0]);
 	//var _ch = camera_get_view_height(view_camera[0]);
 	//var _cx = camera_get_view_x(view_camera[0]);
@@ -56,5 +55,4 @@ if !surface_exists(surf) {
 	draw_set_alpha(1);
 	surface_reset_target();
 	draw_surface(surf, _cx, _cy);
-	}
 }

@@ -4,6 +4,8 @@
 key_left = 0
 key_right = 0;
 
+
+
 // test horizontal axe for left stick for first slot controller, ignoring dead zone (0.2)
 // abs takes a number, and change it to positive equivalent ("-9" -> "9")
 if (abs(gamepad_axis_value(pad_num, gp_axislh)) > .2) {
@@ -94,6 +96,17 @@ if (room == rm_select) {
 	}
 		   
 } else if (room == rm_game) {
+	if (has_taken_stairs >= 40)  {
+		if (can_display_blackBars) {
+			percent = min(1, percent + max((percent / 10), 0.005));
+			if (percent >= 2) {
+				can_display_blackBars = false;
+			}
+		} else {
+			percent = max(0, percent - max(((1 - percent) / 10), 0.01));
+		}
+	} 
+
 	image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
 	image_yscale = 1
 	

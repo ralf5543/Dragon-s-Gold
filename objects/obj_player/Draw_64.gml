@@ -28,17 +28,6 @@ if (room  == rm_game) {
 	key_spacer = (gui_margin * 4);
 	
 	dpad_width = 218 * gui_zoom;
-
-				
-			// black bars transition
-			//if (is_taking_stairs == true) && (has_taken_stairs >= 60) {
-			//	draw_set_color(c_black);
-	
-	
-			//	//percent = percent + 0.1;
-			//	draw_rectangle(0, 0, w, percent * h_half / 2, false);
-			//	draw_rectangle(0, h_half, w, h_half - ( percent * (h_half/ 2)), false);
-			//}
 			
 			
 	//======================------------------------ Portrait
@@ -144,6 +133,14 @@ if (room  == rm_game) {
 		
 		if (key_win_gold) {
 			draw_sprite_ext(spr_check, 0, key_x + (key_spacer * 2) + player_split_x, key_y + player_split_y, gui_zoom, gui_zoom, 0, c_white, 1);
+		}
+		
+	//======================------------------------ Black bars transition
+			
+		if (is_taking_stairs)  {
+			draw_set_color(c_black);
+			draw_rectangle(player_split_x, player_split_y, player_split_width, percent * (player_split_height / 2), false);
+			draw_rectangle(player_split_x, player_split_height, player_split_width, player_split_height - (percent * (player_split_height / 2)), false);
 		}
 
 	

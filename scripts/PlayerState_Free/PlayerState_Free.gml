@@ -19,6 +19,8 @@ function PlayerState_Free(){
 	is_hurt = false;
 	can_take_stairs = true;
 	is_taking_stairs = false;
+	can_display_blackBars = true;
+	percent = 0;
 	
 	// thief only
 	if (character == "thief") {
