@@ -24,3 +24,7 @@ wizard_ready_players = 0;// number of wizards
 thief_ready_players = 0;// number of thieves
 
 door_calculate = true //calculates door numbers only once
+
+// PAUSE
+paused = false;
+paused_surf = -1;

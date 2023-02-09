@@ -35,4 +35,20 @@ if (room == rm_select) {
 			can_end_game = false;
 		}
 	}
+	
+	//========------- PAUSE
+	if keyboard_check_pressed(ord("P")) or (gamepad_button_check_pressed(0, gp_start)) or (gamepad_button_check_pressed(1, gp_start)) or (gamepad_button_check_pressed(2, gp_start)) or (gamepad_button_check_pressed(3, gp_start)) {
+	    paused = !paused;
+		
+	    if paused == false {
+	        instance_activate_all();
+	        surface_free(paused_surf);
+	        paused_surf = -1;
+	    }
+	}
+	
+	if paused == true {
+		//pause alarms here
+	    alarm[0]++;
+	 }
 }

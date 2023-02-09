@@ -64,7 +64,6 @@
     {"name":"PlayerState_Hurt","order":7,"path":"scripts/PlayerState_Hurt/PlayerState_Hurt.yy",},
     {"name":"spr_portrait_thief_alt3","order":19,"path":"sprites/spr_portrait_thief_alt3/spr_portrait_thief_alt3.yy",},
     {"name":"snd_hurt_thief3","order":4,"path":"sounds/snd_hurt_thief3/snd_hurt_thief3.yy",},
-    {"name":"obj_pause","order":4,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"spr_ranger_combo1","order":3,"path":"sprites/spr_ranger_combo1/spr_ranger_combo1.yy",},
     {"name":"spr_column","order":6,"path":"sprites/spr_column/spr_column.yy",},
     {"name":"fnt_10","order":3,"path":"fonts/fnt_10/fnt_10.yy",},
