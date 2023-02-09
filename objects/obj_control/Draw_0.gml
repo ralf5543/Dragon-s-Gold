@@ -24,8 +24,4 @@ if (room == rm_select) {
 		draw_text(xx + (room_width / 8), yy + (room_height / 2), text_start_player);
 		draw_set_halign(fa_left);
 	}
-} else if (room == rm_game) {
-	
-	
-
 }

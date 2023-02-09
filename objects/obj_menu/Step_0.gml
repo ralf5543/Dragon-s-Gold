@@ -48,10 +48,10 @@ if (menu_control) {
 	}
 
     if (menu_comitted != -1) {
-   	 switch (menu_comitted) {
-   		 case 2: default : room_goto(rm_select); break;
-   		 case 0: default : game_end(); break;
-   	 }
+	   	 switch (menu_comitted) {
+	   		 case 2: default : room_goto(rm_select); break;
+	   		 case 0: default : game_end(); break;
+	   	 }
     }
 }
 
