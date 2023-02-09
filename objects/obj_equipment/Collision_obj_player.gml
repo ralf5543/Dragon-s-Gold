@@ -183,7 +183,7 @@ with (other) {
 				text = "Plus de place \n dans l'inventaire !";
 
 				if (!instance_exists(obj_text)) {
-					var equipmentText = instance_create_layer(x, y - 96, "layer_control", obj_text);
+					var equipmentText = instance_create_layer(x, y - 96, "layer_tooltips", obj_text);
 					with (equipmentText) {
 						text = other.text;
 						length = string_length(text);

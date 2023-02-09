@@ -17,7 +17,7 @@ if (stairway_floor == "roof") {
 text = "Appuyez sur \n" + string(text_direction) + " pour \n" + string(text_floor);
 
 if (point_in_circle(obj_player.x, obj_player.y, x, y, 64)) && (!instance_exists(obj_text)) && (help_readen = false) {
-	var stairsText = instance_create_layer(x, y - 96, "layer_control", obj_text);
+	var stairsText = instance_create_layer(x, y - 96, "layer_tooltips", obj_text);
 	with (stairsText) {
 		text = other.text;
 		length = string_length(text);

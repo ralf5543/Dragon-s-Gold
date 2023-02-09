@@ -1,4 +1,4 @@
-/// @description Pause Surface
+/// @description Pause Surface & Menu
 
 if (room  == rm_game) {
 	//draw_text(room_width / 2, 50, "Nombre de salles ROOF " + string(halls_roof_list_size));

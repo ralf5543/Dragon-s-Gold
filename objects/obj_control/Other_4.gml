@@ -1,5 +1,6 @@
 /// @description Insert description here
 
+paused = false;
 
 if (room == rm_game) {
 

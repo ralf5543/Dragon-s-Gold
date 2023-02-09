@@ -43,9 +43,9 @@ menu_itemheight = font_get_size(menu_font);
 menu_comitted = -1;
 menu_control = true;
 
-menu[2] = "New Game";
-menu[1] = "Options";
-menu[0] = "Quit";
+menu[2] = undefined;
+menu[1] = undefined;
+menu[0] = undefined;
 
 menu_items = array_length_1d(menu);
 
