@@ -93,6 +93,7 @@
     {"name":"PlayerState_Crossing_Door","order":4,"path":"scripts/PlayerState_Crossing_Door/PlayerState_Crossing_Door.yy",},
     {"name":"obj_cursor","order":1,"path":"objects/obj_cursor/obj_cursor.yy",},
     {"name":"DrawSetText","order":21,"path":"scripts/DrawSetText/DrawSetText.yy",},
+    {"name":"spr_library","order":8,"path":"sprites/spr_library/spr_library.yy",},
     {"name":"obj_hall_middle_C","order":6,"path":"objects/obj_hall_middle_C/obj_hall_middle_C.yy",},
     {"name":"spr_wizard_dash","order":4,"path":"sprites/spr_wizard_dash/spr_wizard_dash.yy",},
     {"name":"snd_door_closed","order":2,"path":"sounds/snd_door_closed/snd_door_closed.yy",},

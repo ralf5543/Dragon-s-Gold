@@ -122,6 +122,7 @@
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},"order":1,},
     {"id":{"name":"DrawSetText","path":"scripts/DrawSetText/DrawSetText.yy",},"order":21,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":0,},
+    {"id":{"name":"spr_library","path":"sprites/spr_library/spr_library.yy",},"order":0,},
     {"id":{"name":"obj_hall_middle_C","path":"objects/obj_hall_middle_C/obj_hall_middle_C.yy",},"order":6,},
     {"id":{"name":"spr_wizard_dash","path":"sprites/spr_wizard_dash/spr_wizard_dash.yy",},"order":4,},
     {"id":{"name":"spr_thief","path":"sprites/spr_thief/spr_thief.yy",},"order":0,},

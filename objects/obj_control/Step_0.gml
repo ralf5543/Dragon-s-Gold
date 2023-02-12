@@ -132,8 +132,8 @@ if (menu_control) {
 				}
 			} else {
 				switch (menu_comitted) {
-					case 2: game_restart();
-					break;
+					//case 2: game_restart();
+					//break;
 					case 0: game_end();
 					break;
 				}
