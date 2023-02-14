@@ -5,6 +5,10 @@
 //argument1 = keys left needed
 function PlayerState_Lockpicking(argument0, argument1) {
 	
+	if (skeleton_animation_get() != "lockpick") {
+		skeleton_animation_set("lockpick")
+	}
+	
 	if (focus_lockpick < sprite_get_width(spr_lockpick_bar)) {
 	
 		if (can_lockpick == true) {

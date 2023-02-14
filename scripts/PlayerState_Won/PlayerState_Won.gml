@@ -1,8 +1,8 @@
 
 function PlayerState_Won(){
-	show_debug_message("allez, gagné !")
 
 	can_attack = false;
+	audio_stop_sound(snd_lockpick);
 	
 	if (can_play_victory) {
 		audio_play_sound(snd_victory_music, 7, 0);

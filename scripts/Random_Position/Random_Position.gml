@@ -2,6 +2,8 @@
 
 function Random_Position(new_item, y_position){
 	var choose_floor = choose("roof", "middle", "ground");
+	
+	//next line is for debugging
 	//var choose_floor = choose("roof");
 		
 	switch (choose_floor) {
