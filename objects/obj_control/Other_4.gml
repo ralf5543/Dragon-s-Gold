@@ -3,6 +3,10 @@
 paused = false;
 
 if (room == rm_game) {
+	
+	menu_comitted = -1;
+	//menu_cursor = 3;
+	menu_control = false;
 
 	//list of all castle roof rooms objets, used or not
 	halls_roof_list = ds_list_create();

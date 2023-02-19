@@ -15,6 +15,8 @@ if (room == rm_select) {
 		
 	}
 } else if (room == rm_game) {  
+	menu_items = array_length_1d(menu);
+	
 	if (door_calculate) {
 		//attributes an order to each existing DOOR instance
 		for (var i = 0; i < instance_number(obj_door); i ++) {
@@ -36,9 +38,8 @@ if (room == rm_select) {
 		}
 	}
 	
-	//========------- PAUSE
-	if keyboard_check_pressed(ord("P")) or (gamepad_button_check_pressed(0, gp_start)) or (gamepad_button_check_pressed(1, gp_start)) or (gamepad_button_check_pressed(2, gp_start)) or (gamepad_button_check_pressed(3, gp_start)) {
-	    paused = !paused;
+	function togglePauseGame() {
+		paused = !paused;
 		
 	    if paused == false {
 	        instance_activate_all();
@@ -46,19 +47,26 @@ if (room == rm_select) {
 	        paused_surf = -1;
 			
 			//menu	
-			menu_x_target = gui_width + 200;
-	    }
+			menu_x_target = gui_width + 400;
+	    } else {
+			menu_cursor = 3;
+			menu_comitted = -1;
+		}
+	}
+	
+	//========------- PAUSE
+	if keyboard_check_pressed(ord("P")) or (gamepad_button_check_pressed(0, gp_start)) or (gamepad_button_check_pressed(1, gp_start)) or (gamepad_button_check_pressed(2, gp_start)) or (gamepad_button_check_pressed(3, gp_start)) {
+	    togglePauseGame();
 	}
 	
 	if paused == true {
 		//pause alarms here
 	    alarm[0]++;
 		
-		//menu
 		menu_x_target = gui_width - gui_margin;
-		menu_comitted = -1;
 		menu_control = true;
-		menu_cursor = 2;
+	 } else {
+		 menu_control = false;
 	 }
 }
 
@@ -68,7 +76,8 @@ if (room == rm_start) {
 	menu[1] = "Options";
 	menu[0] = "Quit";
 } else {
-	menu[2] = "Back to main menu";
+	menu[3] = "Back to game";
+	menu[2] = "Main menu";
 	menu[1] = "Options";
 	menu[0] = "Quit";
 }
@@ -77,10 +86,8 @@ if (room == rm_start) {
 menu_x += (menu_x_target - menu_x) / menu_speed;
 
 function validateMenuItem() {
-	//paused = false;
-	menu_x_target = gui_width + 200;
+	menu_x_target = gui_width + 400;
 	menu_comitted = menu_cursor;
-	menu_control = false;
 }
 
 //keyboard controls
@@ -106,8 +113,8 @@ if (menu_control) {
 	   	alarm[1] = room_speed / 6;
 	}
     
-	if (keyboard_check_pressed(vk_enter)) or (gamepad_button_check_pressed(0, gp_face1)) or (gamepad_button_check_pressed(0, gp_start)) {
-		validateMenuItem()
+	if (keyboard_check_pressed(vk_enter)) or (gamepad_button_check_pressed(0, gp_face1)) {
+		validateMenuItem();
 	}
 		
    
@@ -123,24 +130,25 @@ if (menu_control) {
 
 		 
 	if (menu_comitted != -1) {
-			if (room == rm_start) {
-				switch (menu_comitted) {
-					case 2: room_goto(rm_select);
-					break;
-					case 0: game_end();
-					break;
-				}
-			} else {
-				switch (menu_comitted) {
-					//case 2: game_restart();
-					//break;
-					case 0: game_end();
-					break;
-				}
+		if (room == rm_start) {
+			switch (menu_comitted) {
+				case 2: room_goto(rm_select);
+				break;
+				case 0: game_end();
+				break;
 			}
+		} else if (room == rm_game) {
+			switch (menu_comitted) {
+				case 3: togglePauseGame();
+				break;
+				case 2: game_restart();
+				break;
+				case 0: game_end();
+				break;
+			}
+		}
 	}
 		
-
 }
 
 
