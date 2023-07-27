@@ -73,7 +73,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_portrait_knight_alt3","path":"sprites/spr_portrait_knight_alt3/spr_portrait_knight_alt3.yy",},},

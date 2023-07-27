@@ -34,7 +34,7 @@ function PlayerState_Free(){
 	var move = key_right - key_left; // because true = 1 and false = -1
 	if (key_run) && (energy > 0) {
 		walksp = 8;
-		//energy --;
+		energy --;
 
 	} else {
 		walksp = 4;

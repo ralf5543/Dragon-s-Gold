@@ -97,14 +97,14 @@ if (room == rm_select) {
 		   
 } else if (room == rm_game) {
 	if (has_taken_stairs >= 40)  {
-		if (can_display_blackBars) {
-			percent = min(1, percent + max((percent / 10), 0.005));
-			if (percent >= 2) {
-				can_display_blackBars = false;
-			}
-		} else {
-			percent = max(0, percent - max(((1 - percent) / 10), 0.01));
-		}
+		//if (can_display_blackBars) {
+		//	percent = min(1, percent + max((percent / 10), 0.005));
+		//	if (percent >= 2) {
+		//		can_display_blackBars = false;
+		//	}
+		//} else {
+		//	percent = max(0, percent - max(((1 - percent) / 10), 0.01));
+		//}
 	} 
 
 	image_xscale = facing;//so 1 or -1 (-1 is flipping the sprite)
