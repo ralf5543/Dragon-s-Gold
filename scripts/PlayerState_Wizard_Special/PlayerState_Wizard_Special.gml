@@ -57,11 +57,11 @@ function PlayerState_Wizard_Special(){
 
 		audio_stop_sound(snd_cast);
 		audio_stop_sound(snd_init_fire);
-		audio_stop_sound(snd_fire);
+		audio_stop_sound(snd_fire);		
 		
-		audio_play_sound(snd_battlecry_male5, 3, false, 0.3);
-		
-		if (focus_fireball > 96) {
+		if (focus_fireball > 96) {	
+			
+			audio_play_sound(snd_battlecry_male5, 3, false, 0.3);
 			audio_sound_pitch(snd_fireball, choose(.8, 1, 1.2));
 			audio_play_sound(snd_fireball, 6, false);
 			if (skeleton_skin_get() != "fireball-throw") {
@@ -80,6 +80,8 @@ function PlayerState_Wizard_Special(){
 				image_index = 1;
 			}
 			
+		} else {
+			state = PLAYERSTATE.FREE;
 		}
 	}
 }

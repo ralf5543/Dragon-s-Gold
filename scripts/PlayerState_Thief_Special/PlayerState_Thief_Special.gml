@@ -1,7 +1,9 @@
 
 function PlayerState_Thief_Special(){
+	show_debug_message("energy " + string(energy));
 	
-	if (place_meeting(x, y + 1, obj_wall) and energy >= 50) {// on the floor
+	if (energy >= 50) or (energy < 50 and skeleton_animation_get() == "rolling") {
+		show_debug_message("c'est bon !");
 		
 		if (skeleton_animation_get() != "rolling") {
 			skeleton_animation_set("rolling")
@@ -33,6 +35,9 @@ function PlayerState_Thief_Special(){
 		
 		x += rolling_distance * facing;// the player will be thrown to the left or the right
 
+	} else {
+		show_debug_message("c'est pas bon...");
+		state = PLAYERSTATE.FREE;
 	}
 	
 }

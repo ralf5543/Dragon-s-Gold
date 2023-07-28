@@ -1,4 +1,4 @@
-/// @description 
+ /// @description 
 
 //jump up animation
 if (skeleton_animation_get() == "jump-up") {
