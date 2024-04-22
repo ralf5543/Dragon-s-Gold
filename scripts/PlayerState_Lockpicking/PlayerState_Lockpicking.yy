@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerState_Lockpicking",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "thief",
-    "path": "folders/Scripts/Player states/thief.yy",
+  "$GMScript":"",
+  "%Name":"PlayerState_Lockpicking",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerState_Lockpicking",
+  "parent":{
+    "name":"thief",
+    "path":"folders/Scripts/Player states/thief.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

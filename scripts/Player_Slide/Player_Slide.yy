@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Player_Slide",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player states",
-    "path": "folders/Scripts/Player states.yy",
+  "$GMScript":"",
+  "%Name":"Player_Slide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Player_Slide",
+  "parent":{
+    "name":"Player states",
+    "path":"folders/Scripts/Player states.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
